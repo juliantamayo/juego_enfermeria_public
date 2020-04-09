@@ -3,8 +3,9 @@ import { Button, View, Text, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './components/load';
-import DetailsScreen from './components/menu';
-
+import Menu from './components/menu';
+import M_juegos from './components/Juegos/m_juegos'
+import M_juegos2 from './components/Juegos/Juego2/m_juego2'
 
 const Stack = createStackNavigator();
 
@@ -13,8 +14,31 @@ export default class App extends Component {
     return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Details" component={DetailsScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} 
+        options={{
+        //  headerLayoutPreset: 'center',
+          headerShown: false,
+          title: 'My home',
+          headerStyle: {
+            backgroundColor: '#f4511e',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}/>
+        <Stack.Screen  name="Menu" component={Menu} 
+        options={{
+        //  headerShown: false
+        }}/>
+        <Stack.Screen name="M_juegos" component={M_juegos} 
+        options={{
+          headerShown: false
+        }}/>
+        <Stack.Screen name="M_juego2" component={M_juegos2} 
+        options={{
+        //  headerShown: false
+        }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
