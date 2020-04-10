@@ -6,6 +6,7 @@ import HomeScreen from './components/load';
 import Menu from './components/menu';
 import M_juegos from './components/Juegos/m_juegos'
 import M_juegos2 from './components/Juegos/Juego2/m_juego2'
+//import ImagenbrackgroundExterna from './components/ImagenbrackgroundExterna';
 
 const Stack = createStackNavigator();
 
