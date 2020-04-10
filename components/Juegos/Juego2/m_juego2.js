@@ -29,7 +29,7 @@ export default class m_juego2 extends Component {
 
       <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
        onPress={() => this.props.navigation.navigate('Home')}>
-               <Image style={ styles.image } source={require("../../../assets/images/BtnMgame.png")} />
+               <Image style={ styles.image } source={require("../../../assets/images/buttonteory.png")} />
       </TouchableOpacity>
 
       </View>

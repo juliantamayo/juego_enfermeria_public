@@ -36,7 +36,7 @@ export default class App extends Component {
         }}/>
         <Stack.Screen name="M_juegos" component={M_juegos} 
         options={{
-          headerShown: false
+         // headerShown: false
         }}/>
         <Stack.Screen name="M_juego2" component={M_juegos2} 
         options={{

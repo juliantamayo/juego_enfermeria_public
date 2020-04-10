@@ -57,6 +57,8 @@ export default class menu extends Component {
   }
 }
 
+//module.export = menu;
+
 const styles = StyleSheet.create({
  container: {
      flex: 1,

@@ -23,21 +23,24 @@ export default class menu extends Component {
       <View style={styles.miniButon}>
      <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
        onPress={() => this.props.navigation.navigate('M_juegos')}>
-               <Image style={ styles.image } source={require("../assets/images/BtnMgame.png")} />
+               <Image style={ styles.image } source={require("../assets/images/buttonMinijuegos.png")} />
       </TouchableOpacity>
 
       <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
        onPress={() => this.props.navigation.navigate('Home')}>
-               <Image style={ styles.image } source={require("../assets/images/BtnMgame.png")} />
+               <Image style={ styles.image } source={require("../assets/images/buttonteory.png")} />
       </TouchableOpacity>
-
+  
       </View>
+
+
+
       <View style={styles.vBody}>
        
         
         <TouchableOpacity style={ styles.imageContainer} activeOpacity={0.8}
        onPress={() => this.props.navigation.navigate('Home')}>
-               <Image style={ styles.image2 } source={require("../assets/images/BtnMgame.png")} />
+               <Image style={ styles.image2 } source={require("../assets/images/buttonstart.png")} />
       </TouchableOpacity>
        </View>
     

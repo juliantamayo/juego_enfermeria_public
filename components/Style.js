@@ -26,15 +26,15 @@ export default StyleSheet.create({
        borderRadius: 60
      },
      image: {
-       height:50,
-       width: 50,
+       height:60,
+       width: 60,
        borderRadius: 60
      },
      vBody: {
       flex:1,
       alignItems: 'center',
        justifyContent: 'center',
-      backgroundColor: 'yellow',
+     // backgroundColor: 'yellow',
       height :'100%',
       width : '100%'
 
@@ -61,6 +61,12 @@ export default StyleSheet.create({
     backgroundColor: "green",
     padding: 10,
     borderRadius: 20
+  },
+  text:{
+    fontSize :20,
+   // color: 'rgba(96,100,109, 1)',
+    //lineHeight: 50
+   // textAlign: 'center',
   }
 });
 

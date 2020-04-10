@@ -8,7 +8,7 @@ import {StyleSheet,
         TouchableHighlight,
         TouchableOpacity
       } from 'react-native';
-
+import styles from './../Style.js';
 
 
 
@@ -28,7 +28,7 @@ export default class m_juegos extends Component {
 
       <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
        onPress={() => this.props.navigation.navigate('Home')}>
-               <Image style={ styles.image } source={require("../../assets/images/BtnMgame.png")} />
+               <Image style={ styles.image } source={require("../../assets/images/buttonteory.png")} />
       </TouchableOpacity>
 
       </View>
@@ -36,15 +36,15 @@ export default class m_juegos extends Component {
        
         
        <TouchableOpacity activeOpacity={0.8} style={styles.button}  onPress={() => this.props.navigation.navigate('Home')}>
-        <Text> JUEGO 1 </Text>
+        <Text style={styles.text}> JUEGO 1 </Text>
        </TouchableOpacity>
 
         <TouchableOpacity activeOpacity={0.8} style={styles.button}  onPress={() => this.props.navigation.navigate('M_juego2')}>
-        <Text> JUEGO 2 </Text>
+        <Text style={styles.text}> JUEGO 2 </Text>
        </TouchableOpacity>
 
         <TouchableOpacity activeOpacity={0.8} style={styles.button}  onPress={() => this.props.navigation.navigate('Home')}>
-        <Text> JUEGO 3 </Text>
+        <Text style={styles.text}> JUEGO 3 </Text>
        </TouchableOpacity>
        </View>
     
@@ -53,46 +53,3 @@ export default class m_juegos extends Component {
   }
 }
 
-const styles = StyleSheet.create({
- container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
-    
-  },
-  imageContainer: {
-       margin: 10,
-       borderRadius: 60
-     },
-     image: {
-       height:50,
-       width: 50,
-       borderRadius: 60
-     },
-     vBody: {
-      flex:1,
-      alignItems: 'center',
-       justifyContent: 'center',
-     // backgroundColor: 'yellow',
-      height :'100%',
-      width : '100%'
-     },
-     miniButon:{
-      flex:0.3,
-      flexDirection: 'column',
-      backgroundColor: 'lightseagreen',
-      alignItems: 'flex-end',
-      justifyContent: 'space-between',
-      height :200,
-      width : '100%'
-     },
-      button: {
-     margin: 20,
-     height:50,
-     width: 270,
-    alignItems: "center",
-    backgroundColor: "green",
-    padding: 10,
-    borderRadius: 20
-  }
-});
