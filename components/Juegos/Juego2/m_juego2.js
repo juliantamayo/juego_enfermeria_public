@@ -35,7 +35,7 @@ export default class m_juego2 extends Component {
       <View style={styles.vBody}>
        
         
-       <TouchableOpacity activeOpacity={0.8} style={styles.button}  onPress={() => this.props.navigation.navigate('Home')}>
+       <TouchableOpacity activeOpacity={0.8} style={styles.button}  onPress={() => this.props.navigation.navigate('QuizIndex')}>
         <Text style={styles.text}> Jugar </Text>
        </TouchableOpacity>
 
