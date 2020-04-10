@@ -8,6 +8,7 @@ import {StyleSheet,
         TouchableHighlight,
         TouchableOpacity
       } from 'react-native';
+       import styles from './../../Style.js';
 
 
 
@@ -51,53 +52,3 @@ export default class m_juego2 extends Component {
   }
 }
 
-const styles = StyleSheet.create({
- container: {
-     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  imageContainer: {
-       margin: 10,
-       borderRadius: 60
-     },
-     image: {
-       height:50,
-       width: 50,
-       borderRadius: 60
-     },
-     vBody: {
-      flex:1,
-      alignItems: 'center',
-       justifyContent: 'center',
-      //backgroundColor: 'yellow',
-      height :'100%',
-      width : '100%'
-     },
-     miniButon:{
-      flex:0.3,
-      flexDirection: 'column',
-      backgroundColor: 'lightseagreen',
-      alignItems: 'flex-end',
-      justifyContent: 'space-between',
-      height :200,
-      width : '100%'
-     },
-      button: {
-     margin: 20,
-     justifyContent: 'center',
-     fontSize : 50,
-     height:80,
-     width: 270,
-    alignItems: "center",
-    backgroundColor: "green",
-    padding: 10,
-    borderRadius: 20
-  },
-  text:{
-    fontSize :20,
-   // color: 'rgba(96,100,109, 1)',
-    //lineHeight: 50
-   // textAlign: 'center',
-  }
-});

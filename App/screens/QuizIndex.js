@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { ScrollView, StatusBar } from "react-native";
+import { ScrollView, StatusBar, StyleSheet, ImageBackground  } from "react-native";
 
 import spaceQuestions from "../data/space";
 import westernsQuestions from "../data/westerns";
@@ -12,10 +12,12 @@ export default class menu extends Component {
 
   render() {
     return (
-   //  <Imagebackground style={styles.container}>
-    <ScrollView>
+   
+   <ImageBackground source={require("../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
+   
+    <ScrollView  style={styles.margen}>
     <StatusBar barStyle="dark-content" />
-    <RowItem
+    <RowItem  
       name="Space"
       color="#36b1f0"
       onPress={() =>
@@ -49,7 +51,23 @@ export default class menu extends Component {
       }
     />
   </ScrollView>
+
+  </ImageBackground>
   );
   }
 }
+
+const styles = StyleSheet.create({
+ container: {
+     flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    
+  },
+  margen:{
+    width : 280,
+     margin: 100,
+
+  }
+});
 

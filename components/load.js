@@ -20,7 +20,7 @@ export default class HomeScreen  extends Component  {
                     onPress={() => this.props.navigation.navigate('Menu')}
                     title="START"
                     color="#841584"
-                    accessibilityLabel="Increase Count"
+                   
                 />
             </View>
         </ImageBackground>
