@@ -6,7 +6,7 @@ import HomeScreen from './components/load';
 import Menu from './components/menu';
 import M_juegos from './components/Juegos/m_juegos'
 import M_juegos2 from './components/Juegos/Juego2/m_juego2'
-
+import Result_Q from './components/Juegos/Juego2/result_q'
 //-----------------------------------------------------------
 import QuizIndex from "./components/Juegos/Juego2/QuizIndex";
 import Quiz from "./components/Juegos/Juego2/Quiz";
@@ -69,11 +69,19 @@ export default function App () {
         }
 
 
-       })
-       
-        //  title:  this.props.route.params?.title
-          
-        }/>
+       })}/>
+        <Stack.Screen name="Result_Q" component={Result_Q} 
+        options={
+           //     headerShown: false,
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerStyle: {
+          backgroundColor: route.params?.color,
+         borderBottomColor: route.params?.color
+        }
+
+
+       })}/>
+
            
          <Stack.Screen name="m_juego1"  component={m_juego1} />
         <Stack.Screen name="juego1_part1" component={juego1_part1} />

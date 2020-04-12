@@ -18,8 +18,10 @@ export default function HomeScreen ({navigation}) {
             <View style={styles.container} >
 
             
-                <Button
-                    onPress={() => navigation.navigate('Menu')}
+                <Button 
+                    onPress={ () => {
+                      navigation.navigate('Menu')
+                                      }}
                     title="START"
                     color="#841584"
                    
