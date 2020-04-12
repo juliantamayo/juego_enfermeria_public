@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   }
 });
 */
-export default ({ navigation }) => (
+export default ({ navigation, route }) => (
   <ImageBackground source={require("../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
    
     <ScrollView  style={styles.margen}>

@@ -54,10 +54,10 @@ export default function App () {
          <Stack.Screen name="Quiz" component={Quiz} 
         options={
            //     headerShown: false,
-        ({ navigation }) => ({ title: route.params.title ,
+        ({ navigation, route }) => ({ title: route.params?.title ,
           headerStyle: {
-          backgroundColor: route.params.color,
-         borderBottomColor: route.params.color
+          backgroundColor: route.params?.color,
+         borderBottomColor: route.params?.color
         }
 
 
