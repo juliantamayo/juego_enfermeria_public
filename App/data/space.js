@@ -16,6 +16,15 @@ const questions = [
       { id: "3", text: "8", correct: true },
       { id: "4", text: "9" }
     ]
+  },
+  {
+    question: "quien descubrio Ameria?",
+    answers: [
+      { id: "1", text: "6" },
+      { id: "2", text: "7" },
+      { id: "3", text: "Colon", correct: true },
+      { id: "4", text: "9" }
+    ]
   }
 ];
 
