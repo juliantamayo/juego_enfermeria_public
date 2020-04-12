@@ -6,12 +6,20 @@ import HomeScreen from './components/load';
 import Menu from './components/menu';
 import M_juegos from './components/Juegos/m_juegos'
 import M_juegos2 from './components/Juegos/Juego2/m_juego2'
+
 //-----------------------------------------------------------
-import QuizIndex from "./App/screens/QuizIndex";
-import Quiz from "./App/screens/Quiz";
-import spaceQuestions from "./App/data/space";
-import westernsQuestions from "./App/data/westerns";
-import computerQuestions from "./App/data/computers";
+import QuizIndex from "./components/Juegos/Juego2/QuizIndex";
+import Quiz from "./components/Juegos/Juego2/Quiz";
+import spaceQuestions from "./components/data/space";
+import westernsQuestions from "./components/data/westerns";
+import computerQuestions from "./components/data/computers";
+
+
+import juego1_part1 from './components/Juegos/Juego1/juego1_part1';
+import juego1_part2 from './components/Juegos/Juego1/juego1_part2';
+import m_juego1 from './components/Juegos/Juego1/M_juego1';
+import juego1_teory1 from './components/Juegos/Juego1/juego1_teory1';
+import juego1_teory2 from './components/Juegos/Juego1/juego1_teory2';
 
 
 const Stack = createStackNavigator();
@@ -66,6 +74,12 @@ export default function App () {
         //  title:  this.props.route.params?.title
           
         }/>
+           
+         <Stack.Screen name="m_juego1"  component={m_juego1} />
+        <Stack.Screen name="juego1_part1" component={juego1_part1} />
+        <Stack.Screen name="juego1_part2" component={juego1_part2} />
+        <Stack.Screen name="juego1_teory1" component={juego1_teory1} />
+        <Stack.Screen name="juego1_teory2" component={juego1_teory2} />
         
       </Stack.Navigator>
     </NavigationContainer>

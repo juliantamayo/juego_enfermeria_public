@@ -34,8 +34,8 @@ export const Alert = ({ correct, visible }) => {
   if (!visible) return null;
 
   const icon = correct
-    ? require("../assets/check.png")
-    : require("../assets/close.png");
+    ? require("../../assets/check.png")
+    : require("../../assets/close.png");
 
   const circleStyles = [styles.circle];
 

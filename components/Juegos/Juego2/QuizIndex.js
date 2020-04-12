@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import { ScrollView, StatusBar, StyleSheet, ImageBackground  } from "react-native";
 
-import spaceQuestions from "../data/space";
-import westernsQuestions from "../data/westerns";
-import computerQuestions from "../data/computers";
+import spaceQuestions from "../../data/space";
+import westernsQuestions from "../../data/westerns";
+import computerQuestions from "../../data/computers";
 
-import { RowItem } from "../components/RowItem";
+import { RowItem } from "../../elementos/RowItem";
 /*
 export default class menu extends Component {
 
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
 });
 */
 export default ({ navigation, route }) => (
-  <ImageBackground source={require("../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
+  <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
    
     <ScrollView  style={styles.margen}>
     <StatusBar barStyle="dark-content" />

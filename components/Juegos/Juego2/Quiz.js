@@ -1,8 +1,8 @@
 import React from "react";
 import { View, StyleSheet, StatusBar, Text, SafeAreaView } from "react-native";
 
-import { Button, ButtonContainer } from "../components/Button";
-import { Alert } from "../components/Alert";
+import { Button, ButtonContainer } from "../../elementos/Button";
+import { Alert } from "../../elementos/Alert";
 
 const styles = StyleSheet.create({
   container: {
