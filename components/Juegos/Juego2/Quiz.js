@@ -60,7 +60,8 @@ class Quiz extends React.Component {
       const nextIndex = state.activeQuestionIndex + 1;
 
       if (nextIndex >= state.totalCount) {
-        return this.props.navigation.popToTop();
+       // return this.props.navigation.popToTop();
+        return this.props.navigation.navigate('QuizIndex');
       }
 
       return {

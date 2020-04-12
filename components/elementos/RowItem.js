@@ -6,12 +6,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     paddingVertical: 20,
     backgroundColor: "#36B1F0",
-    marginBottom: 1
+    marginBottom: 1,
+    borderRadius: 20,
+    margin: 20
   },
   text: {
     fontSize: 18,
     color: "#fff",
-    fontWeight: "600"
+    fontWeight: "600",
+    textAlign: 'center'
   }
 });
 
