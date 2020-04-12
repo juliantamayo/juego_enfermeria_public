@@ -9,11 +9,15 @@ import M_juegos2 from './components/Juegos/Juego2/m_juego2'
 //-----------------------------------------------------------
 import QuizIndex from "./App/screens/QuizIndex";
 import Quiz from "./App/screens/Quiz";
+import spaceQuestions from "./App/data/space";
+import westernsQuestions from "./App/data/westerns";
+import computerQuestions from "./App/data/computers";
+
 
 const Stack = createStackNavigator();
 
-export default class App extends Component {
-  render() {
+export default function App () {
+ 
     return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="HomeScreen">
@@ -35,6 +39,7 @@ export default class App extends Component {
         //  headerShown: false
         }}/>
         <Stack.Screen name="M_juegos" component={M_juegos} 
+
         options={{
          // headerShown: false
         }}/>
@@ -47,14 +52,25 @@ export default class App extends Component {
         //  headerShown: false
         }}/>
          <Stack.Screen name="Quiz" component={Quiz} 
-        options={{
-        //  headerShown: false
+        options={
+           //     headerShown: false,
+        ({ navigation }) => ({ title: route.params.title ,
+          headerStyle: {
+          backgroundColor: route.params.color,
+         borderBottomColor: route.params.color
+        }
+
+
+       })
+       
+        //  title:  this.props.route.params?.title
+          
+        }/>
         
-        }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
-  }
+  
 }
 
 const styles = StyleSheet.create({

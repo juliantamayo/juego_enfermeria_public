@@ -10,14 +10,16 @@ import {StyleSheet,
 
 
 
-export default class HomeScreen  extends Component  {
-  render() {
+export default function HomeScreen ({navigation}) {
+
    return (
 
     <ImageBackground source={require("../assets/images/overlay.png")}style={styles.container}>
             <View style={styles.container} >
+
+            
                 <Button
-                    onPress={() => this.props.navigation.navigate('Menu')}
+                    onPress={() => navigation.navigate('Menu')}
                     title="START"
                     color="#841584"
                    
@@ -26,7 +28,7 @@ export default class HomeScreen  extends Component  {
         </ImageBackground>
     
   );
-  }
+  
 }
 
 const styles = StyleSheet.create({

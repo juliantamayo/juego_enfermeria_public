@@ -23,12 +23,12 @@ export default StyleSheet.create({
      },
   imageContainer: {
        margin: 10,
-       borderRadius: 60
+       borderRadius: 100
      },
      image: {
        height:60,
        width: 60,
-       borderRadius: 60
+       borderRadius: 100
      },
      vBody: {
       flex:1,
@@ -53,12 +53,30 @@ export default StyleSheet.create({
       height :200,
       width : '100%'
      },
-      button: {
+     button: {
      margin: 20,
      height:50,
      width: 270,
     alignItems: "center",
-    backgroundColor: "green",
+    backgroundColor: "#00fa9a",
+    padding: 10,
+    borderRadius: 20
+  },
+  button2: {
+     margin: 20,
+     height:50,
+     width: 270,
+    alignItems: "center",
+    backgroundColor: "#00bfff",
+    padding: 10,
+    borderRadius: 20
+  },
+  button3: {
+     margin: 20,
+     height:50,
+     width: 270,
+    alignItems: "center",
+    backgroundColor: "#9932cc",
     padding: 10,
     borderRadius: 20
   },
@@ -67,6 +85,12 @@ export default StyleSheet.create({
    // color: 'rgba(96,100,109, 1)',
     //lineHeight: 50
    // textAlign: 'center',
-  }
+  },
+  colorAqua:{
+  backgroundColor: "#00ffff"
+  },
+ colorVerde1:{
+ backgroundColor: "#00fa9a"
+}
 });
 
