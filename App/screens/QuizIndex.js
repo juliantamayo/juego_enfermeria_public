@@ -93,7 +93,7 @@ export default ({ navigation }) => (
       name="Westerns"
       color="#799496"
       onPress={() =>
-        this.props.navigation.navigate("Quiz", {
+        navigation.navigate("Quiz", {
           title: "Westerns",
           questions: westernsQuestions,
           color: "#799496"
@@ -104,7 +104,7 @@ export default ({ navigation }) => (
       name="Computers"
       color="#49475B"
       onPress={() =>
-        this.props.navigation.navigate("Quiz", {
+        navigation.navigate("Quiz", {
           title: "Computers",
           questions: computerQuestions,
           color: "#49475B"
