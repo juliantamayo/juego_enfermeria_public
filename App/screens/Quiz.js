@@ -28,7 +28,7 @@ class Quiz extends React.Component {
   state = {
     correctCount: 0,
     //totalCount: this.props.navigation.getParam("questions", []).length,
-      totalCount: this.props.route.params?.questions ??  [].length,
+      totalCount: this.props.route.params?.questions.length,
    //route.params?.someParam ?? 'defaultValue';
     activeQuestionIndex: 0,
     answered: false,
@@ -71,7 +71,7 @@ class Quiz extends React.Component {
   };
 
   render() {
-    const questions = this.props.route.params?.questions ??  [];
+    const questions = this.props.route.params?.questions ?? [];
     const question = questions[this.state.activeQuestionIndex];
 
     return (

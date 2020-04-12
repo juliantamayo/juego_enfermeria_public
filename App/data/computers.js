@@ -16,6 +16,15 @@ const questions = [
       { id: "3", text: "Pear" },
       { id: "4", text: "Apple", correct: true }
     ]
+  },
+  {
+    question: "aniversario de Karla y Julian?",
+    answers: [
+      { id: "1", text: "septiembre 18" },
+      { id: "2", text: "febrero 20" },
+      { id: "3", text: "agosto 18" },
+      { id: "4", text: "septiembre 17", correct: true }
+    ]
   }
 ];
 
