@@ -3,7 +3,7 @@ import { View, StyleSheet, StatusBar, Text, SafeAreaView } from "react-native";
 
 import { Button, ButtonContainer } from "../../elementos/Button";
 import { Alert } from "../../elementos/Alert";
-
+ 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#36B1F0",
@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
 });
 
 class Quiz extends React.Component {
+
   state = {
     correctCount: 0,
     //totalCount: this.props.navigation.getParam("questions", []).length,
@@ -41,8 +42,10 @@ class Quiz extends React.Component {
         const nextState = { answered: true };
 
         if (correct) {
+          var expo=5;
           nextState.correctCount = state.correctCount + 1;
           nextState.answerCorrect = true;
+
         } else {
           nextState.answerCorrect = false;
         }
@@ -61,7 +64,7 @@ class Quiz extends React.Component {
 
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate('QuizIndex');
+        return this.props.navigation.navigate('Result_Q',{experiencia: (this.state.correctCount*5)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
       }
 
       return {
@@ -74,7 +77,7 @@ class Quiz extends React.Component {
   render() {
     const questions = this.props.route.params?.questions ?? [];
     const question = questions[this.state.activeQuestionIndex];
-
+    
     return (
       <View
         style={[
@@ -101,6 +104,7 @@ class Quiz extends React.Component {
           <Text style={styles.text}>
             {`${this.state.correctCount}/${this.state.totalCount}`}
           </Text>
+          
         </SafeAreaView>
         <Alert
           correct={this.state.answerCorrect}

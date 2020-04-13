@@ -71,16 +71,9 @@ export default function App () {
 
        })}/>
         <Stack.Screen name="Result_Q" component={Result_Q} 
-        options={
-           //     headerShown: false,
-        ({ navigation, route }) => ({ title: route.params?.title ,
-          headerStyle: {
-          backgroundColor: route.params?.color,
-         borderBottomColor: route.params?.color
-        }
-
-
-       })}/>
+        options={{
+        //  headerShown: false
+        }}/>
 
            
          <Stack.Screen name="m_juego1"  component={m_juego1} />
