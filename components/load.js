@@ -6,6 +6,7 @@ import {StyleSheet,
         Button,
         ImageBackground 
         } from 'react-native';
+import { CommonActions } from '@react-navigation/native';
 
 
 
@@ -18,14 +19,18 @@ export default function HomeScreen ({navigation}) {
             <View style={styles.container} >
 
             
-                <Button 
-                    onPress={ () => {
-                      navigation.navigate('Menu')
-                                      }}
-                    title="START"
-                    color="#841584"
-                   
-                />
+                 <Button
+        title="START"
+        color="#841584"
+        onPress={() =>
+          navigation.dispatch(
+            CommonActions.navigate({
+              name: 'Menu',
+              
+            })
+          )
+        }
+      />
             </View>
         </ImageBackground>
     
@@ -40,3 +45,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   }
 });
+

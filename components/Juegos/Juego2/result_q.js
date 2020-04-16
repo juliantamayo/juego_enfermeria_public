@@ -5,7 +5,6 @@ import {StyleSheet,
         Button,
         ImageBackground,
         Image,
-        TouchableHighlight,
         TouchableOpacity
       } from 'react-native';
        import styles from './../../Style.js';

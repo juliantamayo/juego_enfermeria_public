@@ -11,7 +11,23 @@ export default StyleSheet.create({
     justifyContent: 'center',
    // backgroundImage : 'url(../assets/images/background.png)'
     //backgroundImage: uri('../assets/images/background.png')
-  },
+  },header:{
+      flex:0.3,
+      flexDirection: 'row',
+      height :'100%',
+      width : '100%'
+     },
+      headerIzquierda:{
+      flex:1,
+      alignItems: 'flex-start'
+     // backgroundColor: 'red',
+     },
+     headerDerecha:{
+      flex:1,
+    //  backgroundColor: 'yellow',
+      //justifyContent: 'flex-end',
+      alignItems: 'flex-end'
+     },
   miniButon:{
       flex:0.3,
       flexDirection: 'column',
@@ -21,7 +37,7 @@ export default StyleSheet.create({
       height :'100%',
       width : '100%'
      },
-  imageContainer: {
+   imageContainer: {
        margin: 10,
        borderRadius: 100
      },
@@ -43,15 +59,6 @@ export default StyleSheet.create({
        height:200,
        width: 200,
        borderRadius: 100
-     },
-     miniButon:{
-      flex:0.3,
-      flexDirection: 'column',
-      backgroundColor: 'lightseagreen',
-      alignItems: 'flex-end',
-      justifyContent: 'space-between',
-      height :200,
-      width : '100%'
      },
      button: {
      margin: 20,
@@ -91,6 +98,12 @@ export default StyleSheet.create({
   },
  colorVerde1:{
  backgroundColor: "#00fa9a"
-}
+},
+margen:{
+    width : 280,
+     margin: 100,
+
+  }
+
 });
 
