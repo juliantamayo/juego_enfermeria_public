@@ -42,6 +42,7 @@ export default StyleSheet.create({
        borderRadius: 100
      },
      image: {
+
        height:60,
        width: 60,
        borderRadius: 100
@@ -60,6 +61,16 @@ export default StyleSheet.create({
        width: 200,
        borderRadius: 100
      },
+     buttonJP: {
+     margin: 20,
+     height:90,
+     width: 270,
+    alignItems: "center",
+    justifyContent: 'center',
+    backgroundColor: "#00bfff",
+    padding: 10,
+    borderRadius: 20
+  },
      button: {
      margin: 20,
      height:50,
@@ -89,20 +100,18 @@ export default StyleSheet.create({
   },
   text:{
     fontSize :20,
-   // color: 'rgba(96,100,109, 1)',
+     fontWeight: 'bold',
+    //color: 'rgba(96,100,109, 1)',
     //lineHeight: 50
    // textAlign: 'center',
   },
-  colorAqua:{
-  backgroundColor: "#00ffff"
-  },
- colorVerde1:{
- backgroundColor: "#00fa9a"
-},
 margen:{
     width : 280,
      margin: 100,
 
+  },
+  margen2:{
+    margin:10
   }
 
 });

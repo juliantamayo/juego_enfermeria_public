@@ -26,6 +26,10 @@ export default function m_juego2 ({navigation, route}) {
        onPress={() => navigation.navigate('M_juegos')}>
                <Image style={ styles.image } source={require("../../../assets/images/button-back.png")} />
       </TouchableOpacity>
+      <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
+       onPress={() => navigation.navigate('Menu')}>
+               <Image style={ styles.image } source={require("../../../assets/images/button-home.png")} />
+      </TouchableOpacity>
       </View>
 
       <View style={styles.headerDerecha}>
@@ -38,19 +42,19 @@ export default function m_juego2 ({navigation, route}) {
       </View>
 
 
-      <View style={styles.vBody}>
-       
-       <TouchableOpacity activeOpacity={0.8} style={styles.button}  onPress={() => navigation.navigate('QuizIndex',
+      <View style={style.container}>
+       <View style={styles.margen2}></View>
+       <TouchableOpacity activeOpacity={0.8} style={styles.buttonJP}  onPress={() => navigation.navigate('QuizIndex',
          {
         //aqui van los parametros
        })
 
      }>
-        <Text style={styles.text}> Jugar </Text>
+        <Text style={styles.text}> JUGAR </Text>
        </TouchableOpacity>
 
-        <TouchableOpacity activeOpacity={0.8} style={styles.button}  onPress={() => navigation.navigate('Home')}>
-        <Text style={styles.text}> Repasar </Text>
+        <TouchableOpacity activeOpacity={0.8} style={styles.buttonJP}  onPress={() => navigation.navigate('Home')}>
+        <Text style={styles.text}> REPASAR </Text>
        </TouchableOpacity>
 
        </View>
@@ -60,3 +64,12 @@ export default function m_juego2 ({navigation, route}) {
   
 }
 
+const style = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+     //backgroundColor: 'yellow',
+      height :'100%',
+      width : '100%'
+  }
+});

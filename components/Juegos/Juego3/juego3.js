@@ -20,9 +20,9 @@ const styles = StyleSheet.create({
   },
   containerImagen:{
     alignItems : 'center',
-    backgroundColor: 'white',
+    backgroundColor: 'black',
     width : '100%',
-    height : '50%'
+    height : '68%'
   },
   Imagen:{
     width: 290,
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
 
 const mult =5;
 
-class juego1_part1 extends React.Component {
+class juego3 extends React.Component {
    
 
   
@@ -69,8 +69,11 @@ class juego1_part1 extends React.Component {
    //route.params?.someParam ?? 'defaultValue';
     activeQuestionIndex: 0,
     answered: false,
-    answerCorrect: false
-      
+    answerCorrect: false,
+      images: [ 
+       require("../../../assets/images/snc.jpeg"),
+       require("../../../assets/images/snp.png"),
+      ]
   };
 
   answer = correct => {
@@ -100,7 +103,7 @@ class juego1_part1 extends React.Component {
 
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate('Result_QJ1',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
+        return this.props.navigation.navigate('Result_QJ3',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
       }
 
       return {
@@ -193,4 +196,4 @@ class juego1_part1 extends React.Component {
   }
 }
 
-export default juego1_part1;
+export default juego3;

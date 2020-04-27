@@ -8,8 +8,8 @@ import { View,
         TouchableOpacity } from 'react-native';
 import styles from './../../Style.js';
 import { RowItemJuego1} from "../../elementos/RowItemJuego1";
-import sncQuestions from "../../data/snc";
-import snpQuestions from "../../data/snp";
+import snaQuestions from "../../data/sna";
+
 
 
 export default ({ navigation, route }) => (
@@ -41,37 +41,7 @@ export default ({ navigation, route }) => (
           <View style={style.headerbodySNC}>
 
 
-              <View style={style.hederSNcizq}>
-               <View style={style.margen}></View>
-                  <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-                        onPress={() => navigation.navigate('M_juegos')}>
-                       <Image style={ styles.image } source={require("../../../assets/images/button-izquierda.png")} />
-                  </TouchableOpacity>
-                   <Text style={style.textoboton}>ESTUDIAR</Text>
-              </View>
-                  
-              <View style={style.hederSNccenter}>
-              <Text style={style.title}> SNC </Text>
-              </View>
-
-                <View style={style.hederSNDer}>
-                 <View style={style.margen}></View>
-                        
-                       <RowItemJuego1   
-                        name="SNC"
-                        color="#20b2aa"
-                        onPress={() =>
-                          navigation.navigate("juego1_part1", {
-                            title: "SNC",
-                            questions: sncQuestions,
-                            color: "#20b2aa"
-                          })
-                        }
-                      />
-    
-   
-                       <Text style={style.textoboton2}>JUGAR</Text>
-                </View>
+             
                 
                
                 </View>
@@ -90,7 +60,7 @@ export default ({ navigation, route }) => (
                 </View>
                   
                 <View style={style.footerSNPcenter}>
-                    <Text style={style.title}> SNP </Text>
+                    <Text style={style.title}> SNA </Text>
                 </View>
 
               <View style={style.footerSNPDer}>
@@ -100,9 +70,9 @@ export default ({ navigation, route }) => (
                         name="SNP"
                         color="#98fb98"
                         onPress={() =>
-                          navigation.navigate("juego1_part2", {
+                          navigation.navigate("juego3", {
                             title: "SNP",
-                            questions: snpQuestions,
+                            questions: snaQuestions,
                             color: "#98fb98"
                           })
                         }
@@ -116,7 +86,6 @@ export default ({ navigation, route }) => (
      </ImageBackground>
 );
 
-
 const style = StyleSheet.create({
   container: {
     flex: 1,
@@ -126,7 +95,7 @@ const style = StyleSheet.create({
     width : '100%'
   },
   headerbodySNC: {
-    flex: 1,
+    flex: 0.7,
     flexDirection: 'row',
     alignItems: "center",
     justifyContent : 'center',
@@ -203,7 +172,7 @@ const style = StyleSheet.create({
     borderWidth: 4,
     borderColor: "#20232a",
     borderRadius: 6,
-    backgroundColor: "#00fa9a",
+    backgroundColor: "#9932cc",
     color: "#20232a",
     textAlign: "center",
     fontSize: 45,

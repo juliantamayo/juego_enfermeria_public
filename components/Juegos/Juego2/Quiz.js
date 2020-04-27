@@ -19,10 +19,12 @@ const styles = StyleSheet.create({
   },
   safearea: {
     flex: 1,
-    marginTop: 100,
+    marginTop: 50,
     justifyContent: "space-between"
   }
 });
+
+const mult =5;
 
 class Quiz extends React.Component {
 
@@ -42,7 +44,6 @@ class Quiz extends React.Component {
         const nextState = { answered: true };
 
         if (correct) {
-          var expo=5;
           nextState.correctCount = state.correctCount + 1;
           nextState.answerCorrect = true;
 
@@ -64,7 +65,7 @@ class Quiz extends React.Component {
 
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate('Result_Q',{experiencia: (this.state.correctCount*5)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
+        return this.props.navigation.navigate('Result_Q',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
       }
 
       return {

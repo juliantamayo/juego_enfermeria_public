@@ -11,7 +11,7 @@ import {StyleSheet,
        import styles from './../../Style.js';
 
 
-export default class result_q extends React.Component  {
+export default class result_qJ1 extends React.Component  {
    
   render(){
  //const expo = this.props.route.params.experiencia;
@@ -22,7 +22,7 @@ export default class result_q extends React.Component  {
           
       <View style={styles.vBody}>
        
-       <TouchableOpacity activeOpacity={0.8} style={styles.button2}  onPress={() => this.props.navigation.navigate('M_juego2')
+       <TouchableOpacity activeOpacity={0.8} style={styles.button2}  onPress={() => this.props.navigation.navigate('m_juego1')
 
      }>
         <Text style={styles.text}> Continuar </Text>
@@ -32,8 +32,7 @@ export default class result_q extends React.Component  {
        <Text style={styles.text}>experiencia: { this.props.route.params.experiencia}</Text>
        
        <Text style={styles.text}>correctas: { this.props.route.params.correctas}</Text>
-      
-       <Text style={styles.text}>erroneas: { this.props.route.params.erroneas}</Text>
+   
 
 
         <TouchableOpacity activeOpacity={0.8} style={styles.button2}  onPress={ this.saveData
