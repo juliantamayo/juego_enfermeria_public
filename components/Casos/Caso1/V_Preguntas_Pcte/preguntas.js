@@ -1,18 +1,30 @@
 import React from "react";
-import { View, StyleSheet, StatusBar, Text, SafeAreaView, Image,TouchableHighlight, Modal } from "react-native";
+import { View, StyleSheet, StatusBar, Text, SafeAreaView, ImageBackground, Image, TouchableHighlight, ScrollView } from "react-native";
 
-import { Button, ButtonContainer } from "../../elementos/ButtonJ1";
-import { Alert } from "../../elementos/Alert";
+import { Button, ButtonContainer } from "../../../elementos/ButtonC1_Preguntas";
+//import C1_pregunta1_Resp_enfermera from "../../../data/C1_preguntas/C1_pregunta1_Resp_enfermera";
+import C1_pregunta1_Resp_enfermera from "../../../data/C1_preguntas/C1_pregunta1_Resp_enfermera";
+import { Alert } from "../../../elementos/Alert";
 
  
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#36B1F0",
+  //  backgroundColor: "#36B1F0",
     flex: 1,
     paddingHorizontal: 20
   },
   text: {
     color: "#fff",
+    backgroundColor: "#36B1F0",
+    fontSize: 22,
+    textAlign: "center",
+    letterSpacing: -0.02,
+    fontWeight: "600"
+  },
+
+  textContador: {
+    color: "#fff",
+    //backgroundColor: "#36B1F0",
     fontSize: 22,
     textAlign: "center",
     letterSpacing: -0.02,
@@ -66,12 +78,10 @@ class juego1_part1 extends React.Component {
     correctCount: 0, 
     //totalCount: this.props.navigation.getParam("questions", []).length,
       totalCount: this.props.route.params?.questions.length,
-       totalCount: 5,
    //route.params?.someParam ?? 'defaultValue';
     activeQuestionIndex: 0,
     answered: false,
-    answerCorrect: false,
-    //availableQuesions : [this.props.route.params?.questions ?? []]
+    answerCorrect: false
       
   };
 
@@ -100,10 +110,16 @@ class juego1_part1 extends React.Component {
     this.setState(state => {
       const nextIndex = state.activeQuestionIndex + 1;
 
-      if (nextIndex >= state.totalCount) {
+      if (nextIndex >= state.totalCount && this.state.correctCount < 2) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate('Result_QJ1',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
-      }
+        return this.props.navigation.navigate('DialogosC1',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
+      }else if (nextIndex >= state.totalCount   && this.state.correctCount==2) {
+       return this.props.navigation.navigate('V_C1_Resp_enfermera',{repu_enferme:1,experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount),
+        title: "Respuesta enfermero",
+          questions: C1_pregunta1_Resp_enfermera,
+          color: "#36b1f0"});
+      
+      } {}
 
       return {
         activeQuestionIndex: nextIndex,
@@ -117,58 +133,24 @@ class juego1_part1 extends React.Component {
   }
 
   render() {
-    let availableQuesions = []
     const { modalVisible } = this.state;
     const questions = this.props.route.params?.questions ?? [];
     const question = questions[this.state.activeQuestionIndex];
     
     return (
-      <View
-        style={[
-          styles.container,
-          { backgroundColor: this.props.route.params.color }
-        ]}
-      >
+     
+    <ImageBackground source={require("../../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
 
-      <Modal
-          animationType="slide"
-          transparent={true}
-          visible={modalVisible}
-          onRequestClose={() => {
-            Alert.alert("Modal has been closed.");
-          }}
-        >
-          
-            <View style={styles.modalView}>
-              
-
-              <TouchableHighlight 
-                
-                onPress={() => {
-                  this.setModalVisible(!modalVisible);
-                }}
-              >
-                 <Image style={styles.Imagen}   source={question.image} resizeMode='contain'/>
-              </TouchableHighlight>
-            </View>
-         
-        </Modal>
+    <ScrollView  >
+    <StatusBar barStyle="dark-content" />
+      
         <StatusBar barStyle="light-content" />
         <SafeAreaView >
         
 
           <Text style={styles.text}>{question.question}</Text>  
           <View>
-          <View style={styles.containerImagen}>
-           <TouchableHighlight
           
-          onPress={() => {
-            this.setModalVisible(true);
-          }}
-        >
-         <Image style={styles.Imagen}   source={question.image} resizeMode='contain'/>
-        </TouchableHighlight>
-           </View>
           
 
             <ButtonContainer>
@@ -182,7 +164,7 @@ class juego1_part1 extends React.Component {
             </ButtonContainer>
           </View>
 
-          <Text style={styles.text}>
+          <Text style={styles.textContador}>
             {`${this.state.correctCount}/${this.state.totalCount}`}
           </Text>
           
@@ -191,7 +173,8 @@ class juego1_part1 extends React.Component {
           correct={this.state.answerCorrect}
           visible={this.state.answered}
         />
-      </View>
+        </ScrollView>
+       </ImageBackground>
     );
   }
 }

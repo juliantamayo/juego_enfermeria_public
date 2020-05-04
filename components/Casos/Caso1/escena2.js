@@ -4,30 +4,26 @@ import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpac
 import styles from './../../Style.js';
 import Escena1Dialog from "../../data/escena1dialog";
 import Escena2Dialog from "../../data/escena2dialog";
-import westernsQuestions from "../../data/westerns";
-import computerQuestions from "../../data/computers";
+import C1_pregunta1 from "../../data/C1_preguntas/C1_pregunta1";
 import { RowItem } from "../../elementos/RowItem";
-import variableglobal from "./variables_caso1"
+
 export default class menu_caso1 extends React.Component {
 
   
-
 
     state ={
 
       isVisible:false,
       isVisible2:false,
       val:this.props.route.params?.activeQuestion,
-      'name': '',
-       hola:this.props.route.params?.ex,
-       'nombre':''
+      
     };
-   
- componentDidMount = () => AsyncStorage.getItem('nombre').then((value) => this.setState({ 'nombre': value }))
+    
+ 
 
 render() {
 
-  
+  const userId = this.props.route.params?.activeQuestion;
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
@@ -39,7 +35,7 @@ render() {
     
      <View style={styles.headerIzquierda}>
      <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-       onPress={() => this.props.navigation.navigate('M_casos')}>
+       onPress={() => this.props.navigation.navigate('M_caso1')}>
                <Image style={ styles.image } source={require("../../../assets/images/button-back.png")} />
       </TouchableOpacity>
       </View>
@@ -52,59 +48,90 @@ render() {
       </View>
      
       </View>
-            
+    
+
+ 
+
      <RowItem   
-      name="Introducción al Caso"
-      color="#f9e67a"
+      name="1. ¿Cómo se encuentra?"
+      color="#77c6c6"
       onPress={() =>
-        this.props.navigation.navigate("Escena1", {
-          title: "Escena1",
-          questions: Escena1Dialog,
+        this.props.navigation.navigate("DialogosC1", {
+          title: "1. ¿Cómo se encuentra?1",
+          questions: C1_pregunta1,
           color: "#36b1f0"
         })
       }
     />
-     { this.state.nombre == '2'? 
+
     <RowItem
-      name="Preguntas a Paciente"
-      color="#f9a94b"
+      name="2. ¿Sabe usted en qué lugar se encuentra?"
+      color="#00b9bc"
       onPress={() =>
         this.props.navigation.navigate("Escena2", {
-          title: "Preguntas a Paciente",
+          title: "Escena2",
           questions: Escena2Dialog,
           color: "#799496"
         })
       }
     />
-    : null }
     <RowItem
-      name="Pruebas de valoración"
-       color="#f9e67a"
+      name="3. ¿Qué elementos de los que observa aquí en su habitación los encuentra también en la sala de su hogar?"
+      color="#77c6c6"
       onPress={() =>
-        this.props.navigation.navigate("pruebaT",{ex:'2'})
+        this.props.navigation.navigate("Escena2", {
+          title: "Escena2",
+          questions: Escena2Dialog,
+          color: "#799496"
+        })
       }
     />
     <RowItem
-      name="Valoración"
-      color="#f9a94b"
-      onPress={() =>
-        this.props.navigation.navigate("Variables",{ex:'2'})
-      }
-    />
-     <RowItem
-      name="Quiz"
-      color="#f9e67a"
-      onPress={() =>
-        this.props.navigation.navigate("Variables",{ex:'2'})
-      }
-    />
-    <RowItem
-      name="Variables"
+      name="4. ¿Sabe cuánto tendría ahorrado en total?"
       color="#00b9bc"
       onPress={() =>
-        this.props.navigation.navigate("Variables",{ex:'2'})
+        this.props.navigation.navigate("Escena2", {
+          title: "Escena2",
+          questions: Escena2Dialog,
+          color: "#799496"
+        })
       }
     />
+   <RowItem
+      name="5. ¿Cuáles son los nombres de sus hijas desde la mayor a la menor?"
+      color="#77c6c6"
+      onPress={() =>
+        this.props.navigation.navigate("Escena2", {
+          title: "Escena2",
+          questions: Escena2Dialog,
+          color: "#799496"
+        })
+      }
+    />
+    <RowItem
+      name="6. ¿Podria por favor levantar sus brazos?"
+      color="#00b9bc"
+      onPress={() =>
+        this.props.navigation.navigate("Escena2", {
+          title: "Escena2",
+          questions: Escena2Dialog,
+          color: "#799496"
+        })
+      }
+    />
+    <RowItem
+      name="7. Puede cerrar los ojos y me puede indicar hacia ¿qué dirección le estoy movilizando su brazo derecho e izquierdo?"
+      color="#77c6c6"
+      onPress={() =>
+        this.props.navigation.navigate("Escena2", {
+          title: "Escena2",
+          questions: Escena2Dialog,
+          color: "#799496"
+        })
+      }
+    />
+  
+  
     </ScrollView>
   </View>
   </ImageBackground>

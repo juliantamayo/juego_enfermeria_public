@@ -12,6 +12,20 @@ import {StyleSheet,
 
 
 export default class result_qJ1 extends React.Component  {
+
+ saveData(){  
+    let name = "Michal";  
+    AsyncStorage.setItem('user',name);  
+  }  
+  displayData = async ()=>{  
+    try{  
+      let user = await AsyncStorage.getItem('user');  
+      alert(user);  
+    }  
+    catch(error){  
+      alert(error)  
+    }  
+  }
    
   render(){
  //const expo = this.props.route.params.experiencia;
@@ -53,30 +67,6 @@ export default class result_qJ1 extends React.Component  {
   );
 }
 
-
-
-
-
-saveData() {
-  
-  let obj = {
-    name: 5,
-
-  }
-  AsyncStorage.setItem('user', JSON.stringify(obj));
-}
-
-displayData = async () => {
-  try {
-    // statements
-    let  user = await AsyncStorage.getItem('user');
-    let parsed = JSON.parse(user);
-    alert(parsed.name);
-  } catch(error) {
-    // statements
-    alert(error)
-  }
-}
 
 }
 

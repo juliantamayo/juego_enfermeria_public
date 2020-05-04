@@ -99,7 +99,7 @@ export default function m_casos({navigation, route}) {
       </TouchableOpacity>
 
       <TouchableOpacity onPress={() =>
-                          navigation.navigate("juego1_part1", {
+                          navigation.navigate("pruebaT2", {activeQuestion: 1,
                             title: "SNC",
                             questions: sncQuestions,
                             color: "#20b2aa"

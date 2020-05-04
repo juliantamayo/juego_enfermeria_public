@@ -30,12 +30,22 @@ import juego3 from './components/Juegos/Juego3/juego3';
 import Result_QJ3 from './components/Juegos/Juego3/result_qJ3';
 //---------------------------------------------------------------
 import pruebaT from './components/Teoria/prueba_atras';
+import pruebaT2 from './components/Teoria/HomeContainer';
+import pruebaT3 from './components/Teoria/AsyncStorageExample';
 
 //-----------------------casos--------------------------------
 import M_casos from './components/Casos/m_casos';
 
 //-------------------------caso1---------------------------------
 import M_caso1 from './components/Casos/Caso1/menu_caso1';
+import Escena1 from './components/Casos/Caso1/escena1';
+import Guardar_escena1 from './components/Casos/Caso1/V_Guardar/guardar_escena1';
+import Escena2 from './components/Casos/Caso1/escena2';
+import DialogosC1 from './components/Casos/Caso1/V_Preguntas_Pcte/dialogos';
+import V_C1_Resp_enfermera from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Resp_enfermera';
+import PreguntasC1 from './components/Casos/Caso1/V_Preguntas_Pcte/preguntas';
+import Variables from './components/Casos/Caso1/variables_caso1';
+
 
 const Stack = createStackNavigator();
 
@@ -280,9 +290,81 @@ useEffect(() => {
           headerTitleStyle: {
             fontWeight: 'bold',
           },
-        }} />   
+        }} />
+
+        <Stack.Screen name="Escena1" component={Escena1} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+
+       })}/>  
+
+       <Stack.Screen name="Guardar_escena1"  component={Guardar_escena1} />
+
+       <Stack.Screen name="Escena2" component={Escena2} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+
+       })}/> 
+
+        <Stack.Screen name="DialogosC1" component={DialogosC1} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+
+       })}/> 
+         <Stack.Screen name="PreguntasC1" component={PreguntasC1} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+
+       })}/> 
+
+         <Stack.Screen name="V_C1_Resp_enfermera" component={V_C1_Resp_enfermera} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+
+       })}/>
+
+
+
 
          <Stack.Screen name="pruebaT"  component={pruebaT} />
+         <Stack.Screen name="pruebaT2"  component={pruebaT2} />
+         <Stack.Screen name="pruebaT3"  component={pruebaT3} />
+          <Stack.Screen name="Variables"  component={Variables} />
         
       </Stack.Navigator>
     </NavigationContainer>
@@ -294,101 +376,3 @@ const styles = StyleSheet.create({
   
 });
 
-/*
-import * as React from 'react';
-import { View, Button, Text } from 'react-native';
-import { NavigationContainer, CommonActions } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home!</Text>
-      <Button
-        title="Navigate to Profile"
-        onPress={() =>
-          navigation.dispatch(
-            CommonActions.navigate({
-              name: 'Profile',
-              params: {
-                user: 'jane',
-              },
-            })
-          )
-        }
-      />
-      <Button
-        title="Go back"
-        onPress={() => navigation.dispatch(CommonActions.goBack())}
-      />
-    </View>
-  );
-}
-
-function ProfileScreen({ navigation, route }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Profile!</Text>
-      <Text>{route.params.user}'s profile</Text>
-      <Button
-        title="Navigate to Home"
-        onPress={() =>
-          navigation.dispatch(
-            CommonActions.navigate({
-              name: 'Home',
-            })
-          )
-        }
-      />
-      <Button
-        title="Reset navigation state"
-        onPress={() =>
-          navigation.dispatch(
-            CommonActions.reset({
-              index: 1,
-              routes: [
-                {
-                  name: 'Profile',
-                  params: { user: 'jane', key: route.params.key },
-                },
-                { name: 'Home' },
-              ],
-            })
-          )
-        }
-      />
-      <Button
-        title="Change user param"
-        onPress={() =>
-          navigation.dispatch({
-            ...CommonActions.setParams({ user: 'Wojtek' }),
-            source: route.key,
-          })
-        }
-      />
-      <Button
-        title="Go back"
-        onPress={() =>
-          navigation.dispatch({
-            ...CommonActions.goBack(),
-            source: route.key,
-            target: route?.params?.key,
-          })
-        }
-      />
-    </View>
-  );
-}
-
-const Stack = createStackNavigator();
-
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Profile" component={ProfileScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}*/
