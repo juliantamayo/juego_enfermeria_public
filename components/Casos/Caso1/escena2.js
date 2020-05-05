@@ -5,6 +5,9 @@ import styles from './../../Style.js';
 import Escena1Dialog from "../../data/escena1dialog";
 import Escena2Dialog from "../../data/escena2dialog";
 import C1_pregunta1 from "../../data/C1_preguntas/C1_pregunta1";
+import C1_pregunta2 from "../../data/C1_preguntas/C1_pregunta2_dialog";
+import C1_pregunta3 from "../../data/C1_preguntas/C1_pregunta3_dialog";
+import C1_pregunta4 from "../../data/C1_preguntas/C1_pregunta4_dialog";
 import { RowItem } from "../../elementos/RowItem";
 
 export default class menu_caso1 extends React.Component {
@@ -68,9 +71,9 @@ render() {
       name="2. ¿Sabe usted en qué lugar se encuentra?"
       color="#00b9bc"
       onPress={() =>
-        this.props.navigation.navigate("Escena2", {
-          title: "Escena2",
-          questions: Escena2Dialog,
+        this.props.navigation.navigate("V_C1_Preg2_dialogo", {
+          title: "¿En qué lugar se encuentra?",
+          questions: C1_pregunta2,
           color: "#799496"
         })
       }
@@ -79,9 +82,9 @@ render() {
       name="3. ¿Qué elementos de los que observa aquí en su habitación los encuentra también en la sala de su hogar?"
       color="#77c6c6"
       onPress={() =>
-        this.props.navigation.navigate("Escena2", {
-          title: "Escena2",
-          questions: Escena2Dialog,
+        this.props.navigation.navigate("V_C1_Preg3_dialogo", {
+          title: "C1_pregunta3",
+          questions: C1_pregunta3,
           color: "#799496"
         })
       }
@@ -90,9 +93,9 @@ render() {
       name="4. ¿Sabe cuánto tendría ahorrado en total?"
       color="#00b9bc"
       onPress={() =>
-        this.props.navigation.navigate("Escena2", {
+        this.props.navigation.navigate("V_C1_Preg4_dialogo", {
           title: "Escena2",
-          questions: Escena2Dialog,
+          questions: C1_pregunta4,
           color: "#799496"
         })
       }

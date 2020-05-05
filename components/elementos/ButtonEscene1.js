@@ -1,5 +1,6 @@
 import React from "react";
-import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
+import { View, TouchableOpacity, Text, StyleSheet, Dimensions } from "react-native";
+const { width, height } = Dimensions.get('window')
 
 const styles = StyleSheet.create({
   button: {
@@ -8,7 +9,7 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     alignItems: "center",
     justifyContent: "center",
-    width: "100%",
+    width,
    // height: '40%',
     marginTop: 5
   },

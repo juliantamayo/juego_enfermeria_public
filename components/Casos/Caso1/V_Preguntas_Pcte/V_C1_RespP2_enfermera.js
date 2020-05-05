@@ -148,7 +148,7 @@ const mult =5;
 
 
 
-class V_C1_Resp_enfermera extends React.Component {
+class V_C1_RespP2_enfermera extends React.Component {
    
   state = {
     modalVisible: false,
@@ -413,4 +413,4 @@ class V_C1_Resp_enfermera extends React.Component {
   }
 }
 
-export default V_C1_Resp_enfermera;
+export default V_C1_RespP2_enfermera;

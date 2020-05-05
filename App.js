@@ -11,9 +11,6 @@ import M_juegos from './components/Juegos/m_juegos';
 import M_juegos2 from './components/Juegos/Juego2/m_juego2';
 import QuizIndex from "./components/Juegos/Juego2/QuizIndex";
 import Quiz from "./components/Juegos/Juego2/Quiz";
-import spaceQuestions from "./components/data/space";
-import westernsQuestions from "./components/data/westerns";
-import computerQuestions from "./components/data/computers";
 import Result_Q from './components/Juegos/Juego2/result_q';
 
 //--------------------------------juego1--------------------------------
@@ -44,6 +41,14 @@ import Escena2 from './components/Casos/Caso1/escena2';
 import DialogosC1 from './components/Casos/Caso1/V_Preguntas_Pcte/dialogos';
 import V_C1_Resp_enfermera from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Resp_enfermera';
 import PreguntasC1 from './components/Casos/Caso1/V_Preguntas_Pcte/preguntas';
+import V_C1_Preg2_dialogo from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg2_dialogo';
+import V_C1_Preg2_pregunta from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg2_pregunta';
+import V_C1_RespP2_enfermera from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_RespP2_enfermera';
+import V_C1_Preg3_dialogo from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg3_dialogo';
+import V_C1_Preg3_pregunta from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg3_pregunta';
+import V_C1_RespP3_enfermera from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_RespP3_enfermera';
+import V_C1_Preg4_dialogo from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg4_dialogo';
+
 import Variables from './components/Casos/Caso1/variables_caso1';
 
 
@@ -355,9 +360,78 @@ useEffect(() => {
          borderBottomColor: route.params?.color
         }
 
+       })}/>
+
+        <Stack.Screen name="V_C1_Preg2_dialogo" component={V_C1_Preg2_dialogo} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
 
        })}/>
 
+        <Stack.Screen name="V_C1_Preg2_pregunta" component={V_C1_Preg2_pregunta} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+      <Stack.Screen name="V_C1_RespP2_enfermera" component={V_C1_RespP2_enfermera} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+        <Stack.Screen name="V_C1_Preg3_dialogo" component={V_C1_Preg3_dialogo} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+        <Stack.Screen name="V_C1_RespP3_enfermera" component={V_C1_RespP3_enfermera} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+        <Stack.Screen name="V_C1_Preg4_dialogo" component={V_C1_Preg4_dialogo} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
 
 
 

@@ -2,8 +2,9 @@ import React from "react";
 import { View, StyleSheet, StatusBar, Text, SafeAreaView, ImageBackground, Image, TouchableHighlight, ScrollView } from "react-native";
 
 import { Button, ButtonContainer } from "../../../elementos/ButtonC1_Preguntas";
-//import C1_pregunta1_Resp_enfermera from "../../../data/C1_preguntas/C1_pregunta1_Resp_enfermera";
-import C1_pregunta1_Resp_enfermera from "../../../data/C1_preguntas/C1_pregunta1_Resp_enfermera";
+
+import C1_pregunta3_Resp_enfermera from "../../../data/C1_preguntas/C1_pregunta3_Resp_enfermera";
+
 import { Alert } from "../../../elementos/Alert";
 
  
@@ -67,7 +68,7 @@ const styles = StyleSheet.create({
 
 const mult =5;
 
-class juego1_part1 extends React.Component {
+class V_c1_Preg3_pregunta extends React.Component {
    
 
   
@@ -109,20 +110,20 @@ class juego1_part1 extends React.Component {
   nextQuestion = () => {
     this.setState(state => {
       const nextIndex = state.activeQuestionIndex + 1;
-               
+
       if (nextIndex >= state.totalCount && this.state.correctCount < 2) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate('DialogosC1',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
+        return this.props.navigation.navigate('V_C1_Preg3_dialogo',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
       }else if (nextIndex >= state.totalCount   && this.state.correctCount==2) {
-       return this.props.navigation.navigate('V_C1_Resp_enfermera',{repu_enferme:1,experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount),
-        title: "Respuesta enfermero",
-          questions: C1_pregunta1_Resp_enfermera,
+       return this.props.navigation.navigate('V_C1_RespP3_enfermera',{repu_enferme:1,experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount),
+        title: "RespuestaP3 enfermero",
+          questions: C1_pregunta3_Resp_enfermera,
           color: "#36b1f0"});
       
       }else if (nextIndex < state.totalCount && this.state.correctCount == 0) {
-         return this.props.navigation.navigate('DialogosC1',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
+         return this.props.navigation.navigate('V_C1_Preg3_dialogo',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
       
-      }
+      } 
 
       return {
         activeQuestionIndex: nextIndex,
@@ -182,4 +183,4 @@ class juego1_part1 extends React.Component {
   }
 }
 
-export default juego1_part1;
+export default V_c1_Preg3_pregunta;

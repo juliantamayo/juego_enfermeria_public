@@ -148,7 +148,7 @@ const mult =5;
 
 
 
-class V_C1_Resp_enfermera extends React.Component {
+class V_C1_RespP3_enfermera extends React.Component {
    
   state = {
     modalVisible: false,
@@ -351,8 +351,22 @@ class V_C1_Resp_enfermera extends React.Component {
 
      <View style={style.header}>   
       <View style={style.headerIzquierda}>
+
      <TouchableOpacity style={ style.imageContainer } activeOpacity={0.8}
-       onPress={() => this.props.navigation.navigate('Escena2')}>
+     onPress={() => 
+                    this.props.navigation.dispatch(
+                      CommonActions.reset({
+                        index: 1,
+                        routes: [
+                          {
+                            name: 'V_C1_RespP3_enfermera',
+                       
+                          },
+                          { name: 'Escena2' },
+                        ],
+                      })
+                    )
+                  }>
                <Image style={ style.image } source={require("../../../../assets/images/button-back.png")} />
       </TouchableOpacity>
 </View>
@@ -361,20 +375,7 @@ class V_C1_Resp_enfermera extends React.Component {
 <View style={style.headerDerecha}> 
 
            <TouchableOpacity style={ style.imageContainer } activeOpacity={0.8}
-                 onPress={() => 
-                    this.props.navigation.dispatch(
-                      CommonActions.reset({
-                        index: 1,
-                        routes: [
-                          {
-                            name: 'Escena1',
-                       
-                          },
-                          { name: 'M_caso1' },
-                        ],
-                      })
-                    )
-                  }>
+                  onPress={() => this.props.navigation.navigate('Escena2')}>
                          <Image style={ style.image } source={require("../../../../assets/images/ayuda.png")} />
                 </TouchableOpacity>   
 
@@ -413,4 +414,4 @@ class V_C1_Resp_enfermera extends React.Component {
   }
 }
 
-export default V_C1_Resp_enfermera;
+export default V_C1_RespP3_enfermera;

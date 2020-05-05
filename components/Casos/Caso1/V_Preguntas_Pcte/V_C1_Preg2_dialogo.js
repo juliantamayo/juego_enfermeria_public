@@ -4,7 +4,7 @@ import {AsyncStorage, Modal, View, StyleSheet, Dimensions, StatusBar, Text, Safe
 import { Button, ButtonContainer } from "../../../elementos/ButtonEscene1";
 import style from '../../../Style.js';
 import Escena2Dialog from "../../../data/escena2dialog";
-import C1_pregunta1_Resp1_C from "../../../data/C1_preguntas/C1_pregunta1_Resp1_C.J.M";
+import C1_pregunta2_pregunta from "../../../data/C1_preguntas/C1_pregunta2_pregunta";
 import { CommonActions } from '@react-navigation/native';
 import Swiper from 'react-native-swiper';
 const { width, height } = Dimensions.get('window')
@@ -148,7 +148,7 @@ const mult =5;
 
 
 
-class V_C1_Resp_enfermera extends React.Component {
+class V_C1_Preg2_dialogo extends React.Component {
    
   state = {
     modalVisible: false,
@@ -167,9 +167,9 @@ class V_C1_Resp_enfermera extends React.Component {
 
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate("Escena2", {activeQuestion: 1, 
-          title: "1.PreguntasC1",
-          questions: C1_pregunta1_Resp1_C,
+        return this.props.navigation.navigate("V_C1_Preg2_pregunta", {activeQuestion: 1, 
+          title: "2.Preguntas",
+          questions: C1_pregunta2_pregunta,
           color: "#36b1f0"
         });
       }
@@ -413,4 +413,4 @@ class V_C1_Resp_enfermera extends React.Component {
   }
 }
 
-export default V_C1_Resp_enfermera;
+export default V_C1_Preg2_dialogo;
