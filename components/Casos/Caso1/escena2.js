@@ -8,6 +8,9 @@ import C1_pregunta1 from "../../data/C1_preguntas/C1_pregunta1";
 import C1_pregunta2 from "../../data/C1_preguntas/C1_pregunta2_dialog";
 import C1_pregunta3 from "../../data/C1_preguntas/C1_pregunta3_dialog";
 import C1_pregunta4 from "../../data/C1_preguntas/C1_pregunta4_dialog";
+import C1_pregunta5 from "../../data/C1_preguntas/C1_pregunta5_dialog";
+import C1_pregunta6 from "../../data/C1_preguntas/C1_pregunta6_dialog";
+import C1_pregunta7 from "../../data/C1_preguntas/C1_pregunta7_dialog";
 import { RowItem } from "../../elementos/RowItem";
 
 export default class menu_caso1 extends React.Component {
@@ -104,9 +107,9 @@ render() {
       name="5. ¿Cuáles son los nombres de sus hijas desde la mayor a la menor?"
       color="#77c6c6"
       onPress={() =>
-        this.props.navigation.navigate("Escena2", {
+        this.props.navigation.navigate("V_C1_Preg5_dialogo", {
           title: "Escena2",
-          questions: Escena2Dialog,
+          questions: C1_pregunta5,
           color: "#799496"
         })
       }
@@ -115,9 +118,9 @@ render() {
       name="6. ¿Podria por favor levantar sus brazos?"
       color="#00b9bc"
       onPress={() =>
-        this.props.navigation.navigate("Escena2", {
+        this.props.navigation.navigate("V_C1_Preg6_dialogo", {
           title: "Escena2",
-          questions: Escena2Dialog,
+          questions: C1_pregunta6,
           color: "#799496"
         })
       }
@@ -126,9 +129,9 @@ render() {
       name="7. Puede cerrar los ojos y me puede indicar hacia ¿qué dirección le estoy movilizando su brazo derecho e izquierdo?"
       color="#77c6c6"
       onPress={() =>
-        this.props.navigation.navigate("Escena2", {
+        this.props.navigation.navigate("V_C1_Preg7_dialogo", {
           title: "Escena2",
-          questions: Escena2Dialog,
+          questions: C1_pregunta7,
           color: "#799496"
         })
       }

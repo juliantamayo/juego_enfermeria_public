@@ -3,24 +3,13 @@ const questions = [
   {
     image: require("../../../assets/images/enfermera1.png"),
     personaje: "ENFERMERA",
-    Text: "¿Qué elementos de los que observa aquí en la habitación, los encuentra también en la sala de su hogar?"
+    Text: "Por favor, dígame si usted tiene $1.000.000 de pesos en un banco, $2.000.000 de pesos en otro y en un tercero $750.000 pesos ¿sabe cuánto tendría ahorrado en total?."
    
   },
   {
-    image: require("../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_pensando.png"),
+    image: require("../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_enojado_hablando.png"),
     personaje: "Señor C.J.M",
-    Text: "¿en mi casa? (Lo dice con dificultad)"
-  
-  },{
-    image: require("../../../assets/images/enfermera1.png"),
-    personaje: "ENFERMERA",
-    Text: "¿Sabe en qué año estamos?"
-   
-  },
-  {
-    image: require("../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_pensando2.png"),
-    personaje: "Señor C.J.M",
-    Text: "Estamos... en el... 2007?. (Lo dice con dificultad)"
+    Text: "Tendríamos…. no se…. $4.000.000? (Lo dice con dificultad)"
   
   }
 ];
