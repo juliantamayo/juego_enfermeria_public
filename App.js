@@ -63,6 +63,8 @@ import V_C1_Preg7_dialogo from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_P
 import V_C1_Preg7_pregunta from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg7_pregunta';
 import V_C1_RespP7_enfermera from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_RespP7_enfermera';
 
+import Escena3 from './components/Casos/Caso1/escena3';
+
 import Variables from './components/Casos/Caso1/variables_caso1';
 
 
@@ -590,6 +592,19 @@ useEffect(() => {
         }
 
        })}/>
+       
+        <Stack.Screen name="Escena3" component={Escena3} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+
+       })}/>      
 
          <Stack.Screen name="pruebaT"  component={pruebaT} />
          <Stack.Screen name="pruebaT2"  component={pruebaT2} />
