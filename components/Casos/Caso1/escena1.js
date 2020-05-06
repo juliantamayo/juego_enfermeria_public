@@ -6,7 +6,6 @@ import { ModalHistorial } from "../../elementos/Modals";
 import style from './../../Style.js';
 import Escena2Dialog from "../../data/escena2dialog";
 import { CommonActions } from '@react-navigation/native';
-import Swiper from 'react-native-swiper';
 const { width, height } = Dimensions.get('window')
  
 const styles = StyleSheet.create({
@@ -195,7 +194,13 @@ class escena1 extends React.Component {
     return (
     <ImageBackground source={question.image} style={style.container} resizeMode='contain'>
         
-    
+      <ModalHistorial
+      
+       text={modalVisible}
+       onPress={() => {
+                  this.setModalVisible(!modalVisible);
+                }}
+      />
 
       <View
         style={
