@@ -147,7 +147,7 @@ const mult =5;
 
 
 
-class V_C2_RespP2_enfermera extends React.Component {
+class V_C3_RespP2_enfermera extends React.Component {
    
   state = {
     modalVisible: false,
@@ -166,7 +166,7 @@ class V_C2_RespP2_enfermera extends React.Component {
 
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate("C2_Escena2");
+        return this.props.navigation.navigate("C3_Escena2");
       }
 
       return {
@@ -347,7 +347,7 @@ class V_C2_RespP2_enfermera extends React.Component {
      <View style={style.header}>   
       <View style={style.headerIzquierda}>
      <TouchableOpacity style={ style.imageContainer } activeOpacity={0.8}
-       onPress={() => this.props.navigation.navigate('C2_Escena2')}>
+       onPress={() => this.props.navigation.navigate('C3_Escena2')}>
                <Image style={ style.image } source={require("../../../../assets/images/button-back.png")} />
       </TouchableOpacity>
 </View>
@@ -408,4 +408,4 @@ class V_C2_RespP2_enfermera extends React.Component {
   }
 }
 
-export default V_C2_RespP2_enfermera;
+export default V_C3_RespP2_enfermera;

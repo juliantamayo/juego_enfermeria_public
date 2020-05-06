@@ -1,8 +1,8 @@
 import React from "react";
 import {AsyncStorage, Modal, View, StyleSheet, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
 
-import { Button, ButtonContainer } from "../../../elementos/ButtonEscene1";
-import style from '../../../Style.js';
+import { Button, ButtonContainer } from "../../elementos/ButtonEscene1";
+import style from './../../Style.js';
 
 import { CommonActions } from '@react-navigation/native';
 import Swiper from 'react-native-swiper';
@@ -147,7 +147,7 @@ const mult =5;
 
 
 
-class V_C2_RespP2_enfermera extends React.Component {
+class escena1 extends React.Component {
    
   state = {
     modalVisible: false,
@@ -166,7 +166,10 @@ class V_C2_RespP2_enfermera extends React.Component {
 
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate("C2_Escena2");
+        return this.props.navigation.navigate("Guardar_escena1", {ex: '2', 
+          title: "C3_Escena2",
+          color: "#36b1f0"
+        });
       }
 
       return {
@@ -347,8 +350,8 @@ class V_C2_RespP2_enfermera extends React.Component {
      <View style={style.header}>   
       <View style={style.headerIzquierda}>
      <TouchableOpacity style={ style.imageContainer } activeOpacity={0.8}
-       onPress={() => this.props.navigation.navigate('C2_Escena2')}>
-               <Image style={ style.image } source={require("../../../../assets/images/button-back.png")} />
+       onPress={() => this.props.navigation.navigate('M_caso3')}>
+               <Image style={ style.image } source={require("../../../assets/images/button-back.png")} />
       </TouchableOpacity>
 </View>
 
@@ -370,14 +373,14 @@ class V_C2_RespP2_enfermera extends React.Component {
                       })
                     )
                   }>
-                         <Image style={ style.image } source={require("../../../../assets/images/ayuda.png")} />
+                         <Image style={ style.image } source={require("../../../assets/images/ayuda.png")} />
                 </TouchableOpacity>   
 
               <TouchableOpacity style={ style.imageContainer } activeOpacity={0.8}
                    onPress={() => {
                         this.setModalVisible(true);
                       }}>
-                           <Image style={ style.image } source={require("../../../../assets/images/historial.png")} />
+                           <Image style={ style.image } source={require("../../../assets/images/historial.png")} />
                </TouchableOpacity>
       
       
@@ -408,4 +411,4 @@ class V_C2_RespP2_enfermera extends React.Component {
   }
 }
 
-export default V_C2_RespP2_enfermera;
+export default escena1;

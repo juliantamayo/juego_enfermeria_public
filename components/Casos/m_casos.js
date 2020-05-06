@@ -8,26 +8,13 @@ import { View,
 		 StatusBar,
 		 Image,
 		 ImageBackground } from "react-native";
-import sncQuestions from "../data/snc";
+
 import estilo from '../Style.js';
  import { CommonActions } from '@react-navigation/native';
 
-const window = Dimensions.get("window");
-const screen = Dimensions.get("screen");
 
 export default function m_casos({navigation, route}) {
-  const [dimensions, setDimensions] = useState({ window, screen });
-
-  const onChange = ({ window, screen }) => {
-    setDimensions({ window, screen });
-  };
-
-  useEffect(() => {
-    Dimensions.addEventListener("change", onChange);
-    return () => {
-      Dimensions.removeEventListener("change", onChange);
-    };
-  });
+  
 
   return (
 <ImageBackground source={require("../../assets/images/background.png")}style={estilo.container} resizeMode='contain'>
@@ -104,7 +91,7 @@ export default function m_casos({navigation, route}) {
         <Text style={style.text}>Caso 2</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => navigation.navigate('M_juegos3')} style={style.button}>
+      <TouchableOpacity onPress={() => navigation.navigate('M_caso3')} style={style.button}>
         <Text style={style.text}>Caso 3</Text>
       </TouchableOpacity>
 
@@ -143,45 +130,3 @@ const style = StyleSheet.create({
   }
 });
 
-/*
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "#36B1F0",
-    flex: 1,
-    paddingHorizontal: 20
-  },
-  text: {
-    color: "#fff",
-    fontSize: 25,
-    textAlign: "center",
-    letterSpacing: -0.02,
-    fontWeight: "600"
-  },
-  safearea: {
-    flex: 1,
-    marginTop: 50,
-    justifyContent: "space-between"
-  },
-  button: {
-    backgroundColor: "rgba(3, 33, 0, 0.47)",
-    borderRadius: 10,
-    paddingVertical: 15,
-    alignItems: "center",
-    justifyContent: "center",
-    width: "46%",
-    marginTop: 20
-  },
-  text2: {
-    color: "#fff",
-    fontSize: 20,
-    textAlign: "center"
-  },
-  buttonContainer: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    marginTop: 20,
-     backgroundColor: "red",
-    justifyContent: "space-between"
-  }
-});
-*/
