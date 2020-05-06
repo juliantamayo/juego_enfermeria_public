@@ -1,8 +1,8 @@
 //This is an example of React Native Global Scope Variables//
 import React, { Component } from 'react';
 //import react in our code.
-import { StyleSheet, View, Text, Button, AsyncStorage, TouchableOpacity, Alert, Dimensions } from 'react-native';
-const { width, height } = Dimensions.get('window')
+import { StyleSheet, View, Text, Button, AsyncStorage,Alert } from 'react-native';
+
 //import all the components we are going to use.
 export default class guardar_escena1 extends Component {
   constructor(route) {
@@ -26,17 +26,6 @@ state = {
        
    } 
 
-  displayData = async ()=>{  
-    try{  
-      let user = await AsyncStorage.getItem('nombre');  
-      alert(user);  
-    }  
-    catch(error){  
-      alert(error)  
-    }  
-  }
-
-
   removeValue = async () => {
   try {
     await AsyncStorage.removeItem('nombre');
@@ -54,22 +43,10 @@ state = {
   
    componentDidMount = () => AsyncStorage.getItem('nombre').then((value) => this.setState({ 'nombre': value }))
      
-   
-
-
-  
-  changeScreen = () => {
-    //Function to navigate to the next screen
-    this.props.navigation.navigate('pruebaT2');
-  };
   render() {
     return (
     <View style={styles.MainContainer}>
         <View style={{ marginBottom: 15 }}>
-          <Text style={styles.textStyle}>
-           nombre {global.nombre}
-            {/*Global Variable*/}
-          </Text>
             <Text style={styles.textStyle}>
          hola   {global.hola}
             {/*Global Variable*/}
@@ -77,9 +54,7 @@ state = {
         </View>
          <Button onPress ={this.saveData} title="guardar" style={styles.button}/>  
           <View style={styles.button}></View>
-           
-        <Button onPress ={this.displayData} title="mostrar" />  
-         <View style={styles.button}></View>
+     
         <Button onPress ={this.removeValue}  title="eliminar cache data"/>  
         
         <View style={styles.button}></View>

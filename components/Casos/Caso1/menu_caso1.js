@@ -15,10 +15,7 @@ export default class menu_caso1 extends React.Component {
 
     state ={
 
-      isVisible:false,
-      isVisible2:false,
       val:this.props.route.params?.activeQuestion,
-      'name': '',
        hola:this.props.route.params?.ex,
        'nombre':''
     };
@@ -71,19 +68,25 @@ render() {
       onPress={() =>
         this.props.navigation.navigate("Escena2", {
           title: "Preguntas a Paciente",
-          questions: Escena2Dialog,
           color: "#799496"
         })
       }
     />
     : null }
+
+    { this.state.nombre == '2'? 
     <RowItem
       name="Pruebas de valoración"
-       color="#f9e67a"
+      color="#f9e67a"
       onPress={() =>
-        this.props.navigation.navigate("pruebaT",{ex:'2'})
+        this.props.navigation.navigate("Escena3", {
+          title: "Pruebas de valoración",
+          color: "#799496"
+        })
       }
     />
+    : null }
+    
     <RowItem
       name="Valoración"
       color="#f9a94b"
@@ -102,7 +105,7 @@ render() {
       name="Variables"
       color="#00b9bc"
       onPress={() =>
-        this.props.navigation.navigate("Variables",{ex:'2'})
+        this.props.navigation.navigate("pruebaT",{ex:'2'})
       }
     />
     </ScrollView>

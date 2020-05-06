@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     textAlign: "center"
   },
   buttonContainer: {
-    flexDirection: "row",
+    flexDirection: "column",
     flexWrap: "wrap",
     marginTop: 20,
     justifyContent: "space-between"
