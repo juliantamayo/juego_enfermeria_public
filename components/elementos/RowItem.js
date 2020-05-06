@@ -15,7 +15,8 @@ const styles = StyleSheet.create({
     //color: "#fff",
     fontWeight: 'bold',
     textAlign: 'center'
-  }
+  },
+  
 });
 
 export const RowItem = ({ onPress = () => {}, name, color }) => (
@@ -25,3 +26,5 @@ export const RowItem = ({ onPress = () => {}, name, color }) => (
     </View>
   </TouchableOpacity>
 );
+
+
