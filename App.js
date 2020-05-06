@@ -1,4 +1,5 @@
 
+
 import React, {Component, useEffect} from 'react';
 import { Button, View, Text, StyleSheet, BackHandler, Alert } from 'react-native';
 import { NavigationContainer, CommonActions } from '@react-navigation/native';
@@ -67,6 +68,54 @@ import Escena3 from './components/Casos/Caso1/escena3';
 
 import Variables from './components/Casos/Caso1/variables_caso1';
 
+//-------------------------caso2---------------------------------
+import M_caso2 from './components/Casos/Caso2/menu_caso2';
+import C2_Escena1 from './components/Casos/Caso2/escena1';
+import C2_Guardar_escena1 from './components/Casos/Caso2/V_Guardar/guardar_escena1';
+import C2_Escena2 from './components/Casos/Caso2/escena2';
+
+import V_C2_Preg1_dialogo from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg1_dialogo';
+import V_C2_Preg1_pregunta from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg1_pregunta';
+import V_C2_RespP1_enfermera from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_RespP1_enfermera';
+
+import V_C2_Preg2_dialogo from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg2_dialogo';
+import V_C2_Preg2_pregunta from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg2_pregunta';
+import V_C2_RespP2_enfermera from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_RespP2_enfermera';
+
+import V_C2_Preg3_dialogo from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg3_dialogo';
+import V_C2_Preg3_pregunta from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg3_pregunta';
+import V_C2_RespP3_enfermera from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_RespP3_enfermera';
+
+import V_C2_Preg4_dialogo from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg4_dialogo';
+import V_C2_Preg4_pregunta from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg4_pregunta';
+import V_C2_RespP4_enfermera from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_RespP4_enfermera';
+
+import V_C2_Preg5_dialogo from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg5_dialogo';
+import V_C2_Preg5_pregunta from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg5_pregunta';
+import V_C2_RespP5_enfermera from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_RespP5_enfermera';
+
+
+//-------------------------caso3---------------------------------
+import M_caso3 from './components/Casos/Caso3/menu_caso3';
+import C3_Escena1 from './components/Casos/Caso3/escena1';
+import C3_Guardar_escena1 from './components/Casos/Caso3/V_Guardar/guardar_escena1';
+import C3_Escena2 from './components/Casos/Caso3/escena2';
+
+import V_C3_Preg1_dialogo from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_Preg1_dialogo';
+import V_C3_Preg1_pregunta from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_Preg1_pregunta';
+import V_C3_RespP1_enfermera from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_RespP1_enfermera';
+
+import V_C3_Preg2_dialogo from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_Preg2_dialogo';
+import V_C3_Preg2_pregunta from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_Preg2_pregunta';
+import V_C3_RespP2_enfermera from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_RespP2_enfermera';
+
+import V_C3_Preg3_dialogo from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_Preg3_dialogo';
+import V_C3_Preg3_pregunta from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_Preg3_pregunta';
+import V_C3_RespP3_enfermera from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_RespP3_enfermera';
+
+import V_C3_Preg4_dialogo from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_Preg4_dialogo';
+import V_C3_Preg4_pregunta from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_Preg4_pregunta';
+import V_C3_RespP4_enfermera from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_RespP4_enfermera';
 
 const Stack = createStackNavigator();
 
@@ -581,6 +630,7 @@ useEffect(() => {
 
        })}/>
 
+
        <Stack.Screen name="V_C1_RespP7_enfermera" component={V_C1_RespP7_enfermera} 
         options={
            
@@ -605,6 +655,433 @@ useEffect(() => {
 
 
        })}/>      
+
+         <Stack.Screen name="M_caso2"  component={M_caso2}
+          options={{
+         headerLeft: null,
+          title: 'M_caso2',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }} />
+
+      
+
+         <Stack.Screen name="C2_Escena1"  component={C2_Escena1}
+          options={{
+         headerLeft: null,
+          title: 'C2_Escena1',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }} />        
+
+
+         <Stack.Screen name="C2_Escena2"  component={C2_Escena2}
+          options={{
+         headerLeft: null,
+          title: 'C2_Escena2',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }} />        
+
+
+            <Stack.Screen name="V_C2_Preg1_dialogo" component={V_C2_Preg1_dialogo} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+           <Stack.Screen name="V_C2_Preg1_pregunta" component={V_C2_Preg1_pregunta} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+
+       <Stack.Screen name="V_C2_RespP1_enfermera" component={V_C2_RespP1_enfermera} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+
+
+            <Stack.Screen name="V_C2_Preg2_dialogo" component={V_C2_Preg2_dialogo} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+           <Stack.Screen name="V_C2_Preg2_pregunta" component={V_C2_Preg2_pregunta} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+
+       <Stack.Screen name="V_C2_RespP2_enfermera" component={V_C2_RespP2_enfermera} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+
+            <Stack.Screen name="V_C2_Preg3_dialogo" component={V_C2_Preg3_dialogo} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+           <Stack.Screen name="V_C2_Preg3_pregunta" component={V_C2_Preg3_pregunta} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+
+       <Stack.Screen name="V_C2_RespP3_enfermera" component={V_C2_RespP3_enfermera} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+
+            <Stack.Screen name="V_C2_Preg4_dialogo" component={V_C2_Preg4_dialogo} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+           <Stack.Screen name="V_C2_Preg4_pregunta" component={V_C2_Preg4_pregunta} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+
+       <Stack.Screen name="V_C2_RespP4_enfermera" component={V_C2_RespP4_enfermera} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+            <Stack.Screen name="V_C2_Preg5_dialogo" component={V_C2_Preg5_dialogo} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+           <Stack.Screen name="V_C2_Preg5_pregunta" component={V_C2_Preg5_pregunta} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+
+       <Stack.Screen name="V_C2_RespP5_enfermera" component={V_C2_RespP5_enfermera} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+         <Stack.Screen name="M_caso3"  component={M_caso3}
+          options={{
+         headerLeft: null,
+          title: 'M_caso3',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }} />
+
+      
+
+         <Stack.Screen name="C3_Escena1"  component={C3_Escena1}
+          options={{
+         headerLeft: null,
+          title: 'C3_Escena1',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }} />        
+
+
+         <Stack.Screen name="C3_Escena2"  component={C3_Escena2}
+          options={{
+         headerLeft: null,
+          title: 'C3_Escena2',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }} />   
+
+             <Stack.Screen name="V_C3_Preg1_dialogo" component={V_C3_Preg1_dialogo} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+           <Stack.Screen name="V_C3_Preg1_pregunta" component={V_C3_Preg1_pregunta} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+
+       <Stack.Screen name="V_C3_RespP1_enfermera" component={V_C3_RespP1_enfermera} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+
+
+            <Stack.Screen name="V_C3_Preg2_dialogo" component={V_C3_Preg2_dialogo} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+           <Stack.Screen name="V_C3_Preg2_pregunta" component={V_C3_Preg2_pregunta} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+
+       <Stack.Screen name="V_C3_RespP2_enfermera" component={V_C3_RespP2_enfermera} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+
+            <Stack.Screen name="V_C3_Preg3_dialogo" component={V_C3_Preg3_dialogo} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+           <Stack.Screen name="V_C3_Preg3_pregunta" component={V_C3_Preg3_pregunta} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+
+       <Stack.Screen name="V_C3_RespP3_enfermera" component={V_C3_RespP3_enfermera} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+
+            <Stack.Screen name="V_C3_Preg4_dialogo" component={V_C3_Preg4_dialogo} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+           <Stack.Screen name="V_C3_Preg4_pregunta" component={V_C3_Preg4_pregunta} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
+
+       <Stack.Screen name="V_C3_RespP4_enfermera" component={V_C3_RespP4_enfermera} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+       })}/>
+
 
          <Stack.Screen name="pruebaT"  component={pruebaT} />
          <Stack.Screen name="pruebaT2"  component={pruebaT2} />

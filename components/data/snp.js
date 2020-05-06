@@ -20,7 +20,7 @@ const questions = [
     ]
   },
   {
-    image: require("../../assets/images/snc.jpeg"),
+    image: require("../../assets/images/SNC_partes_cerebro.png"),
     question: "hola",
     answers: [
       { id: "1", text: "1" },

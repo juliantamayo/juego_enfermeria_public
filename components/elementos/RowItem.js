@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center'
   },
+
   columns:{
     //flexDirection: "columns",
     paddingHorizontal: 15,
@@ -29,6 +30,7 @@ const styles = StyleSheet.create({
    width: Dimensions.get('window').width/3,
   }
 
+
 });
 
 export const RowItem = ({ onPress = () => {}, name, color }) => (
@@ -39,6 +41,7 @@ export const RowItem = ({ onPress = () => {}, name, color }) => (
   </TouchableOpacity>
 );
 
+
 export const RowItemEscena3 = ({ onPress = () => {}, name, color }) => (
  
   <TouchableOpacity onPress={onPress} activeOpacity={0.8}>
@@ -48,5 +51,6 @@ export const RowItemEscena3 = ({ onPress = () => {}, name, color }) => (
   </TouchableOpacity>
   
 );
+
 
 

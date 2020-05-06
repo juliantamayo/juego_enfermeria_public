@@ -1,18 +1,31 @@
 import React from "react";
-import { View, StyleSheet, StatusBar, Text, SafeAreaView, Image,TouchableHighlight, Modal } from "react-native";
+import { View, StyleSheet, StatusBar, Text, SafeAreaView, ImageBackground, Image, TouchableHighlight, ScrollView } from "react-native";
 
-import { Button, ButtonContainer } from "../../elementos/ButtonJ1";
-import { Alert } from "../../elementos/Alert";
+import { Button, ButtonContainer } from "../../../elementos/ButtonC1_Preguntas";
+
+import D_C3_pregunta1_Resp_enfermera from "../../../data/C3_data/C3_preguntas/D_C3_pregunta1_Resp_enfermera";
+
+import { Alert } from "../../../elementos/Alert";
 
  
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#36B1F0",
+  //  backgroundColor: "#36B1F0",
     flex: 1,
     paddingHorizontal: 20
   },
   text: {
     color: "#fff",
+    backgroundColor: "#36B1F0",
+    fontSize: 22,
+    textAlign: "center",
+    letterSpacing: -0.02,
+    fontWeight: "600"
+  },
+
+  textContador: {
+    color: "#fff",
+    //backgroundColor: "#36B1F0",
     fontSize: 22,
     textAlign: "center",
     letterSpacing: -0.02,
@@ -20,9 +33,9 @@ const styles = StyleSheet.create({
   },
   containerImagen:{
     alignItems : 'center',
-    backgroundColor: 'black',
+    backgroundColor: 'white',
     width : '100%',
-    height : '68%'
+    height : '50%'
   },
   Imagen:{
     width: 290,
@@ -55,7 +68,7 @@ const styles = StyleSheet.create({
 
 const mult =5;
 
-class juego3 extends React.Component {
+class V_C3_Preg1_pregunta extends React.Component {
    
 
   
@@ -70,7 +83,7 @@ class juego3 extends React.Component {
     activeQuestionIndex: 0,
     answered: false,
     answerCorrect: false
-
+      
   };
 
   answer = correct => {
@@ -98,10 +111,20 @@ class juego3 extends React.Component {
     this.setState(state => {
       const nextIndex = state.activeQuestionIndex + 1;
 
-      if (nextIndex >= state.totalCount) {
+      if (nextIndex >= state.totalCount && this.state.correctCount < 1) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate('Result_QJ3',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
-      }
+        return this.props.navigation.navigate('V_C3_Preg1_dialogo',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
+      }else if (nextIndex >= state.totalCount   && this.state.correctCount==1) {
+       return this.props.navigation.navigate('V_C3_RespP1_enfermera',{repu_enferme:1,experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount),
+        title: "RespuestaP1 C3 enfermero",
+          questions: D_C3_pregunta1_Resp_enfermera,
+          color: "#36b1f0"});
+      
+      }else if (nextIndex < state.totalCount && this.state.correctCount == 0) {
+         return this.props.navigation.navigate('V_C3_Preg1_dialogo',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
+      
+      } 
+
 
       return {
         activeQuestionIndex: nextIndex,
@@ -120,52 +143,19 @@ class juego3 extends React.Component {
     const question = questions[this.state.activeQuestionIndex];
     
     return (
-      <View
-        style={[
-          styles.container,
-          { backgroundColor: this.props.route.params.color }
-        ]}
-      >
+     
+    <ImageBackground source={require("../../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
 
-      <Modal
-          animationType="slide"
-          transparent={true}
-          visible={modalVisible}
-          onRequestClose={() => {
-            Alert.alert("Modal has been closed.");
-          }}
-        >
-          
-            <View style={styles.modalView}>
-              
-
-              <TouchableHighlight 
-                
-                onPress={() => {
-                  this.setModalVisible(!modalVisible);
-                }}
-              >
-                 <Image style={styles.Imagen}   source={question.image} resizeMode='contain'/>
-              </TouchableHighlight>
-            </View>
-         
-        </Modal>
+    <ScrollView  >
+    <StatusBar barStyle="dark-content" />
+      
         <StatusBar barStyle="light-content" />
         <SafeAreaView >
         
 
           <Text style={styles.text}>{question.question}</Text>  
           <View>
-          <View style={styles.containerImagen}>
-           <TouchableHighlight
           
-          onPress={() => {
-            this.setModalVisible(true);
-          }}
-        >
-         <Image style={styles.Imagen}   source={question.image} resizeMode='contain'/>
-        </TouchableHighlight>
-           </View>
           
 
             <ButtonContainer>
@@ -179,7 +169,7 @@ class juego3 extends React.Component {
             </ButtonContainer>
           </View>
 
-          <Text style={styles.text}>
+          <Text style={styles.textContador}>
             {`${this.state.correctCount}/${this.state.totalCount}`}
           </Text>
           
@@ -188,9 +178,10 @@ class juego3 extends React.Component {
           correct={this.state.answerCorrect}
           visible={this.state.answered}
         />
-      </View>
+        </ScrollView>
+       </ImageBackground>
     );
   }
 }
 
-export default juego3;
+export default V_C3_Preg1_pregunta;
