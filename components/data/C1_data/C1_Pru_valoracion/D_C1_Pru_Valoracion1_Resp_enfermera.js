@@ -3,14 +3,14 @@ const questions = [
  {
     image: require("../../../../assets/images/enfermera_pensando.png"),
     personaje: "ENFERMERA",
-    Text: " ResPruValo1 Es un paciente que se encuentra bien vestido, limpio, con la camisa por dentro y bien peinado (ALIÑADO)"
+    Text: " Hemianopsia homónima de un lado: en cada ojo se compromete la visión del mismo hemicampo"
   },
-   {
+
+    {
     image: require("../../../../assets/images/enfermera_pensando.png"),
     personaje: "ENFERMERA",
-    Text: "Se le ve alegre, con buen lenguaje y entendible (tono adecuado), con marcha estable y espontaneo en lo que responde sin titubear."
+    Text: "hemianopsia homónima derecha en el caso del señor C.J.M"
   }
- 
 ];
 
 export default questions;

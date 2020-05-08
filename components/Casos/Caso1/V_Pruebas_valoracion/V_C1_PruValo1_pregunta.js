@@ -111,10 +111,10 @@ class V_C1_PruValo1_pregunta extends React.Component {
     this.setState(state => {
       const nextIndex = state.activeQuestionIndex + 1;
 
-      if (nextIndex >= state.totalCount && this.state.correctCount < 1) {
+      if (nextIndex >= state.totalCount && this.state.correctCount < 2) {
        // return this.props.navigation.popToTop();
         return this.props.navigation.navigate('V_C1_PruValo1_dialogo',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
-      }else if (nextIndex >= state.totalCount   && this.state.correctCount==1) {
+      }else if (nextIndex >= state.totalCount   && this.state.correctCount==2) {
        return this.props.navigation.navigate('V_C1_RespPruValo1_enfermera',{repu_enferme:1,experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount),
         title: "RespuestaPV1 C1 enfermero",
           questions: D_C1_Pru_Valoracion1_Resp_enfermera,
