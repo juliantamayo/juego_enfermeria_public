@@ -26,8 +26,6 @@ import juego3 from './components/Juegos/Juego3/juego3';
 import Result_QJ3 from './components/Juegos/Juego3/result_qJ3';
 //---------------------------------------------------------------
 import pruebaT from './components/Teoria/prueba_atras';
-import pruebaT2 from './components/Teoria/HomeContainer';
-import pruebaT3 from './components/Teoria/AsyncStorageExample';
 
 //-----------------------casos--------------------------------
 import M_casos from './components/Casos/m_casos';
@@ -1357,8 +1355,6 @@ useEffect(() => {
 
 
          <Stack.Screen name="pruebaT"  component={pruebaT} />
-         <Stack.Screen name="pruebaT2"  component={pruebaT2} />
-         <Stack.Screen name="pruebaT3"  component={pruebaT3} />
           <Stack.Screen name="Variables"  component={Variables} />
         
       </Stack.Navigator>

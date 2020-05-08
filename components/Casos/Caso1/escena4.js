@@ -11,8 +11,8 @@ export default class menu_caso1 extends React.Component {
     this.state = {
       check:false,
       check2:false,
-      caja1:1,
-      caja2:1
+      caja1:0,
+      caja2:0
     }
   }
 
@@ -89,12 +89,12 @@ render() {
        </View>
      
        </View>
-           <Text>Is CheckBox selected: {this.state.check ? this.state.caja1=2: this.state.caja1=1}</Text>
-           <Text>Is CheckBox selected: {this.state.check2 ? this.state.caja2=2: this.state.caja2=1}</Text>
-       <Text>{this.state.caja1}</Text>
+           <Text>Is CheckBox 1: {this.state.check ? this.state.caja1=2: this.state.caja1=1}</Text>
+           <Text>Is CheckBox 2: {this.state.check2 ? this.state.caja2=2: this.state.caja2=1}</Text>
+   
        <Button onPress={() => this.props.navigation.navigate('Guardr_valo',{
        	check1:this.state.caja1,check2:this.state.caja2
-       })} title="mostrar" /> 
+       })} title="Enviar" /> 
     </ScrollView>
   </View>
   </ImageBackground>

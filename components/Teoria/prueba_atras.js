@@ -117,6 +117,34 @@ export default class extends Component {
           <View style={styles.slide}>
             <Image
               style={styles.image}
+              source={require('../../assets/images/1.jpg')}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.slide}>
+            <Image
+              style={styles.image}
+              source={require('../../assets/images/1.jpg')}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.slide}>
+            <Image
+              style={styles.image}
+              source={require('../../assets/images/1.jpg')}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.slide}>
+            <Image
+              style={styles.image}
+              source={require('../../assets/images/1.jpg')}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.slide}>
+            <Image
+              style={styles.image}
               source={require('../../assets/images/2.jpg')}
               resizeMode="cover"
             />
@@ -317,95 +345,132 @@ const styles = StyleSheet.create({
   },
 });
 */
-import React, { Component } from 'react'
-import { StatusBar } from 'react-native'
-import { AsyncStorage, Text, View, TextInput, StyleSheet, TouchableOpacity, Alert } from 'react-native'
-
-class AsyncStorageExample extends Component {
-   state = {
-      'name': '',
-      hola:this.props.route.params?.ex,
-      'nombre':''
-   }
 /*
-  saveData = (value) => {
-      AsyncStorage.setItem('nombre', this.state.hola);
-      this.setState({ 'nombre': this.state.hola });
-       Alert.alert("Mensaje","Datos guardados correctamente");
-       if(Alert!null)
-       this.props.navigation.navigate("M_caso1", {activeQuestion: 1,   
-        });
-   } 
-   */ 
-    saveData = (value) => {
-      AsyncStorage.setItem('nombre', this.state.hola);
-      this.setState({ 'nombre': this.state.hola });
-       Alert.alert("Mensaje","Datos guardados correctamente", [
-       
-        { text: "OK", onPress: () =>  this.props.navigation.navigate("M_caso1",{p:this.state.nombre}) }
-      ]);
-       
-   } 
+import React from 'react'
+import { Text, View } from 'react-native'
+import Swiper from 'react-native-swiper'
 
-  displayData = async ()=>{  
-    try{  
-      let user = await AsyncStorage.getItem('nombre');  
-      alert(user);  
-    }  
-    catch(error){  
-      alert(error)  
-    }  
+var styles = {
+  wrapper: {},
+  slide1: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#9DD6EB'
+  },
+  slide2: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#97CAE5'
+  },
+  slide3: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#92BBD9'
+  },
+  text: {
+    color: '#fff',
+    fontSize: 30,
+    fontWeight: 'bold'
   }
-
-
-  
-   componentDidMount = () => AsyncStorage.getItem('nombre').then((value) => this.setState({ 'nombre': value }))
-     
-   setName = (value) => {
-      AsyncStorage.setItem('name', value);
-      this.setState({ 'name': value });
-   }
-   render() {
-      return (
-         <View style = {styles.container}>
-          
-
-            <TextInput style = {styles.textInput} autoCapitalize = 'none'
-            onChangeText = {this.setName}/>
-            <Text>
-               {this.state.name}
-            </Text>
-            <Text>
-               ={this.state.hola}
-            </Text>
-            <Text>
-             nombre  {this.state.nombre}
-            </Text>
-
-        <TouchableOpacity onPress ={this.saveData}>  
-          <Text>Click to save data</Text>  
-        </TouchableOpacity>    
-        <TouchableOpacity onPress ={this.displayData}>  
-          <Text>Click to display data</Text>  
-        </TouchableOpacity>
-       {this.state.nombre == '2'? <Text>data2</Text>: null }
-
-         </View>
-      )
-   }
 }
-export default AsyncStorageExample
 
-const styles = StyleSheet.create ({
-   container: {
-      flex: 1,
-      alignItems: 'center',
-      marginTop: 50
-   },
-   textInput: {
-      margin: 5,
-      height: 100,
-      borderWidth: 1,
-      backgroundColor: '#7685ed'
-   }
-})
+export default () => (
+  <Swiper style={styles.wrapper} showsButtons loop={false}>
+    <View testID="Hello" style={styles.slide1}>
+      <Text style={styles.text}>Hello Swiper</Text>
+    </View>
+    <View testID="Beautiful" style={styles.slide2}>
+      <Text style={styles.text}>Beautiful</Text>
+    </View>
+    <View testID="Simple" style={styles.slide3}>
+      <Text style={styles.text}>And simple</Text>
+    </View>
+  </Swiper>
+)
+*/
+
+import React, { Component } from 'react'
+import { Text, View, Image, Dimensions } from 'react-native'
+import Swiper from 'react-native-swiper'
+const { width } = Dimensions.get('window')
+
+const styles = {
+  wrapper: {},
+  slide: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: 'transparent'
+  },
+  text: {
+    color: '#fff',
+    fontSize: 30,
+    fontWeight: 'bold'
+  },
+  image: {
+    width,
+    flex: 1
+  },
+  paginationStyle: {
+    position: 'absolute',
+    bottom: 10,
+    right: 10
+  },
+  paginationText: {
+    color: 'white',
+    fontSize: 20
+  }
+}
+
+const renderPagination = (index, total, context) => {
+  return (
+    <View style={styles.paginationStyle}>
+      <Text style={{ color: 'grey' }}>
+        <Text style={styles.paginationText}>{index + 1}</Text>/{total}
+      </Text>
+    </View>
+  )
+}
+
+export default class extends Component {
+  render() {
+    return (
+      <Swiper
+        style={styles.wrapper}
+        renderPagination={renderPagination} showsButtons loop={false}
+        loop={false}
+      >
+        <View
+          style={styles.slide}
+          title={
+            <Text numberOfLines={1}>Aussie tourist dies at Bali hotel</Text>
+          }
+        >
+          <Image style={styles.image} source={require('../../assets/images/bg.jpg')} />
+        </View>
+        <View
+          style={styles.slide}
+          title={<Text numberOfLines={1}>Big lie behind Nine’s new show</Text>}
+        >
+          <Image style={styles.image} source={require('../../assets/images/2.jpg')} />
+        </View>
+        <View
+          style={styles.slide}
+          title={<Text numberOfLines={1}>Why Stone split from Garfield</Text>}
+        >
+          <Image style={styles.image} source={require('../../assets/images/3.jpg')} />
+        </View>
+        <View
+          style={styles.slide}
+          title={
+            <Text numberOfLines={1}>Learn from Kim K to land that job</Text>
+          }
+        >
+          <Image style={styles.image} source={require('../../assets/images/1.jpg')} />
+        </View>
+      </Swiper>
+    )
+  }
+}
