@@ -1,10 +1,10 @@
 import React from "react";
-import {AsyncStorage, View, StyleSheet, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity} from "react-native";
+import {AsyncStorage, View, StyleSheet, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
 
 import { Button, ButtonContainer } from "../../../elementos/ButtonEscene1";
 import { ModalHistorial } from "../../../elementos/Modals";
 import style from '../../../Style.js';
-import C1_pregunta1_Resp1_C from "../../../data/C1_preguntas/C1_pregunta1_Resp1_C.J.M";
+
 import { CommonActions } from '@react-navigation/native';
 const { width, height } = Dimensions.get('window')
  
@@ -12,7 +12,6 @@ const styles = StyleSheet.create({
   container: {
    // backgroundColor: "#36B1F0",
     flex: 1,
-
   },
   text: {
     color: "#fff",
@@ -39,15 +38,13 @@ const styles = StyleSheet.create({
   backgroundColor: "rgba(0, 185, 188, 0.37)",
   width: '100%',
   height: '100%'
-  } 
+  }
+    
 });
 
 const mult =5;
 
-
-
-
-class escena1 extends React.Component {
+class V_C1_RespPruValo6_enfermera extends React.Component {
    
   state = {
     modalVisible: false,
@@ -66,11 +63,7 @@ class escena1 extends React.Component {
 
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate("PreguntasC1", {activeQuestion: 1, 
-          title: "1.PreguntasC1",
-          questions: C1_pregunta1_Resp1_C,
-          color: "#36b1f0"
-        });
+        return this.props.navigation.navigate("Escena3");
       }
 
       return {
@@ -101,7 +94,6 @@ class escena1 extends React.Component {
                   this.setModalVisible(!modalVisible);
                 }}
       />
-
       <View
         style={
           styles.container
@@ -111,10 +103,7 @@ class escena1 extends React.Component {
 
      <View style={style.header}>   
       <View style={style.headerIzquierda}>
-     <TouchableOpacity style={ style.imageContainer } activeOpacity={0.8}
-       onPress={() => this.props.navigation.navigate('Escena2')}>
-               <Image style={ style.image } source={require("../../../../assets/images/button-back.png")} />
-      </TouchableOpacity>
+     
 </View>
 
 
@@ -173,4 +162,4 @@ class escena1 extends React.Component {
   }
 }
 
-export default escena1;
+export default V_C1_RespPruValo6_enfermera;

@@ -5,49 +5,19 @@ import { StyleSheet, View, Text, Button, AsyncStorage,Alert } from 'react-native
 
 //import all the components we are going to use.
 export default class guardar_escena1 extends Component {
-  constructor(route) {
-    super(route);
-    //Setting up global variable
-    global.hola = this.props.route.params?.ex;
-    global.nombre = 0;
-  }
+ 
 state = {
-      'nombre':0
+      'nombre':0,
+       caja:this.props.route.params?.check1,
+       caja2:this.props.route.params?.check2
    }
 
-  saveData = (value) => {
-      AsyncStorage.setItem('nombre',  global.hola.toString());
-      this.setState({ 'nombre':  global.hola });
-       Alert.alert("Mensaje","Datos guardados correctamente", [
-       
-        { text: "OK", onPress: () =>  this.props.navigation.navigate("M_casos") }
-     ]);
-       
-   } 
-
-  removeValue = async () => {
-  try {
-    await AsyncStorage.removeItem('nombre');
-     Alert.alert("Mensaje","Datos eliminados correctamente", [
-       
-        { text: "OK", onPress: () =>  this.props.navigation.navigate("M_casos") }
-     ]);
-  } catch(e) {
-    // remove error
-  }
-
-  console.log('Done.')
-}
-
-  
-   componentDidMount = () => AsyncStorage.getItem('nombre').then((value) => this.setState({ 'nombre': value }))
      
   render() {
     return (
     <View style={styles.MainContainer}>
         <View style={{ marginBottom: 15 }}>
             <Text style={styles.textStyle}>
-         hola   {global.hola}
             {/*Global Variable*/}
           </Text>
         </View>
@@ -57,7 +27,7 @@ state = {
         <Button onPress ={this.removeValue}  title="eliminar cache data"/>  
         
         <View style={styles.button}></View>
- 
+               <Text style={styles.textStyle}>   {this.state.caja}  </Text>
       </View>
     );
   }

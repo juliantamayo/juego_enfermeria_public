@@ -66,7 +66,7 @@ class escena1 extends React.Component {
 
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate("Guardar_escena1", {ex: '2', 
+        return this.props.navigation.navigate("Guardar_escena1", {ex: 2, 
           title: "Escena2",
           questions: Escena2Dialog,
           color: "#36b1f0"

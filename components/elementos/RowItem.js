@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet, Dimensions } from "react-nati
 const { width, height } = Dimensions.get('window')
 
 const styles = StyleSheet.create({
-  row: {
+   row: {
     paddingHorizontal: 15,
     paddingVertical: 20,
     backgroundColor: "#36B1F0",

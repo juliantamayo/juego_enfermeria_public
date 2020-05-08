@@ -1,14 +1,15 @@
 import React from "react";
-import { View, StyleSheet, StatusBar, Text, SafeAreaView } from "react-native";
+import { View, StyleSheet, StatusBar, Text, SafeAreaView, Dimensions, ScrollView} from "react-native";
 
-import { Button, ButtonContainer } from "../../elementos/Button";
+import { Button2, ButtonContainer } from "../../elementos/ButtonJ1";
 import { Alert } from "../../elementos/Alert";
+const { width, height } = Dimensions.get('window')
  
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#36B1F0",
     flex: 1,
-    paddingHorizontal: 20
+    paddingHorizontal: 20,
   },
   text: {
     color: "#fff",
@@ -19,8 +20,9 @@ const styles = StyleSheet.create({
   },
   safearea: {
     flex: 1,
-    marginTop: 50,
-    justifyContent: "space-between"
+    marginTop: 20,
+    justifyContent: "space-between",
+   
   }
 });
 
@@ -86,6 +88,7 @@ class Quiz extends React.Component {
           { backgroundColor: this.props.route.params.color }
         ]}
       >
+        <ScrollView  style={styles.margen}>
         <StatusBar barStyle="light-content" />
         <SafeAreaView style={styles.safearea}>
           <View>
@@ -93,7 +96,7 @@ class Quiz extends React.Component {
 
             <ButtonContainer>
               {question.answers.map(answer => (
-                <Button
+                <Button2
                   key={answer.id}
                   text={answer.text}
                   onPress={() => this.answer(answer.correct)}
@@ -111,6 +114,7 @@ class Quiz extends React.Component {
           correct={this.state.answerCorrect}
           visible={this.state.answered}
         />
+          </ScrollView>
       </View>
     );
   }

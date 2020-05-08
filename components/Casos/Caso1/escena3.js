@@ -2,12 +2,15 @@ import React from 'react';
 import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpacity,  Image, Text, AsyncStorage,Dimensions } from 'react-native';
 
 import styles from './../../Style.js';
-import Escena1Dialog from "../../data/escena1dialog";
-import Escena2Dialog from "../../data/escena2dialog";
-import C1_pregunta1 from "../../data/C1_preguntas/C1_pregunta1";
-import C1_pregunta2 from "../../data/C1_preguntas/C1_pregunta2_dialog";
-import C1_pregunta3 from "../../data/C1_preguntas/C1_pregunta3_dialog";
-import C1_pregunta4 from "../../data/C1_preguntas/C1_pregunta4_dialog";
+
+import C1_Pru_valo1_dialog from "../../data/C1_data/C1_Pru_valoracion/D_C1_Pru_Valoracion1_dialog";
+import C1_Pru_valo2_dialog from "../../data/C1_data/C1_Pru_valoracion/D_C1_Pru_Valoracion2_dialog";
+import C1_Pru_valo3_dialog from "../../data/C1_data/C1_Pru_valoracion/D_C1_Pru_Valoracion3_dialog";
+import C1_Pru_valo4_dialog from "../../data/C1_data/C1_Pru_valoracion/D_C1_Pru_Valoracion4_dialog";
+import C1_Pru_valo5_dialog from "../../data/C1_data/C1_Pru_valoracion/D_C1_Pru_Valoracion5_dialog";
+import C1_Pru_valo6_dialog from "../../data/C1_data/C1_Pru_valoracion/D_C1_Pru_Valoracion6_dialog";
+import C1_Pru_valo7_dialog from "../../data/C1_data/C1_Pru_valoracion/D_C1_Pru_Valoracion7_dialog";
+
 import { ButtonContainer, RowItemEscena3 } from "../../elementos/RowItem";
 const { width, height } = Dimensions.get('window')
 
@@ -28,7 +31,6 @@ export default class menu_caso1 extends React.Component {
 
 render() {
 
-  const userId = this.props.route.params?.activeQuestion;
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
@@ -59,9 +61,9 @@ render() {
       name="1"
       color="#77c6c6"
       onPress={() =>
-        this.props.navigation.navigate("DialogosC1", {
-          title: "1. ¿Cómo se encuentra?1",
-          questions: C1_pregunta1,
+        this.props.navigation.navigate("V_C1_PruValo1_dialogo", {
+          title: "1 pruValo1",
+          questions: C1_Pru_valo1_dialog,
           color: "#36b1f0"
         })
       }
@@ -71,9 +73,9 @@ render() {
       name="2"
       color="#00b9bc"
       onPress={() =>
-        this.props.navigation.navigate("V_C1_Preg2_dialogo", {
-          title: "¿En qué lugar se encuentra?",
-          questions: C1_pregunta2,
+        this.props.navigation.navigate("V_C1_PruValo2_dialogo", {
+          title: "2  pruValo2",
+          questions: C1_Pru_valo2_dialog,
           color: "#799496"
         })
       }
@@ -86,9 +88,9 @@ render() {
       name="3"
       color="#77c6c6"
       onPress={() =>
-        this.props.navigation.navigate("V_C1_Preg3_dialogo", {
-          title: "C1_pregunta3",
-          questions: C1_pregunta3,
+        this.props.navigation.navigate("V_C1_PruValo3_dialogo", {
+          title: "3",
+          questions: C1_Pru_valo3_dialog,
           color: "#799496"
         })
       }
@@ -97,9 +99,9 @@ render() {
       name="4"
       color="#00b9bc"
       onPress={() =>
-        this.props.navigation.navigate("V_C1_Preg4_dialogo", {
-          title: "Escena2",
-          questions: C1_pregunta4,
+        this.props.navigation.navigate("V_C1_PruValo4_dialogo", {
+          title: "4",
+          questions: C1_Pru_valo4_dialog,
           color: "#799496"
         })
       }
@@ -113,9 +115,9 @@ render() {
       name="5"
       color="#77c6c6"
       onPress={() =>
-        this.props.navigation.navigate("Escena2", {
-          title: "Escena2",
-          questions: Escena2Dialog,
+        this.props.navigation.navigate("V_C1_PruValo5_dialogo", {
+          title: "5",
+          questions: C1_Pru_valo5_dialog,
           color: "#799496"
         })
       }
@@ -124,9 +126,9 @@ render() {
       name="6"
       color="#00b9bc"
       onPress={() =>
-        this.props.navigation.navigate("Escena2", {
-          title: "Escena2",
-          questions: Escena2Dialog,
+        this.props.navigation.navigate("V_C1_PruValo6_dialogo", {
+          title: "6",
+          questions: C1_Pru_valo6_dialog,
           color: "#799496"
         })
       }
@@ -140,9 +142,9 @@ render() {
       name="7"
       color="#77c6c6"
       onPress={() =>
-        this.props.navigation.navigate("Escena2", {
-          title: "Escena2",
-          questions: Escena2Dialog,
+        this.props.navigation.navigate("V_C1_PruValo7_dialogo", {
+          title: "7",
+          questions: C1_Pru_valo7_dialog,
           color: "#799496"
         })
       }

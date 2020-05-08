@@ -14,18 +14,14 @@ export default class menu_caso1 extends React.Component {
 
 
     state ={
-
-      val:this.props.route.params?.activeQuestion,
-       hola:this.props.route.params?.ex,
-       'nombre':''
+    
     };
    
  componentDidMount = () => AsyncStorage.getItem('nombre').then((value) => this.setState({ 'nombre': value }))
 
 render() {
 
-  
-
+   const num= parseInt(this.state.nombre)+0;
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
    <View style={style.container}>
@@ -61,7 +57,7 @@ render() {
         })
       }
     />
-     { this.state.nombre == '2'? 
+     { num >= 2? 
     <RowItem
       name="Preguntas a Paciente"
       color="#f9a94b"
@@ -74,13 +70,12 @@ render() {
     />
     : null }
 
-    { this.state.nombre == '2'? 
+    { this.state.nombre >= 2? 
     <RowItem
       name="Pruebas de valoración"
       color="#f9e67a"
       onPress={() =>
         this.props.navigation.navigate("Escena3", {
-          title: "Pruebas de valoración",
           color: "#799496"
         })
       }
@@ -91,7 +86,7 @@ render() {
       name="Valoración"
       color="#f9a94b"
       onPress={() =>
-        this.props.navigation.navigate("Variables",{ex:'2'})
+        this.props.navigation.navigate("Escena4",{ex:'2'})
       }
     />
      <RowItem

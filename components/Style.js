@@ -9,9 +9,9 @@ export default StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-   // backgroundImage : 'url(../assets/images/background.png)'
-    //backgroundImage: uri('../assets/images/background.png')
-  },header:{
+   
+  },
+  header:{
       flex:0.3,
       flexDirection: 'row',
       height :'100%',
