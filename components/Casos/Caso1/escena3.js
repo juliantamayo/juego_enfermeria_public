@@ -22,24 +22,8 @@ export default class escena3 extends React.Component {
      
     };
    
-    componentDidMount= () => {
-    let keys = ['save_pruValo1', 'save_pregPcte2','save_pregPcte3','save_pregPcte4','save_pregPcte5','save_pregPcte6','save_pregPcte7'];
-    AsyncStorage.multiGet(keys).then(result => {
-      this.setState({
-        'save_pruValo1': result[0][1],
-        'save_pregPcte2': result[1][1],
-        'save_pregPcte3': result[2][1],
-        'save_pregPcte4': result[3][1],
-        'save_pregPcte5': result[4][1],
-        'save_pregPcte6': result[5][1],
-        'save_pregPcte7': result[6][1],
-      });
-    });
-  }; 
- 
 
 render() {
-const Esc3=parseFloat(this.state.save_pruValo1);//+parseFloat(this.state.save_pregPcte2)+parseFloat(this.state.save_pregPcte3)+parseFloat(this.state.save_pregPcte4)+parseFloat(this.state.save_pregPcte5)+parseFloat(this.state.save_pregPcte6)+parseFloat(this.state.save_pregPcte7);
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
@@ -160,10 +144,6 @@ const Esc3=parseFloat(this.state.save_pruValo1);//+parseFloat(this.state.save_pr
     />
 
    </View>
-   <Text style={styles.textStyle}>
-         hola   {Esc3}
-           
-          </Text>
     </ScrollView>
   </View>
   </ImageBackground>

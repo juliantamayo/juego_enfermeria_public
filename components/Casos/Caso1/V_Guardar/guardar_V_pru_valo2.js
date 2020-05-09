@@ -4,22 +4,22 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Text, Button, AsyncStorage,Alert } from 'react-native';
 
 //import all the components we are going to use.
-export default class guardar_V_preg_pcte7 extends Component {
+export default class guardar_V_pru_valo2 extends Component {
   constructor(route) {
     super(route);
     // variable global
-    global.recibe_pregPcte7 = this.props.route.params?.ppcte7;
+    global.recibe_pru_valo2 = this.props.route.params?.pv2;
   }
 state = {
-      'save_pregPcte7':0
+      'save_pruValo2':0
    }
 
   saveData = (value2) => {
-      AsyncStorage.setItem('save_pregPcte7',  global.recibe_pregPcte7.toString());
-      this.setState({ 'save_pregPcte7':  global.recibe_pregPcte7 });
+      AsyncStorage.setItem('save_pruValo2',  global.recibe_pru_valo2.toString());
+      this.setState({ 'save_pruValo2':  global.recibe_pru_valo2 });
        Alert.alert("Mensaje","Datos guardados correctamente", [
        
-        { text: "OK", onPress: () =>  this.props.navigation.navigate("M_casos") }
+        { text: "OK", onPress: () =>  this.props.navigation.navigate("Escena3") }
      ]);
        
    } 

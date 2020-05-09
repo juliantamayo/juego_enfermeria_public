@@ -23,10 +23,7 @@ const styles = StyleSheet.create({
   },
   text2: {
    marginLeft : 5,
-   //paddingVertical: 8,
-   // borderWidth: 4,
     borderColor: "#20232a",
-   // borderRadius: 6,
     backgroundColor: "red",
     color: "#fff",
     textAlign: "left",
@@ -63,7 +60,7 @@ class V_C1_RespPruValo3_enfermera extends React.Component {
 
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate("Escena3");
+        return this.props.navigation.navigate("Guardar_V_pru_valo3",{pv3:0.1});
       }
 
       return {
