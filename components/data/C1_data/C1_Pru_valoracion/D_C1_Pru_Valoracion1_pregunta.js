@@ -15,7 +15,7 @@ const questions = [
       { id: "1", text: "Hemianopsia homónima Izquierda: en un solo ojo se compromete la visión del mismo hemicampo" },
       { id: "2", text: "Hemianopsia homónima de derecha: en cada ojo se compromete la visión del mismo hemicampo" , correct: true},
     ]
-  },
+  }
 
 ];
 

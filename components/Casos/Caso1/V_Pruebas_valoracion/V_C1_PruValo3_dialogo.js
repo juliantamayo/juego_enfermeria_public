@@ -2,7 +2,7 @@ import React from "react";
 import {AsyncStorage, View, StyleSheet, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity} from "react-native";
 
 import { Button, ButtonContainer } from "../../../elementos/ButtonEscene1";
-import { ModalHistorial } from "../../../elementos/Modals";
+import { ModalHistorial,  Modal_C1_Pru_valoracion3_procedimiento, Modal_C1_Pru_valoracion3_HN } from "../../../elementos/Modals";
 import style from '../../../Style.js';
 import D_C1_Pru_Valoracion3_pregunta from "../../../data/C1_data/C1_Pru_valoracion/D_C1_Pru_Valoracion3_pregunta";
 import { CommonActions } from '@react-navigation/native';
@@ -52,6 +52,8 @@ class V_C1_PruValo3_dialogo extends React.Component {
    
   state = {
     modalVisible: false,
+    modalVisibleProdedimiento: false,
+    modalVisibleHN: false,
     correctCount: 0, 
     //totalCount: this.props.navigation.getParam("questions", []).length,
       totalCount: this.props.route.params?.questions.length,
@@ -84,11 +86,18 @@ class V_C1_PruValo3_dialogo extends React.Component {
   setModalVisible = (visible) => {
     this.setState({ modalVisible: visible });
   }
+   setModalVisibleProcedimiento = (visible) => {
+    this.setState({ modalVisibleProdedimiento: visible });
+  }
+
+  setModalVisibleHN= (visible) => {
+    this.setState({modalVisibleHN: visible });
+  }
 
   render() {
 
  
-    const { modalVisible } = this.state;
+    const { modalVisible, modalVisibleProdedimiento, modalVisibleHN } = this.state;
     const questions = this.props.route.params?.questions ?? [];
     const question = questions[this.state.activeQuestionIndex];
   
@@ -100,6 +109,22 @@ class V_C1_PruValo3_dialogo extends React.Component {
        text={modalVisible}
        onPress={() => {
                   this.setModalVisible(!modalVisible);
+                }}
+      />
+
+       <Modal_C1_Pru_valoracion3_procedimiento
+      
+       text={modalVisibleProdedimiento}
+       onPress={() => {
+                  this.setModalVisibleProcedimiento(!modalVisibleProdedimiento);
+                }}
+      />
+
+        <Modal_C1_Pru_valoracion3_HN
+      
+       text={modalVisibleHN}
+       onPress={() => {
+                  this.setModalVisibleHN(!modalVisibleHN);
                 }}
       />
 
@@ -137,14 +162,14 @@ class V_C1_PruValo3_dialogo extends React.Component {
 
               <TouchableOpacity style={ style.imageContainer } activeOpacity={0.8}
                    onPress={() => {
-                        this.setModalVisible(true);
+                        this.setModalVisibleProcedimiento(true);
                       }}>
                            <Image style={ style.image } source={require("../../../../assets/images/procedimiento.png")} />
                </TouchableOpacity>
 
                <TouchableOpacity style={ style.imageContainer } activeOpacity={0.8}
                    onPress={() => {
-                        this.setModalVisible(true);
+                        this.setModalVisibleHN(true);
                       }}>
                            <Image style={ style.image } source={require("../../../../assets/images/hallazgos_normales.png")} />
                </TouchableOpacity>

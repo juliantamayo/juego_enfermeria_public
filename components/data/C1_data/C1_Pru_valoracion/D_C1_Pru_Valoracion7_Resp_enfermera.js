@@ -3,12 +3,17 @@ const questions = [
  {
     image: require("../../../../assets/images/enfermera_pensando.png"),
     personaje: "ENFERMERA",
-    Text: " ResPruValo1 Es un paciente que se encuentra bien vestido, limpio, con la camisa por dentro y bien peinado (ALIÑADO)"
+    Text: "El paciente con sus ojos cerrados y solo al tacto en la mano izquierda reconoce llaves, monedas pero con el derecho no reconoce nada."
   },
    {
     image: require("../../../../assets/images/enfermera_pensando.png"),
     personaje: "ENFERMERA",
-    Text: "Se le ve alegre, con buen lenguaje y entendible (tono adecuado), con marcha estable y espontaneo en lo que responde sin titubear."
+    Text: "Astereognosia táctil en miembro superior derecho y estereognosia en miembro superior izquierdo."
+  },
+     {
+    image: require("../../../../assets/images/enfermera_pensando.png"),
+    personaje: "ENFERMERA",
+    Text: "incapacidad de identificar objetos a través del tacto"
   }
  
 ];
