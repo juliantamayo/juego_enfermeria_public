@@ -37,10 +37,7 @@ state = {
 
   console.log('Done.')
 }
-
-  
-   componentDidMount = () => AsyncStorage.getItem('save_pregPcte1').then((value) => this.setState({ 'save_pregPcte1': value }))
-     
+    
   render() {
     return (
     <View style={styles.MainContainer}>

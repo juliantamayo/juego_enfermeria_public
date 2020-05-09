@@ -15,18 +15,31 @@ import { ButtonContainer, RowItemEscena3 } from "../../elementos/RowItem";
 const { width, height } = Dimensions.get('window')
 
 
-export default class menu_caso1 extends React.Component {
+export default class escena3 extends React.Component {
 
-  
 
     state ={
-     'save_pregPcte1':0
+     
     };
-    
+   
+    componentDidMount= () => {
+    let keys = ['save_pruValo1', 'save_pregPcte2','save_pregPcte3','save_pregPcte4','save_pregPcte5','save_pregPcte6','save_pregPcte7'];
+    AsyncStorage.multiGet(keys).then(result => {
+      this.setState({
+        'save_pruValo1': result[0][1],
+        'save_pregPcte2': result[1][1],
+        'save_pregPcte3': result[2][1],
+        'save_pregPcte4': result[3][1],
+        'save_pregPcte5': result[4][1],
+        'save_pregPcte6': result[5][1],
+        'save_pregPcte7': result[6][1],
+      });
+    });
+  }; 
  
 
 render() {
-
+const Esc3=parseFloat(this.state.save_pruValo1);//+parseFloat(this.state.save_pregPcte2)+parseFloat(this.state.save_pregPcte3)+parseFloat(this.state.save_pregPcte4)+parseFloat(this.state.save_pregPcte5)+parseFloat(this.state.save_pregPcte6)+parseFloat(this.state.save_pregPcte7);
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
@@ -148,7 +161,7 @@ render() {
 
    </View>
    <Text style={styles.textStyle}>
-         hola   {this.state.save_pregPcte1}
+         hola   {Esc3}
            
           </Text>
     </ScrollView>
@@ -198,15 +211,12 @@ const style = StyleSheet.create({
     flex:1,
     alignItems : 'center',
     justifyContent : 'center',
-    //backgroundColor: 'red',
     flexDirection: "row",
     width: "100%",
     height :'100%',
-
   },
   viewrowmenu:{
     flex:1,
-   // backgroundColor: 'yellow',
     flexDirection: "column"
    
 

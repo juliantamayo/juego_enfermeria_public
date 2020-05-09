@@ -10,7 +10,6 @@ import { Alert } from "../../../elementos/Alert";
  
 const styles = StyleSheet.create({
   container: {
-  //  backgroundColor: "#36B1F0",
     flex: 1,
     paddingHorizontal: 20
   },
@@ -25,7 +24,6 @@ const styles = StyleSheet.create({
 
   textContador: {
     color: "#fff",
-    //backgroundColor: "#36B1F0",
     fontSize: 22,
     textAlign: "center",
     letterSpacing: -0.02,
@@ -36,50 +34,17 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     width : '100%',
     height : '50%'
-  },
-  Imagen:{
-    width: 290,
-  height: '100%'
-  },
-  Imagen2:{
-    width: 40,
-  height: 40
-  },
-   modalView: {
-     width: '90%',
-   height: '60%',
-    margin: 20,
-    backgroundColor: "white",
-    borderRadius: 20,
-    padding: 35,
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5
   }
-  
-
 });
 
 const mult =5;
 
 class V_c1_Preg4_pregunta extends React.Component {
    
-
-  
-
-
   state = {
-     modalVisible: false,
     correctCount: 0, 
     //totalCount: this.props.navigation.getParam("questions", []).length,
-      totalCount: this.props.route.params?.questions.length,
-   //route.params?.someParam ?? 'defaultValue';
+    totalCount: this.props.route.params?.questions.length,
     activeQuestionIndex: 0,
     answered: false,
     answerCorrect: false
@@ -132,12 +97,7 @@ class V_c1_Preg4_pregunta extends React.Component {
     });
   };
 
-  setModalVisible = (visible) => {
-    this.setState({ modalVisible: visible });
-  }
-
   render() {
-    const { modalVisible } = this.state;
     const questions = this.props.route.params?.questions ?? [];
     const question = questions[this.state.activeQuestionIndex];
     

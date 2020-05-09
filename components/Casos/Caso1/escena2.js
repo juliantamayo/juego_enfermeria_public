@@ -11,13 +11,12 @@ import C1_pregunta6 from "../../data/C1_preguntas/C1_pregunta6_dialog";
 import C1_pregunta7 from "../../data/C1_preguntas/C1_pregunta7_dialog";
 import { RowItem } from "../../elementos/RowItem";
 
-export default class menu_caso1 extends React.Component {
+export default class escena2 extends React.Component {
 
   
 
     state ={
-
-
+//el componente "state" debe estar para poder recibir las variables locales de otras clases
       
     };
     
@@ -38,14 +37,6 @@ export default class menu_caso1 extends React.Component {
     });
   };
  render() {
-
-  const userId = parseFloat(this.state.save_pregPcte1);
-  const userId2 = parseFloat(this.state.save_pregPcte2);
-  const userId3 = parseFloat(this.state.save_pregPcte3);
-  const userId4 = parseFloat(this.state.save_pregPcte4);
-  const userId5 = parseFloat(this.state.save_pregPcte5);
-  const userId6 = parseFloat(this.state.save_pregPcte6);
-  const userId7 = parseFloat(this.state.save_pregPcte7);
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
@@ -71,8 +62,6 @@ export default class menu_caso1 extends React.Component {
      
       </View>
     
-
- 
 
      <RowItem   
       name="1. ¿Cómo se encuentra?"
@@ -167,7 +156,6 @@ export default class menu_caso1 extends React.Component {
 const style = StyleSheet.create({
   container: {
     flex: 1,
-   // alignItems : 'stretch',
     width: "100%",
     height :'100%',
    
