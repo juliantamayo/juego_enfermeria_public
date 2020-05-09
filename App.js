@@ -44,22 +44,27 @@ import Guardar_V_preg_pcte2 from './components/Casos/Caso1/V_Guardar/guardar_V_p
 import V_C1_Preg3_dialogo from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg3_dialogo';
 import V_C1_Preg3_pregunta from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg3_pregunta';
 import V_C1_RespP3_enfermera from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_RespP3_enfermera';
+import Guardar_V_preg_pcte3 from './components/Casos/Caso1/V_Guardar/guardar_V_preg_pcte3';
 
 import V_C1_Preg4_dialogo from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg4_dialogo';
 import V_C1_Preg4_pregunta from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg4_pregunta';
 import V_C1_RespP4_enfermera from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_RespP4_enfermera';
+import Guardar_V_preg_pcte4 from './components/Casos/Caso1/V_Guardar/guardar_V_preg_pcte4';
 
 import V_C1_Preg5_dialogo from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg5_dialogo';
 import V_C1_Preg5_pregunta from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg5_pregunta';
 import V_C1_RespP5_enfermera from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_RespP5_enfermera';
+import Guardar_V_preg_pcte5 from './components/Casos/Caso1/V_Guardar/guardar_V_preg_pcte5';
 
 import V_C1_Preg6_dialogo from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg6_dialogo';
 import V_C1_Preg6_pregunta from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg6_pregunta';
 import V_C1_RespP6_enfermera from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_RespP6_enfermera';
+import Guardar_V_preg_pcte6 from './components/Casos/Caso1/V_Guardar/guardar_V_preg_pcte6';
 
 import V_C1_Preg7_dialogo from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg7_dialogo';
 import V_C1_Preg7_pregunta from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg7_pregunta';
 import V_C1_RespP7_enfermera from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_RespP7_enfermera';
+import Guardar_V_preg_pcte7 from './components/Casos/Caso1/V_Guardar/guardar_V_preg_pcte7';
 //escena3----
 import Escena3 from './components/Casos/Caso1/escena3';
 import V_C1_PruValo1_dialogo from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_PruValo1_dialogo';
@@ -529,6 +534,8 @@ useEffect(() => {
 
        })}/>
 
+       <Stack.Screen name="Guardar_V_preg_pcte3"  component={Guardar_V_preg_pcte3} />
+
         <Stack.Screen name="V_C1_Preg4_dialogo" component={V_C1_Preg4_dialogo} 
         options={
            
@@ -565,6 +572,8 @@ useEffect(() => {
 
        })}/>
 
+       <Stack.Screen name="Guardar_V_preg_pcte4"  component={Guardar_V_preg_pcte4} />
+
        <Stack.Screen name="V_C1_Preg5_dialogo" component={V_C1_Preg5_dialogo} 
               options={
                  
@@ -600,7 +609,8 @@ useEffect(() => {
         }
 
        })}/>
-        
+        <Stack.Screen name="Guardar_V_preg_pcte5"  component={Guardar_V_preg_pcte5} />
+
         <Stack.Screen name="V_C1_Preg6_dialogo" component={V_C1_Preg6_dialogo} 
         options={
            
@@ -636,6 +646,8 @@ useEffect(() => {
         }
 
        })}/>
+
+        <Stack.Screen name="Guardar_V_preg_pcte6"  component={Guardar_V_preg_pcte6} />
 
         <Stack.Screen name="V_C1_Preg7_dialogo" component={V_C1_Preg7_dialogo} 
         options={
@@ -673,6 +685,8 @@ useEffect(() => {
         }
 
        })}/>
+
+       <Stack.Screen name="Guardar_V_preg_pcte7"  component={Guardar_V_preg_pcte7} /> 
 
         <Stack.Screen name="Escena3" component={Escena3} 
         options={{

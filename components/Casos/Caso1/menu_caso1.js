@@ -17,11 +17,26 @@ export default class menu_caso1 extends React.Component {
     
     };
    
- componentDidMount = () => AsyncStorage.getItem('nombre').then((value) => this.setState({ 'nombre': value }))
+componentDidMount= () => {
+    let keys = ['save_pregPcte1', 'save_pregPcte2','save_pregPcte3','save_pregPcte4','save_pregPcte5','save_pregPcte6','save_pregPcte7','nombre'];
+    AsyncStorage.multiGet(keys).then(result => {
+      this.setState({
+        'save_pregPcte1': result[0][1],
+        'save_pregPcte2': result[1][1],
+        'save_pregPcte3': result[2][1],
+        'save_pregPcte4': result[3][1],
+        'save_pregPcte5': result[4][1],
+        'save_pregPcte6': result[5][1],
+        'save_pregPcte7': result[6][1],
+        'nombre'        : result[7][1],
+      });
+    });
+  };
 
 render() {
 
-   const num= parseInt(this.state.nombre)+0;
+   const Esc1= parseInt(this.state.nombre);
+   const Esc2=parseFloat(this.state.save_pregPcte1)+parseFloat(this.state.save_pregPcte2)+parseFloat(this.state.save_pregPcte3)+parseFloat(this.state.save_pregPcte4)+parseFloat(this.state.save_pregPcte5)+parseFloat(this.state.save_pregPcte6)+parseFloat(this.state.save_pregPcte7);
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
    <View style={style.container}>
@@ -57,7 +72,7 @@ render() {
         })
       }
     />
-     { num >= 2? 
+     { Esc1 >= 2? 
     <RowItem
       name="Preguntas a Paciente"
       color="#f9a94b"
@@ -70,7 +85,7 @@ render() {
     />
     : null }
 
-    { this.state.nombre >= 2? 
+    { Esc2 == 1? 
     <RowItem
       name="Pruebas de valoración"
       color="#f9e67a"
@@ -107,10 +122,7 @@ render() {
         this.props.navigation.navigate("Escena6",{ex:'2'})
       }
     />
-  <Text style={styles.textStyle}>
-         hola   {global.hola}
-            {/*Global Variable*/}
-          </Text>
+
     </ScrollView>
   </View>
   </ImageBackground>

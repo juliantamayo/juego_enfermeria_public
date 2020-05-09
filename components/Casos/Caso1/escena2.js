@@ -22,11 +22,30 @@ export default class menu_caso1 extends React.Component {
     };
     
  //componentDidMount = () => AsyncStorage.getItem('save_pregPcte1').then((value) => this.setState({ 'save_pregPcte1': value }));
- componentDidMount= () => AsyncStorage.getItem('save_pregPcte2').then((value2) => this.setState({ 'save_pregPcte2': value2 }))
+ //componentDidMount= () => AsyncStorage.multiGet(['save_pregPcte1','save_pregPcte2']).then(response => this.setState({ 'save_pregPcte1': response}))
+ componentDidMount= () => {
+    let keys = ['save_pregPcte1', 'save_pregPcte2','save_pregPcte3','save_pregPcte4','save_pregPcte5','save_pregPcte6','save_pregPcte7'];
+    AsyncStorage.multiGet(keys).then(result => {
+      this.setState({
+        'save_pregPcte1': result[0][1],
+        'save_pregPcte2': result[1][1],
+        'save_pregPcte3': result[2][1],
+        'save_pregPcte4': result[3][1],
+        'save_pregPcte5': result[4][1],
+        'save_pregPcte6': result[5][1],
+        'save_pregPcte7': result[6][1],
+      });
+    });
+  };
+ render() {
 
-render() {
-
-  const userId = this.props.route.params?.activeQuestion;
+  const userId = parseFloat(this.state.save_pregPcte1);
+  const userId2 = parseFloat(this.state.save_pregPcte2);
+  const userId3 = parseFloat(this.state.save_pregPcte3);
+  const userId4 = parseFloat(this.state.save_pregPcte4);
+  const userId5 = parseFloat(this.state.save_pregPcte5);
+  const userId6 = parseFloat(this.state.save_pregPcte6);
+  const userId7 = parseFloat(this.state.save_pregPcte7);
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
@@ -134,8 +153,7 @@ render() {
       }
     />
   <Text style={styles.textStyle}>
-         hola   {this.state.save_pregPcte1}+
-         hola2   {this.state.save_pregPcte2}
+         
           </Text>
   
     </ScrollView>
