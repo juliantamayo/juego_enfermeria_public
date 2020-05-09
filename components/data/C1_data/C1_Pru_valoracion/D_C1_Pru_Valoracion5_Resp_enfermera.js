@@ -3,12 +3,12 @@ const questions = [
  {
     image: require("../../../../assets/images/enfermera_pensando.png"),
     personaje: "ENFERMERA",
-    Text: " ResPruValo1 Es un paciente que se encuentra bien vestido, limpio, con la camisa por dentro y bien peinado (ALIÑADO)"
+    Text: " Paciente dependiente, En estos momentos se ve limitada su autonomía en actividades de la vida diaria como su arreglo personal, vestirse, sentarse"
   },
    {
     image: require("../../../../assets/images/enfermera_pensando.png"),
     personaje: "ENFERMERA",
-    Text: "Se le ve alegre, con buen lenguaje y entendible (tono adecuado), con marcha estable y espontaneo en lo que responde sin titubear."
+    Text: "al no tener la dominancia y la fuerza suficiente en su hemicuerpo derecho por eso se observa irritable o mal humorado y requiere la ayuda de su esposa."
   }
  
 ];

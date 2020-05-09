@@ -3,12 +3,12 @@ const questions = [
  {
     image: require("../../../../assets/images/enfermera_pensando.png"),
     personaje: "ENFERMERA",
-    Text: " ResPruValo1 Es un paciente que se encuentra bien vestido, limpio, con la camisa por dentro y bien peinado (ALIÑADO)"
+    Text: " Fuerza muscular grado 2 en miembro inferior derecho - hemiparesia derecha,  Espasticidad grado 3, es decir la pierna derecha esta contraída, rígida, se nota un poco más corta que no puede levantar"
   },
    {
     image: require("../../../../assets/images/enfermera_pensando.png"),
     personaje: "ENFERMERA",
-    Text: "Se le ve alegre, con buen lenguaje y entendible (tono adecuado), con marcha estable y espontaneo en lo que responde sin titubear."
+    Text: "Mientras que la pierna derecha la puede movilizar y si se le hace fuerte la resiste"
   }
  
 ];

@@ -1,15 +1,15 @@
 const questions = [
  
   {
-    image: require("../../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_caminar.gif"),
+    image: require("../../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_P5_movilidad_activa.gif"),
     personaje: "ENFERMERA",
-    Text: " PruValo1 Bueno señor P.C.P ¿qué lo trae por estos lares?"
+    Text: "Debe visualizar muy bien al paciente"
    
   },
   {
-    image: require("../../../../assets/images/CASO_2_SEÑOR_PCP_saludando.png"),
+    image: require("../../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_P5_movilidad_activa2.png"),
     personaje: "Señor P.C.P",
-    Text: "Bien señorita, vengo para saber cómo estoy en mi salud"
+    Text: "Es muy importante hacer una buena observación del paciente"
   }
 ];
 
