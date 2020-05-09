@@ -19,7 +19,7 @@ state = {
       this.setState({ 'save_pregPcte7':  global.recibe_pregPcte7 });
        Alert.alert("Mensaje","Datos guardados correctamente", [
        
-        { text: "OK", onPress: () =>  this.props.navigation.navigate("M_caso1") }
+        { text: "OK", onPress: () =>  this.props.navigation.navigate("M_casos") }
      ]);
        
    } 

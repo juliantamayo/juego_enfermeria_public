@@ -111,7 +111,7 @@ class V_c1_Preg5_pregunta extends React.Component {
     this.setState(state => {
       const nextIndex = state.activeQuestionIndex + 1;
 
-      if (nextIndex >= state.totalCount && this.state.correctCount < 2) {
+      if (nextIndex >= state.totalCount && this.state.correctCount < 3) {
        // return this.props.navigation.popToTop();
         return this.props.navigation.navigate('V_C1_Preg5_dialogo',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
       }else if (nextIndex >= state.totalCount   && this.state.correctCount==3) {

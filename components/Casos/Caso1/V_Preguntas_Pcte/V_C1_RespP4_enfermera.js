@@ -167,7 +167,6 @@ class V_C1_RespP4_enfermera extends React.Component {
        // return this.props.navigation.popToTop();
         return this.props.navigation.navigate("Guardar_V_preg_pcte4", {ppcte4: 0.1, 
           title: "1.PreguntasC1",
-          questions: C1_pregunta1_Resp1_C,
           color: "#36b1f0"
         });
       }
