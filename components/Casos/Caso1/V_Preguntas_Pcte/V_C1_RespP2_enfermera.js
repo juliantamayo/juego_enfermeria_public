@@ -167,7 +167,7 @@ class V_C1_RespP2_enfermera extends React.Component {
 
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate("Escena2", {activeQuestion: 1, 
+        return this.props.navigation.navigate("Guardar_V_preg_pcte2", {ppcte2: 0.2, 
           title: "1.PreguntasC1",
           questions: C1_pregunta1_Resp1_C,
           color: "#36b1f0"

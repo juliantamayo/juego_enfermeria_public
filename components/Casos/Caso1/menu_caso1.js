@@ -107,7 +107,10 @@ render() {
         this.props.navigation.navigate("Escena6",{ex:'2'})
       }
     />
-  
+  <Text style={styles.textStyle}>
+         hola   {global.hola}
+            {/*Global Variable*/}
+          </Text>
     </ScrollView>
   </View>
   </ImageBackground>

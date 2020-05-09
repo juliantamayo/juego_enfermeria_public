@@ -5,13 +5,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './components/load';
 import Menu from './components/menu';
 import M_juegos from './components/Juegos/m_juegos';
-
 //-------------------------------juego2-------------------------
 import M_juegos2 from './components/Juegos/Juego2/m_juego2';
 import QuizIndex from "./components/Juegos/Juego2/QuizIndex";
 import Quiz from "./components/Juegos/Juego2/Quiz";
 import Result_Q from './components/Juegos/Juego2/result_q';
-
 //--------------------------------juego1--------------------------------
 import juego1_part1 from './components/Juegos/Juego1/juego1_part1';
 import juego1_part2 from './components/Juegos/Juego1/juego1_part2';
@@ -19,17 +17,14 @@ import Result_QJ1 from './components/Juegos/Juego1/result_qJ1';
 import m_juego1 from './components/Juegos/Juego1/m_juego1';
 import juego1_teory1 from './components/Juegos/Juego1/juego1_teory1';
 import juego1_teory2 from './components/Juegos/Juego1/juego1_teory2';
-
 //--------------------------------juego3----------------------------
 import M_juegos3 from './components/Juegos/Juego3/m_juego3';
 import juego3 from './components/Juegos/Juego3/juego3';
 import Result_QJ3 from './components/Juegos/Juego3/result_qJ3';
 //---------------------------------------------------------------
 import pruebaT from './components/Teoria/prueba_atras';
-
 //-----------------------casos--------------------------------
 import M_casos from './components/Casos/m_casos';
-
 //-------------------------caso1---------------------------------
 import M_caso1 from './components/Casos/Caso1/menu_caso1';
 import Escena1 from './components/Casos/Caso1/escena1';
@@ -39,12 +34,17 @@ import Escena2 from './components/Casos/Caso1/escena2';
 import DialogosC1 from './components/Casos/Caso1/V_Preguntas_Pcte/dialogos';
 import V_C1_Resp_enfermera from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Resp_enfermera';
 import PreguntasC1 from './components/Casos/Caso1/V_Preguntas_Pcte/preguntas';
+import Guardar_V_preg_pcte1 from './components/Casos/Caso1/V_Guardar/guardar_V_preg_pcte1';
+
 import V_C1_Preg2_dialogo from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg2_dialogo';
 import V_C1_Preg2_pregunta from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg2_pregunta';
 import V_C1_RespP2_enfermera from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_RespP2_enfermera';
+import Guardar_V_preg_pcte2 from './components/Casos/Caso1/V_Guardar/guardar_V_preg_pcte2';
+
 import V_C1_Preg3_dialogo from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg3_dialogo';
 import V_C1_Preg3_pregunta from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg3_pregunta';
 import V_C1_RespP3_enfermera from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_RespP3_enfermera';
+
 import V_C1_Preg4_dialogo from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg4_dialogo';
 import V_C1_Preg4_pregunta from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_Preg4_pregunta';
 import V_C1_RespP4_enfermera from './components/Casos/Caso1/V_Preguntas_Pcte/V_C1_RespP4_enfermera';
@@ -454,6 +454,8 @@ useEffect(() => {
 
        })}/>
 
+       <Stack.Screen name="Guardar_V_preg_pcte1"  component={Guardar_V_preg_pcte1} />
+
         <Stack.Screen name="V_C1_Preg2_dialogo" component={V_C1_Preg2_dialogo} 
         options={
            
@@ -489,6 +491,8 @@ useEffect(() => {
         }
 
        })}/>
+
+       <Stack.Screen name="Guardar_V_preg_pcte2"  component={Guardar_V_preg_pcte2} />
 
         <Stack.Screen name="V_C1_Preg3_dialogo" component={V_C1_Preg3_dialogo} 
         options={

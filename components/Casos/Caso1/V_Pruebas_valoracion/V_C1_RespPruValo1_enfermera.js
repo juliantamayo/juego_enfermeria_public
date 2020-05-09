@@ -49,11 +49,9 @@ class V_C1_RespPruValo1_enfermera extends React.Component {
   state = {
     modalVisible: false,
     correctCount: 0, 
-    //totalCount: this.props.navigation.getParam("questions", []).length,
-      totalCount: this.props.route.params?.questions.length,
+    totalCount: this.props.route.params?.questions.length,
     activeQuestionIndex: 0,
-    answered: false,
-    answerCorrect: false
+    answered: false
       
   };
 

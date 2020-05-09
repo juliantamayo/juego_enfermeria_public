@@ -2,8 +2,6 @@ import React from 'react';
 import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpacity,  Image, Text, AsyncStorage } from 'react-native';
 
 import styles from './../../Style.js';
-import Escena1Dialog from "../../data/escena1dialog";
-import Escena2Dialog from "../../data/escena2dialog";
 import C1_pregunta1 from "../../data/C1_preguntas/C1_pregunta1";
 import C1_pregunta2 from "../../data/C1_preguntas/C1_pregunta2_dialog";
 import C1_pregunta3 from "../../data/C1_preguntas/C1_pregunta3_dialog";
@@ -19,13 +17,12 @@ export default class menu_caso1 extends React.Component {
 
     state ={
 
-      isVisible:false,
-      isVisible2:false,
-      val:this.props.route.params?.activeQuestion,
+
       
     };
     
- 
+ //componentDidMount = () => AsyncStorage.getItem('save_pregPcte1').then((value) => this.setState({ 'save_pregPcte1': value }));
+ componentDidMount= () => AsyncStorage.getItem('save_pregPcte2').then((value2) => this.setState({ 'save_pregPcte2': value2 }))
 
 render() {
 
@@ -136,7 +133,10 @@ render() {
         })
       }
     />
-  
+  <Text style={styles.textStyle}>
+         hola   {this.state.save_pregPcte1}+
+         hola2   {this.state.save_pregPcte2}
+          </Text>
   
     </ScrollView>
   </View>

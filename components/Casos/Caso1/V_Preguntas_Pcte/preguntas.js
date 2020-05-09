@@ -2,7 +2,6 @@ import React from "react";
 import { View, StyleSheet, StatusBar, Text, SafeAreaView, ImageBackground, Image, TouchableHighlight, ScrollView } from "react-native";
 
 import { Button, ButtonContainer } from "../../../elementos/ButtonC1_Preguntas";
-//import C1_pregunta1_Resp_enfermera from "../../../data/C1_preguntas/C1_pregunta1_Resp_enfermera";
 import C1_pregunta1_Resp_enfermera from "../../../data/C1_preguntas/C1_pregunta1_Resp_enfermera";
 import { Alert } from "../../../elementos/Alert";
 
@@ -69,8 +68,6 @@ const mult =5;
 
 class juego1_part1 extends React.Component {
    
-
-  
 
 
   state = {

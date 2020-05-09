@@ -11,24 +11,18 @@ const { width, height } = Dimensions.get('window')
  
 const styles = StyleSheet.create({
   container: {
-   // backgroundColor: "#36B1F0",
     flex: 1,
-
   },
   text: {
     color: "#fff",
     fontSize: 22,
     textAlign: "center",
-    
     letterSpacing: -0.02,
     fontWeight: "600"
   },
   text2: {
    marginLeft : 5,
-   //paddingVertical: 8,
-   // borderWidth: 4,
     borderColor: "#20232a",
-   // borderRadius: 6,
     backgroundColor: "red",
     color: "#fff",
     textAlign: "left",
@@ -45,10 +39,7 @@ const styles = StyleSheet.create({
     width: '90%',
     height: '90%',
     margin: 20,
-   // backgroundColor: "black",
     backgroundColor: "rgba(0, 185, 188, 0.37)",
-    //borderRadius: 20,
-    //padding: 35,
     alignItems: "center",
     shadowColor: "#000",
     shadowOffset: {
@@ -61,36 +52,28 @@ const styles = StyleSheet.create({
   },
   openButton: {
    backgroundColor: "red",
-   // borderRadius: 20,
     padding: 10,
     alignItems: "center",
     justifyContent: "center",
     elevation: 2
   },
    modalText2: {
-   // marginBottom: 15,
-    // marginLeft : 20,
     fontSize: 22,
     textAlign: "center",
-    // borderColor: "#20232a",
-     paddingVertical: 8,
-     borderWidth: 4,
-      fontWeight: "bold"
-   // backgroundColor: "red"
+    paddingVertical: 8,
+    borderWidth: 4,
+    fontWeight: "bold"
   },
    modalText: {
-   // marginBottom: 15,
     textAlign: "center",
     fontSize : 18,
      
   },
   modalTextcuerpo: {
-   // marginBottom: 15,
     textAlign: "left",
      marginLeft : 10,
   },
    modalTextnegrilla: {
-   // marginBottom: 15,
    fontSize : 18,
     textAlign: "left",
     fontWeight: "bold",
@@ -98,17 +81,13 @@ const styles = StyleSheet.create({
   },
 
   modalTex3: {
-   // marginBottom: 15,
     textAlign: "center",
-    color: "#fff"
-     
+    color: "#fff"  
   },
   headerModal:{
     flex: 0.1,
     flexDirection : 'row',
-    //backgroundColor: "yellow",
     alignItems: 'center',
-    
   },
   headerMizq:{
     flex:0.9,
@@ -146,18 +125,14 @@ const styles = StyleSheet.create({
 const mult =5;
 
 
-
-
 class V_C1_Resp_enfermera extends React.Component {
    
   state = {
     modalVisible: false,
     correctCount: 0, 
-    //totalCount: this.props.navigation.getParam("questions", []).length,
-      totalCount: this.props.route.params?.questions.length,
+    totalCount: this.props.route.params?.questions.length,
     activeQuestionIndex: 0,
-    answered: false,
-    answerCorrect: false
+    answered: false
       
   };
 
@@ -166,8 +141,7 @@ class V_C1_Resp_enfermera extends React.Component {
       const nextIndex = state.activeQuestionIndex + 1;
 
       if (nextIndex >= state.totalCount) {
-       // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate("Escena2", {activeQuestion: 1, 
+        return this.props.navigation.navigate("Guardar_V_preg_pcte1", {ppcte1: 0.2, 
           title: "1.PreguntasC1",
           questions: C1_pregunta1_Resp1_C,
           color: "#36b1f0"

@@ -4,30 +4,29 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Text, Button, AsyncStorage,Alert } from 'react-native';
 
 //import all the components we are going to use.
-export default class guardar_escena1 extends Component {
+export default class guardar_V_preg_pcte1 extends Component {
   constructor(route) {
     super(route);
     //Setting up global variable
-    global.hola = this.props.route.params?.ex;
-    global.nombre = 0;
+    global.recibe_pregPcte1 = this.props.route.params?.ppcte1;
   }
 state = {
-      'nombre':0
+      'save_pregPcte1':0
    }
 
   saveData = (value) => {
-      AsyncStorage.setItem('nombre',  global.hola.toString());
-      this.setState({ 'nombre':  global.hola });
+      AsyncStorage.setItem('save_pregPcte1',  global.recibe_pregPcte1.toString());
+      this.setState({ 'save_pregPcte1':  global.recibe_pregPcte1 });
        Alert.alert("Mensaje","Datos guardados correctamente", [
        
-        { text: "OK", onPress: () =>  this.props.navigation.navigate("M_casos") }
+        { text: "OK", onPress: () =>  this.props.navigation.navigate("M_caso1") }
      ]);
        
    } 
 
   removeValue = async () => {
   try {
-    await AsyncStorage.removeItem('nombre');
+    await AsyncStorage.removeItem('save_pregPcte1');
      Alert.alert("Mensaje","Datos eliminados correctamente", [
        
         { text: "OK", onPress: () =>  this.props.navigation.navigate("M_casos") }
@@ -40,14 +39,14 @@ state = {
 }
 
   
-   componentDidMount = () => AsyncStorage.getItem('nombre').then((value) => this.setState({ 'nombre': value }))
+   componentDidMount = () => AsyncStorage.getItem('save_pregPcte1').then((value) => this.setState({ 'save_pregPcte1': value }))
      
   render() {
     return (
     <View style={styles.MainContainer}>
         <View style={{ marginBottom: 15 }}>
             <Text style={styles.textStyle}>
-         hola   {global.hola}
+         PPcte   {global.recibe_pregPcte1}
            
           </Text>
         </View>

@@ -20,11 +20,7 @@ export default class menu_caso1 extends React.Component {
   
 
     state ={
-
-      isVisible:false,
-      isVisible2:false,
-      val:this.props.route.params?.activeQuestion,
-      
+     'save_pregPcte1':0
     };
     
  
@@ -151,7 +147,10 @@ render() {
     />
 
    </View>
-   
+   <Text style={styles.textStyle}>
+         hola   {this.state.save_pregPcte1}
+           
+          </Text>
     </ScrollView>
   </View>
   </ImageBackground>
