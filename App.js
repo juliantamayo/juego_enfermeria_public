@@ -91,7 +91,12 @@ import V_C1_PruValo7_pregunta from './components/Casos/Caso1/V_Pruebas_valoracio
 import V_C1_RespPruValo7_enfermera from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_RespPruValo7_enfermera';
 //escena4-------
 import Escena4 from './components/Casos/Caso1/escena4';
-import Guardr_valo from './components/Casos/Caso1/V_Valoracion/guardar_valoracion'
+import Guardr_valo from './components/Casos/Caso1/V_Valoracion/guardar_valoracion';
+//escena5-------
+import Escena5 from './components/Casos/Caso1/escena5';
+//escena6-------
+import Escena6 from './components/Casos/Caso1/escena6';
+
 import Variables from './components/Casos/Caso1/variables_caso1';
 
 //-------------------------caso2---------------------------------
@@ -931,7 +936,34 @@ useEffect(() => {
           headerTitleStyle: {
             fontWeight: 'bold',
           }
-        }}/>  
+        }}/> 
+
+        <Stack.Screen name="Escena5" component={Escena5} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+
+       })}/>
+
+        <Stack.Screen name="Escena6" component={Escena6} 
+        options={{
+        //  headerShown: false
+        
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          }
+        }}/> 
 
          <Stack.Screen name="M_caso2"  component={M_caso2}
           options={{

@@ -93,14 +93,18 @@ render() {
       name="Quiz"
       color="#f9e67a"
       onPress={() =>
-        this.props.navigation.navigate("Variables",{ex:'2'})
+        this.props.navigation.navigate("Escena5",{ex:'2',
+        title: "Quiz",
+          questions: computerQuestions,
+          color: "#36b1f0"
+      })
       }
     />
     <RowItem
       name="Proceso de atención de Enfermeria"
       color="#f9a94b"
       onPress={() =>
-        this.props.navigation.navigate("pruebaT",{ex:'2'})
+        this.props.navigation.navigate("Escena6",{ex:'2'})
       }
     />
   
