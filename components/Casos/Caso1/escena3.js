@@ -12,6 +12,7 @@ import C1_Pru_valo6_dialog from "../../data/C1_data/C1_Pru_valoracion/D_C1_Pru_V
 import C1_Pru_valo7_dialog from "../../data/C1_data/C1_Pru_valoracion/D_C1_Pru_Valoracion7_dialog";
 
 import { ButtonContainer, RowItemEscena3 } from "../../elementos/RowItem";
+import { Modal_C1_escena3 } from "../../elementos/ModalsTutorial";
 const { width, height } = Dimensions.get('window')
 
 
@@ -19,14 +20,28 @@ export default class escena3 extends React.Component {
 
 
     state ={
-     
+     modalVisible: false,
     };
    
+setModalVisible = (visible) => {
+    this.setState({ modalVisible: visible });
+   };
 
 render() {
 
+  const { modalVisible } = this.state;
+
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
+   
+              <Modal_C1_escena3
+                
+                 text={modalVisible}
+                 onPress={() => {
+                            this.setModalVisible(!modalVisible);
+                          }}
+                />
+
    <View style={style.container}>
     <ScrollView  >
     <StatusBar barStyle="dark-content" />
@@ -42,7 +57,9 @@ render() {
 
       <View style={styles.headerDerecha}>
       <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-       onPress={() => this.props.navigation.navigate('Home')}>
+            onPress={() => {
+                        this.setModalVisible(true);
+                      }}>
                <Image style={ styles.image } source={require("../../../assets/images/ayuda.png")} />
       </TouchableOpacity>
       </View>

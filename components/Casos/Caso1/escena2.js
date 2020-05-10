@@ -10,18 +10,16 @@ import C1_pregunta5 from "../../data/C1_preguntas/C1_pregunta5_dialog";
 import C1_pregunta6 from "../../data/C1_preguntas/C1_pregunta6_dialog";
 import C1_pregunta7 from "../../data/C1_preguntas/C1_pregunta7_dialog";
 import { RowItem } from "../../elementos/RowItem";
+import { Modal_C1_escena2 } from "../../elementos/ModalsTutorial";
 
 export default class escena2 extends React.Component {
 
   
-
     state ={
 //el componente "state" debe estar para poder recibir las variables locales de otras clases
-      
+     modalVisible: false 
     };
     
- //componentDidMount = () => AsyncStorage.getItem('save_pregPcte1').then((value) => this.setState({ 'save_pregPcte1': value }));
- //componentDidMount= () => AsyncStorage.multiGet(['save_pregPcte1','save_pregPcte2']).then(response => this.setState({ 'save_pregPcte1': response}))
  componentDidMount= () => {
     let keys = ['save_pregPcte1', 'save_pregPcte2','save_pregPcte3','save_pregPcte4','save_pregPcte5','save_pregPcte6','save_pregPcte7'];
     AsyncStorage.multiGet(keys).then(result => {
@@ -36,10 +34,25 @@ export default class escena2 extends React.Component {
       });
     });
   };
+
+
+  setModalVisible = (visible) => {
+    this.setState({ modalVisible: visible });
+  };
  render() {
+  const { modalVisible,modalVisible2 } = this.state;
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
+   
+    <Modal_C1_escena2
+      
+       text={modalVisible}
+       onPress={() => {
+                  this.setModalVisible(!modalVisible);
+                }}
+      />
+
    <View style={style.container}>
     <ScrollView  >
     <StatusBar barStyle="dark-content" />
@@ -55,7 +68,9 @@ export default class escena2 extends React.Component {
 
       <View style={styles.headerDerecha}>
       <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-       onPress={() => this.props.navigation.navigate('Home')}>
+                   onPress={() => {
+                        this.setModalVisible(true);
+                      }}>
                <Image style={ styles.image } source={require("../../../assets/images/ayuda.png")} />
       </TouchableOpacity>
       </View>

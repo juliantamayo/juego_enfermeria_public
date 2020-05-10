@@ -11,7 +11,6 @@ const { width, height } = Dimensions.get('window')
  
 const styles = StyleSheet.create({
   container: {
-   // backgroundColor: "#36B1F0",
     flex: 1,
 
   },
@@ -25,10 +24,7 @@ const styles = StyleSheet.create({
   },
   text2: {
    marginLeft : 5,
-   //paddingVertical: 8,
-   // borderWidth: 4,
     borderColor: "#20232a",
-   // borderRadius: 6,
     backgroundColor: "red",
     color: "#fff",
     textAlign: "left",
@@ -134,12 +130,12 @@ class escena1 extends React.Component {
 
 <View style={style.headerDerecha}> 
 
-           <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
+           <TouchableOpacity style={ style.imageContainer } activeOpacity={0.8}
                    onPress={() => {
                         this.setModalVisible2(true);
                       }}>
-                           <Image style={ styles.image } source={require("../../../assets/images/ayuda.png")} />
-          </TouchableOpacity>   
+                           <Image style={ style.image } source={require("../../../assets/images/ayuda.png")} />
+               </TouchableOpacity>  
 
               <TouchableOpacity style={ style.imageContainer } activeOpacity={0.8}
                    onPress={() => {
