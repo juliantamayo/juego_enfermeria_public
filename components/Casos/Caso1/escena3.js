@@ -15,18 +15,15 @@ import { ButtonContainer, RowItemEscena3 } from "../../elementos/RowItem";
 const { width, height } = Dimensions.get('window')
 
 
-export default class menu_caso1 extends React.Component {
+export default class escena3 extends React.Component {
 
-  
 
     state ={
-     'save_pregPcte1':0
+     
     };
-    
- 
+   
 
 render() {
-
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
@@ -147,10 +144,6 @@ render() {
     />
 
    </View>
-   <Text style={styles.textStyle}>
-         hola   {this.state.save_pregPcte1}
-           
-          </Text>
     </ScrollView>
   </View>
   </ImageBackground>
@@ -198,15 +191,12 @@ const style = StyleSheet.create({
     flex:1,
     alignItems : 'center',
     justifyContent : 'center',
-    //backgroundColor: 'red',
     flexDirection: "row",
     width: "100%",
     height :'100%',
-
   },
   viewrowmenu:{
     flex:1,
-   // backgroundColor: 'yellow',
     flexDirection: "column"
    
 

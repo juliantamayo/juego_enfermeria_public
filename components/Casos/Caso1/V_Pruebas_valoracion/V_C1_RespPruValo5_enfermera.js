@@ -10,23 +10,18 @@ const { width, height } = Dimensions.get('window')
  
 const styles = StyleSheet.create({
   container: {
-   // backgroundColor: "#36B1F0",
     flex: 1,
   },
   text: {
     color: "#fff",
     fontSize: 22,
     textAlign: "center",
-    
     letterSpacing: -0.02,
     fontWeight: "600"
   },
   text2: {
    marginLeft : 5,
-   //paddingVertical: 8,
-   // borderWidth: 4,
     borderColor: "#20232a",
-   // borderRadius: 6,
     backgroundColor: "red",
     color: "#fff",
     textAlign: "left",
@@ -63,7 +58,7 @@ class V_C1_RespPruValo5_enfermera extends React.Component {
 
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate("Escena3");
+        return this.props.navigation.navigate("Guardar_V_pru_valo5",{pv5:0.2});
       }
 
       return {

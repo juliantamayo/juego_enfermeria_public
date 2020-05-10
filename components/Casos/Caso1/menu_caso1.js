@@ -18,7 +18,9 @@ export default class menu_caso1 extends React.Component {
     };
    
 componentDidMount= () => {
-    let keys = ['save_pregPcte1', 'save_pregPcte2','save_pregPcte3','save_pregPcte4','save_pregPcte5','save_pregPcte6','save_pregPcte7','nombre'];
+    let keys = ['save_pregPcte1', 'save_pregPcte2','save_pregPcte3','save_pregPcte4','save_pregPcte5','save_pregPcte6','save_pregPcte7','nombre',
+     'save_pruValo1', 'save_pruValo2','save_pruValo3','save_pruValo4','save_pruValo5','save_pruValo6','save_pruValo7'
+    ];
     AsyncStorage.multiGet(keys).then(result => {
       this.setState({
         'save_pregPcte1': result[0][1],
@@ -29,6 +31,13 @@ componentDidMount= () => {
         'save_pregPcte6': result[5][1],
         'save_pregPcte7': result[6][1],
         'nombre'        : result[7][1],
+        'save_pruValo1':  result[8][1],
+        'save_pruValo2':  result[9][1],
+        'save_pruValo3':  result[10][1],
+        'save_pruValo4':  result[11][1],
+        'save_pruValo5':  result[12][1],
+        'save_pruValo6':  result[13][1],
+        'save_pruValo7':  result[14][1],
       });
     });
   };
@@ -37,6 +46,8 @@ render() {
 
    const Esc1= parseInt(this.state.nombre);
    const Esc2=parseFloat(this.state.save_pregPcte1)+parseFloat(this.state.save_pregPcte2)+parseFloat(this.state.save_pregPcte3)+parseFloat(this.state.save_pregPcte4)+parseFloat(this.state.save_pregPcte5)+parseFloat(this.state.save_pregPcte6)+parseFloat(this.state.save_pregPcte7);
+   const Esc3=parseFloat(this.state.save_pruValo1)+parseFloat(this.state.save_pruValo2)+parseFloat(this.state.save_pruValo3)+parseFloat(this.state.save_pruValo4)+parseFloat(this.state.save_pruValo5)+parseFloat(this.state.save_pruValo6)+parseFloat(this.state.save_pruValo7);
+
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
    <View style={style.container}>
@@ -96,7 +107,7 @@ render() {
       }
     />
     : null }
-    
+     { Esc3 == 1?
     <RowItem
       name="Valoración"
       color="#f9a94b"
@@ -104,6 +115,8 @@ render() {
         this.props.navigation.navigate("Escena4",{ex:'2'})
       }
     />
+
+     : null }
      <RowItem
       name="Quiz"
       color="#f9e67a"
@@ -115,6 +128,7 @@ render() {
       })
       }
     />
+
     <RowItem
       name="Proceso de atención de Enfermeria"
       color="#f9a94b"

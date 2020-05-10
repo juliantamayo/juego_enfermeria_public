@@ -9,24 +9,18 @@ const { width, height } = Dimensions.get('window')
  
 const styles = StyleSheet.create({
   container: {
-   // backgroundColor: "#36B1F0",
-    flex: 1,
-
+    flex: 1
   },
   text: {
     color: "#fff",
     fontSize: 22,
-    textAlign: "center",
-    
+    textAlign: "center", 
     letterSpacing: -0.02,
     fontWeight: "600"
   },
   text2: {
    marginLeft : 5,
-   //paddingVertical: 8,
-   // borderWidth: 4,
     borderColor: "#20232a",
-   // borderRadius: 6,
     backgroundColor: "red",
     color: "#fff",
     textAlign: "left",
@@ -43,10 +37,7 @@ const styles = StyleSheet.create({
     width: '90%',
     height: '90%',
     margin: 20,
-   // backgroundColor: "black",
     backgroundColor: "rgba(0, 185, 188, 0.37)",
-    //borderRadius: 20,
-    //padding: 35,
     alignItems: "center",
     shadowColor: "#000",
     shadowOffset: {
@@ -59,40 +50,34 @@ const styles = StyleSheet.create({
   },
   openButton: {
    backgroundColor: "red",
-   // borderRadius: 20,
     padding: 10,
     alignItems: "center",
     justifyContent: "center",
     elevation: 2
   },
    modalText2: {
-   // marginBottom: 15,
-    // marginLeft : 20,
     fontSize: 22,
     textAlign: "center",
-    // borderColor: "#20232a",
      paddingVertical: 8,
      borderWidth: 4,
       fontWeight: "bold"
-   // backgroundColor: "red"
   },
    modalText: {
-   // marginBottom: 15,
     textAlign: "center",
-    fontSize : 18,
+    fontSize : 18
      
   },
   modalTextcuerpo: {
    // marginBottom: 15,
     textAlign: "left",
-     marginLeft : 10,
+     marginLeft : 10
   },
    modalTextnegrilla: {
    // marginBottom: 15,
    fontSize : 18,
     textAlign: "left",
     fontWeight: "bold",
-     marginLeft : 3,
+     marginLeft : 3
   },
 
   modalTex3: {
@@ -104,8 +89,7 @@ const styles = StyleSheet.create({
   headerModal:{
     flex: 0.1,
     flexDirection : 'row',
-    //backgroundColor: "yellow",
-    alignItems: 'center',
+    alignItems: 'center'
     
   },
   headerMizq:{
@@ -114,7 +98,7 @@ const styles = StyleSheet.create({
   },
   headerMDer:{
     flex:0.1,
-    backgroundColor: "rgba(0, 0, 0, 0.48)",
+    backgroundColor: "rgba(0, 0, 0, 0.48)"
   },
   bodyModal:{
     flex:0.9,
@@ -124,7 +108,7 @@ const styles = StyleSheet.create({
     borderWidth: 4,
     justifyContent: "center",
     width: '90%',
-    height: '90%',
+    height: '90%'
   },
   margen:{
     margin:5

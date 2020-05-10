@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, StatusBar, Text, SafeAreaView, ImageBackground, Image, TouchableHighlight, ScrollView } from "react-native";
+import { View, StyleSheet, StatusBar, Text, SafeAreaView, ImageBackground, ScrollView } from "react-native";
 
 import { Button, ButtonContainer } from "../../../elementos/ButtonC1_Preguntas";
 
@@ -10,7 +10,6 @@ import { Alert } from "../../../elementos/Alert";
  
 const styles = StyleSheet.create({
   container: {
-  //  backgroundColor: "#36B1F0",
     flex: 1,
     paddingHorizontal: 20
   },
@@ -22,48 +21,13 @@ const styles = StyleSheet.create({
     letterSpacing: -0.02,
     fontWeight: "600"
   },
-
   textContador: {
     color: "#fff",
-    //backgroundColor: "#36B1F0",
     fontSize: 22,
     textAlign: "center",
     letterSpacing: -0.02,
     fontWeight: "600"
-  },
-  containerImagen:{
-    alignItems : 'center',
-    backgroundColor: 'white',
-    width : '100%',
-    height : '50%'
-  },
-  Imagen:{
-    width: 290,
-  height: '100%'
-  },
-  Imagen2:{
-    width: 40,
-  height: 40
-  },
-   modalView: {
-     width: '90%',
-   height: '60%',
-    margin: 20,
-    backgroundColor: "white",
-    borderRadius: 20,
-    padding: 35,
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5
   }
-  
-
 });
 
 const mult =5;
@@ -71,15 +35,10 @@ const mult =5;
 class V_c1_Preg5_pregunta extends React.Component {
    
 
-  
-
-
   state = {
-     modalVisible: false,
     correctCount: 0, 
     //totalCount: this.props.navigation.getParam("questions", []).length,
       totalCount: this.props.route.params?.questions.length,
-   //route.params?.someParam ?? 'defaultValue';
     activeQuestionIndex: 0,
     answered: false,
     answerCorrect: false
@@ -112,7 +71,6 @@ class V_c1_Preg5_pregunta extends React.Component {
       const nextIndex = state.activeQuestionIndex + 1;
 
       if (nextIndex >= state.totalCount && this.state.correctCount < 3) {
-       // return this.props.navigation.popToTop();
         return this.props.navigation.navigate('V_C1_Preg5_dialogo',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
       }else if (nextIndex >= state.totalCount   && this.state.correctCount==3) {
        return this.props.navigation.navigate('V_C1_RespP5_enfermera',{repu_enferme:1,experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount),
@@ -137,7 +95,6 @@ class V_c1_Preg5_pregunta extends React.Component {
   }
 
   render() {
-    const { modalVisible } = this.state;
     const questions = this.props.route.params?.questions ?? [];
     const question = questions[this.state.activeQuestionIndex];
     

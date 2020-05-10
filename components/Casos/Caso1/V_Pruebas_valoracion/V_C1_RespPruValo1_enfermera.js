@@ -61,7 +61,7 @@ class V_C1_RespPruValo1_enfermera extends React.Component {
 
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate("Escena3");
+        return this.props.navigation.navigate("Guardar_V_pru_valo1",{pv1:0.1});
       }
 
       return {

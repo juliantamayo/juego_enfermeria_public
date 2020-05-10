@@ -1,6 +1,5 @@
 import React from "react";
 import {AsyncStorage, Modal, View, StyleSheet, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
-
 import { Button, ButtonContainer } from "../../../elementos/ButtonEscene1";
 import { ModalHistorial } from "../../../elementos/Modals";
 import style from '../../../Style.js';
@@ -63,7 +62,7 @@ class V_C1_RespPruValo2_enfermera extends React.Component {
 
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate("Escena3");
+        return this.props.navigation.navigate("Guardar_V_pru_valo2",{pv2:0.1});
       }
 
       return {

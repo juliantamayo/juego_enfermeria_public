@@ -4,54 +4,34 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Text, Button, AsyncStorage,Alert } from 'react-native';
 
 //import all the components we are going to use.
-export default class guardar_V_preg_pcte1 extends Component {
+export default class guardar_V_pru_valo6 extends Component {
   constructor(route) {
     super(route);
-    //Setting up global variable
-    global.recibe_pregPcte1 = this.props.route.params?.ppcte1;
+    // variable global
+    global.recibe_pru_valo6 = this.props.route.params?.pv6;
   }
 state = {
-      'save_pregPcte1':0
+      'save_pruValo6':0
    }
 
-  saveData = (value) => {
-      AsyncStorage.setItem('save_pregPcte1',  global.recibe_pregPcte1.toString());
-      this.setState({ 'save_pregPcte1':  global.recibe_pregPcte1 });
+  saveData = (value2) => {
+      AsyncStorage.setItem('save_pruValo6',  global.recibe_pru_valo6.toString());
+      this.setState({ 'save_pruValo6':  global.recibe_pru_valo6 });
        Alert.alert("Mensaje","Datos guardados correctamente", [
        
-        { text: "OK", onPress: () =>  this.props.navigation.navigate("M_caso1") }
+        { text: "OK", onPress: () =>  this.props.navigation.navigate("Escena3") }
      ]);
        
    } 
-
-  removeValue = async () => {
-  try {
-    await AsyncStorage.removeItem('save_pregPcte1');
-     Alert.alert("Mensaje","Datos eliminados correctamente", [
-       
-        { text: "OK", onPress: () =>  this.props.navigation.navigate("M_casos") }
-     ]);
-  } catch(e) {
-    // remove error
-  }
-
-  console.log('Done.')
-}
     
   render() {
     return (
     <View style={styles.MainContainer}>
         <View style={{ marginBottom: 15 }}>
-            <Text style={styles.textStyle}>
-         PPcte   {global.recibe_pregPcte1}
-           
-          </Text>
+         
         </View>
          <Button onPress ={this.saveData} title="guardar" style={styles.button}/>  
           <View style={styles.button}></View>
-      {/*Global Variable
-        <Button onPress ={this.removeValue}  title="eliminar cache data"/>  
-        */}
         <View style={styles.button}></View>
  
       </View>

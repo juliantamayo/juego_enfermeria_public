@@ -70,30 +70,37 @@ import Escena3 from './components/Casos/Caso1/escena3';
 import V_C1_PruValo1_dialogo from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_PruValo1_dialogo';
 import V_C1_PruValo1_pregunta from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_PruValo1_pregunta';
 import V_C1_RespPruValo1_enfermera from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_RespPruValo1_enfermera';
+import Guardar_V_pru_valo1 from './components/Casos/Caso1/V_Guardar/guardar_V_pru_valo1';
 
 import V_C1_PruValo2_dialogo from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_PruValo2_dialogo';
 import V_C1_PruValo2_pregunta from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_PruValo2_pregunta';
 import V_C1_RespPruValo2_enfermera from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_RespPruValo2_enfermera';
+import Guardar_V_pru_valo2 from './components/Casos/Caso1/V_Guardar/guardar_V_pru_valo2';
 
 import V_C1_PruValo3_dialogo from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_PruValo3_dialogo';
 import V_C1_PruValo3_pregunta from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_PruValo3_pregunta';
 import V_C1_RespPruValo3_enfermera from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_RespPruValo3_enfermera';
+import Guardar_V_pru_valo3 from './components/Casos/Caso1/V_Guardar/guardar_V_pru_valo3';
 
 import V_C1_PruValo4_dialogo from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_PruValo4_dialogo';
 import V_C1_PruValo4_pregunta from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_PruValo4_pregunta';
 import V_C1_RespPruValo4_enfermera from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_RespPruValo4_enfermera';
+import Guardar_V_pru_valo4 from './components/Casos/Caso1/V_Guardar/guardar_V_pru_valo4';
 
 import V_C1_PruValo5_dialogo from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_PruValo5_dialogo';
 import V_C1_PruValo5_pregunta from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_PruValo5_pregunta';
 import V_C1_RespPruValo5_enfermera from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_RespPruValo5_enfermera';
+import Guardar_V_pru_valo5 from './components/Casos/Caso1/V_Guardar/guardar_V_pru_valo5';
 
 import V_C1_PruValo6_dialogo from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_PruValo6_dialogo';
 import V_C1_PruValo6_pregunta from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_PruValo6_pregunta';
 import V_C1_RespPruValo6_enfermera from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_RespPruValo6_enfermera';
+import Guardar_V_pru_valo6 from './components/Casos/Caso1/V_Guardar/guardar_V_pru_valo6';
 
 import V_C1_PruValo7_dialogo from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_PruValo7_dialogo';
 import V_C1_PruValo7_pregunta from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_PruValo7_pregunta';
 import V_C1_RespPruValo7_enfermera from './components/Casos/Caso1/V_Pruebas_valoracion/V_C1_RespPruValo7_enfermera';
+import Guardar_V_pru_valo7 from './components/Casos/Caso1/V_Guardar/guardar_V_pru_valo7';
 //escena4-------
 import Escena4 from './components/Casos/Caso1/escena4';
 import Guardr_valo from './components/Casos/Caso1/V_Valoracion/guardar_valoracion';
@@ -818,6 +825,8 @@ useEffect(() => {
         }
        })}/>
 
+       <Stack.Screen name="Guardar_V_pru_valo1"  component={Guardar_V_pru_valo1} />
+
        <Stack.Screen name="V_C1_PruValo2_dialogo" component={V_C1_PruValo2_dialogo} 
         options={
            
@@ -851,6 +860,8 @@ useEffect(() => {
         }
        })}/>
 
+       <Stack.Screen name="Guardar_V_pru_valo2"  component={Guardar_V_pru_valo2} /> 
+
        <Stack.Screen name="V_C1_PruValo3_dialogo" component={V_C1_PruValo3_dialogo} 
         options={
            
@@ -883,6 +894,9 @@ useEffect(() => {
          borderBottomColor: route.params?.color
         }
        })}/>
+
+       <Stack.Screen name="Guardar_V_pru_valo3"  component={Guardar_V_pru_valo3} />
+
        <Stack.Screen name="V_C1_PruValo4_dialogo" component={V_C1_PruValo4_dialogo} 
         options={
            
@@ -915,6 +929,9 @@ useEffect(() => {
          borderBottomColor: route.params?.color
         }
        })}/>
+
+       <Stack.Screen name="Guardar_V_pru_valo4"  component={Guardar_V_pru_valo4} />
+
        <Stack.Screen name="V_C1_PruValo5_dialogo" component={V_C1_PruValo5_dialogo} 
         options={
            
@@ -947,6 +964,9 @@ useEffect(() => {
          borderBottomColor: route.params?.color
         }
        })}/>
+
+       <Stack.Screen name="Guardar_V_pru_valo5"  component={Guardar_V_pru_valo5} />
+
        <Stack.Screen name="V_C1_PruValo6_dialogo" component={V_C1_PruValo6_dialogo} 
         options={
            
@@ -979,6 +999,9 @@ useEffect(() => {
          borderBottomColor: route.params?.color
         }
        })}/>
+
+       <Stack.Screen name="Guardar_V_pru_valo6"  component={Guardar_V_pru_valo6} />
+
        <Stack.Screen name="V_C1_PruValo7_dialogo" component={V_C1_PruValo7_dialogo} 
         options={
            
@@ -1011,6 +1034,8 @@ useEffect(() => {
          borderBottomColor: route.params?.color
         }
        })}/>
+
+       <Stack.Screen name="Guardar_V_pru_valo7"  component={Guardar_V_pru_valo7} />
 
        <Stack.Screen name="Escena4" component={Escena4} 
         options={{
