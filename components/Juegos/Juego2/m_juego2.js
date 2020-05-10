@@ -9,7 +9,7 @@ import {StyleSheet,
       } from 'react-native';
        import styles from './../../Style.js';
 import { CommonActions } from '@react-navigation/native';
-import { ModalHistorial } from "../../elementos/Modals";
+import { Modal_MenuJuego2 } from "../../elementos/ModalsTutorial";
 
 export default function m_juego2 ({navigation, route}) {
 
@@ -19,7 +19,7 @@ const [modalVisible, setModalVisible] = useState(false);
   
     <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
        
-      <ModalHistorial
+      <Modal_MenuJuego2
               
                text={modalVisible}
               onPress={() => {

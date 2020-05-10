@@ -9,7 +9,7 @@ import {Text,
   import styles from './Style.js';
  // import im from '../assets/images/background.png';
  import { CommonActions } from '@react-navigation/native';
- import { ModalHistorial } from "./elementos/Modals";
+ import { Modal_Menu } from "./elementos/ModalsTutorial";
 
 export default function menu ({navigation, route}) {
 
@@ -19,7 +19,7 @@ export default function menu ({navigation, route}) {
    //  <Imagebackground style={styles.container}>
     <ImageBackground source={require("../assets/images/background.png")}style={styles.container}>
 
-    <ModalHistorial
+    <Modal_Menu
       
        text={modalVisible}
       onPress={() => {

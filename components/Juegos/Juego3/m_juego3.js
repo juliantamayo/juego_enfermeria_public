@@ -8,23 +8,33 @@ import { View,
         TouchableOpacity } from 'react-native';
 import styles from './../../Style.js';
 import { RowItemJuego1} from "../../elementos/RowItemJuego1";
-import { ModalHistorial } from "../../elementos/Modals";
+import { Modal_MenuJuego3 } from "../../elementos/ModalsTutorial";
+import { ModalSNA } from "../../elementos/ModalsRepaso";
 import snaQuestions from "../../data/sna";
 
 export default function menu_juego3 ({navigation, route}) {
 
  const [modalVisible, setModalVisible] = useState(false);
+ const [modalVisible2, setModalVisible2] = useState(false);
  
     return (
 <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
 
-    <ModalHistorial
+    <Modal_MenuJuego3
               
                text={modalVisible}
               onPress={() => {
                         setModalVisible(!modalVisible);
                       }}
               />
+
+      <ModalSNA
+              
+             text={modalVisible2}
+             onPress={() => {
+                setModalVisible2(!modalVisible2);
+                    }}
+              />              
 
     <View style={styles.header}>
     
@@ -66,9 +76,11 @@ export default function menu_juego3 ({navigation, route}) {
               <View style={style.footerSNPizq}>
                 <View style={style.margen}></View>
                     <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-                          onPress={() => navigation.navigate('M_juegos')}>
-                         <Image style={ styles.image } source={require("../../../assets/images/button-izquierda.png")} />
-                    </TouchableOpacity>
+                        onPress={() => {
+                 setModalVisible2(!modalVisible2);
+                         }}>
+                       <Image style={ styles.image } source={require("../../../assets/images/button-izquierda.png")} />
+                  </TouchableOpacity>
                       <Text style={style.textoboton}>ESTUDIAR</Text>
                 </View>
                   
