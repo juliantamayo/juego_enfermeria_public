@@ -78,7 +78,7 @@ render() {
       name="Pruebas de valoración"
        color="#f9e67a"
       onPress={() =>
-        this.props.navigation.navigate("pruebaT",{ex:'2'})
+        this.props.navigation.navigate("C2_Escena3",{ex:'2'})
       }
     />
     <RowItem

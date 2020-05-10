@@ -345,7 +345,6 @@ const styles = StyleSheet.create({
   },
 });
 */
-/*
 import React from 'react'
 import { Text, View } from 'react-native'
 import Swiper from 'react-native-swiper'
@@ -390,7 +389,9 @@ export default () => (
     </View>
   </Swiper>
 )
-*/
+
+
+/*
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -492,4 +493,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('AwesomeProject', () => AsyncStorageExample);
+AppRegistry.registerComponent('AwesomeProject', () => AsyncStorageExample); */

@@ -2,7 +2,6 @@ import React from 'react';
 import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpacity,  Image, Text, AsyncStorage } from 'react-native';
 
 import styles from './../../Style.js';
-import Escena1Dialog from "../../data/C3_data/C3_escena1dialog";
 
 import { RowItem } from "../../elementos/RowItem";
 
@@ -10,13 +9,10 @@ export default class menu_caso3 extends React.Component {
 
 
     state ={
-      val:this.props.route.params?.activeQuestion,
-      'name': '',
-       hola:this.props.route.params?.ex,
-       'nombre':''
+
     };
    
- componentDidMount = () => AsyncStorage.getItem('nombre').then((value) => this.setState({ 'nombre': value }))
+ 
 
 render() {
 
@@ -52,12 +48,11 @@ render() {
       onPress={() =>
         this.props.navigation.navigate("C3_Escena1", {
           title: "C3_Escena1",
-          questions: Escena1Dialog,
           color: "#36b1f0"
         })
       }
     />
-     { this.state.nombre == '2'? 
+ 
     <RowItem
       name="Preguntas a Paciente"
       color="#f9a94b"
@@ -68,12 +63,12 @@ render() {
         })
       }
     />
-    : null }
+
     <RowItem
       name="Pruebas de valoración"
        color="#f9e67a"
       onPress={() =>
-        this.props.navigation.navigate("pruebaT",{ex:'2'})
+        this.props.navigation.navigate("C3_Escena3")
       }
     />
     <RowItem
