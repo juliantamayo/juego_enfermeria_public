@@ -96,10 +96,10 @@ render() {
       }
     />
     <RowItem
-      name="Variables"
-      color="#00b9bc"
+      name="Proceso de atención de Enfermeria"
+      color="#f9a94b"
       onPress={() =>
-        this.props.navigation.navigate("Variables",{ex:'2'})
+        this.props.navigation.navigate("C2_Escena6",{ex:'2'})
       }
     />
     </ScrollView>

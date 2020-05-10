@@ -506,7 +506,6 @@ const styles = {
   wrapper: {},
   slide: {
     flex: 1,
-   // justifyContent: 'center',
     backgroundColor: 'transparent'
   },
   text: {
@@ -528,18 +527,14 @@ const styles = {
     fontSize: 20
   },
    modalText: {
-   // marginBottom: 15,
     textAlign: "justify",
-    fontSize : 18,
-     
+    fontSize : 18, 
   },
   modalTextcuerpo: {
-   // marginBottom: 15,
     textAlign: "left",
      marginLeft : 10,
   },
    modalTextnegrillaTitulo: {
-   // marginBottom: 15,
    fontSize : 23,
     textAlign: "center",
     fontWeight: "bold",
@@ -547,7 +542,6 @@ const styles = {
      backgroundColor: 'white'
   },
    modalTextnegrilla: {
-   // marginBottom: 15,
    fontSize : 18,
     textAlign: "left",
     fontWeight: "bold",

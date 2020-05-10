@@ -1,4 +1,4 @@
-import React, {Component } from 'react';
+import React, {Component, useState  } from 'react';
 import {Text, 
         View, 
         Button,
@@ -9,14 +9,24 @@ import {Text,
   import styles from './Style.js';
  // import im from '../assets/images/background.png';
  import { CommonActions } from '@react-navigation/native';
+ import { ModalHistorial } from "./elementos/Modals";
 
 export default function menu ({navigation, route}) {
 
-
+ const [modalVisible, setModalVisible] = useState(false);
  
     return (
    //  <Imagebackground style={styles.container}>
     <ImageBackground source={require("../assets/images/background.png")}style={styles.container}>
+
+    <ModalHistorial
+      
+       text={modalVisible}
+      onPress={() => {
+                setModalVisible(!modalVisible);
+              }}
+      />
+
        <View style={styles.header}>   
       <View style={styles.headerIzquierda}>
      <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
@@ -34,6 +44,13 @@ export default function menu ({navigation, route}) {
           )
         }>
                <Image style={ styles.image } source={require("../assets/images/button-settings.png")} />
+      </TouchableOpacity>
+
+      <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
+                   onPress={() => {
+                 setModalVisible(!modalVisible);
+              }}>
+                           <Image style={ styles.image } source={require("../assets/images/ayuda.png")} />
       </TouchableOpacity>
 </View>
 
