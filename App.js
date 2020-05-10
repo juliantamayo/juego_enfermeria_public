@@ -137,6 +137,9 @@ import V_C2_Preg5_dialogo from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_P
 import V_C2_Preg5_pregunta from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg5_pregunta';
 import V_C2_RespP5_enfermera from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_RespP5_enfermera';
 
+import V_C2_Preg6_dialogo from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg6_dialogo';
+import V_C2_Preg6_pregunta from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg6_pregunta';
+import V_C2_RespP6_enfermera from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_RespP6_enfermera';
 //pruebas de valoración escena 3 Caso 2
 import C2_Escena3 from './components/Casos/Caso2/escena3';
 import V_C2_PruValo1_dialogo from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo1_dialogo';
@@ -194,6 +197,8 @@ import V_C2_RespPruValo13_enfermera from './components/Casos/Caso2/V_Pruebas_val
 import V_C2_PruValo14_dialogo from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo14_dialogo';
 import V_C2_PruValo14_pregunta from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo14_pregunta';
 import V_C2_RespPruValo14_enfermera from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_RespPruValo14_enfermera';
+//escena6
+import C2_Escena6 from './components/Casos/Caso2/escena6';
 //-------------------------caso3---------------------------------
 import M_caso3 from './components/Casos/Caso3/menu_caso3';
 import C3_Escena1 from './components/Casos/Caso3/escena1';
@@ -237,6 +242,10 @@ import V_C3_RespPruValo4_enfermera from './components/Casos/Caso3/V_Pruebas_valo
 import V_C3_PruValo5_dialogo from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_PruValo5_dialogo';
 import V_C3_PruValo5_pregunta from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_PruValo5_pregunta';
 import V_C3_RespPruValo5_enfermera from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_RespPruValo5_enfermera';
+
+
+//escena6
+import C3_Escena6 from './components/Casos/Caso3/escena6';
 
 
 const Stack = createStackNavigator();
@@ -1076,8 +1085,6 @@ useEffect(() => {
 
         <Stack.Screen name="Escena6" component={Escena6} 
         options={{
-        //  headerShown: false
-        
           title: '',
           headerStyle: {
             backgroundColor: '#fbe122',
@@ -1786,11 +1793,13 @@ useEffect(() => {
         }
        })}/>
 
-
-
-
-
-
+        <Stack.Screen name="C2_Escena6" component={C2_Escena6} 
+        options={{
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/> 
 
          <Stack.Screen name="M_caso3"  component={M_caso3}
           options={{
@@ -1805,21 +1814,18 @@ useEffect(() => {
           },
         }} />
 
-      
-
-         <Stack.Screen name="C3_Escena1"  component={C3_Escena1}
-          options={{
-         headerLeft: null,
-          title: 'C3_Escena1',
+         <Stack.Screen name="C3_Escena1" component={C3_Escena1} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
           headerStyle: {
-            backgroundColor: '#fbe122',
-          },
-          headerTintColor: 'black',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-          },
-        }} />        
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
 
+
+       })}/>        
 
          <Stack.Screen name="C3_Escena2"  component={C3_Escena2}
           options={{
@@ -2160,6 +2166,14 @@ useEffect(() => {
         }
        })}/>
 
+
+        <Stack.Screen name="C3_Escena6" component={C3_Escena6} 
+        options={{
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
 
          <Stack.Screen name="pruebaT"  component={pruebaT} />

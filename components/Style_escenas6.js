@@ -57,7 +57,8 @@ export default StyleSheet.create({
   },
   bordeview:{
     borderWidth: 2,
-     margin:5,
+     margin:1,
+    paddingVertical: 8,
     backgroundColor: 'white'
   },
   fondoviewText:{

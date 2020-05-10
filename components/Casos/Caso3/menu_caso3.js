@@ -2,8 +2,8 @@ import React from 'react';
 import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpacity,  Image, Text, AsyncStorage } from 'react-native';
 
 import styles from './../../Style.js';
-
 import { RowItem } from "../../elementos/RowItem";
+import Escena3Dialog from "../../data/C3_data/C3_escena1dialog";
 
 export default class menu_caso3 extends React.Component {
 
@@ -48,6 +48,7 @@ render() {
       onPress={() =>
         this.props.navigation.navigate("C3_Escena1", {
           title: "C3_Escena1",
+          questions: Escena3Dialog,
           color: "#36b1f0"
         })
       }
@@ -86,10 +87,10 @@ render() {
       }
     />
     <RowItem
-      name="Variables"
-      color="#00b9bc"
+      name="Proceso de atención de Enfermeria"
+      color="#f9a94b"
       onPress={() =>
-        this.props.navigation.navigate("Variables",{ex:'2'})
+        this.props.navigation.navigate("C3_Escena6",{ex:'2'})
       }
     />
     </ScrollView>
@@ -103,7 +104,6 @@ render() {
 const style = StyleSheet.create({
   container: {
     flex: 1,
-   // alignItems : 'stretch',
     width: "100%",
     height :'100%',
    

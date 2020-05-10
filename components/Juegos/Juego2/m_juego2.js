@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import {StyleSheet, 
         Text, 
         View, 
@@ -9,16 +9,25 @@ import {StyleSheet,
       } from 'react-native';
        import styles from './../../Style.js';
 import { CommonActions } from '@react-navigation/native';
-
-
-
+import { ModalHistorial } from "../../elementos/Modals";
 
 export default function m_juego2 ({navigation, route}) {
+
+const [modalVisible, setModalVisible] = useState(false);
 
     return (
   
     <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
-          
+       
+      <ModalHistorial
+              
+               text={modalVisible}
+              onPress={() => {
+                        setModalVisible(!modalVisible);
+                      }}
+              />
+       
+
       <View style={styles.header}>
     
      <View style={styles.headerIzquierda}>
@@ -36,6 +45,13 @@ export default function m_juego2 ({navigation, route}) {
       <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
        onPress={() => navigation.navigate('Home')}>
                <Image style={ styles.image } source={require("../../../assets/images/buttonteory.png")} />
+      </TouchableOpacity>
+
+      <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
+                   onPress={() => {
+                 setModalVisible(!modalVisible);
+              }}>
+                           <Image style={ styles.image } source={require("../../../assets/images/ayuda.png")} />
       </TouchableOpacity>
       </View>
 

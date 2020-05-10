@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component,useState} from 'react';
 import { View, 
          Text, 
          Alert, 
@@ -8,12 +8,25 @@ import { View,
         TouchableOpacity } from 'react-native';
 import styles from './../../Style.js';
 import { RowItemJuego1} from "../../elementos/RowItemJuego1";
+import { ModalHistorial } from "../../elementos/Modals";
 import sncQuestions from "../../data/snc";
 import snpQuestions from "../../data/snp";
 
+export default function menu_juego1 ({navigation, route}) {
 
-export default ({ navigation, route }) => (
+ const [modalVisible, setModalVisible] = useState(false);
+ 
+    return (
+
 <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
+
+        <ModalHistorial
+              
+               text={modalVisible}
+              onPress={() => {
+                        setModalVisible(!modalVisible);
+                      }}
+              />
 
     <View style={styles.header}>
     
@@ -33,6 +46,12 @@ export default ({ navigation, route }) => (
        onPress={() => navigation.navigate('Home')}>
                <Image style={ styles.image } source={require("../../../assets/images/buttonteory.png")} />
       </TouchableOpacity>
+      <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
+                   onPress={() => {
+                 setModalVisible(!modalVisible);
+              }}>
+                           <Image style={ styles.image } source={require("../../../assets/images/ayuda.png")} />
+      </TouchableOpacity>
       </View>
 
       </View>
@@ -44,7 +63,9 @@ export default ({ navigation, route }) => (
               <View style={style.hederSNcizq}>
                <View style={style.margen}></View>
                   <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-                        onPress={() => navigation.navigate('M_juegos')}>
+                        onPress={() => {
+                 setModalVisible(!modalVisible);
+                         }}>
                        <Image style={ styles.image } source={require("../../../assets/images/button-izquierda.png")} />
                   </TouchableOpacity>
                    <Text style={style.textoboton}>ESTUDIAR</Text>
@@ -114,14 +135,14 @@ export default ({ navigation, route }) => (
     
       </View>
      </ImageBackground>
-);
-
+ );
+  
+}
 
 const style = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    //backgroundColor: 'red',
     height :'100%',
     width : '100%'
   },
@@ -130,7 +151,6 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     alignItems: "center",
     justifyContent : 'center',
-   //  backgroundColor: 'blue',
       height :'100%',
       width : '100%'
     },
@@ -138,7 +158,6 @@ const style = StyleSheet.create({
      flex: 1,
      alignItems : 'flex-end',
      justifyContent : 'center',
-    // backgroundColor: '#ffe4c4',
      height :'100%',
      width : '100%'
 
@@ -147,7 +166,6 @@ const style = StyleSheet.create({
      flex: 1,
      alignItems : 'center',
      justifyContent : 'center',
-   //  backgroundColor: '#7fffd4',
      height :'100%',
      width : '100%'
 
@@ -156,7 +174,6 @@ const style = StyleSheet.create({
      flex: 1,
      alignItems : 'flex-start',
      justifyContent : 'center',
-   //  backgroundColor: 'yellow',
      height :'100%',
      width : '100%'
 
@@ -166,15 +183,12 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     alignItems: "center",
     justifyContent : 'center',
-   // backgroundColor: 'yellow',
     height :'100%',
     width : '100%'
     },
     footerSNPizq: {
      flex: 1,
      alignItems : 'flex-end',
-    //justifyContent : 'center',
-    // backgroundColor: 'gray',
      height :'100%',
      width : '100%'
 
@@ -182,8 +196,6 @@ const style = StyleSheet.create({
     footerSNPcenter: {
      flex: 1,
      alignItems : 'center',
-     //justifyContent : 'center',
-    // backgroundColor: 'red',
      height :'100%',
      width : '100%'
 
@@ -191,8 +203,6 @@ const style = StyleSheet.create({
     footerSNPDer: {
      flex: 1,
      alignItems : 'flex-start',
-    // justifyContent : 'center',
-    // backgroundColor: 'yellow',
      height :'100%',
      width : '100%'
 
@@ -211,10 +221,7 @@ const style = StyleSheet.create({
   },
   textoboton: {
     marginRight : 10,
-   //paddingVertical: 8,
-   // borderWidth: 4,
     borderColor: "#20232a",
-   // borderRadius: 6,
     backgroundColor: "white",
     color: "#20232a",
     textAlign: "center",
@@ -237,110 +244,3 @@ const style = StyleSheet.create({
     margin:10
   }
 });
-
-
-
-
-
-
-
-/*
-function Welcome(props) {
-  let a=parseInt(props.value);
-
- let suma=a + 10;
-  return  <Text>Hello, {suma} , {props.name}</Text>;
-}
-
-class M_juego1 extends Component {
-
-  constructor() {
-    super();
-    this.state = {
-      count: 0,
-    };
-  }
-
-  updateCount() {
-   this.setState((prevState, props) => {
-      return { count: prevState.count + 1 }
-    })
-     let variable= this.state.count
-      Alert.alert("Clicked    "+ variable +"  times")
-  }
-
- render(){
-   // name.valor=name.valor+200;
-
-  return (
-    <View style={styles.container}>
-        <View style={styles.arriba}>
-        <Button style={styles.button}
-        title="ir a JUEGO 1 TEORIA 1"
-        onPress={() => this.props.navigation.navigate('juego1_teory1')}
-         />
-        <Text>SNC</Text>
-      <Button
-        title="ir a JUEGO 1 PARTE 1"
-        onPress={() => this.props.navigation.navigate('juego1_part1')}
-      />
-
-
-         </View>
-        <View style={styles.abajo}> 
-
-         <Button
-        title="cambiar valores"
-         onPress={
-          () => this._onPressButton()
-        }
-              />
-
-      <Welcome value='8' name="julian"/> 
-
-
-          <Button
-              title= "vamooooossssssssssss"
-              onPress={() => this.updateCount()}
-            >
-              
-            </Button>
-
-
-
-        </View>
-    </View>
-  );
-}
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'palevioletred',
-    flexDirection: 'column',
-  },
-
-  arriba: {
-    flex:1,
-    flexDirection: 'row',
-    backgroundColor: 'turquoise',
-    justifyContent: 'space-around',
-    alignItems: 'center'
-
-  },
-  abajo: {
-    flex:1,
-    flexDirection: 'row',
-    backgroundColor: 'mediumturquoise',
-  },
-  button:{
-     color: '#f194ff',
-     borderRadius: 50,
-
-  }
-
-})
-
-export default M_juego1;
-*/

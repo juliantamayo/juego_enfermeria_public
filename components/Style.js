@@ -3,7 +3,6 @@ import {StyleSheet, Dimensions} from 'react-native';
 const { width, height } = Dimensions.get('window')
 
 
-
 export default StyleSheet.create({
   container: {
     flex: 1,
@@ -20,12 +19,9 @@ export default StyleSheet.create({
       headerIzquierda:{
       flex:1,
       alignItems: 'flex-start'
-     // backgroundColor: 'red',
      },
      headerDerecha:{
       flex:1,
-    //  backgroundColor: 'yellow',
-      //justifyContent: 'flex-end',
       alignItems: 'flex-end'
      },
   miniButon:{
@@ -51,7 +47,6 @@ export default StyleSheet.create({
       flex:1,
       alignItems: 'center',
        justifyContent: 'center',
-     // backgroundColor: 'yellow',
       height :'100%',
       width : '100%'
 
@@ -101,14 +96,10 @@ export default StyleSheet.create({
   text:{
     fontSize :20,
      fontWeight: 'bold',
-    //color: 'rgba(96,100,109, 1)',
-    //lineHeight: 50
-   // textAlign: 'center',
   },
 margen:{
     width : 280,
      margin: 100,
-
   },
   margen2:{
     margin:10
