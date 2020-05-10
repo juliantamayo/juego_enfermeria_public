@@ -2,7 +2,7 @@ import React from "react";
 import {AsyncStorage, Modal, View, StyleSheet, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
 
 import { Button, ButtonContainer } from "../../../elementos/ButtonEscene1";
-import { ModalHistorial } from "../../../elementos/Modals";
+import { C2_ModalHistorial } from "../../../elementos/Modals";
 import style from '../../../Style.js';
 
 import { CommonActions } from '@react-navigation/native';
@@ -85,7 +85,7 @@ class V_C2_RespPruValo12_enfermera extends React.Component {
     return (
     <ImageBackground source={question.image} style={style.container} resizeMode='contain'>
 
-     <ModalHistorial
+     <C2_ModalHistorial
       
        text={modalVisible}
        onPress={() => {

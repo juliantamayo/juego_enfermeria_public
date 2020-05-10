@@ -2,7 +2,7 @@ import React from "react";
 import {AsyncStorage, Modal, View, StyleSheet, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
 
 import { Button, ButtonContainer } from "../../../elementos/ButtonEscene1";
-import { ModalC2_Historial } from "../../../elementos/RowItem";
+import { C2_ModalHistorial } from "../../../elementos/Modals";
 import style from '../../../Style.js';
 import D_C2_pregunta2_pregunta from "../../../data/C2_data/C2_preguntas/D_C2_pregunta2_pregunta";
 import { CommonActions } from '@react-navigation/native';
@@ -97,7 +97,13 @@ class V_C2_Preg2_dialogo extends React.Component {
   
     return (
     <ImageBackground source={question.image} style={style.container} resizeMode='contain'>
-
+       <C2_ModalHistorial
+      
+       text={modalVisible}
+       onPress={() => {
+                  this.setModalVisible(!modalVisible);
+                }}
+      />
     
       <View
         style={
@@ -138,7 +144,7 @@ class V_C2_Preg2_dialogo extends React.Component {
 
               <TouchableOpacity style={ style.imageContainer } activeOpacity={0.8}
                    onPress={() => {
-
+                        this.setModalVisible(true);
                       }}>
                            <Image style={ style.image } source={require("../../../../assets/images/historial.png")} />
                </TouchableOpacity>

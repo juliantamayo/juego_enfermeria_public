@@ -17,6 +17,7 @@ import C2_Pru_valo11_dialog from "../../data/C2_data/C2_Pru_valoracion/D_C2_Pru_
 import C2_Pru_valo12_dialog from "../../data/C2_data/C2_Pru_valoracion/D_C2_Pru_Valoracion12_dialog";
 import C2_Pru_valo13_dialog from "../../data/C2_data/C2_Pru_valoracion/D_C2_Pru_Valoracion13_dialog";
 import C2_Pru_valo14_dialog from "../../data/C2_data/C2_Pru_valoracion/D_C2_Pru_Valoracion14_dialog";
+import C2_Pru_valo15_dialog from "../../data/C2_data/C2_Pru_valoracion/D_C2_Pru_Valoracion15_dialog";
 
 
 import { ButtonContainer, RowItemEscena3 } from "../../elementos/RowItem";
@@ -250,6 +251,22 @@ render() {
     />
 
    </View>
+       <View style={style.viewcolsmenu}> 
+
+    <RowItemEscena3
+      name="15"
+      color="#77c6c6"
+      onPress={() =>
+        this.props.navigation.navigate("V_C2_PruValo15_dialogo", {
+          title: "15 C2",
+          questions: C2_Pru_valo15_dialog,
+          color: "#799496"
+        })
+      }
+    />
+
+   </View>
+
 
    <Text style={styles.textStyle}>
          hola   {this.state.save_pregPcte1}
