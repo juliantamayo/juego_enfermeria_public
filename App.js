@@ -238,9 +238,6 @@ import V_C3_PruValo5_dialogo from './components/Casos/Caso3/V_Pruebas_valoracion
 import V_C3_PruValo5_pregunta from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_PruValo5_pregunta';
 import V_C3_RespPruValo5_enfermera from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_RespPruValo5_enfermera';
 
-import V_C3_PruValo6_dialogo from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_PruValo6_dialogo';
-import V_C3_PruValo6_pregunta from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_PruValo6_pregunta';
-import V_C3_RespPruValo6_enfermera from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_RespPruValo6_enfermera';
 
 const Stack = createStackNavigator();
 
@@ -2162,38 +2159,7 @@ useEffect(() => {
          borderBottomColor: route.params?.color
         }
        })}/>
-       <Stack.Screen name="V_C3_PruValo6_dialogo" component={V_C3_PruValo6_dialogo} 
-        options={
-           
-        ({ navigation, route }) => ({ title: route.params?.title ,
-          headerLeft: null,
-          headerStyle: {
-         backgroundColor: '#fbe122',
-         borderBottomColor: route.params?.color
-        }
-       })}/>
 
-       <Stack.Screen name="V_C3_PruValo6_pregunta" component={V_C3_PruValo6_pregunta} 
-        options={
-           
-        ({ navigation, route }) => ({ title: route.params?.title ,
-          headerLeft: null,
-          headerStyle: {
-         backgroundColor: '#fbe122',
-         borderBottomColor: route.params?.color
-        }
-       })}/>
-
-       <Stack.Screen name="V_C3_RespPruValo6_enfermera" component={V_C3_RespPruValo6_enfermera} 
-        options={
-           
-        ({ navigation, route }) => ({ title: route.params?.title ,
-          headerLeft: null,
-          headerStyle: {
-         backgroundColor: '#fbe122',
-         borderBottomColor: route.params?.color
-        }
-       })}/>
 
 
          <Stack.Screen name="pruebaT"  component={pruebaT} />

@@ -512,6 +512,10 @@ const styles = {
   text: {
     color: '#fff',
     fontSize: 30,
+
+
+
+    
     fontWeight: 'bold'
   },
   image: {

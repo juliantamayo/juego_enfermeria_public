@@ -8,7 +8,7 @@ import C3_Pru_valo2_dialog from "../../data/C3_data/C3_Pru_valoracion/D_C3_Pru_V
 import C3_Pru_valo3_dialog from "../../data/C3_data/C3_Pru_valoracion/D_C3_Pru_Valoracion3_dialog";
 import C3_Pru_valo4_dialog from "../../data/C3_data/C3_Pru_valoracion/D_C3_Pru_Valoracion4_dialog";
 import C3_Pru_valo5_dialog from "../../data/C3_data/C3_Pru_valoracion/D_C3_Pru_Valoracion5_dialog";
-import C3_Pru_valo6_dialog from "../../data/C3_data/C3_Pru_valoracion/D_C3_Pru_Valoracion6_dialog";
+
 
 
 
@@ -115,17 +115,6 @@ render() {
         this.props.navigation.navigate("V_C3_PruValo5_dialogo", {
           title: "5 C3",
           questions: C3_Pru_valo5_dialog,
-          color: "#799496"
-        })
-      }
-    />
-    <RowItemEscena3
-      name="6"
-      color="#00b9bc"
-      onPress={() =>
-        this.props.navigation.navigate("V_C3_PruValo6_dialogo", {
-          title: "6 C3",
-          questions: C3_Pru_valo6_dialog,
           color: "#799496"
         })
       }
