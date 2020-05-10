@@ -1,37 +1,13 @@
 import React from "react";
 import { View, TouchableOpacity, Text, StyleSheet, Alert, Modal, TouchableHighlight,
-  StatusBar,  SafeAreaView,ScrollView, Image,ImageBackground } from "react-native";
+  StatusBar,  SafeAreaView,ScrollView, Image, ImageBackground } from "react-native";
 import Swiper from 'react-native-swiper';
 
 const styles = StyleSheet.create({
-  button: {
-    backgroundColor: "rgba(3, 33, 0, 0.47)",
-    borderRadius: 10,
-    paddingVertical: 15,
-    alignItems: "center",
-    justifyContent: "center",
-    width: "46%",
-    marginTop: 20
-  },
-  text: {
-    color: "#fff",
-    fontSize: 20,
-    textAlign: "center"
-  },
-  buttonContainer: {
-    flexDirection: "column",
-    flexWrap: "wrap",
-    marginTop: 20,
-    justifyContent: "space-between"
-  },
   modalView: {
-    width: '90%',
-    height: '90%',
-    margin: 20,
-   // backgroundColor: "black",
+    width: '100%',
+    height: '97%',
     backgroundColor: "rgba(0, 185, 188, 0.37)",
-    //borderRadius: 20,
-    //padding: 35,
     alignItems: "center",
     shadowColor: "#000",
     shadowOffset: {
@@ -44,52 +20,18 @@ const styles = StyleSheet.create({
   },
   openButton: {
    backgroundColor: "red",
-   // borderRadius: 20,
     padding: 10,
     alignItems: "center",
     justifyContent: "center",
     elevation: 2
   },
-   modalText2: {
-   // marginBottom: 15,
-    // marginLeft : 20,
-    fontSize: 22,
-    textAlign: "center",
-    // borderColor: "#20232a",
-     paddingVertical: 8,
-     borderWidth: 4,
-      fontWeight: "bold"
-   // backgroundColor: "red"
-  },
-   modalText: {
-   // marginBottom: 15,
-    textAlign: "center",
-    fontSize : 18,
-     
-  },
-  modalTextcuerpo: {
-   // marginBottom: 15,
-    textAlign: "left",
-     marginLeft : 10,
-  },
-   modalTextnegrilla: {
-   // marginBottom: 15,
-   fontSize : 18,
-    textAlign: "left",
-    fontWeight: "bold",
-     marginLeft : 3,
-  },
-
   modalTex3: {
-   // marginBottom: 15,
     textAlign: "center",
-    color: "#fff"
-     
+    color: "#fff"   
   },
   headerModal:{
     flex: 0.1,
     flexDirection : 'row',
-    //backgroundColor: "yellow",
     alignItems: 'center',
     
   },
@@ -121,7 +63,7 @@ const styles = StyleSheet.create({
   slide: {
     flex: 1,
     backgroundColor: 'transparent',
-    alignItems: 'center'
+    alignItems: 'center',
   },
    image: {
    width: '90%',
@@ -130,7 +72,7 @@ const styles = StyleSheet.create({
 });
 
 
-export const ModalSNC = ({ text, onPress = () => {} }) => (
+export const Modal_Menu = ({ text, onPress = () => {} }) => (
   <Modal
           animationType="slide"
           transparent={true}
@@ -162,13 +104,13 @@ export const ModalSNC = ({ text, onPress = () => {} }) => (
             
             <View style={styles.bodyModal}>
               <Swiper
-          style={styles.wrapper}
+          style={styles.wrapper} showsButtons
           dot={
             <View
               style={{
                 backgroundColor: 'gray',
-                width: 13,
-                height: 13,
+                width: 8,
+                height: 8,
                 borderRadius: 7,
                 marginLeft: 7,
                 marginRight: 7
@@ -179,8 +121,8 @@ export const ModalSNC = ({ text, onPress = () => {} }) => (
             <View
               style={{
                 backgroundColor: 'black',
-                width: 13,
-                height: 13,
+                width: 8,
+                height: 8,
                 borderRadius: 7,
                 marginLeft: 7,
                 marginRight: 7
@@ -192,12 +134,11 @@ export const ModalSNC = ({ text, onPress = () => {} }) => (
           }}
           loop={false}
         >
-          <ImageBackground style={styles.slide} source={require('../../assets/images/SNC_partes_cerebro_repaso.png')} resizeMode="contain">
+          <ImageBackground style={styles.slide} source={require('../../assets/images/WhatsApp.jpeg')} resizeMode="cover">
 
- 
           </ImageBackground>
 
-          <ImageBackground style={styles.slide} source={require('../../assets/images/SNC_diencefalo_repaso.png')} resizeMode="contain">
+          <ImageBackground style={styles.slide} source={require('../../assets/images/WhatsApp.jpeg')} resizeMode="cover">
 
           </ImageBackground>
           
@@ -209,7 +150,8 @@ export const ModalSNC = ({ text, onPress = () => {} }) => (
         </Modal>
 );
 
-export const ModalSNP = ({ text, onPress = () => {} }) => (
+
+export const Modal_MenuJuego1 = ({ text, onPress = () => {} }) => (
   <Modal
           animationType="slide"
           transparent={true}
@@ -241,13 +183,13 @@ export const ModalSNP = ({ text, onPress = () => {} }) => (
             
             <View style={styles.bodyModal}>
               <Swiper
-          style={styles.wrapper}
+          style={styles.wrapper} showsButtons
           dot={
             <View
               style={{
                 backgroundColor: 'gray',
-                width: 13,
-                height: 13,
+                width: 8,
+                height: 8,
                 borderRadius: 7,
                 marginLeft: 7,
                 marginRight: 7
@@ -258,8 +200,8 @@ export const ModalSNP = ({ text, onPress = () => {} }) => (
             <View
               style={{
                 backgroundColor: 'black',
-                width: 13,
-                height: 13,
+                width: 8,
+                height: 8,
                 borderRadius: 7,
                 marginLeft: 7,
                 marginRight: 7
@@ -271,9 +213,14 @@ export const ModalSNP = ({ text, onPress = () => {} }) => (
           }}
           loop={false}
         >
-          <ImageBackground style={styles.slide} source={require('../../assets/images/SNP_nervios_craneales_repaso.png')} resizeMode="contain">
+          <ImageBackground style={styles.slide} source={require('../../assets/images/WhatsApp2.jpeg')} resizeMode="cover">
 
-          </ImageBackground> 
+          </ImageBackground>
+
+          <ImageBackground style={styles.slide} source={require('../../assets/images/WhatsApp2.jpeg')} resizeMode="cover">
+
+          </ImageBackground>
+          
         </Swiper>
             </View> 
             </View>
@@ -282,7 +229,7 @@ export const ModalSNP = ({ text, onPress = () => {} }) => (
         </Modal>
 );
 
-export const ModalSNA = ({ text, onPress = () => {} }) => (
+export const Modal_MenuJuego2 = ({ text, onPress = () => {} }) => (
   <Modal
           animationType="slide"
           transparent={true}
@@ -314,13 +261,13 @@ export const ModalSNA = ({ text, onPress = () => {} }) => (
             
             <View style={styles.bodyModal}>
               <Swiper
-          style={styles.wrapper}
+          style={styles.wrapper} showsButtons
           dot={
             <View
               style={{
                 backgroundColor: 'gray',
-                width: 13,
-                height: 13,
+                width: 8,
+                height: 8,
                 borderRadius: 7,
                 marginLeft: 7,
                 marginRight: 7
@@ -331,8 +278,8 @@ export const ModalSNA = ({ text, onPress = () => {} }) => (
             <View
               style={{
                 backgroundColor: 'black',
-                width: 13,
-                height: 13,
+                width: 8,
+                height: 8,
                 borderRadius: 7,
                 marginLeft: 7,
                 marginRight: 7
@@ -344,21 +291,171 @@ export const ModalSNA = ({ text, onPress = () => {} }) => (
           }}
           loop={false}
         >
-          <View style={styles.slide}>
+          <ImageBackground style={styles.slide} source={require('../../assets/images/WhatsApp2.jpeg')} resizeMode="cover">
 
-                <Image
-              style={styles.image}
-              source={require('../../assets/images/sistemas_autonomo_repaso.png')}
-              resizeMode="contain"
-            />
+          </ImageBackground>
 
-          </View>  
+          <ImageBackground style={styles.slide} source={require('../../assets/images/WhatsApp2.jpeg')} resizeMode="cover">
+
+          </ImageBackground>
+          
         </Swiper>
             </View> 
             </View>
             
-         
         </Modal>
 );
 
+export const Modal_MenuJuego3 = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
 
+            <View style={styles.headerModal}>
+
+            <View style={styles.headerMizq}>
+            </View>
+         <View style={styles.margen}></View>
+
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton}
+                
+                onPress={onPress}
+               >
+                  <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+             </View>
+            
+              
+            </View>
+            
+            <View style={styles.bodyModal}>
+              <Swiper
+          style={styles.wrapper} showsButtons
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 8,
+                height: 8,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 8,
+                height: 8,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 30
+          }}
+          loop={false}
+        >
+          <ImageBackground style={styles.slide} source={require('../../assets/images/WhatsApp2.jpeg')} resizeMode="cover">
+
+          </ImageBackground>
+
+          <ImageBackground style={styles.slide} source={require('../../assets/images/WhatsApp2.jpeg')} resizeMode="cover">
+
+          </ImageBackground>
+          
+        </Swiper>
+            </View> 
+            </View>
+            
+        </Modal>
+);
+
+export const Modal_MenuCaso1 = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
+
+            <View style={styles.headerModal}>
+
+            <View style={styles.headerMizq}>
+            </View>
+         <View style={styles.margen}></View>
+
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton}
+                
+                onPress={onPress}
+               >
+                  <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+             </View>
+            
+              
+            </View>
+            
+            <View style={styles.bodyModal}>
+              <Swiper
+          style={styles.wrapper} showsButtons
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 8,
+                height: 8,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 8,
+                height: 8,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 30
+          }}
+          loop={false}
+        >
+          <ImageBackground style={styles.slide} source={require('../../assets/images/WhatsApp2.jpeg')} resizeMode="cover">
+
+          </ImageBackground>
+
+          <ImageBackground style={styles.slide} source={require('../../assets/images/WhatsApp2.jpeg')} resizeMode="cover">
+
+          </ImageBackground>
+          
+        </Swiper>
+            </View> 
+            </View>
+            
+        </Modal>
+);

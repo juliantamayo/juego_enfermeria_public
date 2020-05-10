@@ -581,7 +581,6 @@ export default class extends Component {
       <Swiper
         style={styles.wrapper}
         renderPagination={renderPagination} showsButtons loop={false}
-        loop={false}
       >
        
         <View

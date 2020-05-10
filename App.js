@@ -110,7 +110,6 @@ import Escena5 from './components/Casos/Caso1/escena5';
 import Escena6 from './components/Casos/Caso1/escena6';
 
 import Variables from './components/Casos/Caso1/variables_caso1';
-
 //-------------------------caso2---------------------------------
 import M_caso2 from './components/Casos/Caso2/menu_caso2';
 import C2_Escena1 from './components/Casos/Caso2/escena1';
@@ -137,9 +136,9 @@ import V_C2_Preg5_dialogo from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_P
 import V_C2_Preg5_pregunta from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg5_pregunta';
 import V_C2_RespP5_enfermera from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_RespP5_enfermera';
 
-import V_C2_Preg6_dialogo from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg6_dialogo';
-import V_C2_Preg6_pregunta from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg6_pregunta';
-import V_C2_RespP6_enfermera from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_RespP6_enfermera';
+//import V_C2_Preg6_dialogo from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg6_dialogo';
+//import V_C2_Preg6_pregunta from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg6_pregunta';
+//import V_C2_RespP6_enfermera from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_RespP6_enfermera';
 //pruebas de valoración escena 3 Caso 2
 import C2_Escena3 from './components/Casos/Caso2/escena3';
 import V_C2_PruValo1_dialogo from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo1_dialogo';
@@ -503,7 +502,15 @@ useEffect(() => {
 
        })}/>  
 
-       <Stack.Screen name="Guardar_escena1"  component={Guardar_escena1} />
+       <Stack.Screen name="Guardar_escena1"  component={Guardar_escena1} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+         // title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
        <Stack.Screen name="Escena2" component={Escena2} 
         options={
@@ -555,7 +562,15 @@ useEffect(() => {
 
        })}/>
 
-       <Stack.Screen name="Guardar_V_preg_pcte1"  component={Guardar_V_preg_pcte1} />
+       <Stack.Screen name="Guardar_V_preg_pcte1"  component={Guardar_V_preg_pcte1} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+         // title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
         <Stack.Screen name="V_C1_Preg2_dialogo" component={V_C1_Preg2_dialogo} 
         options={
@@ -593,7 +608,15 @@ useEffect(() => {
 
        })}/>
 
-       <Stack.Screen name="Guardar_V_preg_pcte2"  component={Guardar_V_preg_pcte2} />
+       <Stack.Screen name="Guardar_V_preg_pcte2"  component={Guardar_V_preg_pcte2} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+         // title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
         <Stack.Screen name="V_C1_Preg3_dialogo" component={V_C1_Preg3_dialogo} 
         options={
@@ -630,7 +653,15 @@ useEffect(() => {
 
        })}/>
 
-       <Stack.Screen name="Guardar_V_preg_pcte3"  component={Guardar_V_preg_pcte3} />
+       <Stack.Screen name="Guardar_V_preg_pcte3"  component={Guardar_V_preg_pcte3} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+         // title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
         <Stack.Screen name="V_C1_Preg4_dialogo" component={V_C1_Preg4_dialogo} 
         options={
@@ -668,7 +699,15 @@ useEffect(() => {
 
        })}/>
 
-       <Stack.Screen name="Guardar_V_preg_pcte4"  component={Guardar_V_preg_pcte4} />
+       <Stack.Screen name="Guardar_V_preg_pcte4"  component={Guardar_V_preg_pcte4} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+         // title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
        <Stack.Screen name="V_C1_Preg5_dialogo" component={V_C1_Preg5_dialogo} 
               options={
@@ -705,7 +744,15 @@ useEffect(() => {
         }
 
        })}/>
-        <Stack.Screen name="Guardar_V_preg_pcte5"  component={Guardar_V_preg_pcte5} />
+        <Stack.Screen name="Guardar_V_preg_pcte5"  component={Guardar_V_preg_pcte5} 
+        options={{
+        //  headerShown: false
+        headerLeft: null,
+         // title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
         <Stack.Screen name="V_C1_Preg6_dialogo" component={V_C1_Preg6_dialogo} 
         options={
@@ -743,7 +790,15 @@ useEffect(() => {
 
        })}/>
 
-        <Stack.Screen name="Guardar_V_preg_pcte6"  component={Guardar_V_preg_pcte6} />
+        <Stack.Screen name="Guardar_V_preg_pcte6"  component={Guardar_V_preg_pcte6} 
+        options={{
+        //  headerShown: false
+        headerLeft: null,
+         // title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
         <Stack.Screen name="V_C1_Preg7_dialogo" component={V_C1_Preg7_dialogo} 
         options={
@@ -782,7 +837,15 @@ useEffect(() => {
 
        })}/>
 
-       <Stack.Screen name="Guardar_V_preg_pcte7"  component={Guardar_V_preg_pcte7} /> 
+       <Stack.Screen name="Guardar_V_preg_pcte7"  component={Guardar_V_preg_pcte7} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+         // title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/> 
 
         <Stack.Screen name="Escena3" component={Escena3} 
         options={{
@@ -831,7 +894,15 @@ useEffect(() => {
         }
        })}/>
 
-       <Stack.Screen name="Guardar_V_pru_valo1"  component={Guardar_V_pru_valo1} />
+       <Stack.Screen name="Guardar_V_pru_valo1"  component={Guardar_V_pru_valo1} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+         // title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
        <Stack.Screen name="V_C1_PruValo2_dialogo" component={V_C1_PruValo2_dialogo} 
         options={
@@ -866,7 +937,15 @@ useEffect(() => {
         }
        })}/>
 
-       <Stack.Screen name="Guardar_V_pru_valo2"  component={Guardar_V_pru_valo2} /> 
+       <Stack.Screen name="Guardar_V_pru_valo2"  component={Guardar_V_pru_valo2} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+         // title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/> 
 
        <Stack.Screen name="V_C1_PruValo3_dialogo" component={V_C1_PruValo3_dialogo} 
         options={
@@ -901,7 +980,15 @@ useEffect(() => {
         }
        })}/>
 
-       <Stack.Screen name="Guardar_V_pru_valo3"  component={Guardar_V_pru_valo3} />
+       <Stack.Screen name="Guardar_V_pru_valo3"  component={Guardar_V_pru_valo3} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+         // title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
        <Stack.Screen name="V_C1_PruValo4_dialogo" component={V_C1_PruValo4_dialogo} 
         options={
@@ -936,7 +1023,15 @@ useEffect(() => {
         }
        })}/>
 
-       <Stack.Screen name="Guardar_V_pru_valo4"  component={Guardar_V_pru_valo4} />
+       <Stack.Screen name="Guardar_V_pru_valo4"  component={Guardar_V_pru_valo4} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+         // title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
        <Stack.Screen name="V_C1_PruValo5_dialogo" component={V_C1_PruValo5_dialogo} 
         options={
@@ -971,7 +1066,15 @@ useEffect(() => {
         }
        })}/>
 
-       <Stack.Screen name="Guardar_V_pru_valo5"  component={Guardar_V_pru_valo5} />
+       <Stack.Screen name="Guardar_V_pru_valo5"  component={Guardar_V_pru_valo5} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+         // title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
        <Stack.Screen name="V_C1_PruValo6_dialogo" component={V_C1_PruValo6_dialogo} 
         options={
@@ -1006,7 +1109,15 @@ useEffect(() => {
         }
        })}/>
 
-       <Stack.Screen name="Guardar_V_pru_valo6"  component={Guardar_V_pru_valo6} />
+       <Stack.Screen name="Guardar_V_pru_valo6"  component={Guardar_V_pru_valo6} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+         // title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
        <Stack.Screen name="V_C1_PruValo7_dialogo" component={V_C1_PruValo7_dialogo} 
         options={
@@ -1041,7 +1152,15 @@ useEffect(() => {
         }
        })}/>
 
-       <Stack.Screen name="Guardar_V_pru_valo7"  component={Guardar_V_pru_valo7} />
+       <Stack.Screen name="Guardar_V_pru_valo7"  component={Guardar_V_pru_valo7} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+         // title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
        <Stack.Screen name="Escena4" component={Escena4} 
         options={{

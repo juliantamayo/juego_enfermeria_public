@@ -1,6 +1,6 @@
 const questions = [
   {
-    image: require("../../assets/images/snp.png"),
+    image: require("../../assets/images/sistemas_autonomo.png"),
     question: "hola",
     answers: [
       { id: "1", text: "IZQUIERDA" },
@@ -9,7 +9,7 @@ const questions = [
     ]
   },
   {
-    image: require("../../assets/images/snp.png"),
+    image: require("../../assets/images/sistemas_autonomo.png"),
     question: "hola",
     answers: [
       { id: "1", text: "IZQUIERDA" },
@@ -17,7 +17,7 @@ const questions = [
     ]
   },
   {
-    image: require("../../assets/images/snp.png"),
+    image: require("../../assets/images/sistemas_autonomo.png"),
     question: "hola",
     answers: [
       { id: "1", text: "IZQUIERDA" },

@@ -7,14 +7,14 @@ import Escena2Dialog from "../../data/escena2dialog";
 import westernsQuestions from "../../data/westerns";
 import computerQuestions from "../../data/computers";
 import { RowItem } from "../../elementos/RowItem";
-import variableglobal from "./variables_caso1"
-export default class menu_caso1 extends React.Component {
+import variableglobal from "./variables_caso1";
+import { Modal_MenuCaso1 } from "../../elementos/ModalsTutorial";
 
-  
+export default class menu_caso1 extends React.Component {
 
 
     state ={
-    
+    modalVisible: false,
     };
    
 componentDidMount= () => {
@@ -41,15 +41,26 @@ componentDidMount= () => {
       });
     });
   };
-
+ setModalVisible = (visible) => {
+    this.setState({ modalVisible: visible });
+   };
 render() {
-
+    const { modalVisible } = this.state;
    const Esc1= parseInt(this.state.nombre);
    const Esc2=parseFloat(this.state.save_pregPcte1)+parseFloat(this.state.save_pregPcte2)+parseFloat(this.state.save_pregPcte3)+parseFloat(this.state.save_pregPcte4)+parseFloat(this.state.save_pregPcte5)+parseFloat(this.state.save_pregPcte6)+parseFloat(this.state.save_pregPcte7);
    const Esc3=parseFloat(this.state.save_pruValo1)+parseFloat(this.state.save_pruValo2)+parseFloat(this.state.save_pruValo3)+parseFloat(this.state.save_pruValo4)+parseFloat(this.state.save_pruValo5)+parseFloat(this.state.save_pruValo6)+parseFloat(this.state.save_pruValo7);
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
+
+    <Modal_MenuCaso1
+      
+       text={modalVisible}
+       onPress={() => {
+                  this.setModalVisible(!modalVisible);
+                }}
+      />
+
    <View style={style.container}>
     <ScrollView  >
     <StatusBar barStyle="dark-content" />
@@ -65,9 +76,11 @@ render() {
 
       <View style={styles.headerDerecha}>
       <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-       onPress={() => this.props.navigation.navigate('Home')}>
-               <Image style={ styles.image } source={require("../../../assets/images/ayuda.png")} />
-      </TouchableOpacity>
+                   onPress={() => {
+                        this.setModalVisible(true);
+                      }}>
+                           <Image style={ styles.image } source={require("../../../assets/images/ayuda.png")} />
+          </TouchableOpacity>
       </View>
      
       </View>
