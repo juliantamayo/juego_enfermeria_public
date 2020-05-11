@@ -4,22 +4,33 @@ import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpac
 import styles from './../../Style.js';
 import { RowItem } from "../../elementos/RowItem";
 import Escena3Dialog from "../../data/C3_data/C3_escena1dialog";
-
+import { Modal_MenuCaso1} from "../../elementos/ModalsTutorial";
 export default class menu_caso3 extends React.Component {
 
 
     state ={
-
+            modalVisible: false,
     };
    
- 
+ setModalVisible = (visible) => {
+    this.setState({ modalVisible: visible });
+   };
 
 render() {
-
+      const { modalVisible } = this.state;
   
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
+    <Modal_MenuCaso1
+      
+       text={modalVisible}
+       onPress={() => {
+                  this.setModalVisible(!modalVisible);
+                }}
+      />
+
+
    <View style={style.container}>
     <ScrollView  >
     <StatusBar barStyle="dark-content" />
@@ -35,7 +46,9 @@ render() {
 
       <View style={styles.headerDerecha}>
       <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-       onPress={() => this.props.navigation.navigate('Home')}>
+       onPress={() => {
+                        this.setModalVisible(true);
+                      }}>
                <Image style={ styles.image } source={require("../../../assets/images/ayuda.png")} />
       </TouchableOpacity>
       </View>

@@ -3,7 +3,7 @@ import {AsyncStorage, Modal, View, StyleSheet, Dimensions, StatusBar, Text, Safe
 
 import { Button, ButtonContainer } from "../../elementos/ButtonEscene1";
 import { ModalHistorial } from "../../elementos/Modals";
-import { Modal_MenuCaso1 } from "../../elementos/ModalsTutorial";
+import { Modal_C1_escena1 } from "../../elementos/ModalsTutorial";
 import style from './../../Style.js';
 import Escena2Dialog from "../../data/escena2dialog";
 import { CommonActions } from '@react-navigation/native';
@@ -82,14 +82,14 @@ class escena1 extends React.Component {
     this.setState({ modalVisible: visible });
   };
 
-  setModalVisible2 = (visible) => {
+  setModalVisible2 = (visible2) => {
     this.setState({ modalVisible2: visible2 });
   }
 
   render() {
 
  
-    const { modalVisible,modalVisible2 } = this.state;
+    const { modalVisible, modalVisible2 } = this.state;
     const questions = this.props.route.params?.questions ?? [];
     const question = questions[this.state.activeQuestionIndex];
   
@@ -104,7 +104,7 @@ class escena1 extends React.Component {
                 }}
       />
 
-      <Modal_MenuCaso1
+      <Modal_C1_escena1
       
        text={modalVisible2}
        onPress={() => {

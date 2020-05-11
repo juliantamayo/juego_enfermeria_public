@@ -7,14 +7,17 @@ import Escena2Dialog from "../../data/escena2dialog";
 import westernsQuestions from "../../data/westerns";
 import computerQuestions from "../../data/computers";
 import { RowItem } from "../../elementos/RowItem";
+import { Modal_MenuCaso1} from "../../elementos/ModalsTutorial";
 
 export default class menu_caso2 extends React.Component {
+
 
 
     state ={
 
       isVisible:false,
       isVisible2:false,
+      modalVisible: false,
       val:this.props.route.params?.activeQuestion,
       'name': '',
        hola:this.props.route.params?.ex,
@@ -23,12 +26,26 @@ export default class menu_caso2 extends React.Component {
    
  componentDidMount = () => AsyncStorage.getItem('nombre').then((value) => this.setState({ 'nombre': value }))
 
+setModalVisible = (visible) => {
+    this.setState({ modalVisible: visible });
+   };
+
 render() {
 
-  
+    const { modalVisible } = this.state;
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
+    
+   <Modal_MenuCaso1
+      
+       text={modalVisible}
+       onPress={() => {
+                  this.setModalVisible(!modalVisible);
+                }}
+      />
+
+
    <View style={style.container}>
     <ScrollView  >
     <StatusBar barStyle="dark-content" />
@@ -44,7 +61,9 @@ render() {
 
       <View style={styles.headerDerecha}>
       <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-       onPress={() => this.props.navigation.navigate('Home')}>
+         onPress={() => {
+                        this.setModalVisible(true);
+                      }}>
                <Image style={ styles.image } source={require("../../../assets/images/ayuda.png")} />
       </TouchableOpacity>
       </View>
