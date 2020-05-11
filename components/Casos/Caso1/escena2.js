@@ -41,13 +41,13 @@ export default class escena2 extends React.Component {
   };
  render() {
   const { modalVisible,modalVisible2 } = this.state;
-  const Pcte1= parseInt(this.state.save_pregPcte1);
-  const Pcte2= parseInt(this.state.save_pregPcte2);
-  const Pcte3= parseInt(this.state.save_pregPcte3);
-  const Pcte4= parseInt(this.state.save_pregPcte4);
-  const Pcte5= parseInt(this.state.save_pregPcte5);
-  const Pcte6= parseInt(this.state.save_pregPcte6);
-  const Pcte7= parseInt(this.state.save_pregPcte6);
+  const Pcte1= parseFloat(this.state.save_pregPcte1);
+  const Pcte2= parseFloat(this.state.save_pregPcte2);
+  const Pcte3= parseFloat(this.state.save_pregPcte3);
+  const Pcte4= parseFloat(this.state.save_pregPcte4);
+  const Pcte5= parseFloat(this.state.save_pregPcte5);
+  const Pcte6= parseFloat(this.state.save_pregPcte6);
+  const Pcte7= parseFloat(this.state.save_pregPcte6);
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
@@ -84,7 +84,7 @@ export default class escena2 extends React.Component {
      
       </View>
     
-     {Pcte1 != null?
+     {Pcte1 == 0.2?
        <RowItem   
       name="1. ¿Cómo se encuentra?"
       color="#82E0AA"
@@ -110,7 +110,7 @@ export default class escena2 extends React.Component {
     />
      
      } 
-   {Pcte2 != null?
+   {Pcte2 == 0.1?
     <RowItem
       name="2. ¿Sabe usted en qué lugar se encuentra?"
       color="#82E0AA"
@@ -135,7 +135,7 @@ export default class escena2 extends React.Component {
       }
     />
     }
-  {Pcte3 != null?
+  {Pcte3 == 0.1?
     <RowItem
       name="3. ¿Qué elementos de los que observa aquí en su habitación los encuentra también en la sala de su hogar?"
       color="#82E0AA"
@@ -159,7 +159,7 @@ export default class escena2 extends React.Component {
           }
         />
    }
-   {Pcte4 != null?
+   {Pcte4 == 0.1?
     <RowItem
       name="4. ¿Sabe cuánto tendría ahorrado en total?"
       color="#82E0AA"
@@ -183,7 +183,7 @@ export default class escena2 extends React.Component {
       }
     />
    }
-   {Pcte5 != null?
+   {Pcte5 == 0.1?
    <RowItem
       name="5. ¿Cuáles son los nombres de sus hijas desde la mayor a la menor?"
       color="#82E0AA"
@@ -207,7 +207,7 @@ export default class escena2 extends React.Component {
       }
     />
    }
-   {Pcte6 != null?
+   {Pcte6 == 0.2?
     <RowItem
       name="6. ¿Podria por favor levantar sus brazos?"
       color="#82E0AA"
@@ -231,7 +231,7 @@ export default class escena2 extends React.Component {
           }
         />
   }
-  {Pcte7 != null?
+  {Pcte7 == 0.2?
     <RowItem
       name="7. Puede cerrar los ojos y me puede indicar hacia ¿qué dirección le estoy movilizando su brazo derecho e izquierdo?"
       color="#82E0AA"
