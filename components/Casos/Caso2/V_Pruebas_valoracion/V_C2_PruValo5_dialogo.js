@@ -2,7 +2,7 @@ import React from "react";
 import {AsyncStorage, View, StyleSheet, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity} from "react-native";
 
 import { Button, ButtonContainer } from "../../../elementos/ButtonEscene1";
-import { ModalHistorial, Modal_C2_Pru_valoracion5_procedimiento, Modal_C2_Pru_valoracion5_HN } from "../../../elementos/Modals";
+import { C2_ModalHistorial, Modal_C2_Pru_valoracion5_procedimiento, Modal_C2_Pru_valoracion5_HN } from "../../../elementos/Modals";
 import style from '../../../Style.js';
 import D_C2_Pru_Valoracion5_pregunta from "../../../data/C2_data/C2_Pru_valoracion/D_C2_Pru_Valoracion5_pregunta";
 import { CommonActions } from '@react-navigation/native';
@@ -104,7 +104,7 @@ class V_C2_PruValo5_dialogo extends React.Component {
     return (
     <ImageBackground source={question.image} style={style.container} resizeMode='contain'>
 
-    <ModalHistorial
+    <C2_ModalHistorial
       
        text={modalVisible}
        onPress={() => {

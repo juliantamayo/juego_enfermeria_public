@@ -136,9 +136,7 @@ import V_C2_Preg5_dialogo from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_P
 import V_C2_Preg5_pregunta from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg5_pregunta';
 import V_C2_RespP5_enfermera from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_RespP5_enfermera';
 
-//import V_C2_Preg6_dialogo from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg6_dialogo';
-//import V_C2_Preg6_pregunta from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg6_pregunta';
-//import V_C2_RespP6_enfermera from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_RespP6_enfermera';
+
 //pruebas de valoración escena 3 Caso 2
 import C2_Escena3 from './components/Casos/Caso2/escena3';
 import V_C2_PruValo1_dialogo from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo1_dialogo';
@@ -196,6 +194,10 @@ import V_C2_RespPruValo13_enfermera from './components/Casos/Caso2/V_Pruebas_val
 import V_C2_PruValo14_dialogo from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo14_dialogo';
 import V_C2_PruValo14_pregunta from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo14_pregunta';
 import V_C2_RespPruValo14_enfermera from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_RespPruValo14_enfermera';
+
+import V_C2_PruValo15_dialogo from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo15_dialogo';
+import V_C2_PruValo15_pregunta from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo15_pregunta';
+import V_C2_RespPruValo15_enfermera from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_RespPruValo15_enfermera';
 //escena6
 import C2_Escena6 from './components/Casos/Caso2/escena6';
 //-------------------------caso3---------------------------------
@@ -1902,6 +1904,39 @@ useEffect(() => {
        })}/>
 
        <Stack.Screen name="V_C2_RespPruValo14_enfermera" component={V_C2_RespPruValo14_enfermera} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+       })}/>
+
+         <Stack.Screen name="V_C2_PruValo15_dialogo" component={V_C2_PruValo15_dialogo} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+       })}/>
+
+       <Stack.Screen name="V_C2_PruValo15_pregunta" component={V_C2_PruValo15_pregunta} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+       })}/>
+
+       <Stack.Screen name="V_C2_RespPruValo15_enfermera" component={V_C2_RespPruValo15_enfermera} 
         options={
            
         ({ navigation, route }) => ({ title: route.params?.title ,

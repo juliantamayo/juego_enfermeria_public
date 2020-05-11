@@ -36,9 +36,7 @@ export default class result_qJ1 extends React.Component  {
           
       <View style={styles.vBody}>
        
-       <TouchableOpacity activeOpacity={0.8} style={styles.button2}  onPress={() => this.props.navigation.navigate('m_juego1')
-
-     }>
+       <TouchableOpacity activeOpacity={0.8} style={styles.button2}  onPress={() => this.props.navigation.navigate('m_juego1')}>
         <Text style={styles.text}> Continuar </Text>
        </TouchableOpacity>
        <View style={style.parametros}>
@@ -49,15 +47,11 @@ export default class result_qJ1 extends React.Component  {
    
 
 
-        <TouchableOpacity activeOpacity={0.8} style={styles.button2}  onPress={ this.saveData
-
-     }>
+        <TouchableOpacity activeOpacity={0.8} style={styles.button2}  onPress={ this.saveData}>
         <Text style={styles.text}> Guardar </Text>
        </TouchableOpacity>
 
-       <TouchableOpacity activeOpacity={0.8} style={styles.button2}  onPress={ this.displayData
-
-     }>
+       <TouchableOpacity activeOpacity={0.8} style={styles.button2}  onPress={ this.displayData}>
         <Text style={styles.text}> Mostrar </Text>
        </TouchableOpacity>
        </View>

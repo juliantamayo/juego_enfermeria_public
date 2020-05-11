@@ -1606,6 +1606,193 @@ export const Modal_C1_Pru_valoracion7_HN = ({ text, onPress = () => {} }) => (
         </Modal>
 );
 
+// CASO 2 HISTORIAL DEL PACIENTE
+
+export const C2_ModalHistorial = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
+
+            <View style={styles.headerModal}>
+
+            <View style={styles.headerMizq}>
+               <Text style={styles.modalText2}>Historial Paciente</Text>
+            </View>
+         <View style={styles.margen}></View>
+
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton}
+                
+                onPress={onPress}
+               >
+                  <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+             </View>
+            
+              
+            </View>
+            
+            <View style={styles.bodyModal}>
+              <Swiper
+          style={styles.wrapper}
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 20
+          }}
+          loop={false}
+        >
+          <View style={styles.slide}>
+
+                <Text style={styles.margen}></Text>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Fecha de consulta: </Text>
+                <Text style={styles.modalText}>29/03/20 </Text>
+                </Text>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Nombre: </Text>
+                <Text style={styles.modalText}>Señor P.C.P</Text>
+                </Text>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Edad: </Text>
+                <Text style={styles.modalText}> 55 años </Text>
+                </Text>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Estado civil: </Text>
+                <Text style={styles.modalText}> Casado </Text>
+                </Text>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Ocupación anterior: </Text>
+                <Text style={styles.modalText}> Ingeniero civil.  </Text>
+                </Text>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Ocupación actual: </Text>
+                <Text style={styles.modalText}> Ingeniero contratista. </Text>
+                </Text>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Acompañante: </Text>
+                <Text style={styles.modalText}> Ninguno </Text>
+                </Text>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Antecedentes Patológicos: </Text>
+                <Text style={styles.modalText}> paciente que refiere no tener antecedentes patológicos.  </Text>
+                </Text>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Antecedentes farmacológicos: </Text>
+                <Text style={styles.modalText}> Ninguno</Text>
+                </Text>
+
+               
+
+          </View>
+
+          <View style={styles.slide}>
+
+              <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Antecedentes Familiares: </Text>
+                <Text style={styles.modalText}> Madre con antecedentes de ACV isquémico con secuelas,  padre hipertenso perteneciente al programa de crónicos.</Text>
+                </Text>
+
+            <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Motivo de Consulta: </Text>
+                <Text style={styles.modalText}> "Vengo por mi cita de control, ya que quiero saber cómo estoy físicamente" </Text>
+                </Text>
+
+            </View>
+                  <ScrollView  >
+       <StatusBar barStyle="dark-content" />
+    
+          <View style={styles.slide}>
+          
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Perfil del paciente: </Text>
+                <Text style={styles.modalText}> {"\n"} Trabaja como ingeniero de obras en la empresa C.P.Y – S.A.S hace 30 años, tiene unas asignación de 5 salarios mínimos legales vigente en pesos colombianos, además de realizar otras actividades fuera de la empresa en la que labora. {"\n"} {"\n"} Vive con su esposa de 52 años en un edificio de 6 pisos y habita en el piso quinto el cual sube por las escaleras siempre.{"\n"} {"\n"} La casa del paciente es propia, tiene 3 habitaciones, cocina, sala, comedor, 2 baños y patio de ropas,  los pisos enchapados, a paredes de material de cemento, además de tener todo el servicio de saneamiento básico, tiene accesos viales con servicio de transporte accesible.{"\n"} {"\n"} El  barrio en el que vive se llama la Colina el cual está a dos cuadras de la central de urgencias que es la mejor institución por referencia del mismo paciente. {"\n"}{"\n"} Paciente que refiere dormir alrededor de 8 ocho horas teniendo un sueño totalmente placido {"\n"}{"\n"}{"\n"}{"\n"}{"\n"}</Text>
+                </Text>
+          </View>
+            </ScrollView>
+
+          <View style={styles.slide}>
+                 <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Alimentación Diaria: </Text>
+                <Text style={styles.modalText}>  </Text>
+                </Text>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Desayuno </Text>
+                <Text style={styles.modalText}> Huevos o caldo, café o chocolate, arepa, jugo de naranja fruta </Text>
+                </Text>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Mediasnueves </Text>
+                <Text style={styles.modalText}>Jugo de naranja con media manzana. </Text>
+                </Text>
+
+                 <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Almuerzo </Text>
+                <Text style={styles.modalText}>Pollo o carne pero come más pescado, con ensalada, ración pequeña de arroz y jugo  </Text>
+                </Text>
+
+                 <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Merienda </Text>
+                <Text style={styles.modalText}>Jugo con galletas integrales </Text>
+                </Text>
+
+                 <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Comida </Text>
+                <Text style={styles.modalText}>Café o jugo con pan. </Text>
+                </Text>
+
+             </View>
+
+
+        </Swiper>
+            </View>
+        
+
+              
+            </View>
+            
+         
+        </Modal>
+);
 
 // CASO 2 MODAL PRUEVA DE VALORACIÒN
 
@@ -4356,6 +4543,185 @@ export const Modal_C2_Pru_valoracion14_HN = ({ text, onPress = () => {} }) => (
 
                 <Text style={styles.modalTextcuerpo}>
                 <Text style={styles.modalText}> {"\n"} Capacidad de discriminar dos puntos separados que se aplican simultáneamente sobre la piel, se debe evidenciar en un paciente normal la discriminación simétrica (ambas partes del cuerpo derecho e izquierdo). </Text>
+                </Text>
+
+
+          </View>
+
+        </ScrollView>
+
+        </Swiper>
+            </View>
+        
+
+              
+            </View>
+            
+        
+        </Modal>
+);
+
+export const Modal_C2_Pru_valoracion15_procedimiento = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
+
+            <View style={styles.headerModal}>
+
+            <View style={styles.headerMizq}>
+               <Text style={styles.modalText2}>Procedimiento Prueba</Text>
+            </View>
+         <View style={styles.margen}></View>
+
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton}
+                
+                onPress={onPress}
+               >
+                  <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+             </View>
+            
+              
+            </View>
+            
+            <View style={styles.bodyModal}>
+              <Swiper
+          style={styles.wrapper}
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 70
+          }}
+          loop={false}
+        >
+
+        <View style={styles.slide}>
+
+                  <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}> -  </Text>
+                <Text style={styles.modalText}> {"\n"}Consiste en la capacidad de identificar objetos por palpación. {"\n"}</Text>
+                </Text>
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalText}> {"\n"} Para examinarla se le coloca al paciente en la mano un objeto de uso común y se le pide que lo identifique con los ojos cerrados y así sucesivamente con otros dos objetos (llaves, marcador, lápiz, etc.) y se hace el mismo procedimiento en la mano contraria {"\n"} </Text>
+                </Text>
+
+           </View>
+          
+        </Swiper>
+            </View>
+        
+
+              
+            </View>
+            
+         
+        </Modal>
+);
+
+
+export const Modal_C2_Pru_valoracion15_HN = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+
+          
+
+            <View style={styles.modalView}>
+
+            <View style={styles.headerModal}>
+
+            <View style={styles.headerMizq}>
+               <Text style={styles.modalText2}>Hallazgos Normales</Text>
+            </View>
+         <View style={styles.margen}></View>
+
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton}
+                
+                onPress={onPress}
+               >
+                  <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+             </View>
+            
+              
+            </View>
+            
+            <View style={styles.bodyModal}>
+              <Swiper
+          style={styles.wrapper}
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 70
+          }}
+          loop={false}
+        >
+          <ScrollView  >
+       <StatusBar barStyle="dark-content" />       
+          <View style={styles.slide}>
+
+                <Text style={styles.margen}></Text>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalText}> {"\n"} -  El paciente identifica sin ningún problema el objeto al cual se le ubica primero en una mano y luego en la otra con los ojos cerrados.  </Text>
                 </Text>
 
 
