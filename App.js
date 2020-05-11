@@ -295,7 +295,7 @@ useEffect(() => {
         options={{
         //  headerShown: false
          headerLeft: null,
-          title: 'Menu',
+          title: 'Menú Principal',
            headerStyle: {
             backgroundColor: '#fbe122',
           },

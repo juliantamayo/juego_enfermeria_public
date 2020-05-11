@@ -71,7 +71,7 @@ export default StyleSheet.create({
      height:50,
      width: 270,
     alignItems: "center",
-    backgroundColor: "#00fa9a",
+    backgroundColor: "#ADE827",
     padding: 10,
     borderRadius: 20
   },
@@ -80,7 +80,7 @@ export default StyleSheet.create({
      height:50,
      width: 270,
     alignItems: "center",
-    backgroundColor: "#00bfff",
+    backgroundColor: "#FBBD20",
     padding: 10,
     borderRadius: 20
   },
@@ -89,7 +89,7 @@ export default StyleSheet.create({
      height:50,
      width: 270,
     alignItems: "center",
-    backgroundColor: "#9932cc",
+    backgroundColor: "#ADE827",
     padding: 10,
     borderRadius: 20
   },
