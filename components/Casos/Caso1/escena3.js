@@ -46,13 +46,13 @@ setModalVisible = (visible) => {
 render() {
 
   const { modalVisible } = this.state;
-  const pruValo1= parseInt(this.state.save_pruValo1);
-  const pruValo2= parseInt(this.state.save_pruValo2);
-  const pruValo3= parseInt(this.state.save_pruValo3);
-  const pruValo4= parseInt(this.state.save_pruValo4);
-  const pruValo5= parseInt(this.state.save_pruValo5);
-  const pruValo6= parseInt(this.state.save_pruValo6);
-  const pruValo7= parseInt(this.state.save_pruValo7);
+  const pruValo1= parseFloat(this.state.save_pruValo1);
+  const pruValo2= parseFloat(this.state.save_pruValo2);
+  const pruValo3= parseFloat(this.state.save_pruValo3);
+  const pruValo4= parseFloat(this.state.save_pruValo4);
+  const pruValo5= parseFloat(this.state.save_pruValo5);
+  const pruValo6= parseFloat(this.state.save_pruValo6);
+  const pruValo7= parseFloat(this.state.save_pruValo7);
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
