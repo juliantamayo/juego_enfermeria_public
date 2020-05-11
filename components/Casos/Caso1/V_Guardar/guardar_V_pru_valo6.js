@@ -1,9 +1,7 @@
-//This is an example of React Native Global Scope Variables//
 import React, { Component } from 'react';
-//import react in our code.
-import { StyleSheet, View, Text, Button, AsyncStorage,Alert } from 'react-native';
+import { StyleSheet, View, Text, Dimensions,Image, AsyncStorage,Alert,ImageBackground,TouchableOpacity } from 'react-native';
+const { width, height } = Dimensions.get('window')
 
-//import all the components we are going to use.
 export default class guardar_V_pru_valo6 extends Component {
   constructor(route) {
     super(route);
@@ -19,38 +17,64 @@ state = {
       this.setState({ 'save_pruValo6':  global.recibe_pru_valo6 });
        Alert.alert("Mensaje","Datos guardados correctamente", [
        
-        { text: "OK", onPress: () =>  this.props.navigation.navigate("Escena3") }
+        { text: "OK", onPress: () =>  this.props.navigation.navigate("M_caso1") }
      ]);
        
    } 
     
   render() {
     return (
-    <View style={styles.MainContainer}>
-        <View style={{ marginBottom: 15 }}>
-         
+    <ImageBackground style={styles.MainContainer} source={require("../../../../assets/images/background.png")} >
+        <View style={styles.ContainerImagen}>
+            <Image style={styles.Imagen} source={require("../../../../assets/images/Congratulations-GIF35.gif")} resizeMode="contain"/>
+            <Text style={styles.textStyle2}>Prueba superada</Text>
         </View>
-         <Button onPress ={this.saveData} title="guardar" style={styles.button}/>  
-          <View style={styles.button}></View>
+         
+         <View style={styles.button}></View>
+        <TouchableOpacity activeOpacity={0.8} style={styles.button3}  onPress ={this.saveData}>
+             <Text style={styles.textStyle}> Continuar </Text>
+         </TouchableOpacity>
         <View style={styles.button}></View>
  
-      </View>
+   </ImageBackground>
     );
   }
 }
 const styles = StyleSheet.create({
   MainContainer: {
+     flex: 1,
+    alignItems: 'center',
     justifyContent: 'center',
-    flex: 1,
-    margin: 10,
-    backgroundColor: '#fff',
   },
   textStyle: {
     fontSize: 20,
     textAlign: 'center',
   },
+  textStyle2: {
+    fontSize: 20,
+    textAlign: 'center',
+    backgroundColor: "white",
+    fontWeight: 'bold',
+  },
    button: {
   
     margin: 5,
+  },
+  button3: {
+     margin: 20,
+     height:50,
+     width: 270,
+    alignItems: "center",
+    backgroundColor: "#00bfff",
+    padding: 10,
+    borderRadius: 20
+  },
+  Imagen:{
+     width: Dimensions.get('window').width/2,
+     height: Dimensions.get('window').height/3,
+  },
+  ContainerImagen:{
+     alignItems: 'center',
+    justifyContent: 'center',
   }
 });
