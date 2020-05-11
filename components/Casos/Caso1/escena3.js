@@ -22,6 +22,22 @@ export default class escena3 extends React.Component {
     state ={
      modalVisible: false,
     };
+
+componentDidMount= () => {
+    let keys = ['save_pruValo1', 'save_pruValo2','save_pruValo3','save_pruValo4','save_pruValo5','save_pruValo6','save_pruValo7'];
+    AsyncStorage.multiGet(keys).then(result => {
+      this.setState({
+        'save_pruValo1':  result[0][1],
+        'save_pruValo2':  result[1][1],
+        'save_pruValo3':  result[2][1],
+        'save_pruValo4':  result[3][1],
+        'save_pruValo5':  result[4][1],
+        'save_pruValo6':  result[5][1],
+        'save_pruValo7':  result[6][1],
+      });
+    });
+  };
+
    
 setModalVisible = (visible) => {
     this.setState({ modalVisible: visible });
@@ -30,6 +46,13 @@ setModalVisible = (visible) => {
 render() {
 
   const { modalVisible } = this.state;
+  const pruValo1= parseInt(this.state.save_pruValo1);
+  const pruValo2= parseInt(this.state.save_pruValo2);
+  const pruValo3= parseInt(this.state.save_pruValo3);
+  const pruValo4= parseInt(this.state.save_pruValo4);
+  const pruValo5= parseInt(this.state.save_pruValo5);
+  const pruValo6= parseInt(this.state.save_pruValo6);
+  const pruValo7= parseInt(this.state.save_pruValo7);
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
@@ -66,8 +89,19 @@ render() {
      
       </View>
    <View style={style.viewcolsmenu}>
-
+  {pruValo1 != null?
      <RowItemEscena3   
+      name="1"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C1_PruValo1_dialogo", {
+          title: "1 pruValo1",
+          questions: C1_Pru_valo1_dialog,
+          color: "#36b1f0"
+        })
+      }
+      />:
+      <RowItemEscena3   
       name="1"
       color="#77c6c6"
       onPress={() =>
@@ -77,8 +111,20 @@ render() {
           color: "#36b1f0"
         })
       }
-    />
-
+      />
+  }
+ {pruValo2 != null?
+    <RowItemEscena3
+      name="2"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C1_PruValo2_dialogo", {
+          title: "2  pruValo2",
+          questions: C1_Pru_valo2_dialog,
+          color: "#799496"
+        })
+      }
+    />:
     <RowItemEscena3
       name="2"
       color="#00b9bc"
@@ -90,10 +136,22 @@ render() {
         })
       }
     />
+  }
     </View>
 
     <View style={style.viewcolsmenu}>
-
+  {pruValo3 != null?
+    <RowItemEscena3
+      name="3"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C1_PruValo3_dialogo", {
+          title: "3",
+          questions: C1_Pru_valo3_dialog,
+          color: "#799496"
+        })
+      }
+    />:
     <RowItemEscena3
       name="3"
       color="#77c6c6"
@@ -105,6 +163,19 @@ render() {
         })
       }
     />
+  }
+  {pruValo4 != null?
+    <RowItemEscena3
+      name="4"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C1_PruValo4_dialogo", {
+          title: "4",
+          questions: C1_Pru_valo4_dialog,
+          color: "#799496"
+        })
+      }
+    />:
     <RowItemEscena3
       name="4"
       color="#00b9bc"
@@ -116,12 +187,24 @@ render() {
         })
       }
     />
+  }
 
      </View>
    
     <View style={style.viewcolsmenu}>
-
+  {pruValo5 != null?
    <RowItemEscena3
+      name="5"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C1_PruValo5_dialogo", {
+          title: "5",
+          questions: C1_Pru_valo5_dialog,
+          color: "#799496"
+        })
+      }
+    />:
+    <RowItemEscena3
       name="5"
       color="#77c6c6"
       onPress={() =>
@@ -132,6 +215,19 @@ render() {
         })
       }
     />
+  }
+  {pruValo6 != null?
+    <RowItemEscena3
+      name="6"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C1_PruValo6_dialogo", {
+          title: "6",
+          questions: C1_Pru_valo6_dialog,
+          color: "#799496"
+        })
+      }
+    />:
     <RowItemEscena3
       name="6"
       color="#00b9bc"
@@ -143,11 +239,23 @@ render() {
         })
       }
     />
+  }
 
    </View>
 
     <View style={style.viewcolsmenu}> 
-
+ {pruValo7 != null?
+    <RowItemEscena3
+      name="7"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C1_PruValo7_dialogo", {
+          title: "7",
+          questions: C1_Pru_valo7_dialog,
+          color: "#799496"
+        })
+      }
+    />:
     <RowItemEscena3
       name="7"
       color="#77c6c6"
@@ -159,6 +267,7 @@ render() {
         })
       }
     />
+  }
 
    </View>
     </ScrollView>
