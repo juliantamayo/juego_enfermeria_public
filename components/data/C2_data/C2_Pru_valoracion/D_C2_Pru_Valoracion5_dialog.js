@@ -1,15 +1,16 @@
 const questions = [
  
   {
-    image: require("../../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_P5_movilidad_activa.gif"),
+    image: require("../../../../assets/images/CASO_2_SEÑOR_PCP_Rinne.gif"),
     personaje: "ENFERMERA",
-    Text: "Debe visualizar muy bien al paciente"
+    Text: "Señor P.C.P aviseme inmediatamente cuando deje de percibir el sonido "
    
   },
-  {
-    image: require("../../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_P5_movilidad_activa2.png"),
+    {
+    image: require("../../../../assets/images/CASO_2_SEÑOR_PCP_Rinne.gif"),
     personaje: "Señor P.C.P",
-    Text: "Es muy importante hacer una buena observación del paciente"
+    Text: "Lo escucucho más cuando está frente a mi oido "
+   
   }
 ];
 

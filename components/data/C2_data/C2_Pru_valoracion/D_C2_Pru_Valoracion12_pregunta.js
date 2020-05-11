@@ -3,17 +3,17 @@ const questions = [
   { 
     question: "¿Cuál es el nombre de la Prueba de valoración que acaba de realizar el enfermero?",
     answers: [
-      { id: "1", text: "Motilidad Extríseca del ojo" },
-      { id: "2", text: "Campimetría por Confrontación" , correct: true},
-      { id: "3", text: "Simetría y Motilidad Facial" },
-      { id: "4", text: "Movilidad Activa" }
+      { id: "1", text: "Reflejo de Estimulación Cutánea", correct: true },
+      { id: "2", text: "Reflejo Biscipital"},
+      { id: "3", text: "Reflejo Supinador" },
+      { id: "4", text: "Reflejo Cremásteriano"  }
     ]
   },
     { 
-    question: "¿Qué se puede asumir con los hallazgos del paciente?",
+    question: "¿Es correcto afirmar que el paciente no refleja la contracción muscular subyacente moviendo la pared abdominal y arrastra el ombligo hacia el lado estimulado ?",
     answers: [
-      { id: "1", text: "Hemianopsia homónima Izquierda: en un solo ojo se compromete la visión del mismo hemicampo" },
-      { id: "2", text: "Hemianopsia homónima de derecha: en cada ojo se compromete la visión del mismo hemicampo" , correct: true},
+      { id: "1", text: "Es falso, si se refleja la contracción. ", correct: true },
+      { id: "2", text: "Es correcto, no se evidencia la contracción." },
     ]
   }
 

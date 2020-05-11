@@ -1,16 +1,12 @@
 const questions = [
  
  {
-    image: require("../../../../assets/images/enfermera_pensando.png"),
+    image: require("../../../../assets/images/enfermera3.png"),
     personaje: "ENFERMERA",
-    Text: " Hemianopsia homónima de un lado: en cada ojo se compromete la visión del mismo hemicampo"
+    Text: "Tu respuesta fue correcta!, el paciente presenta un hallazgo normal, pues se evidencia la flexión plantar de los dedos de los pies en forma de abanico"
   },
 
-    {
-    image: require("../../../../assets/images/enfermera_pensando.png"),
-    personaje: "ENFERMERA",
-    Text: "hemianopsia homónima derecha en el caso del señor C.J.M"
-  }
+
 ];
 
 export default questions;

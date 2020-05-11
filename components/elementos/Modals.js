@@ -4740,6 +4740,180 @@ export const Modal_C2_Pru_valoracion15_HN = ({ text, onPress = () => {} }) => (
         </Modal>
 );
 
+// Historial Caso 3
+
+export const C3_ModalHistorial = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
+
+            <View style={styles.headerModal}>
+
+            <View style={styles.headerMizq}>
+               <Text style={styles.modalText2}>Historial Paciente</Text>
+            </View>
+         <View style={styles.margen}></View>
+
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton}
+                
+                onPress={onPress}
+               >
+                  <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+             </View>
+            
+              
+            </View>
+            
+            <View style={styles.bodyModal}>
+              <Swiper
+          style={styles.wrapper}
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 20
+          }}
+          loop={false}
+        >
+          <View style={styles.slide}>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Fecha de consulta: </Text>
+                <Text style={styles.modalText}>17/09/2020</Text>
+                </Text>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Nombre: </Text>
+                <Text style={styles.modalText}>Señor A.T</Text>
+                </Text>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Edad: </Text>
+                <Text style={styles.modalText}> 50 años </Text>
+                </Text>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Estado civil: </Text>
+                <Text style={styles.modalText}> Divorciado </Text>
+                </Text>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Ocupación actual: </Text>
+                <Text style={styles.modalText}> Vendedor </Text>
+                </Text>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Acompañante: </Text>
+                <Text style={styles.modalText}> Ninguno</Text>
+                </Text>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Antecedentes patológicos: </Text>
+                <Text style={styles.modalText}> Gastritis </Text>
+                </Text>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Antecedentes farmacológicos: </Text>
+                <Text style={styles.modalText}> Milanta.</Text>
+                </Text>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Motivo de Consulta: </Text>
+                <Text style={styles.modalText}> Dolor en el abdomen en su parte superior y nauseas desde hace 2 días. </Text>
+                </Text>
+
+          </View>
+
+
+        <ScrollView  >
+       <StatusBar barStyle="dark-content" />
+          <View style={styles.slide}>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Problema actual: </Text>
+                <Text style={styles.modalText}> Le apareció un dolor en la parte superior del abdomen, Tratando de aliviar un poco su dolor tomó un jugo de aloe vera, pero con poca mejoría, aunque por tener tanta ocupación ha tratado de no prestarle atención, al segundo día el dolor se intensificó, acompañado de náuseas, se siente cansado por que no ha podido dormir bien, desde hace 3 años ha presentado episodios similares que pueden durar entre 1 o 2 meses.</Text>
+                </Text>
+
+                <Text style={styles.margen}></Text>
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Manifiesta: </Text>
+                <Text style={styles.modalText}> “lo único que le importa es que le quiten ese ardor o cólico en la boca del estómago”.   Comenta que además del dolor le preocupa que sus dos hijos adolescentes que viven con él están solos y sin quien esté pendiente de ellos, además de sus obligaciones laborales. Refiere que en las anteriores ocasiones el médico le ha ordenado tomar MILANTA 5cc cada 8 horas antes de las comidas, pero solo lo toma cuando tiene el dolor, no lo consume habitualmente por que se le olvida y porque mantiene ocupado en su trabajo.</Text>
+                </Text>
+
+                <Text style={styles.margen}></Text>
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>-  </Text>
+                <Text style={styles.modalText}>   El paciente consume gaseosa de manera ocasional y licor moderadamente cada 15 días, fuma un paquete de cigarrillos al día y dice que en los últimos días ha comido muy poco, pues no tiene apetito y se llena con mucha facilidad. Consumo de lácteos: diariamente consume entre 1 y 2 vasos de leche deslactosada, además de pan, galletas, pasteles hojaldrados cada 8 días.{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}</Text>
+                </Text>
+
+          </View>
+            </ScrollView>
+
+        <ScrollView  >
+       <StatusBar barStyle="dark-content" />
+
+          <View style={styles.slide}>
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Importante {"\n"} </Text>
+                <Text style={styles.modalText}> Al momento de la valoración, el paciente reconoce diferentes olores, su agudeza visual es AO,AI y OD 20/20, realiza movimientos oculares sin dificultad,  pupilas que reaccionan a la luz, con buena acomodación y convergencia, parpados con buena oclusión y posicion del borde sin alteración en ambos ojos, reconoce la sensación táctil y dolorosa en toda la cara, pestañea al estimular la córnea con un algodón, sus movimientos faciales son simétricos, reconoce diferentes sabores, escucha el tic tac del reloj a 30 cm cada oído, mantiene el equilibrio, lengua centrada y con fuerza, úvula móvil y central, reflejo nauseoso presente sin estimulo, está en la capacidad de realizar contra resistencia de cuello y hombros.{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}</Text>
+                </Text>
+
+          </View>
+           </ScrollView>
+
+
+        <ScrollView  >
+       <StatusBar barStyle="dark-content" />
+          <View style={styles.slide}>
+          
+
+                <Text style={styles.modalTextcuerpo}>
+                <Text style={styles.modalTextnegrilla}>Importante{"\n"} </Text>
+                <Text style={styles.modalText}>  Paciente con implantación de pestañas adecuada, permeabilidad e integridad de aparato lacrimal y de todas las estructuras de los ojos, mucosas húmedas y rosadas. Pabellón auricular bien implantado, blando, no doloroso, con tamaño proporcional al resto del cuerpo; el meato acústico externo mide 2.5 cm con piel integra y presencia de poco cerumen amarillento en ambos oídos, la membrana timpánica se observa integra, el paciente escucha el susurro de la voz a 40 cm, con audición conservada en ambos oídos. Nariz simétrica, proporcional al resto del cuerpo, permeable, en la rinoscopia se observó mucosa nasal pálida y un poco seca debido a la respiración rápida por el dolor. Labios,  mucosa oral, paladar íntegros, rosados, secos por el dolor, dientes completos.{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}</Text>
+                </Text>
+          </View>
+                </ScrollView>
+        </Swiper>
+            </View>
+        
+            </View>
+            
+         
+        </Modal>
+);
+
+
 // CASO 3 PRUEBAS DE VALORACIÒN
 
 export const Modal_C3_Pru_valoracion1_procedimiento = ({ text, onPress = () => {} }) => (

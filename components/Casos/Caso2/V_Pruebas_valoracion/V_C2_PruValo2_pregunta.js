@@ -108,10 +108,10 @@ class V_C2_PruValo2_pregunta extends React.Component {
     this.setState(state => {
       const nextIndex = state.activeQuestionIndex + 1;
 
-      if (nextIndex >= state.totalCount && this.state.correctCount < 3) {
+      if (nextIndex >= state.totalCount && this.state.correctCount < 2) {
        // return this.props.navigation.popToTop();
         return this.props.navigation.navigate('V_C2_PruValo2_dialogo',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
-      }else if (nextIndex >= state.totalCount   && this.state.correctCount==3) {
+      }else if (nextIndex >= state.totalCount   && this.state.correctCount==2) {
        return this.props.navigation.navigate('V_C2_RespPruValo2_enfermera',{repu_enferme:1,experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount),
         title: "RespuestaPV2 C2 enfermero",
           questions: D_C2_Pru_Valoracion2_Resp_enfermera,

@@ -3,17 +3,17 @@ const questions = [
   { 
     question: "¿Cuál es el nombre de la Prueba de valoración que acaba de realizar el enfermero?",
     answers: [
-      { id: "1", text: "Motilidad Extríseca del ojo" },
-      { id: "2", text: "Campimetría por Confrontación" , correct: true},
-      { id: "3", text: "Simetría y Motilidad Facial" },
+      { id: "1", text: "Sensibilidad Táctil" },
+      { id: "2", text: "Palpación" },
+      { id: "3", text: "Discriminación de 2 puntos" , correct: true},
       { id: "4", text: "Movilidad Activa" }
     ]
   },
     { 
-    question: "¿Qué se puede asumir con los hallazgos del paciente?",
+    question: "La prueba de discriminación de 2 puntos debe realizarse comparando áreas simétricas del cuerpo (ejemplo: ambas manos o brazos)?",
     answers: [
-      { id: "1", text: "Hemianopsia homónima Izquierda: en un solo ojo se compromete la visión del mismo hemicampo" },
-      { id: "2", text: "Hemianopsia homónima de derecha: en cada ojo se compromete la visión del mismo hemicampo" , correct: true},
+      { id: "1", text: "Es correcto, se debe realizar en ambas partes del cuerpo", correct: true},
+      { id: "2", text: "No es necesario. " },
     ]
   }
 

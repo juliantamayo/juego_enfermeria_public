@@ -3,12 +3,17 @@ const questions = [
  {
     image: require("../../../../assets/images/enfermera_pensando.png"),
     personaje: "ENFERMERA",
-    Text: " Paciente dependiente, En estos momentos se ve limitada su autonomía en actividades de la vida diaria como su arreglo personal, vestirse, sentarse"
+    Text: " El paciente escucha más los ruidos del diapasón en el aire (18 segundos) que en la conducción ósea (8 segundos)."
   },
    {
     image: require("../../../../assets/images/enfermera_pensando.png"),
     personaje: "ENFERMERA",
-    Text: "al no tener la dominancia y la fuerza suficiente en su hemicuerpo derecho por eso se observa irritable o mal humorado y requiere la ayuda de su esposa."
+    Text: "se puede evidenciar que la conducción área es la que más predomina"
+  },
+   {
+    image: require("../../../../assets/images/enfermera3.png"),
+    personaje: "ENFERMERA",
+    Text: "Encontrándose como un hallazgo normal para el paciente. "
   }
  
 ];
