@@ -89,7 +89,7 @@ render() {
      
       </View>
    <View style={style.viewcolsmenu}>
-  {pruValo1 != null?
+  {pruValo1 == 0.1?
      <RowItemEscena3   
       name="1"
       color="#82E0AA"
@@ -113,7 +113,7 @@ render() {
       }
       />
   }
- {pruValo2 != null?
+ {pruValo2 == 0.1?
     <RowItemEscena3
       name="2"
       color="#82E0AA"
@@ -140,7 +140,7 @@ render() {
     </View>
 
     <View style={style.viewcolsmenu}>
-  {pruValo3 != null?
+  {pruValo3 == 0.1?
     <RowItemEscena3
       name="3"
       color="#82E0AA"
@@ -164,7 +164,7 @@ render() {
       }
     />
   }
-  {pruValo4 != null?
+  {pruValo4 == 0.1?
     <RowItemEscena3
       name="4"
       color="#82E0AA"
@@ -192,7 +192,7 @@ render() {
      </View>
    
     <View style={style.viewcolsmenu}>
-  {pruValo5 != null?
+  {pruValo5 == 0.2?
    <RowItemEscena3
       name="5"
       color="#82E0AA"
@@ -216,7 +216,7 @@ render() {
       }
     />
   }
-  {pruValo6 != null?
+  {pruValo6 == 0.2?
     <RowItemEscena3
       name="6"
       color="#82E0AA"
@@ -244,7 +244,7 @@ render() {
    </View>
 
     <View style={style.viewcolsmenu}> 
- {pruValo7 != null?
+ {pruValo7 == 0.2?
     <RowItemEscena3
       name="7"
       color="#82E0AA"
