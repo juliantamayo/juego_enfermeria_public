@@ -69,7 +69,9 @@ const [modalVisible, setModalVisible] = useState(false);
         <Text style={styles.text}> JUGAR </Text>
        </TouchableOpacity>
 
-        <TouchableOpacity activeOpacity={0.8} style={styles.buttonJP}  onPress={() => navigation.navigate('Home')}>
+        <TouchableOpacity activeOpacity={0.8} style={styles.buttonJP}  onPress={() => {
+                 setModalVisible(!modalVisible);
+              }}>
         <Text style={styles.text}> REPASAR </Text>
        </TouchableOpacity>
 

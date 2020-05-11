@@ -13,22 +13,9 @@ import {StyleSheet,
 
 export default class result_qJ1 extends React.Component  {
 
- saveData(){  
-    let name = "Michal";  
-    AsyncStorage.setItem('user',name);  
-  }  
-  displayData = async ()=>{  
-    try{  
-      let user = await AsyncStorage.getItem('user');  
-      alert(user);  
-    }  
-    catch(error){  
-      alert(error)  
-    }  
-  }
-   
+
   render(){
- //const expo = this.props.route.params.experiencia;
+
  
     return (
   
@@ -41,19 +28,13 @@ export default class result_qJ1 extends React.Component  {
        </TouchableOpacity>
        <View style={style.parametros}>
       
-       <Text style={styles.text}>experiencia: { this.props.route.params.experiencia}</Text>
+       <Text style={styles.text}>Experiencia: { this.props.route.params.experiencia}</Text>
        
-       <Text style={styles.text}>correctas: { this.props.route.params.correctas}</Text>
+       <Text style={styles.text}>Correctas: { this.props.route.params.correctas}</Text>
    
 
 
-        <TouchableOpacity activeOpacity={0.8} style={styles.button2}  onPress={ this.saveData}>
-        <Text style={styles.text}> Guardar </Text>
-       </TouchableOpacity>
-
-       <TouchableOpacity activeOpacity={0.8} style={styles.button2}  onPress={ this.displayData}>
-        <Text style={styles.text}> Mostrar </Text>
-       </TouchableOpacity>
+       
        </View>
        </View>
     

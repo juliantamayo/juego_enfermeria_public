@@ -14,7 +14,6 @@ import {StyleSheet,
 export default class result_qJ3 extends React.Component  {
    
   render(){
- //const expo = this.props.route.params.experiencia;
  
     return (
   
@@ -29,54 +28,17 @@ export default class result_qJ3 extends React.Component  {
        </TouchableOpacity>
        <View style={style.parametros}>
       
-       <Text style={styles.text}>experiencia: { this.props.route.params.experiencia}</Text>
+       <Text style={style.Text}>Experiencia: {this.props.route.params.experiencia}</Text>
        
-       <Text style={styles.text}>correctas: { this.props.route.params.correctas}</Text>
+       <Text style={style.Text}>Correctas: {this.props.route.params.correctas}</Text>
       
-       <Text style={styles.text}>erroneas: { this.props.route.params.erroneas}</Text>
+       <Text style={style.Text}>Erróneas: {this.props.route.params.erroneas}</Text>
 
-
-        <TouchableOpacity activeOpacity={0.8} style={styles.button2}  onPress={ this.saveData
-
-     }>
-        <Text style={styles.text}> Guardar </Text>
-       </TouchableOpacity>
-
-       <TouchableOpacity activeOpacity={0.8} style={styles.button2}  onPress={ this.displayData
-
-     }>
-        <Text style={styles.text}> Mostrar </Text>
-       </TouchableOpacity>
        </View>
        </View>
     
         </ImageBackground>
   );
-}
-
-
-
-
-
-saveData() {
-  
-  let obj = {
-    name: 5,
-
-  }
-  AsyncStorage.setItem('user', JSON.stringify(obj));
-}
-
-displayData = async () => {
-  try {
-    // statements
-    let  user = await AsyncStorage.getItem('user');
-    let parsed = JSON.parse(user);
-    alert(parsed.name);
-  } catch(error) {
-    // statements
-    alert(error)
-  }
 }
 
 }
@@ -88,6 +50,12 @@ const style = StyleSheet.create({
      alignItems: 'center',
      justifyContent: 'center',
      backgroundColor: 'yellow',     
+  },
+  Text:{
+    //alignItems : 'flex-start',
+    textAlign : 'left',
+    fontWeight: "bold",
+    fontSize : 20
   }
 });
 
