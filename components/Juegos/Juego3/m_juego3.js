@@ -65,9 +65,6 @@ export default function menu_juego3 ({navigation, route}) {
       </View>
       <View style={style.container}>
 
-          <View style={style.headerbodySNC}>    
-               
-                </View>
              
           
             <View style={style.footerbodySNP}>
@@ -92,13 +89,11 @@ export default function menu_juego3 ({navigation, route}) {
                 <View style={style.margen}></View>
 
                   <RowItemJuego1   
-                        name="SNP"
-                        color="#98fb98"
                         onPress={() =>
                           navigation.navigate("juego3", {
                             title: "SNP",
                             questions: snaQuestions,
-                            color: "#98fb98"
+                            color: "#10a6a4"
                           })
                         }
                       />
@@ -141,6 +136,7 @@ const style = StyleSheet.create({
      flex: 1,
      alignItems : 'center',
      justifyContent : 'center',
+
      height :'100%',
      width : '100%'
 
@@ -164,6 +160,7 @@ const style = StyleSheet.create({
     footerSNPizq: {
      flex: 1,
      alignItems : 'flex-end',
+     justifyContent: 'center',
      height :'100%',
      width : '100%'
 
@@ -171,6 +168,7 @@ const style = StyleSheet.create({
     footerSNPcenter: {
      flex: 1,
      alignItems : 'center',
+     justifyContent: 'center',
      height :'100%',
      width : '100%'
 
@@ -178,6 +176,7 @@ const style = StyleSheet.create({
     footerSNPDer: {
      flex: 1,
      alignItems : 'flex-start',
+      justifyContent: 'center',
      height :'100%',
      width : '100%'
 
@@ -188,7 +187,7 @@ const style = StyleSheet.create({
     borderWidth: 4,
     borderColor: "#20232a",
     borderRadius: 6,
-    backgroundColor: "#9932cc",
+    backgroundColor: "#F3DD11",
     color: "#20232a",
     textAlign: "center",
     fontSize: 45,

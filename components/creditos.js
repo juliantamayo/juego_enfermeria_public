@@ -98,16 +98,12 @@ export default function creditos ({navigation, route}) {
         </View>
 
 
-         <Text style={escudo.textbold}>      Desarrollado por:      </Text>
+         <Text style={escudo.textbold}>      Diseñado y Desarrollado por:      </Text>
          <Text style={escudo.textnormal}>      Julian D. Tamayo      </Text>
-  
-
-         <Text style={escudo.textbold}>      Diseño e Ilustraciones:      </Text>
          <Text style={escudo.textnormal}>      Karla N. Cárdenas      </Text>
  
-
  
-         <Text style={escudo.textbold}>      Asesor metodológico:      </Text>
+         <Text style={escudo.textbold}>      Asesor Metodológico:      </Text>
          <Text style={escudo.textnormal}>      Ing. Ana Esperanza Merchán      </Text>
 
         <Text style={escudo.textbold}>      Asesor de Contenidos:      </Text>

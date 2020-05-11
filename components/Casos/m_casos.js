@@ -11,16 +11,28 @@ import { View,
 
 import estilo from '../Style.js';
  import { CommonActions } from '@react-navigation/native';
-
+import { Modal_MenuCasos} from "../elementos/ModalsTutorial";
 
 export default function m_casos({navigation, route}) {
   
+const [modalVisible, setModalVisible] = useState(false);
 
   return (
 <ImageBackground source={require("../../assets/images/background.png")}style={estilo.container} resizeMode='contain'>
 
+ <Modal_MenuCasos
+      
+       text={modalVisible}
+      onPress={() => {
+                setModalVisible(!modalVisible);
+              }}
+      />
+   
+
 <View style={estilo.header}>   
       <View style={estilo.headerIzquierda}>
+
+      
      <TouchableOpacity style={ estilo.imageContainer } activeOpacity={0.8}
        onPress={() => 
           navigation.dispatch(
@@ -36,6 +48,13 @@ export default function m_casos({navigation, route}) {
           )
         }>
                <Image style={ estilo.image } source={require("../../assets/images/button-back.png")} />
+      </TouchableOpacity>
+
+        <TouchableOpacity style={ estilo.imageContainer } activeOpacity={0.8}
+                   onPress={() => {
+                 setModalVisible(!modalVisible);
+              }}>
+        <Image style={ estilo.image } source={require("../../assets/images/ayuda.png")} />
       </TouchableOpacity>
 </View>
 

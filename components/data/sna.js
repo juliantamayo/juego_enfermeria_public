@@ -1,10 +1,10 @@
 const questions = [
   {
     image: require("../../assets/images/sistemas_autonomo.png"),
-    question: "hola",
+    question: "esta preugunta es muy larga djkfhdjkhgjdgdhsjklsjkjsk                    jdhfjadhjhsjk          ",
     answers: [
-      { id: "1", text: "IZQUIERDA" },
-      { id: "2", text: "DERECHA", correct: true }
+      { id: "1", text: "Simpática" },
+      { id: "2", text: "Parasimpático", correct: true }
    
     ]
   },
@@ -12,16 +12,18 @@ const questions = [
     image: require("../../assets/images/sistemas_autonomo.png"),
     question: "hola",
     answers: [
-      { id: "1", text: "IZQUIERDA" },
-      { id: "2", text: "DERECHA", correct: true }
+     { id: "1", text: "Simpática" },
+      { id: "2", text: "Parasimpático", correct: true }
+   
     ]
   },
   {
     image: require("../../assets/images/sistemas_autonomo.png"),
     question: "hola",
     answers: [
-      { id: "1", text: "IZQUIERDA" },
-      { id: "2", text: "DERECHA", correct: true }
+      { id: "1", text: "Simpática" },
+      { id: "2", text: "Parasimpático", correct: true }
+   
     ]
   }
 ];

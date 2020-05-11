@@ -131,18 +131,21 @@ export const Modal_Menu = ({ text, onPress = () => {} }) => (
             />
           }
           paginationStyle={{
-            bottom: 30
+            bottom: 10
           }}
           loop={false}
         >
-          <ImageBackground style={styles.slide} source={require('../../assets/images/WhatsApp.jpeg')} resizeMode="cover">
+          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m1.jpg')} resizeMode="cover">
 
           </ImageBackground>
 
-          <ImageBackground style={styles.slide} source={require('../../assets/images/WhatsApp.jpeg')} resizeMode="cover">
+          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m2.jpg')} resizeMode="cover">
 
           </ImageBackground>
-          
+          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m3.jpg')} resizeMode="cover">
+
+          </ImageBackground>
+
         </Swiper>
             </View> 
             </View>
@@ -214,11 +217,17 @@ export const Modal_MenuJuego1 = ({ text, onPress = () => {} }) => (
           }}
           loop={false}
         >
-          <ImageBackground style={styles.slide} source={require('../../assets/images/WhatsApp2.jpeg')} resizeMode="cover">
+          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m8.jpg')} resizeMode="cover">
 
           </ImageBackground>
 
-          <ImageBackground style={styles.slide} source={require('../../assets/images/WhatsApp2.jpeg')} resizeMode="cover">
+          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m9.jpg')} resizeMode="cover">
+
+          </ImageBackground>
+           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m11.jpg')} resizeMode="cover">
+
+          </ImageBackground>
+          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m10.jpg')} resizeMode="cover">
 
           </ImageBackground>
           
@@ -292,13 +301,17 @@ export const Modal_MenuJuego2 = ({ text, onPress = () => {} }) => (
           }}
           loop={false}
         >
-          <ImageBackground style={styles.slide} source={require('../../assets/images/WhatsApp2.jpeg')} resizeMode="cover">
+          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m12.jpg')} resizeMode="cover">
 
           </ImageBackground>
 
-          <ImageBackground style={styles.slide} source={require('../../assets/images/WhatsApp2.jpeg')} resizeMode="cover">
+          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m13.jpg')} resizeMode="cover">
 
           </ImageBackground>
+           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m14.jpg')} resizeMode="cover">
+
+          </ImageBackground>
+
           
         </Swiper>
             </View> 
@@ -376,6 +389,165 @@ export const Modal_MenuJuego3 = ({ text, onPress = () => {} }) => (
           <ImageBackground style={styles.slide} source={require('../../assets/images/WhatsApp2.jpeg')} resizeMode="cover">
 
           </ImageBackground>
+          
+        </Swiper>
+            </View> 
+            </View>
+            
+        </Modal>
+);
+
+export const Modal_MenuCasos = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
+
+            <View style={styles.headerModal}>
+
+            <View style={styles.headerMizq}>
+            </View>
+         <View style={styles.margen}></View>
+
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton}
+                
+                onPress={onPress}
+               >
+                  <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+             </View>
+            
+              
+            </View>
+            
+            <View style={styles.bodyModal}>
+              <Swiper
+          style={styles.wrapper} showsButtons
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 8,
+                height: 8,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 8,
+                height: 8,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 30
+          }}
+          loop={false}
+        >
+         <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m15.jpg')} resizeMode="cover">
+
+          </ImageBackground>
+          
+        </Swiper>
+            </View> 
+            </View>
+            
+        </Modal>
+);
+
+export const Modal_MenuJuegos = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
+
+            <View style={styles.headerModal}>
+
+            <View style={styles.headerMizq}>
+            </View>
+         <View style={styles.margen}></View>
+
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton}
+                
+                onPress={onPress}
+               >
+                  <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+             </View>
+            
+              
+            </View>
+            
+            <View style={styles.bodyModal}>
+              <Swiper
+          style={styles.wrapper} showsButtons
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 8,
+                height: 8,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 8,
+                height: 8,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 30
+          }}
+          loop={false}
+        >
+          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m4.jpg')} resizeMode="cover">
+
+          </ImageBackground>
+
+          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m5.jpg')} resizeMode="cover">
+
+          </ImageBackground>
+          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m6.jpg')} resizeMode="cover">
+
+          </ImageBackground>
+
+         <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m7.jpg')} resizeMode="cover">
+
+          </ImageBackground>
+
+
           
         </Swiper>
             </View> 

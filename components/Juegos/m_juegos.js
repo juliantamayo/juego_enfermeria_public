@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {useState, Component} from 'react';
 import {StyleSheet, 
         Text, 
         View, 
@@ -12,15 +12,24 @@ import {StyleSheet,
       } from 'react-native';
 import styles from './../Style.js';
 import { CommonActions } from '@react-navigation/native';
-
+import { Modal_MenuJuegos} from "../elementos/ModalsTutorial";
 
 export default function m_juegos ({navigation, route}) {
 
+const [modalVisible, setModalVisible] = useState(false);
 
     return (
    
     <ImageBackground source={require("../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
-          
+    
+     <Modal_MenuJuegos
+      
+       text={modalVisible}
+      onPress={() => {
+                setModalVisible(!modalVisible);
+              }}
+      />
+
       <View style={styles.header}>
 
           <View style={styles.headerIzquierda}>
@@ -41,6 +50,15 @@ export default function m_juegos ({navigation, route}) {
                   )}>
                        <Image style={ styles.image } source={require("../../assets/images/button-home.png")} />
               </TouchableOpacity>
+
+             <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
+                   onPress={() => {
+                 setModalVisible(!modalVisible);
+              }}>
+               <Image style={ styles.image } source={require("../../assets/images/ayuda.png")} />
+              </TouchableOpacity>
+
+
           </View>
 
           <View style={styles.headerDerecha}>
