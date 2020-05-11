@@ -47,7 +47,7 @@ export default class escena2 extends React.Component {
   const Pcte4= parseFloat(this.state.save_pregPcte4);
   const Pcte5= parseFloat(this.state.save_pregPcte5);
   const Pcte6= parseFloat(this.state.save_pregPcte6);
-  const Pcte7= parseFloat(this.state.save_pregPcte6);
+  const Pcte7= parseFloat(this.state.save_pregPcte7);
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
