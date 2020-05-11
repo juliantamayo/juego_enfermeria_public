@@ -151,8 +151,6 @@ class juego1_part1 extends React.Component {
           <Text style={styles.text}>{question.question}</Text>  
           <View>
           
-          
-
             <ButtonContainer>
               {question.answers.map(answer => (
                 <Button
