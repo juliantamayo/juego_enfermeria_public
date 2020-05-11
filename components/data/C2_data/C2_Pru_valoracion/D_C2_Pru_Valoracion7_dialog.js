@@ -1,25 +1,20 @@
 const questions = [
  
   {
-    image: require("../../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_P7_sensibilidad1.png"),
+    image: require("../../../../assets/images/enfermera3.png"),
     personaje: "ENFERMERA",
-    Text: " Señor C.J.M Puede distinguir el objeto en su mano derecha?"
+    Text: " Señor C.J.M por favor ubiquese de forma cómoda"
    
   },
 {
-    image: require("../../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_P7_sensibilidad1.png"),
-    personaje: "Señor P.C.P",
-    Text: "No"
+    image: require("../../../../assets/images/CASO_2_SEÑOR_PCP_reflejo_biscipital1.gif"),
+    personaje: "ENFERMERA",
+    Text: "doble levemente el brazo derecho elevándolo a nivel del corazón"
   },
   {
-    image: require("../../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_P7_sensibilidad2.png"),
+    image: require("../../../../assets/images/CASO_2_SEÑOR_PCP_reflejo_biscipital1.gif"),
     personaje: "ENFERMERA",
-    Text: "y con la mano izquierda puede distinguir este objeto?"
-  },
-    {
-    image: require("../../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_P7_sensibilidad2.png"),
-    personaje: "Señor P.C.P",
-    Text: "Es una LLa..ve.."
+    Text: "..."
   }
 
 ];

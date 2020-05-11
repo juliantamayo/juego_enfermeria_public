@@ -8,7 +8,7 @@ const questions = [
   },
 {
     image: require("../../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_P7_sensibilidad1.png"),
-    personaje: "Señor P.C.P",
+    personaje: "Señor C.J.M",
     Text: "No"
   },
   {
@@ -18,7 +18,7 @@ const questions = [
   },
     {
     image: require("../../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_P7_sensibilidad2.png"),
-    personaje: "Señor P.C.P",
+    personaje: "Señor C.J.M",
     Text: "Es una LLa..ve.."
   }
 

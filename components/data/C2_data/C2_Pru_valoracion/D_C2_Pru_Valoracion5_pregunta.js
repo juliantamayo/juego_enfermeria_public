@@ -3,16 +3,16 @@ const questions = [
    { 
     question: "¿Cuál es el nombre de la Prueba de valoración que acaba de realizar el enfermero?",
     answers: [
-      { id: "1", text: "Reflejo Plantar"},
-      { id: "2", text: "Reflejo Biscipital"  },
-      { id: "3", text: "Palpación Percusión" },
-      { id: "4", text: "Movilidad Activa" , correct: true}
+      { id: "1", text: "Discriminación de dos puntos"},
+      { id: "2", text: "Weber"  },
+      { id: "3", text: "Rinne" , correct: true},
+      { id: "4", text: "Reflejo cremastériano" }
     ]
   },{ 
-    question: "¿Qué se puede asumir con los hallazgos del paciente?",
+    question: "Para considerar un hallazgo normal en el paciente debe predominar por más segundos la conducción aérea que la ósea.La afirmación anterior es:",
     answers: [
-      { id: "1", text: "Paciente con limitación de movimientos en hemicuerpo derecho (brazo, tronco, cadera, pierna DERECHA)  " , correct: true},
-      { id: "2", text: "El paciente está en la capacidad de desarrollar todos los movimientos en la amplitud y simetría requerida." },
+      { id: "1", text: "Verdadera " , correct: true},
+      { id: "2", text: "Falsa" },
     ]
   }
 ];

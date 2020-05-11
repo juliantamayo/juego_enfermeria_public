@@ -1,21 +1,19 @@
 const questions = [
  
   {
-    image: require("../../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_P3_simetria_y_motilidad_facial1.png"),
+    image: require("../../../../assets/images/CASO_3_SEÑOR_AT_auscultación_superficial.png"),
     personaje: "ENFERMERA",
-    Text: " Señor C.J.M por favor frunza el ceño "
-   
+    Text: "Señor A.T. respire lenta y profundamente"
   },
     {
-    image: require("../../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_P3_simetria_y_motilidad_facial2.png"),
+    image: require("../../../../assets/images/CASO_3_SEÑOR_AT_auscultación_superficial.png"),
     personaje: "ENFERMERA",
-    Text: " Señor C.J.M ahora por favor ríase.. "
-   
+    Text: "exhale con la boca abierta "
   },
     {
-    image: require("../../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_P3_simetria_y_motilidad_facial3.png"),
+    image: require("../../../../assets/images/CASO_3_SEÑOR_AT_auscultación_superficial.png"),
     personaje: "ENFERMERA",
-    Text: " Señor C.J.M por favor cierre fuertemente los ojos "
+    Text: "Abdomen con presencia de distensión abdominal, contracción muscular en zona de epigastrio que indica la presencia de dolor corroborado con la expresión facial del paciente "
   }
 ];
 

@@ -117,7 +117,7 @@ class V_C2_PruValo12_pregunta extends React.Component {
       }else if (nextIndex >= state.totalCount   && this.state.correctCount==2) {
        return this.props.navigation.navigate('V_C2_RespPruValo12_enfermera',{repu_enferme:1,experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount),
         title: "RespuestaPV12 C2 enfermero",
-          questions: D_C2_Pru_Valoracion1_Resp_enfermera,
+          questions: D_C2_Pru_Valoracion12_Resp_enfermera,
           color: "#36b1f0"});
       
       }else if (nextIndex < state.totalCount && this.state.correctCount == 0) {

@@ -1,18 +1,18 @@
 const questions = [
   {
-  question: "¿Cuál es el nombre de la Prueba de valoración que acaba de realizar el enfermero?",
+    question: "¿Cuál es el nombre de la Prueba de valoración que acaba de realizar el enfermero?",
     answers: [
-      { id: "1", text: "sensibilidad cortical" , correct: true},
-      { id: "2", text: "Fuerza Muscular" },
-      { id: "3", text: "Sensanción Térmica y táctil" },
-      { id: "4", text: "Movilidad Activa" }
+      { id: "1", text: "Reflejo Tricipital" },
+      { id: "2", text: "Reflejo Biscipital", correct: true },
+      { id: "3", text: "Reflejo Supinador" },
+      { id: "4", text: "Reflejo Plantar" }
     ]
   },
   { 
-    question: "¿Qué se puede asumir con los hallazgos del paciente?",
+    question: "¿El reflejo biscipital pone en evidencia la raíz C5 y C6 del raquis cervical y produce la flexión del antebrazo sobre el brazo.?",
     answers: [
-      { id: "1", text: "Astereognosia táctil en miembro superior izquierdo y estereognosia en miembro superior derecho" },
-      { id: "2", text: "Astereognosia táctil en miembro superior derecho y estereognosia en miembro superior izquierdo", correct: true },
+      { id: "1", text: "Verdadero", correct: true },
+      { id: "2", text: "Falso" },
     ]
   }
 ];

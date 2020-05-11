@@ -3,16 +3,17 @@ const questions = [
     { 
     question: "¿Cuál es el nombre de la Prueba de valoración que acaba de realizar el enfermero?",
     answers: [
-      { id: "1", text: "Reflejo Plantar"},
-      { id: "2", text: "Fuerza Muscular"  , correct: true},
-      { id: "3", text: "Palpación Percusión" },
-      { id: "4", text: "Movilidad Activa" }
+      { id: "1", text: "Percusión del Abdomen" },
+      { id: "2", text: "Auscultación del Abdomen" },
+      { id: "3", text: "Palpación Superficial"},
+      { id: "4", text: "Palpación Profunda", correct: true  }
     ]
-  },{ 
-    question: "¿Qué se puede asumir con los hallazgos del paciente?",
+  },
+  { 
+    question: "¿El Paciente A.T. presentó abdomen blando, depresible, no doloroso a la palpación  profunda, no masas palpables.?",
     answers: [
-      { id: "1", text: "Miembro inferior derecho espástico (músculos contraídos) que no puede levantar, miembro inferior izquierdo con arco de movimiento completo contra gravedad y resistencia " , correct: true},
-      { id: "2", text: "Miembro inferior derecho e izquierdo con arco de movimiento completo contra gravedad y resistencia" },
+      { id: "1", text: "Incorrecto, Con la maniobra de deslizamiento se evidenció dolor en el paciente" , correct: true},
+      { id: "2", text: "Correcto, los hallazgos del paciente A.T. corresponden a hallazgos normales" },
     ]
   }
 ];

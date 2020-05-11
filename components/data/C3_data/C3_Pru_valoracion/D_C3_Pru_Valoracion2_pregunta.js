@@ -1,25 +1,27 @@
 const questions = [
   
   { 
-    question: "¿Cuál es el nombre de la Prueba de valoración que acaba de realizar el enfermero?",
+    question: "¿Cuál es el nombre de la Prueba de valoración que acaba de realizar la enfermera?",
     answers: [
-      { id: "1", text: "Motilidad Extríseca del ojo" , correct: true},
-      { id: "2", text: "Simetría y Motilidad Facial" },
-      { id: "3", text: "Campimetría por Confrontación" },
-      { id: "4", text: "Movilidad Activa" }
+      { id: "1", text: "Maniobras de Higado" },
+      { id: "2", text: "Palpación Bimanual" },
+      { id: "3", text: "Palpación del Abdomen" },
+      { id: "4", text: "Auscultación de Abdomen", correct: true }
     ]
   },{ 
-    question: "¿Qué se puede asumir con los hallazgos del paciente?",
+    question: "Los ruidos intestinales normales son sonidos de tono alto. Tienen características de gorgoteo (glu-glu), con una frecuencia de 5 a 35 por minuto como suma total de todos los cuadrantes.La anterior afirmación es:",
     answers: [
-      { id: "1", text: "La simple inspección de la facies permite darse cuenta que la  abertura palpebral o que el párpado superior del lado derecho  está más descendido que el otro " , correct: true},
-      { id: "2", text: "La simple inspección de la facies permite darse cuenta que las dos aberturas palpebrales son de la misma amplitud" },
+      { id: "1", text: "Correcta " , correct: true},
+      { id: "2", text: "Inconrrecta" },
     ]
   },
     { 
-    question: "¿Qué se puede asumir con los hallazgos del paciente?",
+    question: "El paciente manifestó presencia de dolor epigástrico, por tanto, ¿la auscultación se empezó desde qué cuadrante?",
     answers: [
-      { id: "1", text: "ptosis palpebral derecha" , correct: true},
-      { id: "2", text: "ptosis palpebral izquierda" },
+      { id: "1", text: "Cuadrante inferior izquierdo" },
+      { id: "2", text: "Cuadrante inferior derecho " , correct: true},
+      { id: "3", text: "Cuadrante superior izquierdo" },
+      { id: "4", text: "Cuadrante superior derecho" },
     ]
   }
 ];

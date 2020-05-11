@@ -1,21 +1,16 @@
 const questions = [
  
   {
-    image: require("../../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_P3_simetria_y_motilidad_facial1.png"),
+    image: require("../../../../assets/images/CASO_2_SEÑOR_PCP_palpación.gif"),
     personaje: "ENFERMERA",
-    Text: " Señor C.J.M por favor frunza el ceño "
+    Text: " Por favor eñor P.C.P abra su boca "
    
   },
     {
-    image: require("../../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_P3_simetria_y_motilidad_facial2.png"),
+    image: require("../../../../assets/images/CASO_2_SEÑOR_PCP_percusión.gif"),
     personaje: "ENFERMERA",
-    Text: " Señor C.J.M ahora por favor ríase.. "
+    Text: "Por favor señor P.C.P mantenga la boca entreabierta"
    
-  },
-    {
-    image: require("../../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_P3_simetria_y_motilidad_facial3.png"),
-    personaje: "ENFERMERA",
-    Text: " Señor C.J.M por favor cierre fuertemente los ojos "
   }
 ];
 

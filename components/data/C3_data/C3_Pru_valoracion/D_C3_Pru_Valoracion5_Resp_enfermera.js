@@ -1,14 +1,20 @@
 const questions = [
  
  {
-    image: require("../../../../assets/images/enfermera_pensando.png"),
+    image: require("../../../../assets/images/enfermera3.png"),
     personaje: "ENFERMERA",
-    Text: " Paciente dependiente, En estos momentos se ve limitada su autonomía en actividades de la vida diaria como su arreglo personal, vestirse, sentarse"
+    Text: "Correcto! La percusión del hígado se ejecuta siguiendo la línea hemiclavicular; se comienza en el primer espacio intercostal y se desciende espacio por espacio."
   },
+   {
+    image: require("../../../../assets/images/enfermera3.png"),
+    personaje: "ENFERMERA",
+    Text: "La percusión del bazo debe ser una percusión suave."
+  },
+
    {
     image: require("../../../../assets/images/enfermera_pensando.png"),
     personaje: "ENFERMERA",
-    Text: "al no tener la dominancia y la fuerza suficiente en su hemicuerpo derecho por eso se observa irritable o mal humorado y requiere la ayuda de su esposa."
+    Text: "Para el caso del señor A.T. Se percibe sonido timpánico en zona de estómago e intestino subyacente, mate en hígado y bazo."
   }
  
 ];

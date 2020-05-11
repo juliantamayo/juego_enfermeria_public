@@ -4,16 +4,16 @@ const questions = [
     question: "¿Cuál es el nombre de la Prueba de valoración que acaba de realizar el enfermero?",
     answers: [
       { id: "1", text: "Motilidad Extríseca del ojo" },
-      { id: "2", text: "Campimetría por Confrontación" , correct: true},
-      { id: "3", text: "Simetría y Motilidad Facial" },
-      { id: "4", text: "Movilidad Activa" }
+      { id: "2", text: "Campimetría por Confrontación"},
+      { id: "3", text: "Sensibilidad Térmica" },
+      { id: "4", text: "Estereognosia", correct: true }
     ]
   },
     { 
-    question: "¿Qué se puede asumir con los hallazgos del paciente?",
+    question: "¿Si el Paciente identifica los objetos proporcionados en una sola mano se considera como un hallazgo normal?",
     answers: [
-      { id: "1", text: "Hemianopsia homónima Izquierda: en un solo ojo se compromete la visión del mismo hemicampo" },
-      { id: "2", text: "Hemianopsia homónima de derecha: en cada ojo se compromete la visión del mismo hemicampo" , correct: true},
+      { id: "1", text: "Si, lo importante es que identifique el objeto que fue puesto en sus manos" },
+      { id: "2", text: "No, para considerarlo un hallazgo normal debe identificar los objetos proporcionados en ambas manos." , correct: true},
     ]
   }
 

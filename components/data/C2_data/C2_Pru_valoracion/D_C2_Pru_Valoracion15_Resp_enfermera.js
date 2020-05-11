@@ -1,16 +1,11 @@
 const questions = [
  
  {
-    image: require("../../../../assets/images/enfermera_pensando.png"),
+    image: require("../../../../assets/images/enfermera3.png"),
     personaje: "ENFERMERA",
-    Text: " Hemianopsia homónima de un lado: en cada ojo se compromete la visión del mismo hemicampo"
+    Text: "Tu respuesta es correcta! cuando el paciente identifica los objetos proporcionados en ambas manos consideramos un Hallazgo normal, el cuál es el caso del señor P.C.P. "
   },
 
-    {
-    image: require("../../../../assets/images/enfermera_pensando.png"),
-    personaje: "ENFERMERA",
-    Text: "hemianopsia homónima derecha en el caso del señor C.J.M"
-  }
 ];
 
 export default questions;

@@ -3,14 +3,19 @@ const questions = [
  {
     image: require("../../../../assets/images/enfermera_pensando.png"),
     personaje: "ENFERMERA",
-    Text: " Fuerza muscular grado 2 en miembro inferior derecho - hemiparesia derecha,  Espasticidad grado 3, es decir la pierna derecha esta contraída, rígida, se nota un poco más corta que no puede levantar"
+    Text: " Durante la valoración por medio de la inspección se evidencia simetría en ambas hemilenguas. "
   },
    {
     image: require("../../../../assets/images/enfermera_pensando.png"),
     personaje: "ENFERMERA",
-    Text: "Mientras que la pierna derecha la puede movilizar y si se le hace fuerte la resiste"
+    Text: "Se observa también que la punta de la lengua se encuentra centrada."
+  },
+  {
+    image: require("../../../../assets/images/enfermera_pensando.png"),
+    personaje: "ENFERMERA",
+    Text: "Durante la valoración por medio de la palpación y tocando las mejillas en la parte externa, se evidencia la fuerza de la lengua ejercida hacia la mejillas"
   }
- 
+
 ];
 
 export default questions;

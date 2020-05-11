@@ -1,15 +1,10 @@
 const questions = [
  
   {
-    image: require("../../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_P5_movilidad_activa.gif"),
+    image: require("../../../../assets/images/CASO_3_SEÑOR_AT_percusión_del_abdomen.png"),
     personaje: "ENFERMERA",
-    Text: "Debe visualizar muy bien al paciente"
+    Text: "Se percibe sonido timpánico en zona de estómago e intestino subyacente, mate en hígado y bazo."
    
-  },
-  {
-    image: require("../../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_P5_movilidad_activa2.png"),
-    personaje: "Señor P.C.P",
-    Text: "Es muy importante hacer una buena observación del paciente"
   }
 ];
 
