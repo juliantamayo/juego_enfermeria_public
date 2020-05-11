@@ -276,7 +276,7 @@ useEffect(() => {
   }, [])
     return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="HomeScreen">
+      <Stack.Navigator initialRouteName="Menu">
         <Stack.Screen name="Home" component={HomeScreen} 
         options={{
         //  headerLayoutPreset: 'center',
