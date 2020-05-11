@@ -16,11 +16,12 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#fff",
-    backgroundColor: "#36B1F0",
+    backgroundColor: "#036e6a",
     fontSize: 22,
     textAlign: "center",
     letterSpacing: -0.02,
-    fontWeight: "600"
+    fontWeight: "600",
+    borderRadius: 10
   },
 
   textContador: {
@@ -113,7 +114,7 @@ class V_C1_PruValo2_pregunta extends React.Component {
         return this.props.navigation.navigate('V_C1_PruValo2_dialogo',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
       }else if (nextIndex >= state.totalCount   && this.state.correctCount==3) {
        return this.props.navigation.navigate('V_C1_RespPruValo2_enfermera',{repu_enferme:1,experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount),
-        title: "RespuestaPV2 C1 enfermero",
+        title: "Caso 1. Respuesta ",
           questions: D_C1_Pru_Valoracion2_Resp_enfermera,
           color: "#36b1f0"});
       

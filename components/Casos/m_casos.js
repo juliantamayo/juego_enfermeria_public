@@ -112,7 +112,7 @@ const style = StyleSheet.create({
 
   },
   button: {
-    backgroundColor: "rgba(3, 33, 0, 0.47)",
+    backgroundColor: "rgba(3, 110, 101, 0.7)",
     borderRadius: 10,
     paddingVertical: 15,
     alignItems: "center",
@@ -126,7 +126,7 @@ const style = StyleSheet.create({
     fontSize: 25,
     textAlign: "center",
     letterSpacing: -0.02,
-    fontWeight: "600"
+    fontWeight: "bold"
   }
 });
 

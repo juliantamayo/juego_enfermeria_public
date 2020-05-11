@@ -95,7 +95,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C1_PruValo1_dialogo", {
-          title: "1 pruValo1",
+          title: "Caso 1. Prueba 1",
           questions: C1_Pru_valo1_dialog,
           color: "#36b1f0"
         })
@@ -119,7 +119,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C1_PruValo2_dialogo", {
-          title: "2  pruValo2",
+          title: "caso 1. Prueba 2",
           questions: C1_Pru_valo2_dialog,
           color: "#799496"
         })
