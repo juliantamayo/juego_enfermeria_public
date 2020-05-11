@@ -59,15 +59,15 @@ export default function m_juegos ({navigation, route}) {
         <SafeAreaView>
         
            <TouchableOpacity activeOpacity={0.8} style={styles.button}  onPress={() => navigation.navigate('m_juego1')}>
-            <Text style={styles.text}> JUEGO 1 </Text>
+            <Text style={styles.text}> Enfrenta al S.N.C y S.N.P  </Text>
            </TouchableOpacity>
 
             <TouchableOpacity activeOpacity={0.8} style={styles.button2}  onPress={() => navigation.navigate('M_juego2')}>
-            <Text style={styles.text}> JUEGO 2 </Text>
+            <Text style={styles.text}> ¡ Ponte a prueba ! </Text>
             </TouchableOpacity>
 
             <TouchableOpacity activeOpacity={0.8} style={styles.button3}  onPress={() => navigation.navigate('M_juegos3')}>
-            <Text style={styles.text}> JUEGO 3 </Text>
+            <Text style={styles.text}> ¿Listo para el S.N.A? </Text>
            </TouchableOpacity>
             </SafeAreaView>
        </View>

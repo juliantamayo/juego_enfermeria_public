@@ -90,7 +90,7 @@ export default class escena2 extends React.Component {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("DialogosC1", {
-          title: "1. ¿Cómo se encuentra?1",
+          title: "Caso 1. Pregunta  ",
           questions: C1_pregunta1,
           color: "#36b1f0"
         })

@@ -14,11 +14,12 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#fff",
-    backgroundColor: "#36B1F0",
+    backgroundColor: "#036e6a",
     fontSize: 22,
     textAlign: "center",
     letterSpacing: -0.02,
-    fontWeight: "600"
+    fontWeight: "600",
+    borderRadius: 10
   },
 
   textContador: {

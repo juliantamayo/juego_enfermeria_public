@@ -295,7 +295,7 @@ useEffect(() => {
         options={{
         //  headerShown: false
          headerLeft: null,
-          title: 'Menu',
+          title: 'Menú Principal',
            headerStyle: {
             backgroundColor: '#fbe122',
           },
@@ -322,7 +322,7 @@ useEffect(() => {
         <Stack.Screen name="M_juego2" component={M_juegos2} 
         options={{
          headerLeft: null,
-          title: 'Preguntas',
+          title: 'Minijuego 2',
           headerStyle: {
             backgroundColor: '#fbe122',
           },
@@ -335,7 +335,7 @@ useEffect(() => {
         options={{
         //  headerShown: false
         headerLeft: null,
-          title: 'Preguntas',
+          title: 'Minijuego 2- Opciones',
           headerStyle: {
             backgroundColor: '#fbe122',
           },
@@ -374,7 +374,7 @@ useEffect(() => {
          <Stack.Screen name="m_juego1"  component={m_juego1}
           options={{
          headerLeft: null,
-          title: 'Juego 1',
+          title: 'Minijuego 1',
           headerStyle: {
             backgroundColor: '#fbe122',
           },
@@ -467,7 +467,7 @@ useEffect(() => {
         options={{
          // headerShown: false
          headerLeft: null,
-          title: 'M_casos',
+          title: 'Menú Casos de Estudio',
            headerStyle: {
             backgroundColor: '#fbe122',
           },
@@ -481,7 +481,7 @@ useEffect(() => {
         <Stack.Screen name="M_caso1"  component={M_caso1}
           options={{
          headerLeft: null,
-          title: 'M_caso1',
+          title: 'Menú Caso 1',
           headerStyle: {
             backgroundColor: '#fbe122',
           },
@@ -496,6 +496,7 @@ useEffect(() => {
            
         ({ navigation, route }) => ({ title: route.params?.title ,
           headerLeft: null,
+          title: 'Introducción',
           headerStyle: {
          backgroundColor: '#fbe122',
          borderBottomColor: route.params?.color
@@ -544,6 +545,7 @@ useEffect(() => {
            
         ({ navigation, route }) => ({ title: route.params?.title ,
           headerLeft: null,
+          title: 'Caso 1. Pregunta ',
           headerStyle: {
          backgroundColor: '#fbe122',
          borderBottomColor: route.params?.color

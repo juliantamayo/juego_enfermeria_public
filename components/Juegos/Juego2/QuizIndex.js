@@ -33,33 +33,33 @@ export default ({ navigation, route }) => (
     <ScrollView  style={styles.margen}>
     <StatusBar barStyle="dark-content" />
     <RowItem   
-      name="Qué tanto sabes?"
-      color="#36b1f0"
+      name="Preguntados S.N.C"
+      color="#F3DD11"
       onPress={() =>
         navigation.navigate("Quiz", {
-          title: "Qué tanto sabes?",
+          title: "Preguntados S.N.C",
           questions: spaceQuestions,
-          color: "#36b1f0"
+          color: "#18A196"
         })
       }
     />
     <RowItem
-      name="Qué tanto sabes?"
-      color="#799496"
+      name="Preguntados S.N.P"
+      color="#FBBD20"
       onPress={() =>
         navigation.navigate("Quiz", {
-          title: "Qué tanto sabes?",
+          title: "Preguntados S.N.P",
           questions: westernsQuestions,
           color: "#799496"
         })
       }
     />
     <RowItem
-      name="Qué tanto sabes?"
-      color="#49475B"
+      name="Preguntados S.N.A"
+      color="#F3DD11"
       onPress={() =>
         navigation.navigate("Quiz", {
-          title: "Que tanto sabes?",
+          title: "Preguntados S.N.A",
           questions: computerQuestions,
           color: "#49475B"
         })
