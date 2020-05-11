@@ -21,6 +21,10 @@ import juego1_teory2 from './components/Juegos/Juego1/juego1_teory2';
 import M_juegos3 from './components/Juegos/Juego3/m_juego3';
 import juego3 from './components/Juegos/Juego3/juego3';
 import Result_QJ3 from './components/Juegos/Juego3/result_qJ3';
+
+//créditos 
+import Creditos from './components/creditos';
+
 //---------------------------------------------------------------
 import pruebaT from './components/Teoria/prueba_atras';
 //-----------------------casos--------------------------------
@@ -296,6 +300,21 @@ useEffect(() => {
         //  headerShown: false
          headerLeft: null,
           title: 'Menú Principal',
+           headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}/>
+
+
+        <Stack.Screen  name="Creditos" component={Creditos} 
+        options={{
+        //  headerShown: false
+         headerLeft: null,
+          title: 'Créditos Juego',
            headerStyle: {
             backgroundColor: '#fbe122',
           },

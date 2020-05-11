@@ -38,7 +38,7 @@ export default function menu ({navigation, route}) {
                 {
                   name: 'Menu',
                 },
-                { name: 'M_juegos' },
+                { name: 'Creditos' },
               ],
             })
           )

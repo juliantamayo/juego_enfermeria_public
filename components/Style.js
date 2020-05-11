@@ -24,7 +24,12 @@ export default StyleSheet.create({
       flex:1,
       alignItems: 'flex-end'
      },
-  miniButon:{
+     headerCentro:{
+      flex:1,
+      alignItems: 'center'
+     },
+
+      miniButon:{
       flex:0.3,
       flexDirection: 'column',
       backgroundColor: 'lightseagreen',
