@@ -99,9 +99,10 @@ export default function creditos ({navigation, route}) {
 
 
          <Text style={escudo.textbold}>      Diseñado y Desarrollado por:      </Text>
-         <Text style={escudo.textnormal}>      Julian D. Tamayo      </Text>
+         <Text style={escudo.textnormal}>      Julian D. Tamayo & Karla N. Cárdenas      </Text>
+
+         <Text style={escudo.textbold}>      Ilustraciones:      </Text>
          <Text style={escudo.textnormal}>      Karla N. Cárdenas      </Text>
- 
  
          <Text style={escudo.textbold}>      Asesor Metodológico:      </Text>
          <Text style={escudo.textnormal}>      Ing. Ana Esperanza Merchán      </Text>
@@ -109,7 +110,7 @@ export default function creditos ({navigation, route}) {
         <Text style={escudo.textbold}>      Asesor de Contenidos:      </Text>
          <Text style={escudo.textnormal}>      Enf. Adriana Hernández       </Text>
 
-        <Text style={escudo.textnormal}>      Todos los Derechos Reservados      </Text>
+        <Text style={escudo.textbold}>      Todos los Derechos Reservados      </Text>
 
 
 
@@ -127,8 +128,8 @@ export default function creditos ({navigation, route}) {
 
 const escudo = StyleSheet.create({
   escudo: {
-  height: Dimensions.get('window').height/3,
-  width: Dimensions.get('window').width/3
+  height: Dimensions.get('window').height/4,
+  width: Dimensions.get('window').width/4
 
   },
   opacidad: {
@@ -142,7 +143,7 @@ const escudo = StyleSheet.create({
      },
 
       textnormal: {
-        backgroundColor: "rgba(255, 255, 255, 0.90)" ,
+        backgroundColor: "rgba(255, 255, 255, 0.95)" ,
     fontSize: 18,
     //color: "#fff",
 
