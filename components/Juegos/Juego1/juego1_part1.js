@@ -1,8 +1,9 @@
 import React from "react";
-import { View, StyleSheet, StatusBar, Text, SafeAreaView, Image,TouchableHighlight, Modal } from "react-native";
+import { View, StyleSheet, StatusBar, Text, SafeAreaView, Image,TouchableHighlight, Modal,Alert } from "react-native";
 
 import { Button, ButtonContainer } from "../../elementos/ButtonJ1";
-import { Alert } from "../../elementos/Alert";
+import { Alerta } from "../../elementos/Alert";
+import { ModalJuego1} from "../../elementos/ModalsRepaso";
 
  
 const styles = StyleSheet.create({
@@ -27,30 +28,7 @@ const styles = StyleSheet.create({
   Imagen:{
     width: 290,
   height: '100%'
-  },
-  Imagen2:{
-    width: 40,
-  height: 40
-  },
-   modalView: {
-     width: '90%',
-   height: '60%',
-    margin: 20,
-    backgroundColor: "white",
-    borderRadius: 20,
-    padding: 35,
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5
   }
-  
-
 });
 
 const mult =5;
@@ -130,30 +108,17 @@ class juego1_part1 extends React.Component {
         ]}
       >
 
-      <Modal
-          animationType="slide"
-          transparent={true}
-          visible={modalVisible}
-          onRequestClose={() => {
-            Alert.alert("Modal has been closed.");
-          }}
-        >
-          
-            <View style={styles.modalView}>
+      <ModalJuego1
               
-
-              <TouchableHighlight 
-                
-                onPress={() => {
-                  this.setModalVisible(!modalVisible);
-                }}
-              >
-                 <Image style={styles.Imagen}   source={question.image} resizeMode='contain'/>
-              </TouchableHighlight>
-            </View>
+             text={modalVisible}
+             imagen={question.image}
+             onPress={() => {
+                this.setModalVisible(!modalVisible);
+                    }}
+              />
          
-        </Modal>
-        <StatusBar barStyle="light-content" />
+
+              <StatusBar barStyle="light-content" />
         <SafeAreaView >
         
 
@@ -187,7 +152,7 @@ class juego1_part1 extends React.Component {
           </Text>
           
         </SafeAreaView>
-        <Alert
+        <Alerta
           correct={this.state.answerCorrect}
           visible={this.state.answered}
         />

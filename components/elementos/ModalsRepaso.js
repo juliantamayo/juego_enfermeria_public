@@ -13,6 +13,10 @@ const styles = StyleSheet.create({
     width: "46%",
     marginTop: 20
   },
+  Imagen:{
+    width: 290,
+  height: '100%'
+  },
   text: {
     color: "#fff",
     fontSize: 20,
@@ -126,6 +130,23 @@ const styles = StyleSheet.create({
    image: {
    width: '90%',
     height: '90%',
+  },
+  modalView: {
+     width: '90%',
+   height: '60%',
+    margin: 20,
+    backgroundColor: "white",
+    borderRadius: 20,
+    padding: 35,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5
   }
 });
 
@@ -360,5 +381,30 @@ export const ModalSNA = ({ text, onPress = () => {} }) => (
          
         </Modal>
 );
+
+export const ModalJuego1 = ({ text,imagen, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Toque la imagen para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
+              
+
+              <TouchableHighlight 
+                
+                onPress={onPress}>
+                 <Image style={styles.Imagen}   source={imagen} resizeMode='contain'/>
+              </TouchableHighlight>
+            </View>
+         
+        </Modal>
+);
+
+
 
 

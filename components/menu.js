@@ -7,14 +7,20 @@ import {Text,
         TouchableOpacity    
       } from 'react-native';
   import styles from './Style.js';
- // import im from '../assets/images/background.png';
- import { CommonActions } from '@react-navigation/native';
- import { Modal_Menu } from "./elementos/ModalsTutorial";
+import snaQuestions from "./data/sna";
+
+import sncQuestions from "./data/snc";
+import snpQuestions from "./data/snp";
+
+import { CommonActions } from '@react-navigation/native';
+import { Modal_Menu } from "./elementos/ModalsTutorial";
 
 export default function menu ({navigation, route}) {
 
  const [modalVisible, setModalVisible] = useState(false);
- 
+// var listado = [snaQuestions, snpQuestions, sncQuestions];
+ var listado = new Array(snaQuestions, snpQuestions, sncQuestions);
+ var cLetra = listado[Math.floor(Math.random()*listado.length)];
     return (
    //  <Imagebackground style={styles.container}>
     <ImageBackground source={require("../assets/images/background.png")}style={styles.container}>
@@ -74,20 +80,11 @@ export default function menu ({navigation, route}) {
       </TouchableOpacity>
       
        <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-       onPress={() => 
-          navigation.dispatch(
-            CommonActions.reset({
-              index: 1,
-              routes: [
-                {
-                  name: 'Menu',
-             
-                },
-                { name: 'pruebaT' },
-              ],
-            })
-          )
-        }>
+        onPress={() =>
+                          navigation.navigate("pruebaT", {
+                            questions:listado[Math.floor(Math.random()*listado.length)]
+                          })
+                        }>
                <Image style={ styles.image } source={require("../assets/images/buttonteory.png")} />
       </TouchableOpacity>
       </View>

@@ -51,3 +51,25 @@ export const Alert = ({ correct, visible }) => {
     </View>
   );
 };
+
+export const Alerta = ({ correct, visible }) => {
+  if (!visible) return null;
+
+  const icon = correct
+    ? require("../../assets/check.png")
+    : require("../../assets/close.png");
+
+  const circleStyles = [styles.circle];
+
+  if (correct) {
+    circleStyles.push(styles.circleCorrect);
+  }
+
+  return (
+    <View style={styles.container}>
+      <View style={circleStyles}>
+        <Image source={icon} style={styles.icon} resizeMode="contain" />
+      </View>
+    </View>
+  );
+};

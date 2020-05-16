@@ -28,10 +28,7 @@ const styles = StyleSheet.create({
     width: '90%',
     height: '90%',
     margin: 20,
-   // backgroundColor: "black",
     backgroundColor: "rgba(0, 185, 188, 0.37)",
-    //borderRadius: 20,
-    //padding: 35,
     alignItems: "center",
     shadowColor: "#000",
     shadowOffset: {
@@ -44,36 +41,30 @@ const styles = StyleSheet.create({
   },
   openButton: {
    backgroundColor: "red",
-   // borderRadius: 20,
     padding: 10,
     alignItems: "center",
     justifyContent: "center",
     elevation: 2
   },
    modalText2: {
-   // marginBottom: 15,
-    // marginLeft : 20,
     fontSize: 22,
     textAlign: "center",
-    // borderColor: "#20232a",
+
      paddingVertical: 8,
      borderWidth: 4,
       fontWeight: "bold"
-   // backgroundColor: "red"
   },
    modalText: {
-   // marginBottom: 15,
     textAlign: "center",
     fontSize : 18,
      
   },
   modalTextcuerpo: {
-   // marginBottom: 15,
     textAlign: "left",
      marginLeft : 10,
   },
    modalTextnegrilla: {
-   // marginBottom: 15,
+
    fontSize : 18,
     textAlign: "left",
     fontWeight: "bold",
@@ -81,7 +72,6 @@ const styles = StyleSheet.create({
   },
 
   modalTex3: {
-   // marginBottom: 15,
     textAlign: "center",
     color: "#fff"
      
@@ -89,7 +79,6 @@ const styles = StyleSheet.create({
   headerModal:{
     flex: 0.1,
     flexDirection : 'row',
-    //backgroundColor: "yellow",
     alignItems: 'center',
     
   },
@@ -115,7 +104,6 @@ const styles = StyleSheet.create({
     margin:5
   },
   wrapper: {
-     //backgroundColor: 'white'
   },
 
   slide: {
@@ -5881,7 +5869,6 @@ export const Modal_C3_Pru_valoracion5_HN = ({ text, onPress = () => {} }) => (
                 <Text style={styles.modalText}> {"\n"}- Matidez a nivel del hígado y bazo {"\n"}- Timpanismo del aire gástrico en hipocondrio izquierdo {"\n"}- Sonido submate por la interposición del pulmón sobre el borde superior del hígado </Text>
                 </Text>
 
-
           </View>
 
         </ScrollView>
@@ -5889,12 +5876,9 @@ export const Modal_C3_Pru_valoracion5_HN = ({ text, onPress = () => {} }) => (
         </Swiper>
             </View>
         
-
               
             </View>
             
         
         </Modal>
 );
-
-
