@@ -4,7 +4,6 @@ import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpac
 import styles from './../../Style.js';
 import Escena1Dialog from "../../data/escena1dialog";
 import Escena2Dialog from "../../data/escena2dialog";
-import westernsQuestions from "../../data/westerns";
 import D_C1_Quiz from "../../data/C1_data/C1_Quiz/D_C1_Quiz";
 import { RowItem } from "../../elementos/RowItem";
 import variableglobal from "./variables_caso1";

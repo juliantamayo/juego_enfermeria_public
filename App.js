@@ -1282,7 +1282,7 @@ useEffect(() => {
          <Stack.Screen name="C2_Escena3"  component={C2_Escena3}
           options={{
          headerLeft: null,
-          title: 'Caso 2. Preguntas a Paciente',
+          title: 'Caso 2. Pruebas de Valoración',
           headerStyle: {
             backgroundColor: '#fbe122',
           },
