@@ -517,7 +517,7 @@ useEffect(() => {
            
         ({ navigation, route }) => ({ title: route.params?.title ,
           headerLeft: null,
-          title: 'Introducción al caso',
+          title: 'Caso 1. Introducción al Caso',
           headerStyle: {
          backgroundColor: '#fbe122',
          borderBottomColor: route.params?.color
@@ -1191,7 +1191,7 @@ useEffect(() => {
         options={{
         //  headerShown: false
         headerLeft: null,
-          title: 'Valoración',
+          title: 'Caso 1. Valoración',
           headerStyle: {
             backgroundColor: '#fbe122',
           },
@@ -1255,7 +1255,7 @@ useEffect(() => {
          <Stack.Screen name="C2_Escena1"  component={C2_Escena1}
           options={{
          headerLeft: null,
-          title: 'Introducción al Caso',
+          title: 'Caso 2. Introducción al Caso',
           headerStyle: {
             backgroundColor: '#fbe122',
           },

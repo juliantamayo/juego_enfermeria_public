@@ -113,7 +113,7 @@ render() {
         this.props.navigation.navigate("C2_Escena5",{ex:'2',
         title: "Caso 2. Quiz",
           questions: D_C2_Quiz,
-          color: "#36b1f0"
+          color: "#20b2aa"
       })
       }
     />

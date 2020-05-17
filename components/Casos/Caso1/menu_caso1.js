@@ -89,7 +89,7 @@ render() {
       color="#f9e67a"
       onPress={() =>
         this.props.navigation.navigate("Escena1", {
-          title: "Escena1",
+          title: "Caso 1. Introducción al Caso",
           questions: Escena1Dialog,
           color: "#36b1f0"
         })
@@ -134,9 +134,9 @@ render() {
       color="#f9e67a"
       onPress={() =>
         this.props.navigation.navigate("Escena5",{ex:'2',
-        title: "Quiz",
+        title: "Caso1. Quiz",
           questions: D_C1_Quiz,
-          color: "#36b1f0"
+          color: "#20b2aa"
       })
       }
     />
