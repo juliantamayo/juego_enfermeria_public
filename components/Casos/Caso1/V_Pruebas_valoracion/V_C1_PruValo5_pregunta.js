@@ -6,47 +6,8 @@ import { Button, ButtonContainer } from "../../../elementos/ButtonC1_Preguntas";
 import D_C1_Pru_Valoracion5_Resp_enfermera from "../../../data/C1_data/C1_Pru_valoracion/D_C1_Pru_Valoracion5_Resp_enfermera";
 
 import { Alert } from "../../../elementos/Alert";
-
+import  styles  from "../../../Style_preguntas.js";
  
-const styles = StyleSheet.create({
-  container: {
-  //  backgroundColor: "#36B1F0",
-    flex: 1,
-    paddingHorizontal: 20
-  },
-  text: {
-    color: "#fff",
-    backgroundColor: "#36B1F0",
-    fontSize: 22,
-    textAlign: "center",
-    letterSpacing: -0.02,
-    fontWeight: "600"
-  },
-
-  textContador: {
-    color: "#fff",
-    //backgroundColor: "#36B1F0",
-    fontSize: 22,
-    textAlign: "center",
-    letterSpacing: -0.02,
-    fontWeight: "600"
-  },
-  containerImagen:{
-    alignItems : 'center',
-    backgroundColor: 'white',
-    width : '100%',
-    height : '50%'
-  },
-  Imagen:{
-    width: 290,
-  height: '100%'
-  },
-  Imagen2:{
-    width: 40,
-  height: 40
-  }
-});
-
 const mult =5;
 
 class V_C1_PruValo5_pregunta extends React.Component {

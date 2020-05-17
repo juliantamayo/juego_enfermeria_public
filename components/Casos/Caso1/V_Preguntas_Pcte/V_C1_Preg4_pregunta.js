@@ -6,36 +6,7 @@ import { Button, ButtonContainer } from "../../../elementos/ButtonC1_Preguntas";
 import C1_pregunta4_Resp_enfermera from "../../../data/C1_preguntas/C1_pregunta4_Resp_enfermera";
 
 import { Alert } from "../../../elementos/Alert";
-
- 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingHorizontal: 20
-  },
-  text: {
-    color: "#fff",
-    backgroundColor: "#36B1F0",
-    fontSize: 22,
-    textAlign: "center",
-    letterSpacing: -0.02,
-    fontWeight: "600"
-  },
-
-  textContador: {
-    color: "#fff",
-    fontSize: 22,
-    textAlign: "center",
-    letterSpacing: -0.02,
-    fontWeight: "600"
-  },
-  containerImagen:{
-    alignItems : 'center',
-    backgroundColor: 'white',
-    width : '100%',
-    height : '50%'
-  }
-});
+import  styles  from "../../../Style_preguntas.js";
 
 const mult =5;
 

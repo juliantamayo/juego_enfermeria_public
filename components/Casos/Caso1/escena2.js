@@ -90,7 +90,7 @@ export default class escena2 extends React.Component {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("DialogosC1", {
-          title: "Caso 1. Pregunta  ",
+          title: "Caso 1. Pregunta 1  ",
           questions: C1_pregunta1,
           color: "#36b1f0"
         })
@@ -102,7 +102,7 @@ export default class escena2 extends React.Component {
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("DialogosC1", {
-          title: "1. ¿Cómo se encuentra?1",
+          title: "Caso 1. Pregunta 1 ",
           questions: C1_pregunta1,
           color: "#36b1f0"
         })
@@ -116,7 +116,7 @@ export default class escena2 extends React.Component {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C1_Preg2_dialogo", {
-          title: "¿En qué lugar se encuentra?",
+          title: "Caso 1. Pregunta 2",
           questions: C1_pregunta2,
           color: "#799496"
         })
@@ -128,7 +128,7 @@ export default class escena2 extends React.Component {
       color="#00b9bc"
       onPress={() =>
         this.props.navigation.navigate("V_C1_Preg2_dialogo", {
-          title: "¿En qué lugar se encuentra?",
+          title: "Caso 1. Pregunta 2",
           questions: C1_pregunta2,
           color: "#799496"
         })
@@ -141,7 +141,7 @@ export default class escena2 extends React.Component {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C1_Preg3_dialogo", {
-          title: "C1_pregunta3",
+          title: "Caso 1. Pregunta 3",
           questions: C1_pregunta3,
           color: "#799496"
         })
@@ -152,7 +152,7 @@ export default class escena2 extends React.Component {
           color="#77c6c6"
           onPress={() =>
             this.props.navigation.navigate("V_C1_Preg3_dialogo", {
-              title: "C1_pregunta3",
+              title: "Caso 1. Pregunta 3",
               questions: C1_pregunta3,
               color: "#799496"
             })
@@ -165,7 +165,7 @@ export default class escena2 extends React.Component {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C1_Preg4_dialogo", {
-          title: "Escena2",
+          title: "Caso 1. Pregunta 4",
           questions: C1_pregunta4,
           color: "#799496"
         })
@@ -176,7 +176,7 @@ export default class escena2 extends React.Component {
       color="#00b9bc"
       onPress={() =>
         this.props.navigation.navigate("V_C1_Preg4_dialogo", {
-          title: "Escena2",
+          title: "Caso 1. Pregunta 4",
           questions: C1_pregunta4,
           color: "#799496"
         })
@@ -189,7 +189,7 @@ export default class escena2 extends React.Component {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C1_Preg5_dialogo", {
-          title: "Escena2",
+          title: "Caso 1. Pregunta 5",
           questions: C1_pregunta5,
           color: "#799496"
         })
@@ -200,7 +200,7 @@ export default class escena2 extends React.Component {
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("V_C1_Preg5_dialogo", {
-          title: "Escena2",
+          title: "Caso 1. Pregunta 5",
           questions: C1_pregunta5,
           color: "#799496"
         })
@@ -213,7 +213,7 @@ export default class escena2 extends React.Component {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C1_Preg6_dialogo", {
-          title: "Escena2",
+          title: "Caso 1. Pregunta 6",
           questions: C1_pregunta6,
           color: "#799496"
         })
@@ -224,7 +224,7 @@ export default class escena2 extends React.Component {
           color="#00b9bc"
           onPress={() =>
             this.props.navigation.navigate("V_C1_Preg6_dialogo", {
-              title: "Escena2",
+              title: "Caso 1. Pregunta 6",
               questions: C1_pregunta6,
               color: "#799496"
             })
@@ -237,7 +237,7 @@ export default class escena2 extends React.Component {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C1_Preg7_dialogo", {
-          title: "Escena2",
+          title: "Caso 1. Pregunta 7",
           questions: C1_pregunta7,
           color: "#799496"
         })
@@ -248,7 +248,7 @@ export default class escena2 extends React.Component {
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("V_C1_Preg7_dialogo", {
-          title: "Escena2",
+          title: "Caso 1. Pregunta 7",
           questions: C1_pregunta7,
           color: "#799496"
         })

@@ -7,42 +7,8 @@ import style from '../../../Style.js';
 import D_C3_Pru_Valoracion1_pregunta from "../../../data/C3_data/C3_Pru_valoracion/D_C3_Pru_Valoracion1_pregunta";
 import { CommonActions } from '@react-navigation/native';
 
+import  styles  from "../../../Style_dialog.js";
  
-const styles = StyleSheet.create({
-  container: {
-   // backgroundColor: "#36B1F0",
-    flex: 1,
-
-  },
-  text: {
-    color: "#fff",
-    fontSize: 22,
-    textAlign: "center",
-    
-    letterSpacing: -0.02,
-    fontWeight: "600"
-  },
-  text2: {
-   marginLeft : 5,
-   //paddingVertical: 8,
-   // borderWidth: 4,
-    borderColor: "#20232a",
-   // borderRadius: 6,
-    backgroundColor: "red",
-    color: "#fff",
-    textAlign: "left",
-    fontSize: 17,
-    fontWeight: "bold"
-  },
-  containerdialog:{
-   flex: 0.5,
-  backgroundColor: "rgba(0, 185, 188, 0.37)",
-  width: '100%',
-  height: '100%'
-  }
-   
-});
-
 const mult =5;
 
 
@@ -70,7 +36,7 @@ class V_C3_PruValo1_dialogo extends React.Component {
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
         return this.props.navigation.navigate("V_C3_PruValo1_pregunta", {activeQuestion: 1, 
-          title: "2 PrubValu1 c3",
+          title: "Caso 3. Prueba de valoración 1",
           questions: D_C3_Pru_Valoracion1_pregunta,
           color: "#36b1f0"
         });

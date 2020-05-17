@@ -7,46 +7,8 @@ import D_C3_Pru_Valoracion5_Resp_enfermera from "../../../data/C3_data/C3_Pru_va
 
 import { Alert } from "../../../elementos/Alert";
 
+import  styles  from "../../../Style_preguntas.js";
  
-const styles = StyleSheet.create({
-  container: {
-  //  backgroundColor: "#36B1F0",
-    flex: 1,
-    paddingHorizontal: 20
-  },
-  text: {
-    color: "#fff",
-    backgroundColor: "#36B1F0",
-    fontSize: 22,
-    textAlign: "center",
-    letterSpacing: -0.02,
-    fontWeight: "600"
-  },
-
-  textContador: {
-    color: "#fff",
-    //backgroundColor: "#36B1F0",
-    fontSize: 22,
-    textAlign: "center",
-    letterSpacing: -0.02,
-    fontWeight: "600"
-  },
-  containerImagen:{
-    alignItems : 'center',
-    backgroundColor: 'white',
-    width : '100%',
-    height : '50%'
-  },
-  Imagen:{
-    width: 290,
-  height: '100%'
-  },
-  Imagen2:{
-    width: 40,
-  height: 40
-  }
-});
-
 const mult =5;
 
 class V_C3_PruValo5_pregunta extends React.Component {
@@ -97,7 +59,7 @@ class V_C3_PruValo5_pregunta extends React.Component {
         return this.props.navigation.navigate('V_C3_PruValo5_dialogo',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
       }else if (nextIndex >= state.totalCount   && this.state.correctCount==2) {
        return this.props.navigation.navigate('V_C3_RespPruValo5_enfermera',{repu_enferme:1,experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount),
-        title: "RespuestaPV5 C3 enfermero",
+        title: "Caso 3. Prueba de Valoración 5",
           questions: D_C3_Pru_Valoracion5_Resp_enfermera,
           color: "#36b1f0"});
       
