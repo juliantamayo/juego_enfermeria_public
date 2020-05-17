@@ -118,39 +118,6 @@ const style = StyleSheet.create({
     height :'100%',
     width : '100%'
   },
-  headerbodySNC: {
-    flex: 0.7,
-    flexDirection: 'row',
-    alignItems: "center",
-    justifyContent : 'center',
-      height :'100%',
-      width : '100%'
-    },
-    hederSNcizq: {
-     flex: 1,
-     alignItems : 'flex-end',
-     justifyContent : 'center',
-     height :'100%',
-     width : '100%'
-
-    },
-    hederSNccenter: {
-     flex: 1,
-     alignItems : 'center',
-     justifyContent : 'center',
-
-     height :'100%',
-     width : '100%'
-
-    },
-    hederSNDer: {
-     flex: 1,
-     alignItems : 'flex-start',
-     justifyContent : 'center',
-     height :'100%',
-     width : '100%'
-
-    },
    footerbodySNP: {
     flex: 1,
     flexDirection: 'row',
@@ -197,10 +164,7 @@ const style = StyleSheet.create({
   },
   textoboton: {
     marginRight : 10,
-   //paddingVertical: 8,
-   // borderWidth: 4,
     borderColor: "#20232a",
-   // borderRadius: 6,
     backgroundColor: "white",
     color: "#20232a",
     textAlign: "center",
@@ -209,10 +173,7 @@ const style = StyleSheet.create({
   },
    textoboton2: {
     marginLeft : 15,
-   //paddingVertical: 8,
-   // borderWidth: 4,
     borderColor: "#20232a",
-   // borderRadius: 6,
     backgroundColor: "white",
     color: "#20232a",
     textAlign: "center",

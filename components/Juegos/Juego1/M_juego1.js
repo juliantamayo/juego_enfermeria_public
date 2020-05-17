@@ -11,7 +11,8 @@ import { RowItemJuego1} from "../../elementos/RowItemJuego1";
 import { ModalSNC, ModalSNP } from "../../elementos/ModalsRepaso";
 import { Modal_MenuJuego1 } from "../../elementos/ModalsTutorial";
 
-import snpQuestions from "../../data/snp";
+//import snpQuestions from "../../data/snp";
+import {J2questions,J2questions2,J2questions3} from "../../data/snp";
 
 import {questions,questions2,questions3} from "../../data/C1_data/D_c1_juego_part1";
 
@@ -21,8 +22,9 @@ export default function menu_juego1 ({navigation, route}) {
  const [modalVisible2, setModalVisible2] = useState(false);
  const [modalVisible3, setModalVisible3] = useState(false);
 
- var listadopP1 = new Array(questions,questions2,questions3);
- var cLetra = listadopP1[Math.floor(Math.random()*listadopP1.length)];
+ var listadopPJ1 = new Array(questions,questions2,questions3);
+ var listadopPJ2 = new Array(J2questions,J2questions2,J2questions3);
+
 
  
     return (
@@ -109,7 +111,7 @@ export default function menu_juego1 ({navigation, route}) {
                         onPress={() =>
                           navigation.navigate("juego1_part1", {
                             title: "SNC",
-                            questions:listadopP1[Math.floor(Math.random()*listadopP1.length)],
+                            questions:listadopPJ1[Math.floor(Math.random()*listadopPJ1.length)],
                             color: "#20b2aa"
                           })
                         }
@@ -150,7 +152,7 @@ export default function menu_juego1 ({navigation, route}) {
                         onPress={() =>
                           navigation.navigate("juego1_part2", {
                             title: "SNP",
-                            questions: snpQuestions,
+                            questions:listadopPJ2[Math.floor(Math.random()*listadopPJ2.length)],
                             color: "#98fb98"
                           })
                         }
@@ -257,10 +259,7 @@ const style = StyleSheet.create({
   },
    textoboton2: {
     marginLeft : 15,
-   //paddingVertical: 8,
-   // borderWidth: 4,
     borderColor: "#20232a",
-   // borderRadius: 6,
     backgroundColor: "white",
     color: "#20232a",
     textAlign: "center",
