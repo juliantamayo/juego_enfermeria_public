@@ -10,12 +10,14 @@ import styles from './../../Style.js';
 import { RowItemJuego1} from "../../elementos/RowItemJuego1";
 import { Modal_MenuJuego3 } from "../../elementos/ModalsTutorial";
 import { ModalSNA } from "../../elementos/ModalsRepaso";
-import snaQuestions from "../../data/sna";
+import {questions,questions2,questions3} from "../../data/sna";
 
 export default function menu_juego3 ({navigation, route}) {
 
  const [modalVisible, setModalVisible] = useState(false);
  const [modalVisible2, setModalVisible2] = useState(false);
+  var listadopj3 = new Array(questions,questions2,questions3);
+ var cLetra = listadopj3[Math.floor(Math.random()*listadopj3.length)];
  
     return (
 <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
@@ -92,7 +94,7 @@ export default function menu_juego3 ({navigation, route}) {
                         onPress={() =>
                           navigation.navigate("juego3", {
                             title: "SNP",
-                            questions: snaQuestions,
+                           questions:listadopj3[Math.floor(Math.random()*listadopj3.length)],
                             color: "#10a6a4"
                           })
                         }

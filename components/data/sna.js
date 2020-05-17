@@ -109,7 +109,7 @@ export const questions2 = [
     ]
   }
 ];
-export const questions2 = [
+export const questions3 = [
   {
     image: require("../../assets/images/sistemas_autonomo.png"),
     question: " ¿Qué sistema es el responsable de inhibir la salivación?",

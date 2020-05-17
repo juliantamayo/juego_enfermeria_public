@@ -1,7 +1,7 @@
 import React from "react";
 import { View, StyleSheet, StatusBar, Text, SafeAreaView, Dimensions, ScrollView} from "react-native";
 
-import { Button2, ButtonContainer } from "../../elementos/ButtonJ1";
+import { Button, ButtonContainer } from "../../elementos/ButtonC1_Preguntas";
 import { Alert } from "../../elementos/Alert";
 const { width, height } = Dimensions.get('window')
  
@@ -96,7 +96,7 @@ class escena5 extends React.Component {
 
             <ButtonContainer>
               {question.answers.map(answer => (
-                <Button2
+                <Button
                   key={answer.id}
                   text={answer.text}
                   onPress={() => this.answer(answer.correct)}
