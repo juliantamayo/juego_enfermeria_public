@@ -10,14 +10,20 @@ import styles from './../../Style.js';
 import { RowItemJuego1} from "../../elementos/RowItemJuego1";
 import { ModalSNC, ModalSNP } from "../../elementos/ModalsRepaso";
 import { Modal_MenuJuego1 } from "../../elementos/ModalsTutorial";
-import sncQuestions from "../../data/snc";
+
 import snpQuestions from "../../data/snp";
+
+import {questions,questions2,questions3} from "../../data/C1_data/D_c1_juego_part1";
 
 export default function menu_juego1 ({navigation, route}) {
 
  const [modalVisible, setModalVisible] = useState(false);
  const [modalVisible2, setModalVisible2] = useState(false);
  const [modalVisible3, setModalVisible3] = useState(false);
+
+ var listadopP1 = new Array(questions,questions2,questions3);
+ var cLetra = listadopP1[Math.floor(Math.random()*listadopP1.length)];
+
  
     return (
 
@@ -103,7 +109,7 @@ export default function menu_juego1 ({navigation, route}) {
                         onPress={() =>
                           navigation.navigate("juego1_part1", {
                             title: "SNC",
-                            questions: sncQuestions,
+                            questions:listadopP1[Math.floor(Math.random()*listadopP1.length)],
                             color: "#20b2aa"
                           })
                         }

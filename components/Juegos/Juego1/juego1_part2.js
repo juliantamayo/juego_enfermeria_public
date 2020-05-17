@@ -1,9 +1,11 @@
 import React from "react";
-import { View, StyleSheet, StatusBar, Text, SafeAreaView, Image,TouchableHighlight, Modal } from "react-native";
+import { View, StyleSheet, StatusBar, Text, SafeAreaView, Image,TouchableHighlight,Alert,Dimensions,ScrollView } from "react-native";
 
 import { Button, ButtonContainer } from "../../elementos/ButtonJ1";
-import { Alert } from "../../elementos/Alert";
-
+import { Alerta } from "../../elementos/Alert";
+import { ModalJuego1} from "../../elementos/ModalsRepaso";
+import { Modal_gameover} from "../../elementos/ModalsGameover";
+const { width, height } = Dimensions.get('window')
  
 const styles = StyleSheet.create({
   container: {
@@ -13,7 +15,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#fff",
-    fontSize: 25,
+    fontSize: 22,
     textAlign: "center",
     letterSpacing: -0.02,
     fontWeight: "600"
@@ -22,31 +24,29 @@ const styles = StyleSheet.create({
     alignItems : 'center',
     backgroundColor: 'white',
     width : '100%',
-    height : '50%'
+    height: Dimensions.get('window').width/1.5,
+
   },
   Imagen:{
-    width: 290,
+  width: 290,
+ // width: Dimensions.get('window').width/3,
   height: '100%'
   },
-   modalView: {
-     width: '90%',
-   height: '80%',
-    margin: 20,
-    backgroundColor: "white",
-    borderRadius: 20,
-    padding: 35,
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5
+   textContador: {
+    color: "#fff",
+    fontSize: 22,
+    textAlign: "center",
+    letterSpacing: -0.02,
+    fontWeight: "600"
+  },
+  timertext:{
+    color: "#fff",
+    fontSize: 22,
+    textAlign: "center",
+    letterSpacing: -0.02,
+    fontWeight: "600",
+    backgroundColor: 'black',
   }
-  
-
 });
 
 const mult =5;
@@ -58,14 +58,14 @@ class juego1_part2 extends React.Component {
 
 
   state = {
-     modalVisible: false,
-    correctCount: 0,
-    //totalCount: this.props.navigation.getParam("questions", []).length,
-      totalCount: this.props.route.params?.questions.length,
-   //route.params?.someParam ?? 'defaultValue';
+    modalVisible: false,
+    modalfinjuego:false,
+    correctCount: 0, 
+    totalCount: this.props.route.params?.questions.length,
     activeQuestionIndex: 0,
     answered: false,
-    answerCorrect: false
+    answerCorrect: false,
+    timer: 10
   };
 
   answer = correct => {
@@ -96,11 +96,14 @@ class juego1_part2 extends React.Component {
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
         return this.props.navigation.navigate('Result_QJ1',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
+      }else if (this.state.timer == -1) {
+       return{ modalfinjuego:true}
       }
 
       return {
         activeQuestionIndex: nextIndex,
-        answered: false
+        answered: false,
+        timer: 10
       };
     });
   };
@@ -109,8 +112,29 @@ class juego1_part2 extends React.Component {
     this.setState({ modalVisible: visible });
   }
 
+  setModalfinjuego = (visible) => {
+    this.setState({ modalfinjuego: visible });
+  }
+    componentDidMount(){
+  this.interval = setInterval(
+    () => this.setState((prevState)=> ({ timer: prevState.timer - 1 })),
+    1000
+  );
+}
+
+componentDidUpdate(){
+  if(this.state.timer === -1){ 
+    clearInterval(this.interval);
+  }
+}
+
+componentWillUnmount(){
+ clearInterval(this.interval);
+}
+
   render() {
-    const { modalVisible } = this.state;
+    let availableQuesions = []
+    const { modalVisible,modalfinjuego } = this.state;
     const questions = this.props.route.params?.questions ?? [];
     const question = questions[this.state.activeQuestionIndex];
     
@@ -122,33 +146,26 @@ class juego1_part2 extends React.Component {
         ]}
       >
 
-      <Modal
-          animationType="slide"
-          transparent={true}
-          visible={modalVisible}
-          onRequestClose={() => {
-            Alert.alert("Modal has been closed.");
-          }}
-        >
-          
-            <View style={styles.modalView}>
+      <ModalJuego1
               
+             text={modalVisible}
+             imagen={question.image}
+             onPress={() => {
+                this.setModalVisible(!modalVisible);
+                    }}
+              />
 
-              <TouchableHighlight 
-                
-                onPress={() => {
-                  this.setModalVisible(!modalVisible);
-                }}
-              >
-                 <Image style={styles.Imagen}   source={question.image} resizeMode='contain'/>
-              </TouchableHighlight>
-            </View>
+              <Modal_gameover
+              
+             text={this.state.timer == -1? true: modalfinjuego}
+             onPress={() => this.props.navigation.navigate('m_juego1')}
+              />
          
-        </Modal>
-        <StatusBar barStyle="light-content" />
+<ScrollView  >
+              <StatusBar barStyle="light-content" />
         <SafeAreaView >
         
-
+         <Text style={styles.timertext}> { this.state.timer == -1? 0: this.state.timer} </Text>
           <Text style={styles.text}>{question.question}</Text>  
           <View>
           <View style={styles.containerImagen}>
@@ -179,58 +196,14 @@ class juego1_part2 extends React.Component {
           </Text>
           
         </SafeAreaView>
-        <Alert
+        <Alerta
           correct={this.state.answerCorrect}
           visible={this.state.answered}
         />
+        </ScrollView>
       </View>
     );
   }
 }
 
 export default juego1_part2;
-
-
-
-
-/*
-import React, {Component} from 'react';
-import { Button, View, Text, Alert } from 'react-native';
-import App, {name} from '../../../app'
-
-
-class juego1_part1 extends Component {
-
-   _onPressButton() {
-    // name.valor=name.valor+100,
-     //name.valoresNuevos= ['julian David', name.valor],
-   // alert('los nuevos valores son'+name.nombreCompleto)
-   //Alert.alert('ESTI FUNCIONA PPOR LO MENOS')
-  }
-
-  render(){
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>ESTE ES EL JUEGO 1</Text>
-      <Button
-        title="ir a menu juegos"
-        onPress={() => this.props.navigation.navigate('m_juego1')}
-      />
-
-      <Button 
-        title="presioname"
-        onPress={
-         this._onPressButton
-        }
-      />
-
-       <Text>  </Text>
-    </View>
-
-  );
-}
-}
-
-
-export default juego1_part1;
-*/

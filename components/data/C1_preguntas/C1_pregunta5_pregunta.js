@@ -20,7 +20,7 @@ const questions = [
 
   },
   {
-    question: "¿: ¿Cuáles son las estructuras del sistema nervioso que intervienen para que el señor CJ.M pueda recordar en orden de mayor a menor el nombre de sus hijas y evocar esos recuerdos?",
+    question: "¿Cuáles son las estructuras del sistema nervioso que intervienen para que el señor CJ.M pueda recordar en orden de mayor a menor el nombre de sus hijas y evocar esos recuerdos?",
     answers: [
       { id: "1", text: "Cerebelo, corteza motora"},
       { id: "2", text: "Sistema límbico, lóbulo temporal medial", correct: true  },

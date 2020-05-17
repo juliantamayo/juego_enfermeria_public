@@ -6,11 +6,9 @@ import {Text,
         Image,
         TouchableOpacity    
       } from 'react-native';
-  import styles from './Style.js';
-import snaQuestions from "./data/sna";
+import styles from './Style.js';
 
-import sncQuestions from "./data/snc";
-import snpQuestions from "./data/snp";
+import {questions,questions2,questions3} from "./data/C1_data/D_c1_juego_part1";
 
 import { CommonActions } from '@react-navigation/native';
 import { Modal_Menu } from "./elementos/ModalsTutorial";
@@ -18,11 +16,10 @@ import { Modal_Menu } from "./elementos/ModalsTutorial";
 export default function menu ({navigation, route}) {
 
  const [modalVisible, setModalVisible] = useState(false);
-// var listado = [snaQuestions, snpQuestions, sncQuestions];
- var listado = new Array(snaQuestions, snpQuestions, sncQuestions);
+
+ var listado = new Array(questions,questions2,questions3);
  var cLetra = listado[Math.floor(Math.random()*listado.length)];
     return (
-   //  <Imagebackground style={styles.container}>
     <ImageBackground source={require("../assets/images/background.png")}style={styles.container}>
 
     <Modal_Menu

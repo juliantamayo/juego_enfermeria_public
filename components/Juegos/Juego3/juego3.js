@@ -1,9 +1,9 @@
 import React from "react";
-import { View, StyleSheet, StatusBar, Text, SafeAreaView, Image,TouchableHighlight, Modal } from "react-native";
+import { View, StyleSheet, StatusBar, Text, SafeAreaView, Image,TouchableHighlight, Modal,Dimensions } from "react-native";
 
 import { Button, ButtonContainer } from "../../elementos/ButtonJ1";
 import { Alert } from "../../elementos/Alert";
-
+const { width, height } = Dimensions.get('window')
  
 const styles = StyleSheet.create({
   container: {
@@ -22,7 +22,8 @@ const styles = StyleSheet.create({
     alignItems : 'center',
     backgroundColor: 'white',
     width : '100%',
-    height : '68%'
+    // height: '68%'
+    height: Dimensions.get('window').width/1.2,
   },
   Imagen:{
     width: 290,
@@ -62,11 +63,9 @@ class juego3 extends React.Component {
 
 
   state = {
-     modalVisible: false,
+    modalVisible: false,
     correctCount: 0, 
-    //totalCount: this.props.navigation.getParam("questions", []).length,
-      totalCount: this.props.route.params?.questions.length,
-   //route.params?.someParam ?? 'defaultValue';
+    totalCount: this.props.route.params?.questions.length,
     activeQuestionIndex: 0,
     answered: false,
     answerCorrect: false

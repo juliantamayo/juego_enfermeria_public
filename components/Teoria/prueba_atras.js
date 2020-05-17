@@ -842,7 +842,7 @@ const styles = StyleSheet.create({
     alignItems : 'center',
     backgroundColor: 'white',
     width : '100%',
-    height : '68%'
+    height : '50%'
   },
   Imagen:{
     width: 290,
@@ -851,26 +851,7 @@ const styles = StyleSheet.create({
   Imagen2:{
     width: 40,
   height: 40
-  },
-   modalView: {
-     width: '90%',
-   height: '60%',
-    margin: 20,
-    backgroundColor: "white",
-    borderRadius: 20,
-    padding: 35,
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5
   }
-  
-
 });
 
 const mult =5;
@@ -940,7 +921,7 @@ class juego3 extends React.Component {
   setModalfinjuego = (visible) => {
     this.setState({ modalfinjuego: visible });
   }
-  componentDidMount(){
+    componentDidMount(){
   this.interval = setInterval(
     () => this.setState((prevState)=> ({ timer: prevState.timer - 1 })),
     1000
@@ -979,9 +960,7 @@ componentWillUnmount(){
           <Modal_gameover
               
              text={this.state.timer == -1? true: modalfinjuego}
-             onPress={() => {
-                this.setModalfinjuego(!modalfinjuego);
-                    }}
+             onPress={() => this.props.navigation.navigate('Menu')}
               />
 
 

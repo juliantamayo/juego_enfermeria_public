@@ -132,8 +132,22 @@ const styles = StyleSheet.create({
     height: '90%',
   },
   modalView: {
+     width: '100%',
+    height: '97%',
+    backgroundColor: "rgba(0, 185, 188, 0.37)",
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5
+  },
+   modalView2: {
      width: '90%',
-   height: '60%',
+   height: '80%',
     margin: 20,
     backgroundColor: "white",
     borderRadius: 20,
@@ -392,7 +406,7 @@ export const ModalJuego1 = ({ text,imagen, onPress = () => {} }) => (
           }}
         >
           
-            <View style={styles.modalView}>
+            <View style={styles.modalView2}>
               
 
               <TouchableHighlight 

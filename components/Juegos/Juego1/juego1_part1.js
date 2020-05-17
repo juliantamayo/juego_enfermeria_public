@@ -1,10 +1,11 @@
 import React from "react";
-import { View, StyleSheet, StatusBar, Text, SafeAreaView, Image,TouchableHighlight, Modal,Alert } from "react-native";
+import { View, StyleSheet, StatusBar, Text, SafeAreaView, Image,TouchableHighlight,Alert,Dimensions,ScrollView } from "react-native";
 
 import { Button, ButtonContainer } from "../../elementos/ButtonJ1";
 import { Alerta } from "../../elementos/Alert";
 import { ModalJuego1} from "../../elementos/ModalsRepaso";
-
+import { Modal_gameover} from "../../elementos/ModalsGameover";
+const { width, height } = Dimensions.get('window')
  
 const styles = StyleSheet.create({
   container: {
@@ -23,11 +24,28 @@ const styles = StyleSheet.create({
     alignItems : 'center',
     backgroundColor: 'white',
     width : '100%',
-    height : '50%'
+    height: Dimensions.get('window').width/1.5,
+
   },
   Imagen:{
-    width: 290,
+  width: 290,
+ // width: Dimensions.get('window').width/3,
   height: '100%'
+  },
+   textContador: {
+    color: "#fff",
+    fontSize: 22,
+    textAlign: "center",
+    letterSpacing: -0.02,
+    fontWeight: "600"
+  },
+  timertext:{
+    color: "#fff",
+    fontSize: 22,
+    textAlign: "center",
+    letterSpacing: -0.02,
+    fontWeight: "600",
+    backgroundColor: 'black',
   }
 });
 
@@ -40,17 +58,14 @@ class juego1_part1 extends React.Component {
 
 
   state = {
-     modalVisible: false,
+    modalVisible: false,
+    modalfinjuego:false,
     correctCount: 0, 
-    //totalCount: this.props.navigation.getParam("questions", []).length,
-      totalCount: this.props.route.params?.questions.length,
-       totalCount: 5,
-   //route.params?.someParam ?? 'defaultValue';
+    totalCount: this.props.route.params?.questions.length,
     activeQuestionIndex: 0,
     answered: false,
     answerCorrect: false,
-    //availableQuesions : [this.props.route.params?.questions ?? []]
-      
+    timer: 10
   };
 
   answer = correct => {
@@ -79,13 +94,15 @@ class juego1_part1 extends React.Component {
       const nextIndex = state.activeQuestionIndex + 1;
 
       if (nextIndex >= state.totalCount) {
-       // return this.props.navigation.popToTop();
         return this.props.navigation.navigate('Result_QJ1',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
+      }else if (this.state.timer == -1) {
+       return{ modalfinjuego:true}
       }
 
       return {
         activeQuestionIndex: nextIndex,
-        answered: false
+        answered: false,
+        timer: 10
       };
     });
   };
@@ -94,9 +111,29 @@ class juego1_part1 extends React.Component {
     this.setState({ modalVisible: visible });
   }
 
+  setModalfinjuego = (visible) => {
+    this.setState({ modalfinjuego: visible });
+  }
+    componentDidMount(){
+  this.interval = setInterval(
+    () => this.setState((prevState)=> ({ timer: prevState.timer - 1 })),
+    1000
+  );
+}
+
+componentDidUpdate(){
+  if(this.state.timer === -1){ 
+    clearInterval(this.interval);
+  }
+}
+
+componentWillUnmount(){
+ clearInterval(this.interval);
+}
+
   render() {
     let availableQuesions = []
-    const { modalVisible } = this.state;
+    const { modalVisible,modalfinjuego } = this.state;
     const questions = this.props.route.params?.questions ?? [];
     const question = questions[this.state.activeQuestionIndex];
     
@@ -116,12 +153,18 @@ class juego1_part1 extends React.Component {
                 this.setModalVisible(!modalVisible);
                     }}
               />
-         
 
+              <Modal_gameover
+              
+             text={this.state.timer == -1? true: modalfinjuego}
+             onPress={() => this.props.navigation.navigate('m_juego1')}
+              />
+         
+<ScrollView  >
               <StatusBar barStyle="light-content" />
         <SafeAreaView >
         
-
+         <Text style={styles.timertext}> { this.state.timer == -1? 0: this.state.timer} </Text>
           <Text style={styles.text}>{question.question}</Text>  
           <View>
           <View style={styles.containerImagen}>
@@ -156,6 +199,7 @@ class juego1_part1 extends React.Component {
           correct={this.state.answerCorrect}
           visible={this.state.answered}
         />
+        </ScrollView>
       </View>
     );
   }
