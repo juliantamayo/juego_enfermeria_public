@@ -517,7 +517,7 @@ useEffect(() => {
            
         ({ navigation, route }) => ({ title: route.params?.title ,
           headerLeft: null,
-          title: 'Introducción',
+          title: 'Introducción al caso',
           headerStyle: {
          backgroundColor: '#fbe122',
          borderBottomColor: route.params?.color
@@ -876,7 +876,7 @@ useEffect(() => {
         options={{
         //  headerShown: false
         headerLeft: null,
-          title: 'Pruebas de valoración',
+          title: 'Caso 1. Pruebas de valoración',
           headerStyle: {
             backgroundColor: '#fbe122',
           },
@@ -1242,7 +1242,7 @@ useEffect(() => {
          <Stack.Screen name="M_caso2"  component={M_caso2}
           options={{
          headerLeft: null,
-          title: 'M_caso2',
+          title: 'Menú Caso 2',
           headerStyle: {
             backgroundColor: '#fbe122',
           },
@@ -1255,7 +1255,7 @@ useEffect(() => {
          <Stack.Screen name="C2_Escena1"  component={C2_Escena1}
           options={{
          headerLeft: null,
-          title: 'C2_Escena1',
+          title: 'Introducción al Caso',
           headerStyle: {
             backgroundColor: '#fbe122',
           },
@@ -1269,7 +1269,7 @@ useEffect(() => {
          <Stack.Screen name="C2_Escena2"  component={C2_Escena2}
           options={{
          headerLeft: null,
-          title: 'C2_Escena2',
+          title: 'Caso 2. Preguntas a Paciente',
           headerStyle: {
             backgroundColor: '#fbe122',
           },
@@ -1282,7 +1282,7 @@ useEffect(() => {
          <Stack.Screen name="C2_Escena3"  component={C2_Escena3}
           options={{
          headerLeft: null,
-          title: 'C2_Escena3',
+          title: 'Caso 2. Preguntas a Paciente',
           headerStyle: {
             backgroundColor: '#fbe122',
           },
@@ -1996,7 +1996,7 @@ useEffect(() => {
          <Stack.Screen name="M_caso3"  component={M_caso3}
           options={{
          headerLeft: null,
-          title: 'M_caso3',
+          title: 'Menú Caso 3',
           headerStyle: {
             backgroundColor: '#fbe122',
           },
@@ -2022,7 +2022,7 @@ useEffect(() => {
          <Stack.Screen name="C3_Escena2"  component={C3_Escena2}
           options={{
          headerLeft: null,
-          title: 'C3_Escena2',
+          title: 'Caso 3. Preguntas Paciente',
           headerStyle: {
             backgroundColor: '#fbe122',
           },
@@ -2035,7 +2035,7 @@ useEffect(() => {
            <Stack.Screen name="C3_Escena3"  component={C3_Escena3}
           options={{
          headerLeft: null,
-          title: 'C3_Escena3',
+          title: 'Caso 3. Puebas de Valoración',
           headerStyle: {
             backgroundColor: '#fbe122',
           },

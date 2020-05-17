@@ -8,7 +8,7 @@ import D_C2_pregunta2_dialog from "../../data/C2_data/C2_preguntas/D_C2_pregunta
 import D_C2_pregunta3_dialog from "../../data/C2_data/C2_preguntas/D_C2_pregunta3_dialog";
 import D_C2_pregunta4_dialog from "../../data/C2_data/C2_preguntas/D_C2_pregunta4_dialog";
 import D_C2_pregunta5_dialog from "../../data/C2_data/C2_preguntas/D_C2_pregunta5_dialog";
-
+import { Modal_C1_escena2 } from "../../elementos/ModalsTutorial";
 
 import { RowItem } from "../../elementos/RowItem";
 
@@ -20,18 +20,30 @@ export default class menu_caso1 extends React.Component {
 
       isVisible:false,
       isVisible2:false,
+      modalVisible: false ,
       val:this.props.route.params?.activeQuestion,
       
     };
     
- 
+  setModalVisible = (visible) => {
+    this.setState({ modalVisible: visible });
+  };
 
 render() {
 
   const userId = this.props.route.params?.activeQuestion;
-
+  const { modalVisible } = this.state;
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
+   
+    <Modal_C1_escena2
+      
+       text={modalVisible}
+       onPress={() => {
+                  this.setModalVisible(!modalVisible);
+                }}
+      />
+
    <View style={style.container}>
     <ScrollView  >
     <StatusBar barStyle="dark-content" />
@@ -47,7 +59,9 @@ render() {
 
       <View style={styles.headerDerecha}>
       <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-       onPress={() => this.props.navigation.navigate('Home')}>
+                    onPress={() => {
+                        this.setModalVisible(true);
+                      }}>
                <Image style={ styles.image } source={require("../../../assets/images/ayuda.png")} />
       </TouchableOpacity>
       </View>
@@ -58,11 +72,11 @@ render() {
  
 
      <RowItem   
-      name="1. Bueno señor P.C.P ¿qué lo trae por estos lares ?"
+      name="1. Bueno señor P.C.P ¿qué lo trae por estos lares?"
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("V_C2_Preg1_dialogo", {
-          title: "1. Bueno señor P.C.P ¿Qué lo trae por estos lares?",
+          title: "Caso 2. Pregunta 1",
           questions: D_C2_pregunta1_dialog,
           color: "#36b1f0"
         })
@@ -74,7 +88,7 @@ render() {
       color="#00b9bc"
       onPress={() =>
         this.props.navigation.navigate("V_C2_Preg2_dialogo", {
-          title: "Pregunta2",
+          title: "Caso 2. Pregunta 2",
           questions: D_C2_pregunta2_dialog,
           color: "#799496"
         })
@@ -85,7 +99,7 @@ render() {
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("V_C2_Preg3_dialogo", {
-          title: "C2 Pregunta 3",
+          title: "Caso 2. Pregunta 3",
           questions: D_C2_pregunta3_dialog,
           color: "#799496"
         })
@@ -96,7 +110,7 @@ render() {
       color="#00b9bc"
       onPress={() =>
         this.props.navigation.navigate("V_C2_Preg4_dialogo", {
-          title: "C2 Pregunta 4",
+          title: "Caso 2. Pregunta 4",
           questions: D_C2_pregunta4_dialog,
           color: "#799496"
         })
@@ -107,7 +121,7 @@ render() {
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("V_C2_Preg5_dialogo", {
-          title: "C2 Pregunta 5",
+          title: "Caso 2. Pregunta 5",
           questions: D_C2_pregunta5_dialog,
           color: "#799496"
         })

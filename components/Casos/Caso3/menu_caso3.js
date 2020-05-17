@@ -61,7 +61,7 @@ render() {
       color="#f9e67a"
       onPress={() =>
         this.props.navigation.navigate("C3_Escena1", {
-          title: "C3_Escena1",
+          title: "Introducción al Caso",
           questions: Escena3Dialog,
           color: "#36b1f0"
         })

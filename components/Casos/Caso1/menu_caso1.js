@@ -102,7 +102,7 @@ render() {
       color="#f9a94b"
       onPress={() =>
         this.props.navigation.navigate("Escena2", {
-          title: "Preguntas a Paciente",
+          title: "Caso 1. Preguntas a Paciente",
           color: "#799496"
         })
       }

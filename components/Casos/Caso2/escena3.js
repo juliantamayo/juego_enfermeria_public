@@ -18,7 +18,7 @@ import C2_Pru_valo12_dialog from "../../data/C2_data/C2_Pru_valoracion/D_C2_Pru_
 import C2_Pru_valo13_dialog from "../../data/C2_data/C2_Pru_valoracion/D_C2_Pru_Valoracion13_dialog";
 import C2_Pru_valo14_dialog from "../../data/C2_data/C2_Pru_valoracion/D_C2_Pru_Valoracion14_dialog";
 import C2_Pru_valo15_dialog from "../../data/C2_data/C2_Pru_valoracion/D_C2_Pru_Valoracion15_dialog";
-
+ import { Modal_C1_escena3 } from "../../elementos/ModalsTutorial";
 
 import { ButtonContainer, RowItemEscena3 } from "../../elementos/RowItem";
 const { width, height } = Dimensions.get('window')
@@ -29,16 +29,26 @@ export default class menu_caso2 extends React.Component {
   
 
     state ={
-     'save_pregPcte1':0
+     'save_pregPcte1':0,
+      modalVisible: false,
     };
     
- 
+ setModalVisible = (visible) => {
+    this.setState({ modalVisible: visible });
+   };
 
 render() {
-
+      const { modalVisible } = this.state;
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
+     <Modal_C1_escena3
+            text={modalVisible}
+             onPress={() => {
+                            this.setModalVisible(!modalVisible);
+                          }}
+     />
+
    <View style={style.container}>
     <ScrollView  >
     <StatusBar barStyle="dark-content" />
@@ -54,7 +64,9 @@ render() {
 
       <View style={styles.headerDerecha}>
       <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-       onPress={() => this.props.navigation.navigate('Home')}>
+       onPress={() => {
+                        this.setModalVisible(true);
+                      }}>
                <Image style={ styles.image } source={require("../../../assets/images/ayuda.png")} />
       </TouchableOpacity>
       </View>

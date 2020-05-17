@@ -5,7 +5,6 @@ import styles from './../../Style.js';
 import Escena1Dialog from "../../data/C2_data/C2_escena1dialog";
 import Escena2Dialog from "../../data/escena2dialog";
 import D_C2_Quiz from "../../data/C2_data/C2_Quiz/D_C2_Quiz";
-import computerQuestions from "../../data/computers";
 import { RowItem } from "../../elementos/RowItem";
 import { Modal_MenuCaso1} from "../../elementos/ModalsTutorial";
 
@@ -112,7 +111,7 @@ render() {
       color="#f9e67a"
       onPress={() =>
         this.props.navigation.navigate("C2_Escena5",{ex:'2',
-        title: "Quiz",
+        title: "Caso 2. Quiz",
           questions: D_C2_Quiz,
           color: "#36b1f0"
       })

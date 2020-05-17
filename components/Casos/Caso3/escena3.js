@@ -9,7 +9,7 @@ import C3_Pru_valo3_dialog from "../../data/C3_data/C3_Pru_valoracion/D_C3_Pru_V
 import C3_Pru_valo4_dialog from "../../data/C3_data/C3_Pru_valoracion/D_C3_Pru_Valoracion4_dialog";
 import C3_Pru_valo5_dialog from "../../data/C3_data/C3_Pru_valoracion/D_C3_Pru_Valoracion5_dialog";
 
-
+import { Modal_C1_escena3 } from "../../elementos/ModalsTutorial";
 
 
 import { ButtonContainer, RowItemEscena3 } from "../../elementos/RowItem";
@@ -21,16 +21,26 @@ export default class menu_caso3 extends React.Component {
   
 
     state ={
-     'save_pregPcte1':0
+     'save_pregPcte1':0,
+      modalVisible: false,
     };
     
- 
+ setModalVisible = (visible) => {
+    this.setState({ modalVisible: visible });
+   };
 
 render() {
-
+    const { modalVisible } = this.state;
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
+     <Modal_C1_escena3
+         text={modalVisible}
+          onPress={() => {
+       this.setModalVisible(!modalVisible);
+            }}
+                />
+
    <View style={style.container}>
     <ScrollView  >
     <StatusBar barStyle="dark-content" />
@@ -46,7 +56,9 @@ render() {
 
       <View style={styles.headerDerecha}>
       <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-       onPress={() => this.props.navigation.navigate('Home')}>
+       onPress={() => {
+                        this.setModalVisible(true);
+                      }}>
                <Image style={ styles.image } source={require("../../../assets/images/ayuda.png")} />
       </TouchableOpacity>
       </View>
