@@ -1,4 +1,4 @@
-const questions = [
+export const Mj2SNP_questions = [
   {
     question: "Cuáles son los nervios espinales que emergen de la columna torácica?",
     answers: [
@@ -34,7 +34,12 @@ const questions = [
       { id: "3", text: "Nervio Hipogloso (XII)" },
       { id: "4", text: "Nervio Accesorio o espinal (XI)", correct: true }
     ]
-  },
+  }
+
+];
+
+export const Mj2SNP_questions2 = [
+ 
   {
     question: "Cuál es el nervio craneal que se relaciona con la recepción de señales de la lengua y la faringe y emisión de órdenes de movimientos en esta área?",
     answers: [
@@ -70,7 +75,12 @@ const questions = [
       { id: "3", text: "Par craneal III oculomotor" },
       { id: "4", text: "Par craneal VI abducens" }
     ]
-  },
+  }
+
+];
+
+export const Mj2SNP_questions3 = [
+ 
   {
     question: "Cuál es el par craneal que estimula el movimiento de la faringe, sensación de faringe, lengua posterior (incluyendo el sabor de la lengua posterior)?",
     answers: [
@@ -97,8 +107,16 @@ const questions = [
       { id: "3", text: "Bulbo raquídeo" },
       { id: "4", text: "Mesencéfalo" }
     ]
+  },
+  {
+    question: "Cuáles son los nervios espinales que surgen del hueso sacro, ubicado en la base de la columna vertebral?",
+    answers: [
+      { id: "1", text: "Nervios sacros (S1 a S5)", correct: true },
+      { id: "2", text: "Nervios cervicales (C1 a C8)" },
+      { id: "3", text: "Nervios dorsales (T1 a T12) " },
+      { id: "4", text: "Nervios lumbares (L1 a L5)" }
+    ]
   }
 
 ];
 
-export default questions;
