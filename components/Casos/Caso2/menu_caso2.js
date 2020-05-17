@@ -4,7 +4,7 @@ import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpac
 import styles from './../../Style.js';
 import Escena1Dialog from "../../data/C2_data/C2_escena1dialog";
 import Escena2Dialog from "../../data/escena2dialog";
-import westernsQuestions from "../../data/westerns";
+import D_C2_Quiz from "../../data/C2_data/C2_Quiz/D_C2_Quiz";
 import computerQuestions from "../../data/computers";
 import { RowItem } from "../../elementos/RowItem";
 import { Modal_MenuCaso1} from "../../elementos/ModalsTutorial";
@@ -111,7 +111,11 @@ render() {
       name="Quiz"
       color="#f9e67a"
       onPress={() =>
-        this.props.navigation.navigate("Variables",{ex:'2'})
+        this.props.navigation.navigate("C2_Escena5",{ex:'2',
+        title: "Quiz",
+          questions: D_C2_Quiz,
+          color: "#36b1f0"
+      })
       }
     />
     <RowItem

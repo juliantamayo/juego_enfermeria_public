@@ -203,6 +203,7 @@ import V_C2_PruValo15_dialogo from './components/Casos/Caso2/V_Pruebas_valoracio
 import V_C2_PruValo15_pregunta from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo15_pregunta';
 import V_C2_RespPruValo15_enfermera from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_RespPruValo15_enfermera';
 //escena6
+import C2_Escena5 from './components/Casos/Caso2/escena5';
 import C2_Escena6 from './components/Casos/Caso2/escena6';
 //-------------------------caso3---------------------------------
 import M_caso3 from './components/Casos/Caso3/menu_caso3';
@@ -250,6 +251,7 @@ import V_C3_RespPruValo5_enfermera from './components/Casos/Caso3/V_Pruebas_valo
 
 
 //escena6
+import C3_Escena5 from './components/Casos/Caso3/escena5';
 import C3_Escena6 from './components/Casos/Caso3/escena6';
 
 
@@ -1968,6 +1970,21 @@ useEffect(() => {
         }
        })}/>
 
+
+
+        <Stack.Screen name="C2_Escena5" component={C2_Escena5} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+
+       })}/>
+
         <Stack.Screen name="C2_Escena6" component={C2_Escena6} 
         options={{
           title: '',
@@ -2339,6 +2356,19 @@ useEffect(() => {
          backgroundColor: '#fbe122',
          borderBottomColor: route.params?.color
         }
+       })}/>
+
+          <Stack.Screen name="C3_Escena5" component={C3_Escena5} 
+        options={
+           
+        ({ navigation, route }) => ({ title: route.params?.title ,
+          headerLeft: null,
+          headerStyle: {
+         backgroundColor: '#fbe122',
+         borderBottomColor: route.params?.color
+        }
+
+
        })}/>
 
 

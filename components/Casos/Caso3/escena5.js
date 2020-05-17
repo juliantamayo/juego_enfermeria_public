@@ -67,7 +67,7 @@ class escena5 extends React.Component {
 
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate('M_caso1',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
+        return this.props.navigation.navigate('M_caso3',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
       }
 
       return {

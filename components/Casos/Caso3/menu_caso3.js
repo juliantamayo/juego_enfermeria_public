@@ -4,6 +4,7 @@ import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpac
 import styles from './../../Style.js';
 import { RowItem } from "../../elementos/RowItem";
 import Escena3Dialog from "../../data/C3_data/C3_escena1dialog";
+import D_C3_Quiz from "../../data/C3_data/C3_Quiz/D_C3_Quiz";
 import { Modal_MenuCaso1} from "../../elementos/ModalsTutorial";
 export default class menu_caso3 extends React.Component {
 
@@ -92,13 +93,18 @@ render() {
         this.props.navigation.navigate("Variables",{ex:'2'})
       }
     />
-     <RowItem
+    <RowItem
       name="Quiz"
       color="#f9e67a"
       onPress={() =>
-        this.props.navigation.navigate("Variables",{ex:'2'})
+        this.props.navigation.navigate("C3_Escena5",{ex:'2',
+        title: "Quiz",
+          questions: D_C3_Quiz,
+          color: "#36b1f0"
+      })
       }
     />
+
     <RowItem
       name="Proceso de atención de Enfermeria"
       color="#f9a94b"
