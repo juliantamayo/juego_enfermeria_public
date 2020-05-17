@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpacity,  Image  } from "react-native";
 
-import spaceQuestions from "../../data/space";
-import westernsQuestions from "../../data/westerns";
-import computerQuestions from "../../data/computers";
+import J2SNPQuestions from "../../data/J2SNP";
+import J2SNCQuestions from "../../data/J2SNC";
+import J2SNAQuestions from "../../data/J2SNA";
 
 import { RowItem } from "../../elementos/RowItem";
 
@@ -38,7 +38,7 @@ export default ({ navigation, route }) => (
       onPress={() =>
         navigation.navigate("Quiz", {
           title: "Preguntados S.N.C",
-          questions: spaceQuestions,
+          questions: J2SNPQuestions,
           color: "#18A196"
         })
       }
@@ -49,7 +49,7 @@ export default ({ navigation, route }) => (
       onPress={() =>
         navigation.navigate("Quiz", {
           title: "Preguntados S.N.P",
-          questions: westernsQuestions,
+          questions: J2SNCQuestions,
           color: "#799496"
         })
       }
@@ -60,7 +60,7 @@ export default ({ navigation, route }) => (
       onPress={() =>
         navigation.navigate("Quiz", {
           title: "Preguntados S.N.A",
-          questions: computerQuestions,
+          questions: J2SNAQuestions,
           color: "#49475B"
         })
       }
