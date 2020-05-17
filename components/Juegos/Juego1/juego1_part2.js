@@ -133,7 +133,6 @@ componentWillUnmount(){
 }
 
   render() {
-    let availableQuesions = []
     const { modalVisible,modalfinjuego } = this.state;
     const questions = this.props.route.params?.questions ?? [];
     const question = questions[this.state.activeQuestionIndex];

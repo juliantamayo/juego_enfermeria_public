@@ -1,4 +1,4 @@
-const questions = [
+export const Mj2questions = [
   {
     question: "Cuál es el sistema nervioso que reduce la presión arterial, la frecuencia cardíaca y respiratoria?",
     answers: [
@@ -43,7 +43,11 @@ const questions = [
       { id: "3", text: "Parasimpático", correct: true },
       { id: "4", text: "Encefálico" }
     ]
-  },
+  }
+
+];
+
+export const Mj2questions2 = [
   {
     question: "Cuál es el Sistema nervioso compuesto de dos cadenas de 23 ganglios situados a lo largo y a los dos lados de la columna vertebral?",
     answers: [
@@ -79,8 +83,16 @@ const questions = [
       { id: "3", text: "Periférico" },
       { id: "4", text: "Simpático", correct: true }
     ]
+  },
+  {
+    question: "Cuál es el sistema que se encarga de que la médula suprarrenal sea estimulada para liberar epinefrina (adrenalina) y norepinefrina (noradrenalina), lo que a su vez aumenta la tasa metabólica de las células y estimula al hígado para que libere glucosa en la sangre?",
+    answers: [
+      { id: "1", text: "Simpático", correct: true },
+      { id: "2", text: "Parasimpático" },
+      { id: "3", text: "Central" },
+      { id: "4", text: "Periférico" },
+    ]
   }
 
 ];
 
-export default questions;

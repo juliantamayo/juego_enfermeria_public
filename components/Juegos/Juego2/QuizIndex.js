@@ -1,15 +1,23 @@
 import React, {Component} from 'react';
 import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpacity,  Image  } from "react-native";
 
-import J2SNPQuestions from "../../data/J2SNP";
-import J2SNCQuestions from "../../data/J2SNC";
-import J2SNAQuestions from "../../data/J2SNA";
+
+import {Mj2questions,Mj2questions2} from "../../data/J2SNA";
+import {Mj2SNC_questions,Mj2SNC_questions2,Mj2SNC_questions3} from "../../data/J2SNC";
+import {Mj2SNP_questions,Mj2SNP_questions2,Mj2SNP_questions3} from "../../data/J2SNP";
+
 
 import { RowItem } from "../../elementos/RowItem";
 
 import styles from './../../Style.js';
 
-export default ({ navigation, route }) => (
+export default function QuixIndex ({navigation, route}) {
+
+ var listadopPJ2_SNA = new Array(Mj2questions,Mj2questions2);
+ var listadopPJ2_SNC = new Array(Mj2SNC_questions,Mj2SNC_questions2,Mj2SNC_questions3);
+ var listadopPJ2_SNP = new Array(Mj2SNP_questions,Mj2SNP_questions2,Mj2SNP_questions3);
+
+    return (
   <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
   
   <View style={styles.header}>
@@ -38,7 +46,7 @@ export default ({ navigation, route }) => (
       onPress={() =>
         navigation.navigate("Quiz", {
           title: "Preguntados S.N.C",
-          questions: J2SNPQuestions,
+          questions:listadopPJ2_SNC[Math.floor(Math.random()*listadopPJ2_SNC.length)],
           color: "#18A196"
         })
       }
@@ -49,7 +57,7 @@ export default ({ navigation, route }) => (
       onPress={() =>
         navigation.navigate("Quiz", {
           title: "Preguntados S.N.P",
-          questions: J2SNCQuestions,
+          questions: listadopPJ2_SNP[Math.floor(Math.random()*listadopPJ2_SNP.length)],
           color: "#799496"
         })
       }
@@ -60,7 +68,7 @@ export default ({ navigation, route }) => (
       onPress={() =>
         navigation.navigate("Quiz", {
           title: "Preguntados S.N.A",
-          questions: J2SNAQuestions,
+          questions:listadopPJ2_SNA[Math.floor(Math.random()*listadopPJ2_SNA.length)],
           color: "#49475B"
         })
       }
@@ -68,4 +76,6 @@ export default ({ navigation, route }) => (
   </ScrollView>
 
   </ImageBackground>
-);
+ );
+  
+}
