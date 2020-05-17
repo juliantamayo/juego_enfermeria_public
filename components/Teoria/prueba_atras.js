@@ -847,10 +847,6 @@ const styles = StyleSheet.create({
   Imagen:{
     width: 290,
   height: '100%'
-  },
-  Imagen2:{
-    width: 40,
-  height: 40
   }
 });
 
