@@ -6,7 +6,7 @@ import { C3_ModalHistorial, Modal_C3_Pru_valoracion5_procedimiento, Modal_C3_Pru
 import style from '../../../Style.js';
 import D_C3_Pru_Valoracion5_pregunta from "../../../data/C3_data/C3_Pru_valoracion/D_C3_Pru_Valoracion5_pregunta";
 import { CommonActions } from '@react-navigation/native';
-
+import { Modal_Pruebas } from "../../../elementos/ModalsTutorial";
 import  styles  from "../../../Style_dialog.js";
 
 const mult =5;
@@ -18,6 +18,7 @@ class V_C3_PruValo5_dialogo extends React.Component {
    
   state = {
     modalVisible: false,
+    modalVisible2: false,
      modalVisibleProdedimiento: false,
     modalVisibleHN: false,
     correctCount: 0, 
@@ -52,6 +53,9 @@ class V_C3_PruValo5_dialogo extends React.Component {
   setModalVisible = (visible) => {
     this.setState({ modalVisible: visible });
   }
+  setModalVisible2 = (visible2) => {
+    this.setState({ modalVisible2: visible2 });
+  }
    setModalVisibleProcedimiento = (visible) => {
     this.setState({ modalVisibleProdedimiento: visible });
   }
@@ -63,7 +67,7 @@ class V_C3_PruValo5_dialogo extends React.Component {
   render() {
 
  
-    const { modalVisible, modalVisibleProdedimiento, modalVisibleHN } = this.state;
+    const { modalVisible, modalVisible2, modalVisibleProdedimiento, modalVisibleHN } = this.state;
     const questions = this.props.route.params?.questions ?? [];
     const question = questions[this.state.activeQuestionIndex];
   
@@ -75,6 +79,13 @@ class V_C3_PruValo5_dialogo extends React.Component {
        text={modalVisible}
        onPress={() => {
                   this.setModalVisible(!modalVisible);
+                }}
+      />
+        <Modal_Pruebas
+      
+       text={modalVisible2}
+       onPress={() => {
+                  this.setModalVisible2(!modalVisible2);
                 }}
       />
       <Modal_C3_Pru_valoracion5_procedimiento
@@ -109,8 +120,8 @@ class V_C3_PruValo5_dialogo extends React.Component {
       </TouchableOpacity>
 
       <TouchableOpacity style={ style.imageContainer } activeOpacity={0.8}
-                   onPress={() => {
-                        this.setModalVisible(true);
+                    onPress={() => {
+                        this.setModalVisible2(true);
                       }}>
              <Image style={ style.image } source={require("../../../../assets/images/ayuda.png")} />
        </TouchableOpacity>

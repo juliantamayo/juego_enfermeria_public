@@ -7,6 +7,8 @@ import style from '../../../Style.js';
 import D_C2_Pru_Valoracion15_pregunta from "../../../data/C2_data/C2_Pru_valoracion/D_C2_Pru_Valoracion15_pregunta";
 import { CommonActions } from '@react-navigation/native';
 import  styles  from "../../../Style_dialog.js";
+import { Modal_Pruebas } from "../../../elementos/ModalsTutorial";
+
 const mult =5;
 
 
@@ -16,6 +18,7 @@ class V_C2_PruValo15_dialogo extends React.Component {
    
   state = {
     modalVisible: false,
+    modalVisible2: false,
     modalVisibleProdedimiento: false,
     modalVisibleHN: false,
     correctCount: 0, 
@@ -34,7 +37,7 @@ class V_C2_PruValo15_dialogo extends React.Component {
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
         return this.props.navigation.navigate("V_C2_PruValo15_pregunta", {activeQuestion: 1, 
-          title: "2 PrubValu15 c2",
+          title: "Caso 2. Pueba de Valoración 15",
           questions: D_C2_Pru_Valoracion15_pregunta,
           color: "#36b1f0"
         });
@@ -50,6 +53,9 @@ class V_C2_PruValo15_dialogo extends React.Component {
   setModalVisible = (visible) => {
     this.setState({ modalVisible: visible });
   }
+  setModalVisible2 = (visible2) => {
+    this.setState({ modalVisible2: visible2 });
+  }
     setModalVisibleProcedimiento = (visible) => {
     this.setState({ modalVisibleProdedimiento: visible });
   }
@@ -62,7 +68,7 @@ class V_C2_PruValo15_dialogo extends React.Component {
   render() {
 
  
-    const { modalVisible, modalVisibleProdedimiento, modalVisibleHN } = this.state;
+    const { modalVisible, modalVisible2, modalVisibleProdedimiento, modalVisibleHN } = this.state;
     const questions = this.props.route.params?.questions ?? [];
     const question = questions[this.state.activeQuestionIndex];
   
@@ -76,7 +82,13 @@ class V_C2_PruValo15_dialogo extends React.Component {
                   this.setModalVisible(!modalVisible);
                 }}
       />
-
+       <Modal_Pruebas
+      
+       text={modalVisible2}
+       onPress={() => {
+                  this.setModalVisible2(!modalVisible2);
+                }}
+      />
       <Modal_C2_Pru_valoracion15_procedimiento
       
        text={modalVisibleProdedimiento}
@@ -108,8 +120,8 @@ class V_C2_PruValo15_dialogo extends React.Component {
       </TouchableOpacity>
 
       <TouchableOpacity style={ style.imageContainer } activeOpacity={0.8}
-                   onPress={() => {
-                        this.setModalVisible(true);
+                    onPress={() => {
+                        this.setModalVisible2(true);
                       }}>
              <Image style={ style.image } source={require("../../../../assets/images/ayuda.png")} />
        </TouchableOpacity>

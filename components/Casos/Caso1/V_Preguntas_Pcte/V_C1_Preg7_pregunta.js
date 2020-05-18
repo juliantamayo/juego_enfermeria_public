@@ -58,7 +58,7 @@ class V_c1_Preg7_pregunta extends React.Component {
         return this.props.navigation.navigate('V_C1_Preg7_dialogo',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
       }else if (nextIndex >= state.totalCount   && this.state.correctCount==1) {
        return this.props.navigation.navigate('V_C1_RespP7_enfermera',{repu_enferme:1,experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount),
-        title: "RespuestaP7 enfermero",
+        title: "Caso 1. Pregunta 7",
           questions: C1_pregunta7_Resp_enfermera,
           color: "#36b1f0"});
       

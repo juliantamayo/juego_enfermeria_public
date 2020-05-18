@@ -1,20 +1,13 @@
 import React from "react";
 import { View, StyleSheet, StatusBar, Text, SafeAreaView, ImageBackground, Image, TouchableHighlight, ScrollView } from "react-native";
-
 import { Button, ButtonContainer } from "../../../elementos/ButtonC1_Preguntas";
-
 import D_C2_pregunta3_Resp_enfermera from "../../../data/C2_data/C2_preguntas/D_C2_pregunta3_Resp_enfermera";
-
 import { Alert } from "../../../elementos/Alert";
 import  styles  from "../../../Style_preguntas.js";
  
 const mult =5;
 
 class V_C2_Preg3_pregunta extends React.Component {
-   
-
-  
-
 
   state = {
      modalVisible: false,
@@ -58,7 +51,7 @@ class V_C2_Preg3_pregunta extends React.Component {
         return this.props.navigation.navigate('V_C2_Preg3_dialogo',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
       }else if (nextIndex >= state.totalCount   && this.state.correctCount==1) {
        return this.props.navigation.navigate('V_C2_RespP3_enfermera',{repu_enferme:1,experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount),
-        title: "RespuestaP3 C2 enfermero",
+        title: "Caso 2. Pregunta 3",
           questions: D_C2_pregunta3_Resp_enfermera,
           color: "#36b1f0"});
       

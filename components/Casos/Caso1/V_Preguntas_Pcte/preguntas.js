@@ -10,7 +10,7 @@ import  styles  from "../../../Style_preguntas.js";
 
 const mult =5;
 
-class juego1_part1 extends React.Component {
+class preguntas extends React.Component {
    
 
 
@@ -56,7 +56,7 @@ class juego1_part1 extends React.Component {
         return this.props.navigation.navigate('DialogosC1',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
       }else if (nextIndex >= state.totalCount   && this.state.correctCount==2) {
        return this.props.navigation.navigate('V_C1_Resp_enfermera',{repu_enferme:1,experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount),
-        title: "Respuesta enfermero",
+        title: "Caso 1. Pregunta 1",
           questions: C1_pregunta1_Resp_enfermera,
           color: "#36b1f0"});
       
@@ -121,4 +121,4 @@ class juego1_part1 extends React.Component {
   }
 }
 
-export default juego1_part1;
+export default preguntas;

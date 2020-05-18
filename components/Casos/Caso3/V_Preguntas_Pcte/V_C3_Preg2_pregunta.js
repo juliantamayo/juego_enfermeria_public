@@ -58,7 +58,7 @@ class V_C3_Preg2_pregunta extends React.Component {
         return this.props.navigation.navigate('V_C3_Preg2_dialogo',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
       }else if (nextIndex >= state.totalCount   && this.state.correctCount==1) {
        return this.props.navigation.navigate('V_C3_RespP2_enfermera',{repu_enferme:1,experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount),
-        title: "Caso 3. Pregunta a Paciente 2",
+        title: "Caso 3. Pregunta 2",
           questions: D_C3_pregunta2_Resp_enfermera,
           color: "#36b1f0"});
       

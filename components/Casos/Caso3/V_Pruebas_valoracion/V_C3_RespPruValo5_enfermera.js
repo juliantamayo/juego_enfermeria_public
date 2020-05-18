@@ -6,14 +6,14 @@ import { C3_ModalHistorial } from "../../../elementos/Modals";
 import style from '../../../Style.js';
 import  styles  from "../../../Style_dialog.js";
 import { CommonActions } from '@react-navigation/native';
-const { width, height } = Dimensions.get('window')
-
+import { Modal_Pruebas } from "../../../elementos/ModalsTutorial";
 const mult =5;
 
 class V_C3_RespPruValo5_enfermera extends React.Component {
    
   state = {
     modalVisible: false,
+    modalVisible2: false,
     correctCount: 0, 
     //totalCount: this.props.navigation.getParam("questions", []).length,
       totalCount: this.props.route.params?.questions.length,
@@ -42,11 +42,14 @@ class V_C3_RespPruValo5_enfermera extends React.Component {
   setModalVisible = (visible) => {
     this.setState({ modalVisible: visible });
   }
+  setModalVisible2 = (visible2) => {
+    this.setState({ modalVisible2: visible2 });
+  }
 
   render() {
 
  
-    const { modalVisible } = this.state;
+    const { modalVisible, modalVisible2 } = this.state;
     const questions = this.props.route.params?.questions ?? [];
     const question = questions[this.state.activeQuestionIndex];
   
@@ -58,6 +61,13 @@ class V_C3_RespPruValo5_enfermera extends React.Component {
        text={modalVisible}
        onPress={() => {
                   this.setModalVisible(!modalVisible);
+                }}
+      />
+        <Modal_Pruebas
+      
+       text={modalVisible2}
+       onPress={() => {
+                  this.setModalVisible2(!modalVisible2);
                 }}
       />
       <View
@@ -76,20 +86,9 @@ class V_C3_RespPruValo5_enfermera extends React.Component {
 <View style={style.headerDerecha}> 
 
            <TouchableOpacity style={ style.imageContainer } activeOpacity={0.8}
-                 onPress={() => 
-                    this.props.navigation.dispatch(
-                      CommonActions.reset({
-                        index: 1,
-                        routes: [
-                          {
-                            name: 'Escena1',
-                       
-                          },
-                          { name: 'M_caso1' },
-                        ],
-                      })
-                    )
-                  }>
+                   onPress={() => {
+                        this.setModalVisible2(true);
+                      }}>
                          <Image style={ style.image } source={require("../../../../assets/images/ayuda.png")} />
                 </TouchableOpacity>   
 

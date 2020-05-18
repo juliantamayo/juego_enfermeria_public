@@ -5,48 +5,10 @@ import { Button, ButtonContainer } from "../../../elementos/ButtonEscene1";
 import { ModalHistorial } from "../../../elementos/Modals";
 import { Modal_Preguntas } from "../../../elementos/ModalsTutorial";
 import style from '../../../Style.js';
+import  styles  from "../../../Style_dialog.js";
 import C1_pregunta1_Resp1_C from "../../../data/C1_preguntas/C1_pregunta1_Resp1_C.J.M";
-import { CommonActions } from '@react-navigation/native';
-const { width, height } = Dimensions.get('window')
  
-const styles = StyleSheet.create({
-  container: {
-   // backgroundColor: "#36B1F0",
-    flex: 1,
-
-  },
-  text: {
-    color: "#fff",
-    fontSize: 22,
-    textAlign: "center",
-    
-    letterSpacing: -0.02,
-    fontWeight: "600"
-  },
-  text2: {
-   marginLeft : 5,
-   //paddingVertical: 8,
-   // borderWidth: 4,
-    borderColor: "#20232a",
-   // borderRadius: 6,
-    backgroundColor: "red",
-    color: "#fff",
-    textAlign: "left",
-    fontSize: 17,
-    fontWeight: "bold"
-  },
-  containerdialog:{
-   flex: 0.5,
-  backgroundColor: "rgba(0, 185, 188, 0.37)",
-  width: '100%',
-  height: '100%'
-  } 
-});
-
 const mult =5;
-
-
-
 
 class escena1 extends React.Component {
    
@@ -137,7 +99,7 @@ class escena1 extends React.Component {
                 onPress={() => {
                         this.setModalVisible2(true);
                       }}>
-                         <Image style={ style.image } source={require("../../../../assets/images/ayuda.png")} />
+         <Image style={ style.image } source={require("../../../../assets/images/ayuda.png")} />
                 </TouchableOpacity>   
 
               <TouchableOpacity style={ style.imageContainer } activeOpacity={0.8}
