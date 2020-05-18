@@ -90,7 +90,7 @@ render() {
         this.props.navigation.navigate("V_C2_Preg2_dialogo", {
           title: "Caso 2. Pregunta 2",
           questions: D_C2_pregunta2_dialog,
-          color: "#799496"
+          color: "#36b1f0"
         })
       }
     />
@@ -101,7 +101,7 @@ render() {
         this.props.navigation.navigate("V_C2_Preg3_dialogo", {
           title: "Caso 2. Pregunta 3",
           questions: D_C2_pregunta3_dialog,
-          color: "#799496"
+          color: "#36b1f0"
         })
       }
     />
@@ -112,7 +112,7 @@ render() {
         this.props.navigation.navigate("V_C2_Preg4_dialogo", {
           title: "Caso 2. Pregunta 4",
           questions: D_C2_pregunta4_dialog,
-          color: "#799496"
+          color: "#36b1f0"
         })
       }
     />
@@ -123,7 +123,7 @@ render() {
         this.props.navigation.navigate("V_C2_Preg5_dialogo", {
           title: "Caso 2. Pregunta 5",
           questions: D_C2_pregunta5_dialog,
-          color: "#799496"
+          color: "#36b1f0"
         })
       }
     />

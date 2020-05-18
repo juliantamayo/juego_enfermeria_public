@@ -888,3 +888,177 @@ export const Modal_C1_escena3 = ({ text, onPress = () => {} }) => (
             
         </Modal>
 );
+export const Modal_Preguntas = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
+
+            <View style={styles.headerModal}>
+
+            <View style={styles.headerMizq}>
+            </View>
+         <View style={styles.margen}></View>
+
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton}
+                
+                onPress={onPress}
+               >
+                  <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+             </View>
+            
+              
+            </View>
+            
+            <View style={styles.bodyModal}>
+              <Swiper
+          style={styles.wrapper} showsButtons
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 8,
+                height: 8,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 8,
+                height: 8,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 30
+          }}
+          loop={false}
+        >
+          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m24.jpg')} resizeMode="cover">
+
+          </ImageBackground>
+
+          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m25.jpg')} resizeMode="cover">
+
+          </ImageBackground>
+          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m27.jpg')} resizeMode="cover">
+
+          </ImageBackground>
+
+          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m28.jpg')} resizeMode="cover">
+
+          </ImageBackground>
+           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m29.jpg')} resizeMode="cover">
+
+          </ImageBackground>
+          
+        </Swiper>
+            </View> 
+            </View>
+            
+        </Modal>
+);
+export const Modal_Pruebas = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
+
+            <View style={styles.headerModal}>
+
+            <View style={styles.headerMizq}>
+            </View>
+         <View style={styles.margen}></View>
+
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton}
+                
+                onPress={onPress}
+               >
+                  <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+             </View>
+            
+              
+            </View>
+            
+            <View style={styles.bodyModal}>
+              <Swiper
+          style={styles.wrapper} showsButtons
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 8,
+                height: 8,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 8,
+                height: 8,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 30
+          }}
+          loop={false}
+        >
+         <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m30.jpg')} resizeMode="contain">
+
+          </ImageBackground>
+
+          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m31.jpg')} resizeMode="contain">
+
+          </ImageBackground>
+          
+          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m27.jpg')} resizeMode="contain">
+
+          </ImageBackground>
+
+          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m28.jpg')} resizeMode="contain">
+
+          </ImageBackground>
+           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/m29.jpg')} resizeMode="contain">
+
+          </ImageBackground>
+          
+          
+        </Swiper>
+            </View> 
+            </View>
+            
+        </Modal>
+);

@@ -6,29 +6,8 @@ import { Button, ButtonContainer } from "../../../elementos/ButtonC1_Preguntas";
 import C1_pregunta5_Resp_enfermera from "../../../data/C1_preguntas/C1_pregunta5_Resp_enfermera";
 
 import { Alert } from "../../../elementos/Alert";
-
+import  styles  from "../../../Style_preguntas.js";
  
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingHorizontal: 20
-  },
-  text: {
-    color: "#fff",
-    backgroundColor: "#36B1F0",
-    fontSize: 22,
-    textAlign: "center",
-    letterSpacing: -0.02,
-    fontWeight: "600"
-  },
-  textContador: {
-    color: "#fff",
-    fontSize: 22,
-    textAlign: "center",
-    letterSpacing: -0.02,
-    fontWeight: "600"
-  }
-});
 
 const mult =5;
 
@@ -74,7 +53,7 @@ class V_c1_Preg5_pregunta extends React.Component {
         return this.props.navigation.navigate('V_C1_Preg5_dialogo',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
       }else if (nextIndex >= state.totalCount   && this.state.correctCount==3) {
        return this.props.navigation.navigate('V_C1_RespP5_enfermera',{repu_enferme:1,experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount),
-        title: "RespuestaP5 enfermero",
+        title: "Caso 1. Pregunta 5",
           questions: C1_pregunta5_Resp_enfermera,
           color: "#36b1f0"});
       

@@ -4,70 +4,13 @@ import { View, StyleSheet, StatusBar, Text, SafeAreaView, ImageBackground, Image
 import { Button, ButtonContainer } from "../../../elementos/ButtonC1_Preguntas";
 import C1_pregunta1_Resp_enfermera from "../../../data/C1_preguntas/C1_pregunta1_Resp_enfermera";
 import { Alert } from "../../../elementos/Alert";
-
+import  styles  from "../../../Style_preguntas.js";
  
-const styles = StyleSheet.create({
-  container: {
-  //  backgroundColor: "#36B1F0",
-    flex: 1,
-    paddingHorizontal: 20
-  },
-  text: {
-    color: "#fff",
-    backgroundColor: "#036e6a",
-    fontSize: 22,
-    textAlign: "center",
-    letterSpacing: -0.02,
-    fontWeight: "600",
-    borderRadius: 10
-  },
 
-  textContador: {
-    color: "#fff",
-    //backgroundColor: "#36B1F0",
-    fontSize: 22,
-    textAlign: "center",
-    letterSpacing: -0.02,
-    fontWeight: "600"
-  },
-  containerImagen:{
-    alignItems : 'center',
-    backgroundColor: 'white',
-    width : '100%',
-    height : '50%'
-  },
-  Imagen:{
-    width: 290,
-  height: '100%'
-  },
-  Imagen2:{
-    width: 40,
-  height: 40
-  },
-   modalView: {
-     width: '90%',
-   height: '60%',
-    margin: 20,
-    backgroundColor: "white",
-    borderRadius: 20,
-    padding: 35,
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5
-  }
-  
-
-});
 
 const mult =5;
 
-class juego1_part1 extends React.Component {
+class preguntas extends React.Component {
    
 
 
@@ -113,7 +56,7 @@ class juego1_part1 extends React.Component {
         return this.props.navigation.navigate('DialogosC1',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
       }else if (nextIndex >= state.totalCount   && this.state.correctCount==2) {
        return this.props.navigation.navigate('V_C1_Resp_enfermera',{repu_enferme:1,experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount),
-        title: "Respuesta enfermero",
+        title: "Caso 1. Pregunta 1",
           questions: C1_pregunta1_Resp_enfermera,
           color: "#36b1f0"});
       
@@ -178,4 +121,4 @@ class juego1_part1 extends React.Component {
   }
 }
 
-export default juego1_part1;
+export default preguntas;

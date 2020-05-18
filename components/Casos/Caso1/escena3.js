@@ -95,7 +95,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C1_PruValo1_dialogo", {
-          title: "Caso 1. Prueba 1",
+          title: "Caso 1. Prueba de Valoración 1",
           questions: C1_Pru_valo1_dialog,
           color: "#36b1f0"
         })
@@ -106,7 +106,7 @@ render() {
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("V_C1_PruValo1_dialogo", {
-          title: "1 pruValo1",
+          title: "Caso 1. Prueba de Valoración 1",
           questions: C1_Pru_valo1_dialog,
           color: "#36b1f0"
         })
@@ -119,7 +119,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C1_PruValo2_dialogo", {
-          title: "caso 1. Prueba 2",
+          title: "Caso 1. Prueba de Valoración 2",
           questions: C1_Pru_valo2_dialog,
           color: "#799496"
         })
@@ -130,7 +130,7 @@ render() {
       color="#00b9bc"
       onPress={() =>
         this.props.navigation.navigate("V_C1_PruValo2_dialogo", {
-          title: "2  pruValo2",
+          title: "Caso 1. Prueba de Valoración 2",
           questions: C1_Pru_valo2_dialog,
           color: "#799496"
         })
@@ -146,7 +146,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C1_PruValo3_dialogo", {
-          title: "3",
+          title: "Caso 1. Prueba de Valoración 3",
           questions: C1_Pru_valo3_dialog,
           color: "#799496"
         })
@@ -157,7 +157,7 @@ render() {
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("V_C1_PruValo3_dialogo", {
-          title: "3",
+          title: "Caso 1. Prueba de Valoración 3",
           questions: C1_Pru_valo3_dialog,
           color: "#799496"
         })
@@ -170,7 +170,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C1_PruValo4_dialogo", {
-          title: "4",
+          title: "Caso 1. Prueba de Valoración 4",
           questions: C1_Pru_valo4_dialog,
           color: "#799496"
         })
@@ -181,7 +181,7 @@ render() {
       color="#00b9bc"
       onPress={() =>
         this.props.navigation.navigate("V_C1_PruValo4_dialogo", {
-          title: "4",
+          title: "Caso 1. Prueba de Valoración 4",
           questions: C1_Pru_valo4_dialog,
           color: "#799496"
         })
@@ -198,7 +198,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C1_PruValo5_dialogo", {
-          title: "5",
+          title: "Caso 1. Prueba de Valoración 5",
           questions: C1_Pru_valo5_dialog,
           color: "#799496"
         })
@@ -209,7 +209,7 @@ render() {
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("V_C1_PruValo5_dialogo", {
-          title: "5",
+          title: "Caso 1. Prueba de Valoración 5",
           questions: C1_Pru_valo5_dialog,
           color: "#799496"
         })
@@ -222,7 +222,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C1_PruValo6_dialogo", {
-          title: "6",
+          title: "Caso 1. Prueba de Valoración 6",
           questions: C1_Pru_valo6_dialog,
           color: "#799496"
         })
@@ -233,7 +233,7 @@ render() {
       color="#00b9bc"
       onPress={() =>
         this.props.navigation.navigate("V_C1_PruValo6_dialogo", {
-          title: "6",
+          title: "Caso 1. Prueba de Valoración 6",
           questions: C1_Pru_valo6_dialog,
           color: "#799496"
         })
@@ -250,7 +250,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C1_PruValo7_dialogo", {
-          title: "7",
+          title: "Caso 1. Prueba de Valoración 7",
           questions: C1_Pru_valo7_dialog,
           color: "#799496"
         })
@@ -261,7 +261,7 @@ render() {
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("V_C1_PruValo7_dialogo", {
-          title: "7",
+          title: "Caso 1. Prueba de Valoración 7",
           questions: C1_Pru_valo7_dialog,
           color: "#799496"
         })
