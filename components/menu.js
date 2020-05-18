@@ -8,8 +8,6 @@ import {Text,
       } from 'react-native';
 import styles from './Style.js';
 
-import {questions,questions2,questions3} from "./data/C1_data/D_c1_juego_part1";
-
 import { CommonActions } from '@react-navigation/native';
 import { Modal_Menu } from "./elementos/ModalsTutorial";
 
@@ -17,8 +15,6 @@ export default function menu ({navigation, route}) {
 
  const [modalVisible, setModalVisible] = useState(false);
 
- var listado = new Array(questions,questions2,questions3);
- var cLetra = listado[Math.floor(Math.random()*listado.length)];
     return (
     <ImageBackground source={require("../assets/images/background.png")}style={styles.container}>
 
@@ -77,11 +73,7 @@ export default function menu ({navigation, route}) {
       </TouchableOpacity>
       
        <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-        onPress={() =>
-                          navigation.navigate("pruebaT", {
-                            questions:listado[Math.floor(Math.random()*listado.length)]
-                          })
-                        }>
+        onPress={() => navigation.navigate('m_teoria')}>
                <Image style={ styles.image } source={require("../assets/images/buttonteory.png")} />
       </TouchableOpacity>
       </View>

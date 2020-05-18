@@ -4,6 +4,7 @@ import { NavigationContainer, CommonActions } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './components/load';
 import Menu from './components/menu';
+import m_teoria from './components/Teoria/m_teoria';
 import M_juegos from './components/Juegos/m_juegos';
 //-------------------------------juego2-------------------------
 import M_juegos2 from './components/Juegos/Juego2/m_juego2';
@@ -302,6 +303,20 @@ useEffect(() => {
         //  headerShown: false
          headerLeft: null,
           title: 'Menú Principal',
+           headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}/>
+
+         <Stack.Screen  name="m_teoria" component={m_teoria} 
+        options={{
+        //  headerShown: false
+         headerLeft: null,
+          title: 'Teoría',
            headerStyle: {
             backgroundColor: '#fbe122',
           },
