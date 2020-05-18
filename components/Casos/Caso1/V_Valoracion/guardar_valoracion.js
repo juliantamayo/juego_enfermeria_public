@@ -1,6 +1,6 @@
-//This is an example of React Native Global Scope Variables//
+
 import React, { Component } from 'react';
-//import react in our code.
+
 import { StyleSheet, 
   View, 
   Text,
@@ -9,7 +9,7 @@ import { StyleSheet,
   Image,
   StatusBar,ScrollView } from 'react-native';
 import style from '../../../Style.js';
-//import all the components we are going to use.
+
 export default class guardar_escena1 extends Component {
  
 state = {
@@ -19,6 +19,22 @@ state = {
 
      
   render() {
+    var helloMessage=<Text>1</Text>;
+    if (this.state.caja==1) {
+     helloMessage = <View style={styles.viewcheckbody}>
+       <View style={styles.viewchecktext}>
+        <Text style={styles.text}>
+       Check Box 1
+        </Text>
+        </View>
+         <View style={styles.viewcheck}>
+        <Text style={styles.textIncorrec}>
+          X
+        </Text>
+        </View>
+     
+       </View>;
+  }
     return (
       <ImageBackground source={require("../../../../assets/images/background.png")}style={style.container} resizeMode='contain'>
    <View style={styles.container}>
@@ -34,10 +50,7 @@ state = {
       </View>
 
       <View style={style.headerDerecha}>
-      <TouchableOpacity style={ style.imageContainer } activeOpacity={0.8}
-       onPress={() => this.props.navigation.navigate('Home')}>
-               <Image style={ style.image } source={require("../../../../assets/images/ayuda.png")} />
-      </TouchableOpacity>
+      
       </View>
      
       </View>
@@ -47,14 +60,11 @@ state = {
             <Text style={styles.textStyle}>
             {/*Global Variable*/}
           </Text>
-        </View>
-         <Button onPress ={this.saveData} title="guardar" style={styles.button}/>  
-          <View style={styles.button}></View>
-     
-        <Button onPress ={this.removeValue}  title="eliminar cache data"/>  
+        </View>  
+          <View style={styles.button}></View>  
          <View style={style.margen2}></View>
       
-         {this.state.caja ==1 ?
+         {/*this.state.caja ==1 ?
         <View style={styles.viewcheckbody}>
        <View style={styles.viewchecktext}>
         <Text style={styles.text}>
@@ -81,9 +91,9 @@ state = {
         </Text>
         </View>
      
-       </View>} 
+       </View> */} 
      <View style={style.margen2}></View>
-        {this.state.caja2 ==1 ?
+        {/*this.state.caja2 ==1 ?
         <View style={styles.viewcheckbody}>
        <View style={styles.viewchecktext}>
         <Text style={styles.text}>
@@ -98,13 +108,15 @@ state = {
      
        </View>
 
-         :null}  
+       /*  :null */}  
 
 
         <View style={styles.button}></View>
                <Text style={styles.textStyle}>   {this.state.caja}  </Text>
                <Text style={styles.textStyle}>   {this.state.caja2}  </Text>
+               {helloMessage}
       </View>
+      <Button onPress ={this.saveData} title="guardar" style={styles.button}/>
       </ScrollView>
   </View>
   </ImageBackground>

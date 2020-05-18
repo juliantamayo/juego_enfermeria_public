@@ -84,7 +84,7 @@ export default function menu_juego3 ({navigation, route}) {
                 </View>
                   
                 <View style={style.footerSNPcenter}>
-                    <Text style={style.title}> SNA </Text>
+                    <Text style={style.title}>SNA</Text>
                 </View>
 
               <View style={style.footerSNPDer}>
@@ -160,6 +160,9 @@ const style = StyleSheet.create({
     color: "#20232a",
     textAlign: "center",
     fontSize: 45,
+    paddingVertical: 4,
+    paddingRight : 3,
+    paddingLeft :3,
     fontWeight: "bold"
   },
   textoboton: {

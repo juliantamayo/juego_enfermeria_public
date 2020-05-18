@@ -27,18 +27,15 @@ export default StyleSheet.create({
     fontSize: 20
   },
    modalText: {
-   // marginBottom: 15,
     textAlign: "justify",
     fontSize : 18,
      
   },
   modalTextcuerpo: {
-   // marginBottom: 15,
     textAlign: "left",
      marginLeft : 10,
   },
    modalTextnegrillaTitulo: {
-   // marginBottom: 15,
    fontSize : 23,
     textAlign: "center",
     fontWeight: "bold",
@@ -46,7 +43,6 @@ export default StyleSheet.create({
      backgroundColor: 'white'
   },
    modalTextnegrilla: {
-   // marginBottom: 15,
    fontSize : 18,
     textAlign: "left",
     fontWeight: "bold",

@@ -11,7 +11,6 @@ import { RowItemJuego1} from "../../elementos/RowItemJuego1";
 import { ModalSNC, ModalSNP } from "../../elementos/ModalsRepaso";
 import { Modal_MenuJuego1 } from "../../elementos/ModalsTutorial";
 
-//import snpQuestions from "../../data/snp";
 import {J2questions,J2questions2,J2questions3} from "../../data/snp";
 
 import {questions,questions2,questions3} from "../../data/C1_data/D_c1_juego_part1";
@@ -99,7 +98,7 @@ export default function menu_juego1 ({navigation, route}) {
               </View>
                   
               <View style={style.hederSNccenter}>
-              <Text style={style.title}> SNC </Text>
+              <Text style={style.title}>SNC</Text>
               </View>
 
                 <View style={style.hederSNDer}>
@@ -140,7 +139,7 @@ export default function menu_juego1 ({navigation, route}) {
                 </View>
                   
                 <View style={style.footerSNPcenter}>
-                    <Text style={style.title}> SNP </Text>
+                    <Text style={style.title}>SNP</Text>
                 </View>
 
               <View style={style.footerSNPDer}>
@@ -246,6 +245,9 @@ const style = StyleSheet.create({
     color: "#20232a",
     textAlign: "center",
     fontSize: 45,
+    paddingVertical: 4,
+    paddingRight : 3,
+    paddingLeft :3,
     fontWeight: "bold"
   },
   textoboton: {
