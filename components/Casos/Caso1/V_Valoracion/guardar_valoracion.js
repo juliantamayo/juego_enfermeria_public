@@ -14,7 +14,9 @@ export default class guardar_escena1 extends Component {
  
 state = {
        caja:this.props.route.params?.check1,
-       caja2:this.props.route.params?.check2
+       caja2:this.props.route.params?.check2,
+       arraycheckRecibe:this.props.route.params?.arraycheckR,
+       arraycomparar:[1,0,1,0,1,1,0,1,0,1,1,1,0,1,1,0,1,1,1,1,0,1,1,0,1]
    }
 
      
@@ -34,6 +36,18 @@ state = {
         </View>
      
        </View>;
+        var correct=<Text></Text>;
+       for (var i = 0; i <= this.state.arraycheckRecibe.length; i++) {
+         if (this.state.arraycheckRecibe == this.state.arraycomparar) {
+           correct= this.state.arraycheckRecibe.map((item, key)=>(
+         <Text key={key} style={styles.text}>{ item } </Text>)
+         )
+           
+         }else if (this.state.arraycheckRecibe ==this.state.arraycomparar) {
+           
+         }
+       }
+
   }
     return (
       <ImageBackground source={require("../../../../assets/images/background.png")}style={style.container} resizeMode='contain'>
@@ -112,11 +126,11 @@ state = {
 
 
         <View style={styles.button}></View>
-               <Text style={styles.textStyle}>   {this.state.caja}  </Text>
-               <Text style={styles.textStyle}>   {this.state.caja2}  </Text>
+               
                {helloMessage}
       </View>
-      <Button onPress ={this.saveData} title="guardar" style={styles.button}/>
+      <Button onPress={() => this.props.navigation.navigate('M_caso1')} title="guardar" style={styles.button}/>
+      <Text  style={styles.text}>{this.state.arraycheckRecibe[2]} </Text>
       </ScrollView>
   </View>
   </ImageBackground>

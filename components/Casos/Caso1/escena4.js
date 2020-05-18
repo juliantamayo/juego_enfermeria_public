@@ -10,6 +10,8 @@ export default class menu_caso1 extends React.Component {
     super();
   
     this.state = {
+
+
       check:false,check2:false,check3:false,check4:false,check5:false,
       check6:false,check7:false,check8:false,check9:false,check10:false,
       check11:false,check12:false,check13:false,check14:false,check15:false,
@@ -21,6 +23,7 @@ export default class menu_caso1 extends React.Component {
       caja11:0,caja12:0,caja13:0,caja14:0,caja15:0,
       caja16:0,caja17:0,caja18:0,caja19:0,caja20:0,
       caja21:0,caja22:0,caja23:0,caja24:0,caja25:0,
+
     }
   }
 
@@ -40,6 +43,7 @@ export default class menu_caso1 extends React.Component {
 
 
 validarCheckBox = (value) => {
+
   const vali1=this.state.caja1;    const vali2=this.state.caja2;    const vali3=this.state.caja3;
   const vali4=this.state.caja4;    const vali5=this.state.caja5;    const vali6=this.state.caja6; 
   const vali7=this.state.caja7;    const vali8=this.state.caja8;    const vali9=this.state.caja9;
@@ -50,18 +54,25 @@ validarCheckBox = (value) => {
   const vali22=this.state.caja22;  const vali23=this.state.caja23;  const vali24=this.state.caja24;
   const vali25=this.state.caja25;
 
+ var checkArray = [ vali1, vali2, vali3, vali4, vali5, vali6,vali7,vali8,vali9,vali10,vali11,vali12,
+                         vali13,vali14,vali15,vali16,vali17,vali18,vali19,vali20,vali21,vali22,vali23,vali24,vali25 ];
+
   if (vali1==0 && vali2==0   && vali3==0  && vali4==0  && vali5==0  && vali6==0  && vali7==0  && 
       vali8==0  && vali9==0  && vali10==0 && vali11==0 && vali12==0 && vali13==0 && vali14==0 &&
       vali15==0 && vali16==0 && vali17==0 && vali18==0 && vali19==0 && vali20==0 && vali21==0 &&
       vali22==0 && vali23==0 && vali24==0 && vali25==0) {
        Alert.alert("Mensaje","no ha seleccionado ningun hallazgo ");
-    }else if (this.state.caja1==1 && this.state.caja2==1) {
+
+    }else{
         Alert.alert("Mensaje","Datos ", [
        
-        { text: "OK", onPress: () =>  this.props.navigation.navigate("Guardr_valo",{check1:this.state.caja1}) }
+        { text: "OK", onPress: () =>  this.props.navigation.navigate("Guardr_valo",{arraycheckR:[ vali1, vali2, vali3, vali4, vali5, vali6,vali7,vali8,vali9,vali10,vali11,vali12,
+                         vali13,vali14,vali15,vali16,vali17,vali18,vali19,vali20,vali21,vali22,vali23,vali24,vali25 ]}) }
      ]);
-    }   
+    }  
    } 
+
+ 
  
 render() {
 
@@ -92,16 +103,11 @@ render() {
       <View style={styles.margen2}></View>
       <View style={style.containerBody}>
       <Text style={style.textTitulo}>Hallazgos en el Paciente</Text>
+      
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
         <Text style={style.text}>Estado de confusión</Text>
-        <TextInput
-        type="hidden"
-      style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
-     
-     
-    />
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -110,7 +116,7 @@ render() {
         />
        </View>
        </View>
-        <Text >Is CheckBox 1: {this.state.check ? this.state.caja1=1 : this.state.caja1=0}</Text>
+       <Text  style={style.text_transparent}>Is CheckBox 1: {this.state.check ? this.state.caja1=1 : this.state.caja1=0}</Text>
         <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -123,7 +129,7 @@ render() {
         />
        </View>
        </View>
-        <Text>Is CheckBox 2: {this.state.check2 ? this.state.caja2=1: this.state.caja2=0}</Text>
+       <Text style={style.text_transparent}>Is CheckBox 2: {this.state.check2 ? this.state.caja2=1 : this.state.caja2=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -136,7 +142,7 @@ render() {
         />
        </View>
        </View>
-        <Text>Is CheckBox 3: {this.state.check3 ? this.state.caja3=1: this.state.caja3=0}</Text>
+        <Text style={style.text_transparent}>Is CheckBox 3: {this.state.check3 ? this.state.caja3=1: this.state.caja3=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -149,7 +155,7 @@ render() {
         />
        </View>
        </View>
-      <Text>Is CheckBox 4 {this.state.check4 ? this.state.caja4=1: this.state.caja4=0}</Text>
+      <Text style={style.text_transparent}>Is CheckBox 4 {this.state.check4 ? this.state.caja4=1: this.state.caja4=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -162,6 +168,7 @@ render() {
         />
        </View>
        </View>
+        <Text style={style.text_transparent}>Is CheckBox 5 {this.state.check5 ? this.state.caja5=1: this.state.caja5=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -174,6 +181,7 @@ render() {
         />
        </View>
        </View>
+        <Text style={style.text_transparent}>Is CheckBox 6 {this.state.check6 ? this.state.caja6=1: this.state.caja6=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -186,6 +194,7 @@ render() {
         />
        </View>
        </View>
+        <Text style={style.text_transparent}>Is CheckBox 7 {this.state.check7 ? this.state.caja7=1: this.state.caja7=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -198,6 +207,7 @@ render() {
         />
        </View>
        </View>
+        <Text style={style.text_transparent}>Is CheckBox 8 {this.state.check8 ? this.state.caja8=1: this.state.caja8=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -210,6 +220,7 @@ render() {
         />
        </View>
        </View>
+        <Text style={style.text_transparent}>Is CheckBox 9 {this.state.check9 ? this.state.caja9=1: this.state.caja9=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -222,6 +233,7 @@ render() {
         />
        </View>
        </View>
+        <Text style={style.text_transparent}>Is CheckBox 10 {this.state.check10 ? this.state.caja10=1: this.state.caja10=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -234,6 +246,7 @@ render() {
         />
        </View>
        </View>
+   <Text style={style.text_transparent}>Is CheckBox 11 {this.state.check11 ? this.state.caja11=1: this.state.caja11=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -246,6 +259,7 @@ render() {
         />
        </View>
        </View>
+    <Text style={style.text_transparent}>Is CheckBox 12 {this.state.check12 ? this.state.caja12=1: this.state.caja12=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -258,6 +272,7 @@ render() {
         />
        </View>
        </View>
+    <Text style={style.text_transparent}>Is CheckBox 13 {this.state.check13 ? this.state.caja6=1: this.state.caja13=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -270,6 +285,7 @@ render() {
         />
        </View>
        </View>
+    <Text style={style.text_transparent}>Is CheckBox 14 {this.state.check14 ? this.state.caja14=1: this.state.caja14=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -282,6 +298,7 @@ render() {
         />
        </View>
        </View>
+    <Text style={style.text_transparent}>Is CheckBox 15 {this.state.check15 ? this.state.caja15=1: this.state.caja15=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -294,6 +311,7 @@ render() {
         />
        </View>
        </View>
+  <Text style={style.text_transparent}>Is CheckBox 16 {this.state.check16 ? this.state.caja16=1: this.state.caja16=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -306,6 +324,7 @@ render() {
         />
        </View>
        </View>
+        <Text style={style.text_transparent}>Is CheckBox 17 {this.state.check17 ? this.state.caja17=1: this.state.caja17=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -318,6 +337,7 @@ render() {
         />
        </View>
        </View>
+        <Text style={style.text_transparent}>Is CheckBox 18 {this.state.check18 ? this.state.caja18=1: this.state.caja18=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -330,6 +350,7 @@ render() {
         />
        </View>
        </View>
+    <Text style={style.text_transparent}>Is CheckBox 19 {this.state.check19 ? this.state.caja19=1: this.state.caja19=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -342,6 +363,7 @@ render() {
         />
        </View>
        </View>
+  <Text style={style.text_transparent}>Is CheckBox 20 {this.state.check20 ? this.state.caja20=1: this.state.caja20=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -354,6 +376,7 @@ render() {
         />
        </View>
        </View>
+   <Text style={style.text_transparent}>Is CheckBox 21 {this.state.check21 ? this.state.caja21=1: this.state.caja21=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -366,6 +389,7 @@ render() {
         />
        </View>
        </View>
+   <Text style={style.text_transparent}>Is CheckBox 22 {this.state.check22 ? this.state.caja22=1: this.state.caja22=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -378,6 +402,7 @@ render() {
         />
        </View>
        </View>
+     <Text style={style.text_transparent}>Is CheckBox 23 {this.state.check23 ? this.state.caja23=1: this.state.caja23=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -390,6 +415,7 @@ render() {
         />
        </View>
        </View>
+ <Text style={style.text_transparent}>Is CheckBox 24 {this.state.check24 ? this.state.caja24=1: this.state.caja24=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -402,12 +428,9 @@ render() {
         />
        </View>
        </View>
+    <Text style={style.text_transparent}>Is CheckBox 25 {this.state.check25 ? this.state.caja25=1: this.state.caja25=0}</Text>
        
-         { /*   <TouchableOpacity onPress={() => this.props.navigation.navigate('Guardr_valo',{
-                               check1:this.state.caja1,check2:this.state.caja2
-                             })} style={style.button}>
-                  <Text style={style.textBoton}>Continuar</Text>
-                </TouchableOpacity>*/}
+  
                 <TouchableOpacity onPress={this.validarCheckBox} style={style.button}>
                   <Text style={style.textBoton}>Continuar</Text>
                 </TouchableOpacity>
@@ -477,5 +500,10 @@ const style = StyleSheet.create({
   paddingVertical: 5,
   paddingRight : 5,
   paddingLeft :5
+ },
+ text_transparent:{
+   color: 'transparent',
+   //color:'black',
+   fontSize:1
  }
 });
