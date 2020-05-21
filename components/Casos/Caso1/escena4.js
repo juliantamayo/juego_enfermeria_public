@@ -61,10 +61,10 @@ validarCheckBox = (value) => {
       vali8==0  && vali9==0  && vali10==0 && vali11==0 && vali12==0 && vali13==0 && vali14==0 &&
       vali15==0 && vali16==0 && vali17==0 && vali18==0 && vali19==0 && vali20==0 && vali21==0 &&
       vali22==0 && vali23==0 && vali24==0 && vali25==0) {
-       Alert.alert("Mensaje","no ha seleccionado ningun hallazgo ");
+       Alert.alert("Mensaje","No ha seleccionado ningun hallazgo ");
 
     }else{
-        Alert.alert("Mensaje","Datos ", [
+        Alert.alert("Mensaje","Recuerdas que puedes hacer la valoración de nuevo si lo deseas", [
        
         { text: "OK", onPress: () =>  this.props.navigation.navigate("Guardr_valo",{arraycheckR:[ vali1, vali2, vali3, vali4, vali5, vali6,vali7,vali8,vali9,vali10,vali11,vali12,
                          vali13,vali14,vali15,vali16,vali17,vali18,vali19,vali20,vali21,vali22,vali23,vali24,vali25 ]}) }
@@ -272,7 +272,7 @@ render() {
         />
        </View>
        </View>
-    <Text style={style.text_transparent}>Is CheckBox 13 {this.state.check13 ? this.state.caja6=1: this.state.caja13=0}</Text>
+    <Text style={style.text_transparent}>Is CheckBox 13 {this.state.check13 ? this.state.caja13=1: this.state.caja13=0}</Text>
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
@@ -503,7 +503,6 @@ const style = StyleSheet.create({
  },
  text_transparent:{
    color: 'transparent',
-   //color:'black',
    fontSize:1
  }
 });

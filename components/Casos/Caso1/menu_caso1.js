@@ -6,7 +6,6 @@ import Escena1Dialog from "../../data/escena1dialog";
 import Escena2Dialog from "../../data/escena2dialog";
 import D_C1_Quiz from "../../data/C1_data/C1_Quiz/D_C1_Quiz";
 import { RowItem } from "../../elementos/RowItem";
-import variableglobal from "./variables_caso1";
 import { Modal_MenuCaso1 } from "../../elementos/ModalsTutorial";
 
 export default class menu_caso1 extends React.Component {
@@ -18,7 +17,7 @@ export default class menu_caso1 extends React.Component {
    
 componentDidMount= () => {
     let keys = ['save_pregPcte1', 'save_pregPcte2','save_pregPcte3','save_pregPcte4','save_pregPcte5','save_pregPcte6','save_pregPcte7','nombre',
-     'save_pruValo1', 'save_pruValo2','save_pruValo3','save_pruValo4','save_pruValo5','save_pruValo6','save_pruValo7'
+     'save_pruValo1', 'save_pruValo2','save_pruValo3','save_pruValo4','save_pruValo5','save_pruValo6','save_pruValo7','save_valo','save_quiz'
     ];
     AsyncStorage.multiGet(keys).then(result => {
       this.setState({
@@ -37,6 +36,8 @@ componentDidMount= () => {
         'save_pruValo5':  result[12][1],
         'save_pruValo6':  result[13][1],
         'save_pruValo7':  result[14][1],
+        'save_valoracion':  result[15][1],
+        'save_quiz':      result[16][1],
       });
     });
   };
@@ -48,7 +49,8 @@ render() {
    const Esc1= parseInt(this.state.nombre);
    const Esc2=parseFloat(this.state.save_pregPcte1)+parseFloat(this.state.save_pregPcte2)+parseFloat(this.state.save_pregPcte3)+parseFloat(this.state.save_pregPcte4)+parseFloat(this.state.save_pregPcte5)+parseFloat(this.state.save_pregPcte6)+parseFloat(this.state.save_pregPcte7);
    const Esc3=parseFloat(this.state.save_pruValo1)+parseFloat(this.state.save_pruValo2)+parseFloat(this.state.save_pruValo3)+parseFloat(this.state.save_pruValo4)+parseFloat(this.state.save_pruValo5)+parseFloat(this.state.save_pruValo6)+parseFloat(this.state.save_pruValo7);
-
+   const Esc4=parseInt(this.state.save_valoracion);
+   const Esc5= parseInt(this.state.save_quiz);
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
 
@@ -129,6 +131,7 @@ render() {
     />
 
      : null }
+      { Esc4 == 1?
      <RowItem
       name="Quiz"
       color="#f9e67a"
@@ -139,15 +142,17 @@ render() {
           color: "#20b2aa"
       })
       }
-    />
-
+    />:
+    null}
+    { Esc5 == 10?
     <RowItem
       name="Proceso de atención de Enfermeria"
       color="#f9a94b"
       onPress={() =>
         this.props.navigation.navigate("Escena6",{ex:'2'})
       }
-    />
+    />:
+    null}
 
     </ScrollView>
   </View>
@@ -160,36 +165,8 @@ render() {
 const style = StyleSheet.create({
   container: {
     flex: 1,
-   // alignItems : 'stretch',
     width: "100%",
     height :'100%',
    
-  },
-  scrollView: {
-    backgroundColor: 'pink',
-    marginHorizontal: 8,
-  },
-  text: {
-    textAlign : 'center',
-    fontSize: 20,
-  },
-  button: {
-    backgroundColor: "rgba(3, 33, 0, 0.47)",
-    borderRadius: 10,
-    paddingVertical: 15,
-    alignItems: "center",
-    justifyContent: "center",
-    width: "66%",
-    height :'30%',
-    margin: 20,
-    marginLeft : 60,
-   
-  },
-  viewScroll:{
-    flex : 1,
-    backgroundColor: 'red',
-    alignItems: "center",
-    width: "100%",
-    height :'100%',
   }
 });

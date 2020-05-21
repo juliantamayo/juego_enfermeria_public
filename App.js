@@ -111,10 +111,10 @@ import Escena4 from './components/Casos/Caso1/escena4';
 import Guardr_valo from './components/Casos/Caso1/V_Valoracion/guardar_valoracion';
 //escena5-------
 import Escena5 from './components/Casos/Caso1/escena5';
+import Guardar_V_quiz from './components/Casos/Caso1/V_Guardar/guardar_V_quiz'
 //escena6-------
 import Escena6 from './components/Casos/Caso1/escena6';
 
-import Variables from './components/Casos/Caso1/variables_caso1';
 //-------------------------caso2---------------------------------
 import M_caso2 from './components/Casos/Caso2/menu_caso2';
 import C2_Escena1 from './components/Casos/Caso2/escena1';
@@ -1241,6 +1241,17 @@ useEffect(() => {
 
 
        })}/>
+
+        <Stack.Screen name="Guardar_V_quiz"  component={Guardar_V_quiz} 
+       options={{
+        //  headerShown: false
+        title: 'Quiz',
+        headerLeft: null,
+         // title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
         <Stack.Screen name="Escena6" component={Escena6} 
         options={{
@@ -2397,7 +2408,7 @@ useEffect(() => {
 
 
          <Stack.Screen name="pruebaT"  component={pruebaT} />
-          <Stack.Screen name="Variables"  component={Variables} />
+
         
       </Stack.Navigator>
     </NavigationContainer>

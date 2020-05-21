@@ -52,7 +52,7 @@ export const ContainerSave = ({ children }) => (
 <ImageBackground style={styles.MainContainer} source={require("../../assets/images/background.png")} >
    <View style={styles.ContainerImagen}>
             <Image style={styles.Imagen} source={require("../../assets/images/felicidades.gif")} resizeMode="contain"/>
-            <Text style={styles.textStyle2}>Pregunta superada</Text>
+            
    </View>
         <View style={styles.button}></View>
             {children}
