@@ -6,6 +6,8 @@ const styles = StyleSheet.create({
      flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    width: Dimensions.get('window').width,
+     height: Dimensions.get('window').height
   },
   textStyle: {
     fontSize: 20,
@@ -38,7 +40,13 @@ const styles = StyleSheet.create({
      alignItems: 'center',
     justifyContent: 'center',
    // marginBottom: 5
-  }
+  },parametros: {
+     height:200,
+     width: 200,
+     alignItems: 'center',
+     justifyContent: 'center',
+     backgroundColor: 'yellow',     
+  },
 });
 
 export const Save = ({  onPress = () => {} }) => (    
@@ -59,6 +67,31 @@ export const ContainerSave = ({ children }) => (
     <View style={styles.button}></View>
    </ImageBackground>
 );
+
+export const Save2 = ({  onPress = () => {} }) => (    
+       <TouchableOpacity activeOpacity={0.8} style={styles.button3}  onPress ={onPress}>
+        <Text style={styles.textStyle}> Continuar </Text>
+       </TouchableOpacity>
+         
+);
+
+export const ContainerSave2 = ({ text,text2,children }) => (
+<ImageBackground style={styles.MainContainer} source={require("../../assets/images/background.png")} >
+   <View style={styles.parametros}>
+      
+       
+       <Text style={styles.textStyle}>Correctas: {text}</Text>
+      
+       <Text style={styles.textStyle}>Erróneas: {text2}</Text>
+
+       </View>
+        <View style={styles.button}></View>
+            {children}
+    <View style={styles.button}></View>
+   </ImageBackground>
+);
+
+
 
 
 

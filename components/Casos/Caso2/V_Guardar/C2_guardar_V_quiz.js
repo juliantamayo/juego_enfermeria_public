@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, AsyncStorage, Alert,View } from 'react-native';
 import { Save, ContainerSave,Save2,ContainerSave2 } from "../../../elementos/ItemGuardar";
-export default class guardar_V_quiz extends Component {
+export default class guardar_escena1 extends Component {
   constructor(route) {
     super(route);
 

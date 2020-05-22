@@ -279,11 +279,6 @@ render() {
 
    </View>
 
-
-   <Text style={styles.textStyle}>
-         hola   {this.state.save_pregPcte1}
-           
-          </Text>
     </ScrollView>
   </View>
   </ImageBackground>
@@ -295,7 +290,6 @@ render() {
 const style = StyleSheet.create({
   container: {
     flex: 1,
-   // alignItems : 'stretch',
     width: "100%",
     height :'100%',
    
@@ -331,7 +325,6 @@ const style = StyleSheet.create({
     flex:1,
     alignItems : 'center',
     justifyContent : 'center',
-    //backgroundColor: 'red',
     flexDirection: "row",
     width: "100%",
     height :'100%',
@@ -339,9 +332,7 @@ const style = StyleSheet.create({
   },
   viewrowmenu:{
     flex:1,
-   // backgroundColor: 'yellow',
     flexDirection: "column"
-   
 
   }
 });
