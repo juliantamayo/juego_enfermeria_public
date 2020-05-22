@@ -22,6 +22,11 @@ import juego1_teory2 from './components/Juegos/Juego1/juego1_teory2';
 import M_juegos3 from './components/Juegos/Juego3/m_juego3';
 import juego3 from './components/Juegos/Juego3/juego3';
 import Result_QJ3 from './components/Juegos/Juego3/result_qJ3';
+//--------------------------------Teoría------------------
+import m_t_snp from './components/Teoria/T_SNP/m_t_snp';
+import m_t_snc from './components/Teoria/T_SNC/m_t_snc';
+import m_t_sna from './components/Teoria/T_SNA/m_t_sna';
+import m_t_pruval from './components/Teoria/T_PruValoracion/m_t_pruval';
 
 //créditos 
 import Creditos from './components/creditos';
@@ -317,6 +322,62 @@ useEffect(() => {
         //  headerShown: false
          headerLeft: null,
           title: 'Teoría',
+           headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}/>
+
+         <Stack.Screen  name="m_t_snp" component={m_t_snp} 
+        options={{
+        //  headerShown: false
+         headerLeft: null,
+          title: 'Sistema Nervioso Periférico',
+           headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}/>
+
+        <Stack.Screen  name="m_t_sna" component={m_t_sna} 
+        options={{
+        //  headerShown: false
+         headerLeft: null,
+          title: 'Sistema Nervioso Autónomo',
+           headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}/>
+
+        <Stack.Screen  name="m_t_snc" component={m_t_snc} 
+        options={{
+        //  headerShown: false
+         headerLeft: null,
+          title: 'Sistema Nervioso Central',
+           headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}/>
+
+        <Stack.Screen  name="m_t_pruval" component={m_t_pruval} 
+        options={{
+        //  headerShown: false
+         headerLeft: null,
+          title: 'Pruebas de Valoración',
            headerStyle: {
             backgroundColor: '#fbe122',
           },

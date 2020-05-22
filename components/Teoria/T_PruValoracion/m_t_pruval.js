@@ -1,14 +1,14 @@
 import React from 'react';
 import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpacity,  Image, Text, AsyncStorage } from 'react-native';
 
-import styles from '../Style.js';
+import styles from '../../Style.js';
 
 
-import { RowItem } from "../elementos/RowItem";
-import { Modal_C1_escena2 } from "../elementos/ModalsTutorial";
-import { SNC, SNP, SNA, Pruval } from "../elementos/Modals_teoria";
+import { RowItem } from "../../elementos/RowItem";
+import { Modal_C1_escena2 } from "../../elementos/ModalsTutorial";
+import { SNC, SNP, SNA, Pruval } from "../../elementos/Modals_teoria";
 
-export default class m_teoria extends React.Component {
+export default class m_t_pruval extends React.Component {
 
   
     state ={
@@ -42,7 +42,7 @@ export default class m_teoria extends React.Component {
 
 
   return (
-   <ImageBackground source={require("../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
+   <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
    
     <Modal_C1_escena2
       
@@ -96,7 +96,7 @@ export default class m_teoria extends React.Component {
      <View style={styles.headerIzquierda}>
      <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
        onPress={() => this.props.navigation.pop()}>
-               <Image style={ styles.image } source={require("../../assets/images/button-back.png")} />
+               <Image style={ styles.image } source={require("../../../assets/images/button-back.png")} />
       </TouchableOpacity>
       </View>
 
@@ -105,38 +105,39 @@ export default class m_teoria extends React.Component {
                    onPress={() => {
                         this.setModalVisible(true);
                       }}>
-               <Image style={ styles.image } source={require("../../assets/images/ayuda.png")} />
+               <Image style={ styles.image } source={require("../../../assets/images/ayuda.png")} />
       </TouchableOpacity>
       </View>
      
       </View>
        <RowItem   
-        name="1. Sístema Nervioso Periférico"
+      name="1. Sístema Nerviosos Periférico"
       color="#F8D95B"
-      onPress={() =>
-        this.props.navigation.navigate("m_t_snp")}
-       />
+         onPress={() => {
+                        this.setModalVisible_snp(true);
+                      }}/>
    
     <RowItem
       name="2. Sístema Nervioso Central"
       color="#77c6c6"
-      onPress={() =>
-        this.props.navigation.navigate("m_t_snc")}
-       />
+     onPress={() => {
+                        this.setModalVisible_snc(true);
+                      }}/>
 
     <RowItem
       name="3. Sístema Nervioso Autónomo"
       color="#F8D95B"
-       onPress={() =>
-        this.props.navigation.navigate("m_t_sna")}
-       />
+       onPress={() => {
+                        this.setModalVisible_sna(true);
+                      }}/>
   
     <RowItem
       name="4. Pruebas de Valoración"
       color="#77c6c6"
-     o onPress={() =>
-        this.props.navigation.navigate("m_t_pruval")}
-       />
+     onPress={() => {
+                        this.setModalVisible_pruval(true);
+                      }}/>
+  
     </ScrollView>
   </View>
   </ImageBackground>
