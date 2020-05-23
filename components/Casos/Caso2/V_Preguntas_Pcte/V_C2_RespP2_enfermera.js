@@ -17,9 +17,8 @@ class V_C2_RespP2_enfermera extends React.Component {
   state = {
     modalVisible: false,
      modalVisible2: false,
-    correctCount: 0, 
-    //totalCount: this.props.navigation.getParam("questions", []).length,
-      totalCount: this.props.route.params?.questions.length,
+    correctCount: 0,
+    totalCount: this.props.route.params?.questions.length,
     activeQuestionIndex: 0,
     answered: false,
     answerCorrect: false
@@ -32,7 +31,7 @@ class V_C2_RespP2_enfermera extends React.Component {
 
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate("C2_Escena2");
+        return this.props.navigation.navigate("C2_Guardar_V_preg_pcte2",{C2_ppcte2: 1});
       }
 
       return {
@@ -82,11 +81,8 @@ class V_C2_RespP2_enfermera extends React.Component {
 
      <View style={style.header}>   
       <View style={style.headerIzquierda}>
-     <TouchableOpacity style={ style.imageContainer } activeOpacity={0.8}
-       onPress={() => this.props.navigation.navigate('C2_Escena2')}>
-               <Image style={ style.image } source={require("../../../../assets/images/button-back.png")} />
-      </TouchableOpacity>
-</View>
+     
+     </View>
 
 
 <View style={style.headerDerecha}> 

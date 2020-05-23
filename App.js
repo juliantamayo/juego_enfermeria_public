@@ -126,88 +126,108 @@ import C2_Escena1 from './components/Casos/Caso2/escena1';
 import C2_Guardar_escena1 from './components/Casos/Caso2/V_Guardar/guardar_escena1';
 import C2_Escena2 from './components/Casos/Caso2/escena2';
 
+//escena2
 import V_C2_Preg1_dialogo from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg1_dialogo';
 import V_C2_Preg1_pregunta from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg1_pregunta';
 import V_C2_RespP1_enfermera from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_RespP1_enfermera';
+import C2_Guardar_V_preg_pcte1 from './components/Casos/Caso2/V_Guardar/C2_guardar_V_preg_pcte1';
 
 import V_C2_Preg2_dialogo from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg2_dialogo';
 import V_C2_Preg2_pregunta from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg2_pregunta';
 import V_C2_RespP2_enfermera from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_RespP2_enfermera';
+import C2_Guardar_V_preg_pcte2 from './components/Casos/Caso2/V_Guardar/C2_guardar_V_preg_pcte2';
 
 import V_C2_Preg3_dialogo from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg3_dialogo';
 import V_C2_Preg3_pregunta from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg3_pregunta';
 import V_C2_RespP3_enfermera from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_RespP3_enfermera';
+import C2_Guardar_V_preg_pcte3 from './components/Casos/Caso2/V_Guardar/C2_guardar_V_preg_pcte3';
 
 import V_C2_Preg4_dialogo from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg4_dialogo';
 import V_C2_Preg4_pregunta from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg4_pregunta';
 import V_C2_RespP4_enfermera from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_RespP4_enfermera';
+import C2_Guardar_V_preg_pcte4 from './components/Casos/Caso2/V_Guardar/C2_guardar_V_preg_pcte4';
 
 import V_C2_Preg5_dialogo from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg5_dialogo';
 import V_C2_Preg5_pregunta from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg5_pregunta';
 import V_C2_RespP5_enfermera from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_RespP5_enfermera';
+import C2_Guardar_V_preg_pcte5 from './components/Casos/Caso2/V_Guardar/C2_guardar_V_preg_pcte5';
 
-
-//pruebas de valoración escena 3 Caso 2
+//escena3
 import C2_Escena3 from './components/Casos/Caso2/escena3';
 import V_C2_PruValo1_dialogo from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo1_dialogo';
 import V_C2_PruValo1_pregunta from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo1_pregunta';
 import V_C2_RespPruValo1_enfermera from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_RespPruValo1_enfermera';
+import C2_Guardar_V_pru_valo1 from './components/Casos/Caso2/V_Guardar/C2_guardar_V_pru_valo1';
 
 import V_C2_PruValo2_dialogo from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo2_dialogo';
 import V_C2_PruValo2_pregunta from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo2_pregunta';
 import V_C2_RespPruValo2_enfermera from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_RespPruValo2_enfermera';
+import C2_Guardar_V_pru_valo2 from './components/Casos/Caso2/V_Guardar/C2_guardar_V_pru_valo2';
 
 import V_C2_PruValo3_dialogo from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo3_dialogo';
 import V_C2_PruValo3_pregunta from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo3_pregunta';
 import V_C2_RespPruValo3_enfermera from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_RespPruValo3_enfermera';
+import C2_Guardar_V_pru_valo3 from './components/Casos/Caso2/V_Guardar/C2_guardar_V_pru_valo3';
 
 import V_C2_PruValo4_dialogo from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo4_dialogo';
 import V_C2_PruValo4_pregunta from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo4_pregunta';
 import V_C2_RespPruValo4_enfermera from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_RespPruValo4_enfermera';
+import C2_Guardar_V_pru_valo4 from './components/Casos/Caso2/V_Guardar/C2_guardar_V_pru_valo4';
 
 import V_C2_PruValo5_dialogo from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo5_dialogo';
 import V_C2_PruValo5_pregunta from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo5_pregunta';
 import V_C2_RespPruValo5_enfermera from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_RespPruValo5_enfermera';
+import C2_Guardar_V_pru_valo5 from './components/Casos/Caso2/V_Guardar/C2_guardar_V_pru_valo5';
 
 import V_C2_PruValo6_dialogo from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo6_dialogo';
 import V_C2_PruValo6_pregunta from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo6_pregunta';
 import V_C2_RespPruValo6_enfermera from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_RespPruValo6_enfermera';
+import C2_Guardar_V_pru_valo6 from './components/Casos/Caso2/V_Guardar/C2_guardar_V_pru_valo6';
 
 import V_C2_PruValo7_dialogo from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo7_dialogo';
 import V_C2_PruValo7_pregunta from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo7_pregunta';
 import V_C2_RespPruValo7_enfermera from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_RespPruValo7_enfermera';
+import C2_Guardar_V_pru_valo7 from './components/Casos/Caso2/V_Guardar/C2_guardar_V_pru_valo7';
 
 import V_C2_PruValo8_dialogo from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo8_dialogo';
 import V_C2_PruValo8_pregunta from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo8_pregunta';
 import V_C2_RespPruValo8_enfermera from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_RespPruValo8_enfermera';
+import C2_Guardar_V_pru_valo8 from './components/Casos/Caso2/V_Guardar/C2_guardar_V_pru_valo8';
 
 import V_C2_PruValo9_dialogo from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo9_dialogo';
 import V_C2_PruValo9_pregunta from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo9_pregunta';
 import V_C2_RespPruValo9_enfermera from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_RespPruValo9_enfermera';
+import C2_Guardar_V_pru_valo9 from './components/Casos/Caso2/V_Guardar/C2_guardar_V_pru_valo9';
 
 import V_C2_PruValo10_dialogo from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo10_dialogo';
 import V_C2_PruValo10_pregunta from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo10_pregunta';
 import V_C2_RespPruValo10_enfermera from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_RespPruValo10_enfermera';
+import C2_Guardar_V_pru_valo10 from './components/Casos/Caso2/V_Guardar/C2_guardar_V_pru_valo10';
 
 import V_C2_PruValo11_dialogo from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo11_dialogo';
 import V_C2_PruValo11_pregunta from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo11_pregunta';
 import V_C2_RespPruValo11_enfermera from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_RespPruValo11_enfermera';
+import C2_Guardar_V_pru_valo11 from './components/Casos/Caso2/V_Guardar/C2_guardar_V_pru_valo11';
 
 import V_C2_PruValo12_dialogo from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo12_dialogo';
 import V_C2_PruValo12_pregunta from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo12_pregunta';
 import V_C2_RespPruValo12_enfermera from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_RespPruValo12_enfermera';
+import C2_Guardar_V_pru_valo12 from './components/Casos/Caso2/V_Guardar/C2_guardar_V_pru_valo12';
 
 import V_C2_PruValo13_dialogo from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo13_dialogo';
 import V_C2_PruValo13_pregunta from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo13_pregunta';
 import V_C2_RespPruValo13_enfermera from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_RespPruValo13_enfermera';
+import C2_Guardar_V_pru_valo13 from './components/Casos/Caso2/V_Guardar/C2_guardar_V_pru_valo13';
 
 import V_C2_PruValo14_dialogo from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo14_dialogo';
 import V_C2_PruValo14_pregunta from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo14_pregunta';
 import V_C2_RespPruValo14_enfermera from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_RespPruValo14_enfermera';
+import C2_Guardar_V_pru_valo14 from './components/Casos/Caso2/V_Guardar/C2_guardar_V_pru_valo14';
 
 import V_C2_PruValo15_dialogo from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo15_dialogo';
 import V_C2_PruValo15_pregunta from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo15_pregunta';
 import V_C2_RespPruValo15_enfermera from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_RespPruValo15_enfermera';
+import C2_Guardar_V_pru_valo15 from './components/Casos/Caso2/V_Guardar/C2_guardar_V_pru_valo15';
 //escena6
 import C2_Escena5 from './components/Casos/Caso2/escena5';
 import C2_Escena6 from './components/Casos/Caso2/escena6';
@@ -667,7 +687,7 @@ useEffect(() => {
        options={{
         //  headerShown: false
         headerLeft: null,
-         // title: '',
+         title: '',
           headerStyle: {
             backgroundColor: '#fbe122',
           }
@@ -1042,7 +1062,7 @@ useEffect(() => {
        options={{
         //  headerShown: false
         headerLeft: null,
-         // title: '',
+          title: '',
           headerStyle: {
             backgroundColor: '#fbe122',
           }
@@ -1171,7 +1191,7 @@ useEffect(() => {
        options={{
         //  headerShown: false
         headerLeft: null,
-         // title: '',
+          title: '',
           headerStyle: {
             backgroundColor: '#fbe122',
           }
@@ -1214,7 +1234,7 @@ useEffect(() => {
        options={{
         //  headerShown: false
         headerLeft: null,
-         // title: '',
+          title: '',
           headerStyle: {
             backgroundColor: '#fbe122',
           }
@@ -1257,7 +1277,7 @@ useEffect(() => {
        options={{
         //  headerShown: false
         headerLeft: null,
-         // title: '',
+          title: '',
           headerStyle: {
             backgroundColor: '#fbe122',
           }
@@ -1350,9 +1370,17 @@ useEffect(() => {
           headerTitleStyle: {
             fontWeight: 'bold',
           },
-        }} />        
-
-
+        }} />
+        
+        <Stack.Screen name="C2_Guardar_escena1"  component={C2_Guardar_escena1} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>        
          <Stack.Screen name="C2_Escena2"  component={C2_Escena2}
           options={{
          headerLeft: null,
@@ -1415,6 +1443,15 @@ useEffect(() => {
         }
 
        })}/>
+        <Stack.Screen name="C2_Guardar_V_preg_pcte1"  component={C2_Guardar_V_preg_pcte1} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
         <Stack.Screen name="V_C2_Preg2_dialogo" component={V_C2_Preg2_dialogo} 
         options={
@@ -1452,6 +1489,15 @@ useEffect(() => {
         }
 
        })}/>
+        <Stack.Screen name="C2_Guardar_V_preg_pcte2"  component={C2_Guardar_V_preg_pcte2} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
 
         <Stack.Screen name="V_C2_Preg3_dialogo" component={V_C2_Preg3_dialogo} 
@@ -1478,7 +1524,6 @@ useEffect(() => {
 
        })}/>
 
-
        <Stack.Screen name="V_C2_RespP3_enfermera" component={V_C2_RespP3_enfermera} 
         options={
            
@@ -1490,7 +1535,15 @@ useEffect(() => {
         }
 
        })}/>
-
+        <Stack.Screen name="C2_Guardar_V_preg_pcte3"  component={C2_Guardar_V_preg_pcte3} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
         <Stack.Screen name="V_C2_Preg4_dialogo" component={V_C2_Preg4_dialogo} 
         options={
@@ -1528,6 +1581,15 @@ useEffect(() => {
         }
 
        })}/>
+        <Stack.Screen name="C2_Guardar_V_preg_pcte4"  component={C2_Guardar_V_preg_pcte4} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
         <Stack.Screen name="V_C2_Preg5_dialogo" component={V_C2_Preg5_dialogo} 
         options={
@@ -1565,6 +1627,15 @@ useEffect(() => {
         }
 
        })}/>
+        <Stack.Screen name="C2_Guardar_V_preg_pcte5"  component={C2_Guardar_V_preg_pcte5} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
          <Stack.Screen name="V_C2_PruValo1_dialogo" component={V_C2_PruValo1_dialogo} 
         options={
@@ -1598,7 +1669,16 @@ useEffect(() => {
          borderBottomColor: route.params?.color
         }
        })}/>
-
+        <Stack.Screen name="C2_Guardar_V_pru_valo1"  component={C2_Guardar_V_pru_valo1} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
+     
        <Stack.Screen name="V_C2_PruValo2_dialogo" component={V_C2_PruValo2_dialogo} 
         options={
            
@@ -1632,6 +1712,16 @@ useEffect(() => {
         }
        })}/>
 
+        <Stack.Screen name="C2_Guardar_V_pru_valo2"  component={C2_Guardar_V_pru_valo2} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
+
        <Stack.Screen name="V_C2_PruValo3_dialogo" component={V_C2_PruValo3_dialogo} 
         options={
            
@@ -1664,6 +1754,16 @@ useEffect(() => {
          borderBottomColor: route.params?.color
         }
        })}/>
+        <Stack.Screen name="C2_Guardar_V_pru_valo3"  component={C2_Guardar_V_pru_valo3} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
+
        <Stack.Screen name="V_C2_PruValo4_dialogo" component={V_C2_PruValo4_dialogo} 
         options={
            
@@ -1696,6 +1796,17 @@ useEffect(() => {
          borderBottomColor: route.params?.color
         }
        })}/>
+
+        <Stack.Screen name="C2_Guardar_V_pru_valo4"  component={C2_Guardar_V_pru_valo4} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
+
        <Stack.Screen name="V_C2_PruValo5_dialogo" component={V_C2_PruValo5_dialogo} 
         options={
            
@@ -1728,6 +1839,17 @@ useEffect(() => {
          borderBottomColor: route.params?.color
         }
        })}/>
+
+        <Stack.Screen name="C2_Guardar_V_pru_valo5"  component={C2_Guardar_V_pru_valo5} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
+
        <Stack.Screen name="V_C2_PruValo6_dialogo" component={V_C2_PruValo6_dialogo} 
         options={
            
@@ -1760,6 +1882,17 @@ useEffect(() => {
          borderBottomColor: route.params?.color
         }
        })}/>
+
+        <Stack.Screen name="C2_Guardar_V_pru_valo6"  component={C2_Guardar_V_pru_valo6} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
+
        <Stack.Screen name="V_C2_PruValo7_dialogo" component={V_C2_PruValo7_dialogo} 
         options={
            
@@ -1792,6 +1925,16 @@ useEffect(() => {
          borderBottomColor: route.params?.color
         }
        })}/>
+
+        <Stack.Screen name="C2_Guardar_V_pru_valo7"  component={C2_Guardar_V_pru_valo7} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
          <Stack.Screen name="V_C2_PruValo8_dialogo" component={V_C2_PruValo8_dialogo} 
         options={
@@ -1826,6 +1969,16 @@ useEffect(() => {
         }
        })}/>
 
+        <Stack.Screen name="C2_Guardar_V_pru_valo8"  component={C2_Guardar_V_pru_valo8} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
+
          <Stack.Screen name="V_C2_PruValo9_dialogo" component={V_C2_PruValo9_dialogo} 
         options={
            
@@ -1858,6 +2011,16 @@ useEffect(() => {
          borderBottomColor: route.params?.color
         }
        })}/>
+
+        <Stack.Screen name="C2_Guardar_V_pru_valo9"  component={C2_Guardar_V_pru_valo9} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
          <Stack.Screen name="V_C2_PruValo10_dialogo" component={V_C2_PruValo10_dialogo} 
         options={
@@ -1892,6 +2055,16 @@ useEffect(() => {
         }
        })}/>
 
+        <Stack.Screen name="C2_Guardar_V_pru_valo10"  component={C2_Guardar_V_pru_valo10} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
+
  <Stack.Screen name="V_C2_PruValo11_dialogo" component={V_C2_PruValo11_dialogo} 
         options={
            
@@ -1924,6 +2097,16 @@ useEffect(() => {
          borderBottomColor: route.params?.color
         }
        })}/>
+
+        <Stack.Screen name="C2_Guardar_V_pru_valo11"  component={C2_Guardar_V_pru_valo11} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
          <Stack.Screen name="V_C2_PruValo12_dialogo" component={V_C2_PruValo12_dialogo} 
         options={
@@ -1958,6 +2141,16 @@ useEffect(() => {
         }
        })}/>
 
+        <Stack.Screen name="C2_Guardar_V_pru_valo12"  component={C2_Guardar_V_pru_valo12} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
+
          <Stack.Screen name="V_C2_PruValo13_dialogo" component={V_C2_PruValo13_dialogo} 
         options={
            
@@ -1990,6 +2183,16 @@ useEffect(() => {
          borderBottomColor: route.params?.color
         }
        })}/>
+
+        <Stack.Screen name="C2_Guardar_V_pru_valo13"  component={C2_Guardar_V_pru_valo13} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
          <Stack.Screen name="V_C2_PruValo14_dialogo" component={V_C2_PruValo14_dialogo} 
         options={
@@ -2024,6 +2227,16 @@ useEffect(() => {
         }
        })}/>
 
+        <Stack.Screen name="C2_Guardar_V_pru_valo14"  component={C2_Guardar_V_pru_valo14} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
+
          <Stack.Screen name="V_C2_PruValo15_dialogo" component={V_C2_PruValo15_dialogo} 
         options={
            
@@ -2057,7 +2270,15 @@ useEffect(() => {
         }
        })}/>
 
-
+        <Stack.Screen name="C2_Guardar_V_pru_valo15"  component={C2_Guardar_V_pru_valo15} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
         <Stack.Screen name="C2_Escena5" component={C2_Escena5} 
         options={

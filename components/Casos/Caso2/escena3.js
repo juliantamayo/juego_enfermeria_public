@@ -32,6 +32,31 @@ export default class menu_caso2 extends React.Component {
      'save_pregPcte1':0,
       modalVisible: false,
     };
+
+    componentDidMount= () => {
+    let keys = ['C2_save_pruValo1', 'C2_save_pruValo2','C2_save_pruValo3','save_pruValo4','save_pruValo5','save_pruValo6','save_pruValo7',
+                 'save_pruValo7','save_pruValo7','save_pruValo7','save_pruValo7','save_pruValo7','save_pruValo7','save_pruValo7',
+                 'save_pruValo7'];
+    AsyncStorage.multiGet(keys).then(result => {
+      this.setState({
+        'C2_save_pruValo1':  result[0][1],
+        'C2_save_pruValo2':  result[1][1],
+        'C2_save_pruValo3':  result[2][1],
+        'save_pruValo4':  result[3][1],
+        'save_pruValo5':  result[4][1],
+        'save_pruValo6':  result[5][1],
+        'save_pruValo7':  result[6][1],
+        'save_pruValo7':  result[7][1],
+        'save_pruValo7':  result[8][1],
+        'save_pruValo7':  result[9][1],
+        'save_pruValo7':  result[10][1],
+        'save_pruValo7':  result[11][1],
+        'save_pruValo7':  result[12][1],
+        'save_pruValo7':  result[13][1],
+        'save_pruValo7':  result[14][1],
+      });
+    });
+  };
     
  setModalVisible = (visible) => {
     this.setState({ modalVisible: visible });
@@ -39,6 +64,21 @@ export default class menu_caso2 extends React.Component {
 
 render() {
       const { modalVisible } = this.state;
+  const C2_pruValo1= parseInt(this.state.C2_save_pruValo1);
+  const C2_pruValo2= parseInt(this.state.C2_save_pruValo2);
+  const C2_pruValo3= parseInt(this.state.C2_save_pruValo3);
+  const C2_pruValo4= parseInt(this.state.save_pruValo4);
+  const C2_pruValo5= parseInt(this.state.save_pruValo5);
+  const C2_pruValo6= parseInt(this.state.save_pruValo6);
+  const C2_pruValo7= parseInt(this.state.save_pruValo7);
+  const C2_pruValo8= parseInt(this.state.save_pruValo8);
+  const C2_pruValo9= parseInt(this.state.save_pruValo9);
+  const C2_pruValo10= parseInt(this.state.save_pruValo10);
+  const C2_pruValo11= parseInt(this.state.save_pruValo11);
+  const C2_pruValo12= parseInt(this.state.save_pruValo12);
+  const C2_pruValo13= parseInt(this.state.save_pruValo13);
+  const C2_pruValo14= parseInt(this.state.save_pruValo14);
+  const C2_pruValo15= parseInt(this.state.save_pruValo15);
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
@@ -74,7 +114,19 @@ render() {
       </View>
    <View style={style.viewcolsmenu}>
 
+   {C2_pruValo1 == 1?
      <RowItemEscena3   
+      name="1"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C2_PruValo1_dialogo", {
+          title: "1 pruValo1 C2",
+          questions: C2_Pru_valo1_dialog,
+          color: "#36b1f0"
+        })
+      }
+    />:
+    <RowItemEscena3   
       name="1"
       color="#77c6c6"
       onPress={() =>
@@ -85,7 +137,19 @@ render() {
         })
       }
     />
-
+  }
+  {C2_pruValo2 == 1?
+    <RowItemEscena3
+      name="2"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C2_PruValo2_dialogo", {
+          title: "2  pruValo2 C2",
+          questions: C2_Pru_valo2_dialog,
+          color: "#799496"
+        })
+      }
+    />:
     <RowItemEscena3
       name="2"
       color="#00b9bc"
@@ -97,10 +161,22 @@ render() {
         })
       }
     />
+   }
     </View>
 
     <View style={style.viewcolsmenu}>
-
+ {C2_pruValo3 == 1?
+    <RowItemEscena3
+      name="3"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C2_PruValo3_dialogo", {
+          title: "3 C2",
+          questions: C2_Pru_valo3_dialog,
+          color: "#799496"
+        })
+      }
+    />:
     <RowItemEscena3
       name="3"
       color="#77c6c6"
@@ -112,6 +188,7 @@ render() {
         })
       }
     />
+   }
     <RowItemEscena3
       name="4"
       color="#00b9bc"
@@ -279,11 +356,6 @@ render() {
 
    </View>
 
-
-   <Text style={styles.textStyle}>
-         hola   {this.state.save_pregPcte1}
-           
-          </Text>
     </ScrollView>
   </View>
   </ImageBackground>
@@ -295,7 +367,6 @@ render() {
 const style = StyleSheet.create({
   container: {
     flex: 1,
-   // alignItems : 'stretch',
     width: "100%",
     height :'100%',
    
@@ -331,7 +402,6 @@ const style = StyleSheet.create({
     flex:1,
     alignItems : 'center',
     justifyContent : 'center',
-    //backgroundColor: 'red',
     flexDirection: "row",
     width: "100%",
     height :'100%',
@@ -339,9 +409,7 @@ const style = StyleSheet.create({
   },
   viewrowmenu:{
     flex:1,
-   // backgroundColor: 'yellow',
     flexDirection: "column"
-   
 
   }
 });

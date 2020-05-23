@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
-import { StyleSheet, AsyncStorage, Alert } from 'react-native';
+import { AsyncStorage, Alert } from 'react-native';
 import { Save, ContainerSave } from "../../../elementos/ItemGuardar";
-export default class C2_guardar_escena1 extends Component {
+
+export default class guardar_V_pru_valo7 extends Component {
   constructor(route) {
     super(route);
-
-    global.C2_hola = this.props.route.params?.C2_ex;
+    // variable global
+    global.recibe_pru_valo7 = this.props.route.params?.pv7;
   }
 state = {
-      'C2_intro':0
+      'save_pruValo7':0
    }
 
-  saveData = (value) => {
-      AsyncStorage.setItem('C2_intro',  global.C2_hola.toString());
-      this.setState({ 'C2_intro':  global.C2_hola });
+  saveData = (value2) => {
+      AsyncStorage.setItem('save_pruValo7',  global.recibe_pru_valo7.toString());
+      this.setState({ 'save_pruValo7':  global.recibe_pru_valo7 });
        Alert.alert("Mensaje","Datos guardados correctamente", [
        
         { text: "OK", onPress: () =>  this.props.navigation.navigate("M_casos") }
      ]);
        
    } 
-   
+    
   render() {
     return (
     <ContainerSave>
