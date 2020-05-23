@@ -17,8 +17,9 @@ export default class menu_caso2 extends React.Component {
     };
 
 componentDidMount= () => {
-    let keys2 = ['C2_save_pregPcte1', 'C2_save_pregPcte2','C2_save_pregPcte3','C2_save_pregPcte4','C2_save_pregPcte5','C2_intro','save_pregPcte7','C2_intro',
-     'save_pruValo1', 'save_pruValo2','save_pruValo3','save_pruValo4','save_pruValo5','save_pruValo6','save_pruValo7','save_valo','save_quiz'
+    let keys2 = ['C2_save_pregPcte1', 'C2_save_pregPcte2','C2_save_pregPcte3','C2_save_pregPcte4','C2_save_pregPcte5','C2_intro','C2_save_pruValo1','C2_save_pruValo2',
+     'C2_save_pruValo3', 'C2_save_pruValo4','C2_save_pruValo5','C2_save_pruValo6','C2_save_pruValo7','C2_save_pruValo8','C2_save_pruValo9','C2_save_pruValo10',
+    'C2_save_pruValo11','C2_save_pruValo12','C2_save_pruValo13','C2_save_pruValo14','C2_save_pruValo15','save_quiz'
     ];
     AsyncStorage.multiGet(keys2).then(result => {
       this.setState({
@@ -27,18 +28,23 @@ componentDidMount= () => {
         'C2_save_pregPcte3': result[2][1],
         'C2_save_pregPcte4': result[3][1],
         'C2_save_pregPcte5': result[4][1],
-        'C2_intro'      : result[5][1],
-        'save_pregPcte7': result[6][1],
-        'C2_intro'      : result[7][1],
-        'save_pruValo1':  result[8][1],
-        'save_pruValo2':  result[9][1],
-        'save_pruValo3':  result[10][1],
-        'save_pruValo4':  result[11][1],
-        'save_pruValo5':  result[12][1],
-        'save_pruValo6':  result[13][1],
-        'save_pruValo7':  result[14][1],
-        'save_valoracion':  result[15][1],
-        'save_quiz':      result[16][1],
+        'C2_intro'         : result[5][1],
+        'C2_save_pruValo1' : result[6][1],
+        'C2_save_pruValo2' : result[7][1],
+        'C2_save_pruValo3' : result[8][1],
+        'C2_save_pruValo4' : result[9][1],
+        'C2_save_pruValo5' : result[10][1],
+        'C2_save_pruValo6' : result[11][1],
+        'C2_save_pruValo7' : result[12][1],
+        'C2_save_pruValo8' : result[13][1],
+        'C2_save_pruValo9' : result[14][1],
+        'C2_save_pruValo10': result[15][1],
+        'C2_save_pruValo11': result[16][1],
+        'C2_save_pruValo12': result[17][1],
+        'C2_save_pruValo13': result[18][1],
+        'C2_save_pruValo14': result[19][1],
+        'C2_save_pruValo15': result[20][1],
+        'save_quiz':         result[21][1],
       });
     });
   };
@@ -52,7 +58,10 @@ render() {
     const { modalVisible } = this.state;
     const C2_Esc1= parseInt(this.state.C2_intro);
     const C2_Esc2=parseInt(this.state.C2_save_pregPcte1)+parseInt(this.state.C2_save_pregPcte2)+parseInt(this.state.C2_save_pregPcte3)+parseInt(this.state.C2_save_pregPcte4)+parseInt(this.state.C2_save_pregPcte5);
-    const C2_Esc3=parseFloat(this.state.save_pruValo1)+parseFloat(this.state.save_pruValo2)+parseFloat(this.state.save_pruValo3)+parseFloat(this.state.save_pruValo4)+parseFloat(this.state.save_pruValo5)+parseFloat(this.state.save_pruValo6)+parseFloat(this.state.save_pruValo7);
+    const C2_Esc3=parseInt(this.state.C2_save_pruValo1)+parseInt(this.state.C2_save_pruValo2)+parseInt(this.state.C2_save_pruValo3)+parseInt(this.state.C2_save_pruValo4)+parseInt(this.state.C2_save_pruValo5)+parseInt(this.state.C2_save_pruValo6)+parseInt(this.state.C2_save_pruValo7)
+    +parseInt(this.state.C2_save_pruValo8)+parseInt(this.state.C2_save_pruValo9)+parseFloat(this.state.C2_save_pruValo10)
+    +parseInt(this.state.C2_save_pruValo11)+parseInt(this.state.C2_save_pruValo12)+parseInt(this.state.C2_save_pruValo13)+parseInt(this.state.C2_save_pruValo14)+parseInt(this.state.C2_save_pruValo15);
+    
     const C2_Esc4=parseInt(this.state.save_valoracion);
     const C2_Esc5= parseInt(this.state.save_quiz);
 
@@ -124,13 +133,15 @@ render() {
       }
     />:
     null }
+    { C2_Esc3 == 15?
     <RowItem
       name="Valoración"
       color="#f9a94b"
       onPress={() =>
         this.props.navigation.navigate("C2_Escena3",{ex:'2'})
       }
-    />
+    />:
+    null}
      <RowItem
       name="Quiz"
       color="#f9e67a"
