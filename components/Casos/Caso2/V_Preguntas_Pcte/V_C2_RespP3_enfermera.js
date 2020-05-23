@@ -7,19 +7,15 @@ import { C2_ModalHistorial } from "../../../elementos/Modals";
 import { CommonActions } from '@react-navigation/native';
 import { Modal_Preguntas } from "../../../elementos/ModalsTutorial";
 import  styles  from "../../../Style_dialog.js";
-const mult =5;
 
 
-
-
-class V_C2_RespP1_enfermera extends React.Component {
+class V_C2_RespP3_enfermera extends React.Component {
    
   state = {
     modalVisible: false,
-     modalVisible2: false,
+    modalVisible2: false,
     correctCount: 0, 
-    //totalCount: this.props.navigation.getParam("questions", []).length,
-      totalCount: this.props.route.params?.questions.length,
+    totalCount: this.props.route.params?.questions.length,
     activeQuestionIndex: 0,
     answered: false,
     answerCorrect: false
@@ -32,7 +28,7 @@ class V_C2_RespP1_enfermera extends React.Component {
 
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate("C2_Escena2");
+        return this.props.navigation.navigate("C2_Guardar_V_preg_pcte3",{C2_ppcte3: 1});
       }
 
       return {
@@ -81,11 +77,8 @@ class V_C2_RespP1_enfermera extends React.Component {
 
      <View style={style.header}>   
       <View style={style.headerIzquierda}>
-     <TouchableOpacity style={ style.imageContainer } activeOpacity={0.8}
-       onPress={() => this.props.navigation.navigate('C2_Escena2')}>
-               <Image style={ style.image } source={require("../../../../assets/images/button-back.png")} />
-      </TouchableOpacity>
-</View>
+     
+     </View>
 
 
 <View style={style.headerDerecha}> 
@@ -132,4 +125,4 @@ class V_C2_RespP1_enfermera extends React.Component {
   }
 }
 
-export default V_C2_RespP1_enfermera;
+export default V_C2_RespP3_enfermera;

@@ -17,16 +17,16 @@ export default class menu_caso2 extends React.Component {
     };
 
 componentDidMount= () => {
-    let keys2 = ['save_pregPcte1', 'save_pregPcte2','save_pregPcte3','save_pregPcte4','save_pregPcte5','C2_intro','save_pregPcte7','C2_intro',
+    let keys2 = ['C2_save_pregPcte1', 'C2_save_pregPcte2','C2_save_pregPcte3','C2_save_pregPcte4','C2_save_pregPcte5','C2_intro','save_pregPcte7','C2_intro',
      'save_pruValo1', 'save_pruValo2','save_pruValo3','save_pruValo4','save_pruValo5','save_pruValo6','save_pruValo7','save_valo','save_quiz'
     ];
     AsyncStorage.multiGet(keys2).then(result => {
       this.setState({
-        'save_pregPcte1': result[0][1],
-        'save_pregPcte2': result[1][1],
-        'save_pregPcte3': result[2][1],
-        'save_pregPcte4': result[3][1],
-        'save_pregPcte5': result[4][1],
+        'C2_save_pregPcte1': result[0][1],
+        'C2_save_pregPcte2': result[1][1],
+        'C2_save_pregPcte3': result[2][1],
+        'C2_save_pregPcte4': result[3][1],
+        'C2_save_pregPcte5': result[4][1],
         'C2_intro'      : result[5][1],
         'save_pregPcte7': result[6][1],
         'C2_intro'      : result[7][1],
@@ -51,7 +51,7 @@ render() {
 
     const { modalVisible } = this.state;
     const C2_Esc1= parseInt(this.state.C2_intro);
-    const C2_Esc2=parseFloat(this.state.save_pregPcte1)+parseFloat(this.state.save_pregPcte2)+parseFloat(this.state.save_pregPcte3)+parseFloat(this.state.save_pregPcte4)+parseFloat(this.state.save_pregPcte5)+parseFloat(this.state.save_pregPcte6)+parseFloat(this.state.save_pregPcte7);
+    const C2_Esc2=parseInt(this.state.C2_save_pregPcte1)+parseInt(this.state.C2_save_pregPcte2)+parseInt(this.state.C2_save_pregPcte3)+parseInt(this.state.C2_save_pregPcte4)+parseInt(this.state.C2_save_pregPcte5);
     const C2_Esc3=parseFloat(this.state.save_pruValo1)+parseFloat(this.state.save_pruValo2)+parseFloat(this.state.save_pruValo3)+parseFloat(this.state.save_pruValo4)+parseFloat(this.state.save_pruValo5)+parseFloat(this.state.save_pruValo6)+parseFloat(this.state.save_pruValo7);
     const C2_Esc4=parseInt(this.state.save_valoracion);
     const C2_Esc5= parseInt(this.state.save_quiz);
@@ -115,13 +115,15 @@ render() {
       }
     />
     : null }
+    { C2_Esc2 == 5? 
     <RowItem
       name="Pruebas de valoración"
        color="#f9e67a"
       onPress={() =>
         this.props.navigation.navigate("C2_Escena3",{ex:'2'})
       }
-    />
+    />:
+    null }
     <RowItem
       name="Valoración"
       color="#f9a94b"

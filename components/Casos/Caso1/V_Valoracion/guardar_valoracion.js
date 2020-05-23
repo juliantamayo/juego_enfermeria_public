@@ -63,14 +63,17 @@ state = {
             // array1=<Text style={styles.text}>son iguales</Text>;
            // }
              if (JSON.stringify(a1) === JSON.stringify(a2)) {
-                 array1=<Text style={styles.textcarita}>😎</Text>;
+                 array1=<View style={styles.viewcaritas}>
+                        <Text style={styles.textmensaje_carita}>Bien hecho</Text>
+                        <Text style={styles.carita}>😎</Text>
+                        </View>;
             }//else if (JSON.stringify(a1[i])==0 && JSON.stringify(a2[i])==0) {
              //    array2=<Text style={styles.text}>✔</Text>;
            // }
             else if (JSON.stringify(a1) !== JSON.stringify(a2)) {
                  array2=<View style={styles.viewcaritas}>
                         <Text style={styles.textmensaje_carita2}>Ha faltado o se ha seleccionado una de más</Text>
-                        <Text style={styles.textcarita}>😞</Text>
+                        <Text style={styles.carita}>😞</Text>
                         </View>;
             }//else  if (JSON.stringify(a1[i])==1 && JSON.stringify(a2[i])==0){
               //   array4=<Text style={styles.text}>elegiste una que no era</Text>;
@@ -373,6 +376,15 @@ const styles = StyleSheet.create({
   fontWeight: 'bold',
   borderWidth: 2,
   backgroundColor: "rgba(255,0, 0, 0.7)",
+  paddingVertical: 5,
+  paddingRight : 5,
+  paddingLeft :5,
+  color: "white"
+},
+carita:{
+  fontSize: 40,
+  textAlign: "center",
+  fontWeight: 'bold',
   paddingVertical: 5,
   paddingRight : 5,
   paddingLeft :5,
