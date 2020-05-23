@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpacity,  Image, Text, AsyncStorage,Dimensions } from 'react-native';
+import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpacity,  Image, Text, AsyncStorage} from 'react-native';
 
 import styles from './../../Style.js';
 
@@ -13,7 +13,6 @@ import C1_Pru_valo7_dialog from "../../data/C1_data/C1_Pru_valoracion/D_C1_Pru_V
 
 import { ButtonContainer, RowItemEscena3 } from "../../elementos/RowItem";
 import { Modal_C1_escena3 } from "../../elementos/ModalsTutorial";
-const { width, height } = Dimensions.get('window')
 
 
 export default class escena3 extends React.Component {
