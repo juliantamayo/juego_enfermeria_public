@@ -12,7 +12,12 @@ import {StyleSheet,
 
 
 export default class result_qJ1 extends React.Component  {
+state = {
 
+
+    tot: this.props.route.params?.t
+    
+  };
 
   render(){
 

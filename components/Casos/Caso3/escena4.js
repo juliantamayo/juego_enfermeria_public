@@ -17,17 +17,14 @@ export default class C3_escena4 extends React.Component {
       check11:false,check12:false,check13:false,check14:false,check15:false,
       check16:false,check17:false,check18:false,check19:false,check20:false,
       check21:false,check22:false,check23:false,check24:false,check25:false,
-      check26:false,check27:false,check28:false,check29:false,check30:false,
-      check31:false,check32:false,check33:false,check34:false,check35:false,check36:false,
+      check26:false,check27:false,check28:false,
 
       caja1:0,caja2:0,caja3:0,caja4:0,caja5:0,
       caja6:0,caja7:0,caja8:0,caja9:0,caja10:0,
       caja11:0,caja12:0,caja13:0,caja14:0,caja15:0,
       caja16:0,caja17:0,caja18:0,caja19:0,caja20:0,
       caja21:0,caja22:0,caja23:0,caja24:0,caja25:0,
-      caja26:0,caja27:0,caja28:0,caja29:0,caja30:0,
-      caja31:0,caja32:0,caja33:0,caja34:0,caja35:0,caja36:0,
-
+      caja26:0,caja27:0,caja28:0
     }
   }
 
@@ -45,12 +42,10 @@ export default class C3_escena4 extends React.Component {
   CheckBoxTest12(){this.setState({check12:!this.state.check12})}  CheckBoxTest25(){this.setState({check25:!this.state.check25})}
   CheckBoxTest13(){this.setState({check13:!this.state.check13})}
 
-  CheckBoxTest26(){this.setState({check26:!this.state.check26})}   CheckBoxTest32(){this.setState({check32:!this.state.check32})}
-  CheckBoxTest27(){this.setState({check27:!this.state.check27})}   CheckBoxTest33(){this.setState({check33:!this.state.check33})}
-  CheckBoxTest28(){this.setState({check28:!this.state.check28})}   CheckBoxTest34(){this.setState({check34:!this.state.check34})}
-  CheckBoxTest29(){this.setState({check29:!this.state.check29})}   CheckBoxTest35(){this.setState({check35:!this.state.check35})}
-  CheckBoxTest30(){this.setState({check30:!this.state.check30})}   CheckBoxTest36(){this.setState({check36:!this.state.ch36eck36})}
-  CheckBoxTest31(){this.setState({check31:!this.state.check31})}
+  CheckBoxTest26(){this.setState({check26:!this.state.check26})} 
+  CheckBoxTest27(){this.setState({check27:!this.state.check27})}  
+  CheckBoxTest28(){this.setState({check28:!this.state.check28})}  
+  
 
 
 validarCheckBox = (value) => {
@@ -64,13 +59,11 @@ validarCheckBox = (value) => {
   const vali19=this.state.caja19;  const vali20=this.state.caja20;  const vali21=this.state.caja21;
   const vali22=this.state.caja22;  const vali23=this.state.caja23;  const vali24=this.state.caja24;
   const vali25=this.state.caja25;  const vali26=this.state.caja26;  const vali27=this.state.caja27;
-  const vali28=this.state.caja28;  const vali29=this.state.caja29;  const vali30=this.state.caja30;
-  const vali31=this.state.caja31;  const vali32=this.state.caja32;  const vali33=this.state.caja33;
-  const vali34=this.state.caja34;  const vali35=this.state.caja35;  const vali36=this.state.caja36;
+  const vali28=this.state.caja28; 
 
  var checkArray = [ vali1, vali2, vali3, vali4, vali5, vali6,vali7,vali8,vali9,vali10,vali11,vali12,
                          vali13,vali14,vali15,vali16,vali17,vali18,vali19,vali20,vali21,vali22,vali23,vali24,vali25,
-                         vali26,vali27,vali28,vali29,vali30,vali31,vali32,vali33,vali34,vali35,vali36 ];
+                         vali26,vali27,vali28];
  var suma = 0;                        
 
   checkArray.forEach (function(checkArray){
@@ -80,12 +73,10 @@ validarCheckBox = (value) => {
   if (vali1==0 && vali2==0   && vali3==0  && vali4==0  && vali5==0  && vali6==0  && vali7==0  && 
       vali8==0  && vali9==0  && vali10==0 && vali11==0 && vali12==0 && vali13==0 && vali14==0 &&
       vali15==0 && vali16==0 && vali17==0 && vali18==0 && vali19==0 && vali20==0 && vali21==0 &&
-      vali22==0 && vali23==0 && vali24==0 && vali25==0 && vali26==0 && vali27==0 && vali28==0 &&
-      vali29==0 && vali30==0 && vali31==0 && vali32==0 && vali33==0 && vali34==0 && vali35==0 &&
-      vali36==0) {
+      vali22==0 && vali23==0 && vali24==0 && vali25==0 && vali26==0 && vali27==0 && vali28==0 ) {
        Alert.alert("Mensaje","No ha seleccionado ningun hallazgo ");
 
-    }else if (suma >=30) {
+    }else if (suma >=24) {
        Alert.alert("Mensaje","Debes elegir bien los hallazgos del paciente");
     }
     else {
@@ -93,7 +84,7 @@ validarCheckBox = (value) => {
        
         { text: "OK", onPress: () =>  this.props.navigation.navigate("C3_Guardr_valo",{C3_arraycheckR:[ vali1, vali2, vali3, vali4, vali5, vali6,vali7,vali8,vali9,vali10,vali11,vali12,
                          vali13,vali14,vali15,vali16,vali17,vali18,vali19,vali20,vali21,vali22,vali23,vali24,vali25,
-                         vali26,vali27,vali28,vali29,vali30,vali31,vali32,vali33,vali34,vali35,vali36 ]}) }
+                         vali26,vali27,vali28]}) }
      ]);
     }  
    } 
@@ -113,7 +104,7 @@ render() {
     
      <View style={styles.headerIzquierda}>
      <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-       onPress={() => this.props.navigation.navigate('M_caso1')}>
+       onPress={() => this.props.navigation.navigate('M_caso3')}>
                <Image style={ styles.image } source={require("../../../assets/images/button-back.png")} />
       </TouchableOpacity>
       </View>
@@ -133,7 +124,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Cuenta con un adecuado estado de salud</Text>
+        <Text style={style.text}>1. Paciente alerta, cognitivamente orientado.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -146,7 +137,7 @@ render() {
         <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Es una persona activa, pensante, camina adecuadamente, es independiente.</Text>
+        <Text style={style.text}>2. Desorientado alopsiquicamente (tiempo y lugar).</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -159,7 +150,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Ve bien de cerca y lejos, percibe olores, sabores y   percibe la sensación táctil y dolorosa sin dificultad en todas las áreas del cuerpo</Text>
+        <Text style={style.text}>3. Capacidad de juzgar objetivamente las situaciones y memoria conservada.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -172,7 +163,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Desorientado alopsiquicamente (tiempo y lugar).</Text>
+        <Text style={style.text}>4. Presenta signos y síntomas de dolor.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -185,7 +176,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Las respuestas emocionales son acordes al funcionamiento normal en su vida cotidiana y la expresión gestual corresponde a la reacción emocional verbalizada.</Text>
+        <Text style={style.text}>5.  Afasia de Expresión y apraxia verbal.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -198,7 +189,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>El paciente que se encuentra bien vestido, alegre, con buen lenguaje y entendible, con marcha estable y espontaneo en lo que responde sin titubear.</Text>
+        <Text style={style.text}>6.  Presenta epigastralgia.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -211,7 +202,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Fascias de dolor</Text>
+        <Text style={style.text}>7.  Está en la capacidad de percibir y describir verbalmente su situación.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -224,7 +215,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Memoria conservada</Text>
+        <Text style={style.text}>8.  Fascias de dolor.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -237,7 +228,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Desorientado alopsiquicamente</Text>
+        <Text style={style.text}>9.  Fuerza muscular grado 2 en miembro inferior derecho - hemiparesia derecha, espasticidad grado 3.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -250,7 +241,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Juicio conservado, </Text>
+        <Text style={style.text}>10.  Postura levemente inclinada hacia adelante, movimientos un poco más lentos.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -263,7 +254,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Bradipsiquia.</Text>
+        <Text style={style.text}>11.  Postura erguida, movimientos normales, marcha normal.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -276,7 +267,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Patrón de sueño sin alteraciones.</Text>
+        <Text style={style.text}>12.  Paciente que en la palpación abdominal superficial y profunda presenta fascias y manifestaciones de dolor, al llegar a la zona del epigastrio este se hace más intenso e insoportable.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -289,7 +280,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Capacidad de diferenciación de olores.</Text>
+        <Text style={style.text}>13.  Astereognosia en ambos brazos.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -302,7 +293,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Incapacidad de diferenciación de olores</Text>
+        <Text style={style.text}>14.  La faringe de color rojo intenso evidencia la inflamación de la mucosa de la faringe.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -315,7 +306,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Al estimulo con la  torunda de algodón cerca de las fosas nasales presenta  estornudo, parpadeo y el lagrimeo.</Text>
+        <Text style={style.text}>15.  Ptosis palpebral derecha.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -328,7 +319,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Identificación de sensación de calor y frio en áreas simétricas.</Text>
+        <Text style={style.text}>16.  presencia de reflejo nauseoso sin el estímulo.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -341,7 +332,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>En la palpación se evidencia simetría facial y contracción de la mandíbula de manera simétrica.</Text>
+        <Text style={style.text}>17.  Sin presencia de reflejo nauseoso.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -354,7 +345,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Afasia de Expresión y apraxia verbal.</Text>
+        <Text style={style.text}>18.  Cuello simétrico y buen desarrollo muscular, a la palpación piel fría y sensibilidad conservada, sin adenopatías no se palpa tiroides.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -367,7 +358,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Asimetría facial y contracción de la mandíbula de manera asimétrica.</Text>
+        <Text style={style.text}>19.  Asimetría facial y contracción de la mandíbula de manera asimétrica.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -380,7 +371,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>En la percusión contracción rápida en ambos lados del musculo maseterino.</Text>
+        <Text style={style.text}>20.  pulso carotideo aumentado por el dolor.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -393,7 +384,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Durante la valoración por medio de la inspección se evidencia simetría en ambas hemilenguas.</Text>
+        <Text style={style.text}>21.  A nivel del tórax se evidencia Buen estado nutricional y desarrollo musculo esquelético.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -406,7 +397,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Punta de la lengua desviada, sin capacidad de ejercer fuerza hacia las mejillas.</Text>
+        <Text style={style.text}>22.  piel integra, pero sudorosa por dolor, tórax elíptico, simétrico.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -419,7 +410,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>La punta de la lengua se encuentra centrada, fuerza de la lengua ejercida hacia las mejillas.</Text>
+        <Text style={style.text}>23.  Paciente dependiente.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -432,7 +423,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>La conducción ósea es la que más predomina</Text>
+        <Text style={style.text}>24.  Frémito vocal presente igual en ambos hemitórax, resonancia en todos los campos pulmonares, ruido traqueal, murmullo bronco vesicular y vesicular presentes. PMI visible en el 5 EII con LMC.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -445,7 +436,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>La conducción área es la que más predomina, </Text>
+        <Text style={style.text}>25.  Marcha hemipléjica.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -458,7 +449,7 @@ render() {
     <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Paciente que lateraliza de lado derecho</Text>
+        <Text style={style.text}>26.  Se evidencia nauseas con presencia de borborigmos en todos los cuadrantes.  No ruidos vasculares.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -471,7 +462,7 @@ render() {
     <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>El paciente no lateraliza las vibraciones del diapasón.</Text>
+        <Text style={style.text}>27.  Se percibe sonido timpánico en zona de estómago e intestino subyacente, mate en hígado y bazo.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -484,7 +475,7 @@ render() {
     <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Se evidencia una flexión leve hacia el hombro.</Text>
+        <Text style={style.text}>28.  Paciente con capacidad para desarrollar prueba dedo-nariz coordinado, firme y rápido, que percibe sensación táctil y dolorosa en todas las áreas del cuerpo.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -495,110 +486,6 @@ render() {
        </View>
     <Text style={style.text_transparent}>Is CheckBox 28 {this.state.check28 ? this.state.caja28=1: this.state.caja28=0}</Text>
     <View style={styles.margen2}></View>
-       <View style={style.viewcheckbody}>
-       <View style={style.viewchecktext}>
-        <Text style={style.text}>Al percutir el tendón del tríceps se consigue la extensión del antebrazo por encima del brazo.</Text>
-        </View>
-         <View style={style.viewcheck}>
-       <CheckBox  
-                   value={this.state.check29} 
-                    onChange={()=>this.CheckBoxTest29()} 
-        />
-       </View>
-       </View>
-    <Text style={style.text_transparent}>Is CheckBox 29 {this.state.check29 ? this.state.caja29=1: this.state.caja29=0}</Text>
-    <View style={styles.margen2}></View>
-       <View style={style.viewcheckbody}>
-       <View style={style.viewchecktext}>
-        <Text style={style.text}>Al percutir el punto medio de la rodilla se evidencia la flexión de la rodilla.</Text>
-        </View>
-         <View style={style.viewcheck}>
-       <CheckBox  
-                   value={this.state.check30} 
-                    onChange={()=>this.CheckBoxTest30()} 
-        />
-       </View>
-       </View>
-    <Text style={style.text_transparent}>Is CheckBox 30 {this.state.check30 ? this.state.caja30=1: this.state.caja30=0}</Text>
-    <View style={styles.margen2}></View>
-       <View style={style.viewcheckbody}>
-       <View style={style.viewchecktext}>
-        <Text style={style.text}>Se puede evidenciar el movimiento del pie en flexión plantar.</Text>
-        </View>
-         <View style={style.viewcheck}>
-       <CheckBox  
-                   value={this.state.check31} 
-                    onChange={()=>this.CheckBoxTest31()} 
-        />
-       </View>
-       </View>
-    <Text style={style.text_transparent}>Is CheckBox 31{this.state.check31 ? this.state.caja31=1: this.state.caja31=0}</Text>
-    <View style={styles.margen2}></View>
-       <View style={style.viewcheckbody}>
-       <View style={style.viewchecktext}>
-        <Text style={style.text}>El movimiento de la pared abdominal hacia el lado que se está estimulando con el lápiz.</Text>
-        </View>
-         <View style={style.viewcheck}>
-       <CheckBox  
-                   value={this.state.check32} 
-                    onChange={()=>this.CheckBoxTest32()} 
-        />
-       </View>
-       </View>
-    <Text style={style.text_transparent}>Is CheckBox 32 {this.state.check32 ? this.state.caja32=1: this.state.caja32=0}</Text>
-    <View style={styles.margen2}></View>
-       <View style={style.viewcheckbody}>
-       <View style={style.viewchecktext}>
-        <Text style={style.text}>Flexión plantar de los dedos de los pies en forma de abanico.</Text>
-        </View>
-         <View style={style.viewcheck}>
-       <CheckBox  
-                   value={this.state.check33} 
-                    onChange={()=>this.CheckBoxTest33()} 
-        />
-       </View>
-       </View>
-    <Text style={style.text_transparent}>Is CheckBox 33 {this.state.check33 ? this.state.caja33=1: this.state.caja33=0}</Text>
-    <View style={styles.margen2}></View>
-       <View style={style.viewcheckbody}>
-       <View style={style.viewchecktext}>
-        <Text style={style.text}>El paciente tiene la capacidad de discriminar los dos puntos en ambas partes del cuerpo, siendo este simétrico.</Text>
-        </View>
-         <View style={style.viewcheck}>
-       <CheckBox  
-                   value={this.state.check34} 
-                    onChange={()=>this.CheckBoxTest34()} 
-        />
-       </View>
-       </View>
-    <Text style={style.text_transparent}>Is CheckBox 34 {this.state.check34 ? this.state.caja34=1: this.state.caja34=0}</Text>
-    <View style={styles.margen2}></View>
-       <View style={style.viewcheckbody}>
-       <View style={style.viewchecktext}>
-        <Text style={style.text}>Astereognosia en ambos brazos.</Text>
-        </View>
-         <View style={style.viewcheck}>
-       <CheckBox  
-                   value={this.state.check35} 
-                    onChange={()=>this.CheckBoxTest35()} 
-        />
-       </View>
-       </View>
-    <Text style={style.text_transparent}>Is CheckBox 35 {this.state.check35 ? this.state.caja35=1: this.state.caja35=0}</Text>
-    <View style={styles.margen2}></View>
-       <View style={style.viewcheckbody}>
-       <View style={style.viewchecktext}>
-        <Text style={style.text}>Estereognosia en ambos brazos.</Text>
-        </View>
-         <View style={style.viewcheck}>
-       <CheckBox  
-                   value={this.state.check36} 
-                    onChange={()=>this.CheckBoxTest36()} 
-        />
-       </View>
-       </View>
-    <Text style={style.text_transparent}>Is CheckBox 36 {this.state.check36 ? this.state.caja36=1: this.state.caja36=0}</Text>
-       
   
                 <TouchableOpacity onPress={this.validarCheckBox} style={style.button}>
                   <Text style={style.textBoton}>Continuar</Text>

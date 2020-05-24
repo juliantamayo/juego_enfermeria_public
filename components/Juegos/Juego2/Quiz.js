@@ -73,8 +73,8 @@ class Quiz extends React.Component {
     this.setState(state => {
       const nextIndex = state.activeQuestionIndex + 1;
 
-      if (nextIndex >= state.totalCount) {
-       // return this.props.navigation.popToTop();
+      if (nextIndex == state.totalCount) {
+       var T= this.state.timer='-2';
         return this.props.navigation.navigate('Result_Q',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
       }else if (this.state.timer == -1) {
        return{ modalfinjuego:true}

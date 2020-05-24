@@ -93,7 +93,7 @@ render() {
         })
       }
     />
-  { C3_Esc1 >= 2?
+  { C3_Esc1 == 2?
     <RowItem
       name="Preguntas a Paciente"
       color="#f9a94b"
@@ -105,7 +105,7 @@ render() {
       }
     />:
     null}
- {C3_Esc2 >= 4?
+ {C3_Esc2 == 4?
     <RowItem
       name="Pruebas de valoración"
        color="#f9e67a"
@@ -114,13 +114,16 @@ render() {
       }
     />:
     null}
+ {C3_Esc3 == 5?   
     <RowItem
       name="Valoración"
       color="#f9a94b"
       onPress={() =>
-        this.props.navigation.navigate("Variables",{ex:'2'})
+        this.props.navigation.navigate("C3_Escena4")
       }
-    />
+    />:
+   null}
+   {C3_Esc4 == 1? 
     <RowItem
       name="Quiz"
       color="#f9e67a"
@@ -131,15 +134,17 @@ render() {
           color: "#20b2aa"
       })
       }
-    />
-
+    />:
+    null}
+  {C3_Esc5 == 7?
     <RowItem
       name="Proceso de atención de Enfermeria"
       color="#f9a94b"
       onPress={() =>
         this.props.navigation.navigate("C3_Escena6",{ex:'2'})
       }
-    />
+    />:
+    null}
     </ScrollView>
   </View>
   </ImageBackground>

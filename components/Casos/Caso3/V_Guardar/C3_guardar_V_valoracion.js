@@ -21,7 +21,7 @@ constructor(route) {
 
 state = {
        C3_arraycheckRecibe:this.props.route.params?.C3_arraycheckR,
-       C3_arraycomparar:[1,1,1,0,1,1,0,1,0,1,0,1,1,0,1,1,1,0,0,1,1,0,1,0,1,0,1,1,1,1,1,1,1,1,0,1],
+       C3_arraycomparar:[1,0,1,1,0,1,1,1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,0,1,1,1],
        'C3_save_valoracion':0
    }
 
@@ -103,7 +103,7 @@ state = {
       
       {a1[0]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Cuenta con un adecuado estado de salud</Text>
+             <Text style={styles.textCheck}>1.  Paciente alerta, cognitivamente orientado.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -111,15 +111,15 @@ state = {
       </View>: null}
       {a1[1]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Es una persona activa, pensante, camina adecuadamente, es independiente.</Text>
+             <Text style={styles.textCheck}>2.  Desorientado alopsiquicamente (tiempo y lugar).</Text>
            </View>
            <View style={styles.viewcheck}>
-             <Text  style={styles.textcorrect}>✔</Text>
+             <Text  style={styles.textIncorrect}>X</Text>
            </View>
       </View>: null}
       {a1[2]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>3.  Ve bien de cerca y lejos, percibe olores, sabores y percibe la sensación táctil y dolorosa sin dificultad en todas las áreas del cuerpo.</Text>
+             <Text style={styles.textCheck}>3.  Capacidad de juzgar objetivamente las situaciones y memoria conservada.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -127,23 +127,23 @@ state = {
       </View>: null}
       {a1[3]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>4.  Desorientado alopsiquicamente (tiempo y lugar).</Text>
-           </View>
-           <View style={styles.viewcheck}>
-             <Text  style={styles.textIncorrect}>X</Text>
-           </View>
-      </View>: null}
-      {a1[4]==1 ?  <View style={styles.viewcheckbody}>
-           <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>5.  Las respuestas emocionales son acordes al funcionamiento normal en su vida cotidiana y la expresión gestual corresponde a la reacción emocional verbalizada.</Text>
+             <Text style={styles.textCheck}>4.  Presenta signos y síntomas de dolor.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
            </View>
       </View>: null}
+      {a1[4]==1 ?  <View style={styles.viewcheckbody}>
+           <View style={styles.viewchecktext}>
+             <Text style={styles.textCheck}>5.  Afasia de Expresión y apraxia verbal.</Text>
+           </View>
+           <View style={styles.viewcheck}>
+             <Text  style={styles.textIncorrect}>X</Text>
+           </View>
+      </View>: null}
       {a1[5]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>6.  El paciente que se encuentra bien vestido, alegre, con buen lenguaje y entendible, con marcha estable y espontaneo en lo que responde sin titubear.</Text>
+             <Text style={styles.textCheck}>6.  Presenta epigastralgia</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -151,15 +151,15 @@ state = {
       </View>: null}
       {a1[6]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>7.  Fascias de dolor</Text>
+             <Text style={styles.textCheck}>7.  Está en la capacidad de percibir y describir verbalmente su situación</Text>
            </View>
            <View style={styles.viewcheck}>
-             <Text  style={styles.textIncorrect}>X</Text>
+             <Text  style={styles.textcorrect}>✔</Text>
            </View>
       </View>: null}
       {a1[7]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>8.  Memoria conservada.</Text>
+             <Text style={styles.textCheck}>8.  Fascias de dolor.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -167,7 +167,7 @@ state = {
       </View>: null}
       {a1[8]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>9.  Desorientado alopsiquicamente.</Text>
+             <Text style={styles.textCheck}>9.  Fuerza muscular grado 2 en miembro inferior derecho - hemiparesia derecha, espasticidad grado 3.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
@@ -175,7 +175,7 @@ state = {
       </View>: null}
       {a1[9]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>10.  Juicio conservado.</Text>
+             <Text style={styles.textCheck}>10.  Postura levemente inclinada hacia adelante, movimientos un poco más lentos.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -183,7 +183,7 @@ state = {
       </View>: null}
       {a1[10]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>11.  Bradipsiquia.</Text>
+             <Text style={styles.textCheck}>11.  Postura erguida, movimientos normales, marcha normal.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
@@ -191,7 +191,7 @@ state = {
       </View>: null}
       {a1[11]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>12.  Patrón de sueño sin alteraciones.</Text>
+             <Text style={styles.textCheck}>12.  Paciente que en la palpación abdominal superficial y profunda presenta fascias y manifestaciones de dolor, al llegar a la zona del epigastrio este se hace más intenso e insoportable.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -199,31 +199,31 @@ state = {
       </View>: null}
       {a1[12]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>13.  Capacidad de diferenciación de olores.</Text>
-           </View>
-           <View style={styles.viewcheck}>
-             <Text  style={styles.textcorrect}>✔</Text>
-           </View>
-      </View>: null}
-      {a1[13]==1 ? <View style={styles.viewcheckbody}>
-           <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>14.  Incapacidad de diferenciación de olores</Text>
+             <Text style={styles.textCheck}>13. Astereognosia en ambos brazos.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
            </View>
       </View>: null}
-      {a1[14]==1 ? <View style={styles.viewcheckbody}>
+      {a1[13]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>15.  Al estimulo con la torunda de algodón cerca de las fosas nasales presenta estornudo, parpadeo y el lagrimeo.</Text>
+             <Text style={styles.textCheck}>14.  La faringe de color rojo intenso evidencia la inflamación de la mucosa de la faringe.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
            </View>
       </View>: null}
+      {a1[14]==1 ? <View style={styles.viewcheckbody}>
+           <View style={styles.viewchecktext}>
+             <Text style={styles.textCheck}>15.  Ptosis palpebral derecha.</Text>
+           </View>
+           <View style={styles.viewcheck}>
+             <Text  style={styles.textIncorrect}>X</Text>
+           </View>
+      </View>: null}
       {a1[15]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>16.   Identificación de sensación de calor y frio en áreas simétricas.</Text>
+             <Text style={styles.textCheck}>16.  Presencia de reflejo nauseoso sin el estímulo.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -231,18 +231,18 @@ state = {
       </View>: null}
       {a1[16]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>17.   En la palpación se evidencia simetría facial y contracción de la mandíbula de manera simétrica</Text>
+             <Text style={styles.textCheck}>17.  Sin presencia de reflejo nauseoso.</Text>
            </View>
            <View style={styles.viewcheck}>
-             <Text  style={styles.textcorrect}>✔</Text>
+             <Text  style={styles.textIncorrect}>X</Text>
            </View>
       </View>: null}
       {a1[17]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>18.  Afasia de Expresión y apraxia verbal.</Text>
+             <Text style={styles.textCheck}>18.  Cuello simétrico y buen desarrollo muscular, a la palpación piel fría y sensibilidad conservada, sin adenopatías no se palpa tiroides.</Text>
            </View>
            <View style={styles.viewcheck}>
-             <Text  style={styles.textIncorrect}>X</Text>
+             <Text  style={styles.textcorrect}>✔</Text>
            </View>
       </View>: null}
       {a1[18]==1 ? <View style={styles.viewcheckbody}>
@@ -255,7 +255,7 @@ state = {
       </View>: null}
       {a1[19]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>20.  En la percusión contracción rápida en ambos lados del musculo maseterino.</Text>
+             <Text style={styles.textCheck}>20.  Pulso carotideo aumentado por el dolor.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -263,7 +263,7 @@ state = {
       </View>: null}
       {a1[20]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>21.  Durante la valoración por medio de la inspección se evidencia simetría en ambas hemilenguas.</Text>
+             <Text style={styles.textCheck}>21.  A nivel del tórax se evidencia Buen estado nutricional y desarrollo musculo esquelético.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -271,47 +271,47 @@ state = {
       </View>: null}
       {a1[21]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>22.  Punta de la lengua desviada, sin capacidad de ejercer fuerza hacia las mejillas</Text>
+             <Text style={styles.textCheck}>22.  Piel integra, pero sudorosa por dolor, tórax elíptico, simétrico.</Text>
            </View>
            <View style={styles.viewcheck}>
-             <Text  style={styles.textIncorrect}>X</Text>
+             <Text  style={styles.textcorrect}>✔</Text>
            </View>
       </View>: null}
       {a1[22]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>23.   La punta de la lengua se encuentra centrada, fuerza de la lengua ejercida hacia las mejillas.</Text>
+             <Text style={styles.textCheck}>23.  Paciente dependiente.</Text>
            </View>
            <View style={styles.viewcheck}>
-             <Text  style={styles.textcorrect}>✔</Text>
+             <Text  style={styles.textIncorrect}>X</Text>
            </View>
       </View>: null}
       {a1[23]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>24.  La conducción ósea es la que más predomina</Text>
-           </View>
-           <View style={styles.viewcheck}>
-             <Text  style={styles.textIncorrect}>X</Text>
-           </View>
-      </View>: null}
-      {a1[24]==1 ?<View style={styles.viewcheckbody}>
-           <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>25.   La conducción área es la que más predomina, </Text>
+             <Text style={styles.textCheck}>24.  Frémito vocal presente igual en ambos hemitórax, resonancia en todos los campos pulmonares, ruido traqueal, murmullo bronco vesicular y vesicular presentes. PMI visible en el 5 EII con LMC.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
            </View>
       </View>: null}
-      {a1[25]==1 ?<View style={styles.viewcheckbody}>
+      {a1[24]==1 ?<View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>26.  Paciente que lateraliza de lado derecho.</Text>
+             <Text style={styles.textCheck}>25.  Marcha hemipléjica.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
            </View>
       </View>: null}
+      {a1[25]==1 ?<View style={styles.viewcheckbody}>
+           <View style={styles.viewchecktext}>
+             <Text style={styles.textCheck}>26.  Se evidencia nauseas con presencia de borborigmos en todos los cuadrantes.  No ruidos vasculares.</Text>
+           </View>
+           <View style={styles.viewcheck}>
+             <Text  style={styles.textcorrect}>✔</Text>
+           </View>
+      </View>: null}
       {a1[26]==1 ?<View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>27.  El paciente no lateraliza las vibraciones del diapasón.</Text>
+             <Text style={styles.textCheck}>27.  Se percibe sonido timpánico en zona de estómago e intestino subyacente, mate en hígado y bazo.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -319,71 +319,7 @@ state = {
       </View>: null}
       {a1[27]==1 ?<View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>28.  Se evidencia una flexión leve hacia el hombro.</Text>
-           </View>
-           <View style={styles.viewcheck}>
-             <Text  style={styles.textcorrect}>✔</Text>
-           </View>
-      </View>: null}
-      {a1[28]==1 ?<View style={styles.viewcheckbody}>
-           <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>29.   Al percutir el tendón del tríceps se consigue la extensión del antebrazo por encima del brazo,</Text>
-           </View>
-           <View style={styles.viewcheck}>
-             <Text  style={styles.textcorrect}>✔</Text>
-           </View>
-      </View>: null}
-      {a1[29]==1 ?<View style={styles.viewcheckbody}>
-           <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>30.   Al percutir el punto medio de la rodilla se evidencia la flexión de la rodilla.</Text>
-           </View>
-           <View style={styles.viewcheck}>
-             <Text  style={styles.textcorrect}>✔</Text>
-           </View>
-      </View>: null}
-      {a1[30]==1 ?<View style={styles.viewcheckbody}>
-           <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>31.   Se puede evidenciar el movimiento del pie en flexión plantar.</Text>
-           </View>
-           <View style={styles.viewcheck}>
-             <Text  style={styles.textcorrect}>✔</Text>
-           </View>
-      </View>: null}
-      {a1[31]==1 ?<View style={styles.viewcheckbody}>
-           <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>32.   El movimiento de la pared abdominal hacia el lado que se está estimulando con el lápiz.</Text>
-           </View>
-           <View style={styles.viewcheck}>
-             <Text  style={styles.textcorrect}>✔</Text>
-           </View>
-      </View>: null}
-      {a1[32]==1 ?<View style={styles.viewcheckbody}>
-           <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>33.  Flexión plantar de los dedos de los pies en forma de abanico.</Text>
-           </View>
-           <View style={styles.viewcheck}>
-             <Text  style={styles.textcorrect}>✔</Text>
-           </View>
-      </View>: null}
-      {a1[33]==1 ?<View style={styles.viewcheckbody}>
-           <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>34.  El paciente tiene la capacidad de discriminar los dos puntos en ambas partes del cuerpo, siendo este simétrico.</Text>
-           </View>
-           <View style={styles.viewcheck}>
-             <Text  style={styles.textcorrect}>✔</Text>
-           </View>
-      </View>: null}
-      {a1[34]==1 ?<View style={styles.viewcheckbody}>
-           <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>35.  Astereognosia en ambos brazos.</Text>
-           </View>
-           <View style={styles.viewcheck}>
-             <Text  style={styles.textIncorrect}>X</Text>
-           </View>
-      </View>: null}
-      {a1[35]==1 ?<View style={styles.viewcheckbody}>
-           <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>36.  Estereognosia en ambos brazos</Text>
+             <Text style={styles.textCheck}>28.  Paciente con capacidad para desarrollar prueba dedo-nariz coordinado, firme y rápido, que percibe sensación táctil y dolorosa en todas las áreas del cuerpo.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -397,8 +333,8 @@ state = {
              <TouchableOpacity onPress ={this.saveData} style={styles.button2}>
                   <Text style={styles.textBoton}>Continuar</Text>
                 </TouchableOpacity>
-               <View style={styles.button}></View>
-  </View>
+              
+   </View>
  
       </ScrollView>
   </View>
