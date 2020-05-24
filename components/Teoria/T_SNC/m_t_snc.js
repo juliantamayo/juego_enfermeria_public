@@ -64,7 +64,7 @@ export default class m_t_snc  extends React.Component {
       name=" Encéfalo"
       color="#77c6c6"
         onPress={() =>
-        this.props.navigation.navigate("t_pares_craneales")}
+        this.props.navigation.navigate("t_encefalo")}
        />
     <RowItem
       name=" Médula Espinal"
