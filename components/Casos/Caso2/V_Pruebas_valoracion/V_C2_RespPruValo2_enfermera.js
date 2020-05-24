@@ -8,19 +8,14 @@ import  styles  from "../../../Style_dialog.js";
 import { CommonActions } from '@react-navigation/native';
 import { Modal_Pruebas } from "../../../elementos/ModalsTutorial";
  
-
-const mult =5;
-
 class V_C2_RespPruValo2_enfermera extends React.Component {
    
   state = {
     modalVisible: false,
     modalVisible2: false,
-    correctCount: 0, 
     totalCount: this.props.route.params?.questions.length,
     activeQuestionIndex: 0,
-    answered: false,
-    answerCorrect: false
+    answered: false
       
   };
 

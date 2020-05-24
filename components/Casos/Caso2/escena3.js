@@ -24,12 +24,12 @@ import { ButtonContainer, RowItemEscena3 } from "../../elementos/RowItem";
 const { width, height } = Dimensions.get('window')
 
 
-export default class menu_caso2 extends React.Component {
+export default class C2_escena3 extends React.Component {
 
   
 
     state ={
-     'save_pregPcte1':0,
+
       modalVisible: false,
     };
 
