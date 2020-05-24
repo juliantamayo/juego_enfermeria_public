@@ -213,11 +213,6 @@ render() {
 
    </View>
 
-
-   <Text style={styles.textStyle}>
-         hola   {this.state.save_pregPcte1}
-           
-          </Text>
     </ScrollView>
   </View>
   </ImageBackground>

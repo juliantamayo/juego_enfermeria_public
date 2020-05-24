@@ -288,26 +288,36 @@ import C3_Escena3 from './components/Casos/Caso3/escena3';
 import V_C3_PruValo1_dialogo from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_PruValo1_dialogo';
 import V_C3_PruValo1_pregunta from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_PruValo1_pregunta';
 import V_C3_RespPruValo1_enfermera from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_RespPruValo1_enfermera';
+import C3_Guardar_V_pru_valo1 from './components/Casos/Caso3/V_Guardar/C3_guardar_V_pru_valo1';
 
 import V_C3_PruValo2_dialogo from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_PruValo2_dialogo';
 import V_C3_PruValo2_pregunta from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_PruValo2_pregunta';
 import V_C3_RespPruValo2_enfermera from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_RespPruValo2_enfermera';
+import C3_Guardar_V_pru_valo2 from './components/Casos/Caso3/V_Guardar/C3_guardar_V_pru_valo2';
 
 import V_C3_PruValo3_dialogo from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_PruValo3_dialogo';
 import V_C3_PruValo3_pregunta from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_PruValo3_pregunta';
 import V_C3_RespPruValo3_enfermera from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_RespPruValo3_enfermera';
+import C3_Guardar_V_pru_valo3 from './components/Casos/Caso3/V_Guardar/C3_guardar_V_pru_valo3';
 
 import V_C3_PruValo4_dialogo from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_PruValo4_dialogo';
 import V_C3_PruValo4_pregunta from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_PruValo4_pregunta';
 import V_C3_RespPruValo4_enfermera from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_RespPruValo4_enfermera';
+import C3_Guardar_V_pru_valo4 from './components/Casos/Caso3/V_Guardar/C3_guardar_V_pru_valo4';
 
 import V_C3_PruValo5_dialogo from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_PruValo5_dialogo';
 import V_C3_PruValo5_pregunta from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_PruValo5_pregunta';
 import V_C3_RespPruValo5_enfermera from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_RespPruValo5_enfermera';
+import C3_Guardar_V_pru_valo5 from './components/Casos/Caso3/V_Guardar/C3_guardar_V_pru_valo5';
 
+//escena4----
+import C3_Escena4 from './components/Casos/Caso3/escena4';
+import C3_Guardr_valo from './components/Casos/Caso3/V_Guardar/C3_guardar_V_valoracion';
+//escena5----
+import C3_Escena5 from './components/Casos/Caso3/escena5';
+import C3_Guardar_V_quiz from './components/Casos/Caso3/V_Guardar/C3_guardar_V_quiz';
 
 //escena6
-import C3_Escena5 from './components/Casos/Caso3/escena5';
 import C3_Escena6 from './components/Casos/Caso3/escena6';
 
 
@@ -1173,7 +1183,7 @@ useEffect(() => {
        options={{
         //  headerShown: false
         headerLeft: null,
-         // title: '',
+          title: '',
           headerStyle: {
             backgroundColor: '#fbe122',
           }
@@ -2219,7 +2229,7 @@ useEffect(() => {
           }
         }}/>
 
- <Stack.Screen name="V_C2_PruValo11_dialogo" component={V_C2_PruValo11_dialogo} 
+     <Stack.Screen name="V_C2_PruValo11_dialogo" component={V_C2_PruValo11_dialogo} 
         options={
            
         ({ navigation, route }) => ({ title: route.params?.title ,
@@ -2478,7 +2488,7 @@ useEffect(() => {
         //  headerShown: false
         title: 'Quiz',
         headerLeft: null,
-         // title: '',
+          title: '',
           headerStyle: {
             backgroundColor: '#fbe122',
           }
@@ -2771,6 +2781,16 @@ useEffect(() => {
         }
        })}/>
 
+        <Stack.Screen name="C3_Guardar_V_pru_valo1"  component={C3_Guardar_V_pru_valo1} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+         // title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
+
        <Stack.Screen name="V_C3_PruValo2_dialogo" component={V_C3_PruValo2_dialogo} 
         options={
            
@@ -2804,6 +2824,16 @@ useEffect(() => {
         }
        })}/>
 
+        <Stack.Screen name="C3_Guardar_V_pru_valo2"  component={C3_Guardar_V_pru_valo2} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+         // title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
+
        <Stack.Screen name="V_C3_PruValo3_dialogo" component={V_C3_PruValo3_dialogo} 
         options={
            
@@ -2836,6 +2866,17 @@ useEffect(() => {
          borderBottomColor: route.params?.color
         }
        })}/>
+
+        <Stack.Screen name="C3_Guardar_V_pru_valo3"  component={C3_Guardar_V_pru_valo3} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
+
        <Stack.Screen name="V_C3_PruValo4_dialogo" component={V_C3_PruValo4_dialogo} 
         options={
            
@@ -2868,6 +2909,17 @@ useEffect(() => {
          borderBottomColor: route.params?.color
         }
        })}/>
+
+        <Stack.Screen name="C3_Guardar_V_pru_valo4"  component={C3_Guardar_V_pru_valo4} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
+
        <Stack.Screen name="V_C3_PruValo5_dialogo" component={V_C3_PruValo5_dialogo} 
         options={
            
@@ -2901,7 +2953,45 @@ useEffect(() => {
         }
        })}/>
 
-          <Stack.Screen name="C3_Escena5" component={C3_Escena5} 
+        <Stack.Screen name="C3_Guardar_V_pru_valo5"  component={C3_Guardar_V_pru_valo5} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
+
+           <Stack.Screen name="C3_Escena4" component={C3_Escena4} 
+        options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: 'Caso 3. Valoración',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          }
+        }}/>
+
+        <Stack.Screen name="C3_Guardr_valo" component={C3_Guardr_valo} 
+        options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: 'Caso 2. Valoración',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          }
+        }}/>
+
+        <Stack.Screen name="C3_Escena5" component={C3_Escena5} 
         options={
            
         ({ navigation, route }) => ({ title: route.params?.title ,
@@ -2910,9 +3000,18 @@ useEffect(() => {
          backgroundColor: '#fbe122',
          borderBottomColor: route.params?.color
         }
-
-
        })}/>
+
+        <Stack.Screen name="C3_Guardar_V_quiz"  component={C3_Guardar_V_quiz} 
+       options={{
+        //  headerShown: false
+        title: 'Quiz',
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
 
         <Stack.Screen name="C3_Escena6" component={C3_Escena6} 
