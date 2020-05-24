@@ -70,26 +70,37 @@ export default class t_encefalo  extends React.Component {
       <StatusBar barStyle="dark-content" />
       <View style={styles.margen2}></View>
      <View style={style.container}>
-     <Text style={style.title}> Distrubución </Text>
-     <Text style={style.text}> Las 12 parejas de pares craneales abastecen básicamente a la cabeza y el cuello. Sólo una pareja (nervio vago) se distribuye por el torax y el abdomen.{"\n"}{"\n"}Los pares craneales están numerados en orden y en la mayoría de los casos su nombre revela las estructuras más importantes que controlan. {"\n"}{"\n"}Los nervios craneales, al igual que los nervios raquídeos son parte del sistema nervioso periférico y se designan con números romanos y nombres. {"\n"}{"\n"}Los números indican el orden en que nacen los nervios del encéfalo, de anterior a posterior, y el nombre su distribución o función. {"\n"}{"\n"} </Text>
-     
-
-     <View style={style.ContainerImagen}>
-     <Image style={style.Imagen} source={require("../../../assets/images/SNP_nervios_craneales_repaso.png")} resizeMode="contain"/>
-      </View>
+     <Text style={style.title}> Composición </Text>
+           <RowItem
+      name="  Cerebro "
+      color="#77c6c6"
+     onPress={() =>
+        this.props.navigation.navigate("t_cerebro")}
+       />
+      <RowItem
+      name="  Diencéfalo "
+      color="#77c6c6"
+     onPress={() =>
+        this.props.navigation.navigate("t_diencefalo")}
+       />
+              <RowItem
+      name="  Tronco Encefálico "
+      color="#77c6c6"
+     onPress={() =>
+        this.props.navigation.navigate("t_tronco_encefalico")}
+       />
+              <RowItem
+      name="  Cerebelo "
+      color="#77c6c6"
+     onPress={() =>
+        this.props.navigation.navigate("t_cerebelo")}
+       />
+       
      <View style={styles.margen2}></View>
      </View>
       </ScrollView>
 
-      <View
-          style={styles.slide}
-          title={
-            <Text numberOfLines={1}></Text>
-          }
-        >
-
     
-      </View>
       </Swiper>
 
   </ImageBackground>
