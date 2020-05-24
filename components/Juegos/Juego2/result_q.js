@@ -42,31 +42,6 @@ export default class result_q extends React.Component  {
   );
 }
 
-
-
-
-
-saveData() {
-  
-  let obj = {
-    name: 5,
-
-  }
-  AsyncStorage.setItem('user', JSON.stringify(obj));
-}
-
-displayData = async () => {
-  try {
-    // statements
-    let  user = await AsyncStorage.getItem('user');
-    let parsed = JSON.parse(user);
-    alert(parsed.name);
-  } catch(error) {
-    // statements
-    alert(error)
-  }
-}
-
 }
 
 const style = StyleSheet.create({

@@ -97,7 +97,7 @@ render() {
         })
       }
     />
-     { Esc1 >= 2? 
+     { Esc1 == 2? 
     <RowItem
       name="Preguntas a Paciente"
       color="#f9a94b"
