@@ -7,21 +7,16 @@ import { C2_ModalHistorial } from "../../../elementos/Modals";
 import { CommonActions } from '@react-navigation/native';
 import { Modal_Preguntas } from "../../../elementos/ModalsTutorial";
 import  styles  from "../../../Style_dialog.js";
-const mult =5;
-
-
 
 
 class V_C2_RespP1_enfermera extends React.Component {
    
   state = {
     modalVisible: false,
-     modalVisible2: false,
-    correctCount: 0, 
+    modalVisible2: false, 
     totalCount: this.props.route.params?.questions.length,
     activeQuestionIndex: 0,
-    answered: false,
-    answerCorrect: false
+    answered: false
       
   };
 

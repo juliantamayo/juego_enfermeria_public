@@ -12,6 +12,33 @@ export default class menu_caso3 extends React.Component {
     state ={
             modalVisible: false,
     };
+
+    componentDidMount= () => {
+    let keys = ['C3_save_pregPcte1', 'C3_save_pregPcte2','C3_save_pregPcte3','C3_save_pregPcte4','save_pregPcte5','save_pregPcte6','save_pregPcte7','C3_nombre',
+     'save_pruValo1', 'save_pruValo2','save_pruValo3','save_pruValo4','save_pruValo5','save_pruValo6','save_pruValo7','save_valoracion','save_quiz'
+    ];
+    AsyncStorage.multiGet(keys).then(result => {
+      this.setState({
+        'C3_save_pregPcte1': result[0][1],
+        'C3_save_pregPcte2': result[1][1],
+        'C3_save_pregPcte3': result[2][1],
+        'C3_save_pregPcte4': result[3][1],
+        'save_pregPcte5': result[4][1],
+        'save_pregPcte6': result[5][1],
+        'save_pregPcte7': result[6][1],
+        'C3_nombre'     : result[7][1],
+        'save_pruValo1':  result[8][1],
+        'save_pruValo2':  result[9][1],
+        'save_pruValo3':  result[10][1],
+        'save_pruValo4':  result[11][1],
+        'save_pruValo5':  result[12][1],
+        'save_pruValo6':  result[13][1],
+        'save_pruValo7':  result[14][1],
+        'save_valoracion':  result[15][1],
+        'save_quiz':      result[16][1],
+      });
+    });
+  };
    
  setModalVisible = (visible) => {
     this.setState({ modalVisible: visible });
@@ -19,8 +46,12 @@ export default class menu_caso3 extends React.Component {
 
 render() {
       const { modalVisible } = this.state;
+      const C3_Esc1= parseInt(this.state.C3_nombre);
+      const C3_Esc2=parseInt(this.state.C3_save_pregPcte1)+parseInt(this.state.C3_save_pregPcte2)+parseInt(this.state.C3_save_pregPcte3)+parseInt(this.state.C3_save_pregPcte4);
+      const C3_Esc3=parseFloat(this.state.save_pruValo1)+parseFloat(this.state.save_pruValo2)+parseFloat(this.state.save_pruValo3)+parseFloat(this.state.save_pruValo4)+parseFloat(this.state.save_pruValo5)+parseFloat(this.state.save_pruValo6)+parseFloat(this.state.save_pruValo7);
+      const C3_Esc4=parseInt(this.state.save_valoracion);
+      const C3_Esc5= parseInt(this.state.save_quiz);
   
-
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
     <Modal_MenuCaso1
@@ -67,7 +98,7 @@ render() {
         })
       }
     />
- 
+  { C3_Esc1 >= 2?
     <RowItem
       name="Preguntas a Paciente"
       color="#f9a94b"
@@ -77,15 +108,17 @@ render() {
           color: "#799496"
         })
       }
-    />
-
+    />:
+    null}
+ {C3_Esc2 >= 4?
     <RowItem
       name="Pruebas de valoración"
        color="#f9e67a"
       onPress={() =>
         this.props.navigation.navigate("C3_Escena3")
       }
-    />
+    />:
+    null}
     <RowItem
       name="Valoración"
       color="#f9a94b"

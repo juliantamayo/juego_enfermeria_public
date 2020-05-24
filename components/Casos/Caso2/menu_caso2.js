@@ -19,7 +19,7 @@ export default class menu_caso2 extends React.Component {
 componentDidMount= () => {
     let keys2 = ['C2_save_pregPcte1', 'C2_save_pregPcte2','C2_save_pregPcte3','C2_save_pregPcte4','C2_save_pregPcte5','C2_intro','C2_save_pruValo1','C2_save_pruValo2',
      'C2_save_pruValo3', 'C2_save_pruValo4','C2_save_pruValo5','C2_save_pruValo6','C2_save_pruValo7','C2_save_pruValo8','C2_save_pruValo9','C2_save_pruValo10',
-    'C2_save_pruValo11','C2_save_pruValo12','C2_save_pruValo13','C2_save_pruValo14','C2_save_pruValo15','save_quiz'
+    'C2_save_pruValo11','C2_save_pruValo12','C2_save_pruValo13','C2_save_pruValo14','C2_save_pruValo15','C2_save_valoracion','C2_save_quiz'
     ];
     AsyncStorage.multiGet(keys2).then(result => {
       this.setState({
@@ -44,7 +44,8 @@ componentDidMount= () => {
         'C2_save_pruValo13': result[18][1],
         'C2_save_pruValo14': result[19][1],
         'C2_save_pruValo15': result[20][1],
-        'save_quiz':         result[21][1],
+        'C2_save_valoracion':result[21][1],
+        'C2_save_quiz':      result[22][1],
       });
     });
   };
@@ -62,8 +63,8 @@ render() {
     +parseInt(this.state.C2_save_pruValo8)+parseInt(this.state.C2_save_pruValo9)+parseFloat(this.state.C2_save_pruValo10)
     +parseInt(this.state.C2_save_pruValo11)+parseInt(this.state.C2_save_pruValo12)+parseInt(this.state.C2_save_pruValo13)+parseInt(this.state.C2_save_pruValo14)+parseInt(this.state.C2_save_pruValo15);
     
-    const C2_Esc4=parseInt(this.state.save_valoracion);
-    const C2_Esc5= parseInt(this.state.save_quiz);
+    const C2_Esc4=parseInt(this.state.C2_save_valoracion);
+    const C2_Esc5= parseInt(this.state.C2_save_quiz);
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
@@ -138,10 +139,11 @@ render() {
       name="Valoración"
       color="#f9a94b"
       onPress={() =>
-        this.props.navigation.navigate("C2_Escena3",{ex:'2'})
+        this.props.navigation.navigate("C2_Escena4")
       }
     />:
     null}
+    { C2_Esc4 == 1?
      <RowItem
       name="Quiz"
       color="#f9e67a"
@@ -152,14 +154,17 @@ render() {
           color: "#20b2aa"
       })
       }
-    />
+    />:
+    null}
+    { C2_Esc5 == 8?
     <RowItem
       name="Proceso de atención de Enfermeria"
       color="#f9a94b"
       onPress={() =>
         this.props.navigation.navigate("C2_Escena6",{ex:'2'})
       }
-    />
+    />:
+    null}
     </ScrollView>
   </View>
   </ImageBackground>

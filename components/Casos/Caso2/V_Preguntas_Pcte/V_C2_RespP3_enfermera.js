@@ -14,12 +14,9 @@ class V_C2_RespP3_enfermera extends React.Component {
   state = {
     modalVisible: false,
     modalVisible2: false,
-    correctCount: 0, 
     totalCount: this.props.route.params?.questions.length,
     activeQuestionIndex: 0,
-    answered: false,
-    answerCorrect: false
-      
+    answered: false      
   };
 
   nextQuestion = () => {

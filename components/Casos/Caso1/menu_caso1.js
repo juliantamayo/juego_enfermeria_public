@@ -17,7 +17,7 @@ export default class menu_caso1 extends React.Component {
    
 componentDidMount= () => {
     let keys = ['save_pregPcte1', 'save_pregPcte2','save_pregPcte3','save_pregPcte4','save_pregPcte5','save_pregPcte6','save_pregPcte7','nombre',
-     'save_pruValo1', 'save_pruValo2','save_pruValo3','save_pruValo4','save_pruValo5','save_pruValo6','save_pruValo7','save_valo','save_quiz'
+     'save_pruValo1', 'save_pruValo2','save_pruValo3','save_pruValo4','save_pruValo5','save_pruValo6','save_pruValo7','save_valoracion','save_quiz'
     ];
     AsyncStorage.multiGet(keys).then(result => {
       this.setState({
