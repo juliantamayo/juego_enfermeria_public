@@ -1,91 +1,42 @@
 import React from 'react';
-import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpacity,  Image, Text, AsyncStorage } from 'react-native';
-
+import {  ScrollView, StyleSheet, ImageBackground, View, TouchableOpacity,  Image, Dimensions, StatusBar, Text, AsyncStorage } from 'react-native';
+import Swiper from 'react-native-swiper'
 import styles from '../Style.js';
 
 
 import { RowItem } from "../elementos/RowItem";
 import { Modal_C1_escena2 } from "../elementos/ModalsTutorial";
-import { SNC, SNP, SNA, Pruval } from "../elementos/Modals_teoria";
-
+const { width, height } = Dimensions.get('window')
+const renderPagination = (index, total, context) => {
+  return (
+    <View style={styles.paginationStyle}>
+      <Text style={{ color: 'grey' }}>
+        <Text style={styles.paginationText}>{index + 1}</Text>/{total}
+      </Text>
+    </View>
+  )
+}
 export default class m_teoria extends React.Component {
 
-  
     state ={
 //el componente "state" debe estar para poder recibir las variables locales de otras clases
      modalVisible: false,
-     modal_snc:false,
-     modal_snp:false,
-     modal_sna:false,
-     modal_pruval:false
     };
     
   setModalVisible = (visible) => {
     this.setState({ modalVisible: visible });
   };
-  setModalVisible_snc = (visible) => {
-    this.setState({ modal_snc: visible });
-  };
-  setModalVisible_snp = (visible) => {
-    this.setState({ modal_snp: visible });
-  };
-   setModalVisible_sna = (visible) => {
-    this.setState({ modal_sna: visible });
-  };
-    setModalVisible_pruval = (visible) => {
-    this.setState({ modal_pruval: visible });
-  };
-
 
  render() {
-  const { modalVisible, modal_snp, modal_snc, modal_sna, modal_pruval } = this.state;
-
-
+  const { modalVisible } = this.state;
   return (
    <ImageBackground source={require("../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
    
-    <Modal_C1_escena2
-      
-       text={modalVisible}
-       onPress={() => {
-                  this.setModalVisible(!modalVisible);
-                }}
-      />
-        <SNC
-      
-       text={modal_snc}
-
-       onPress={() => {
-                  this.setModalVisible_snc(!modal_snc);
-                }}
-      />
-      <SNP
-      
-       text={modal_snp}
-
-       onPress={() => {
-                  this.setModalVisible_snp(!modal_snp);
-                }}
-      />
-        <SNA
-      
-       text={modal_sna}
-
-       onPress={() => {
-                  this.setModalVisible_sna(!modal_sna);
-                }}
-        />
-         <Pruval
-      
-       text={modal_pruval}
-
-       onPress={() => {
-                  this.setModalVisible_pruval(!modal_pruval);
-                }}
-        />
-
-
-
+    <Swiper
+        style={styles.wrapper}
+        renderPagination={renderPagination} showsButtons loop={false}
+        loop={false}
+      >
 
     <View style={style.container}>
     <ScrollView  >
@@ -139,6 +90,76 @@ export default class m_teoria extends React.Component {
        />
     </ScrollView>
   </View>
+    <ScrollView  >
+      <View style={style.container}>
+    
+    <StatusBar barStyle="dark-content" />
+    <View style={styles.margen2}></View>
+    <View style={styles.header}>
+    
+     <View style={styles.headerIzquierda}>
+     <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
+       onPress={() => this.props.navigation.pop()}>
+               <Image style={ styles.image } source={require("../../assets/images/button-back.png")} />
+      </TouchableOpacity>
+      </View>
+
+      <View style={styles.headerDerecha}>
+      <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
+                   onPress={() => {
+                        this.setModalVisible(true);
+                      }}>
+               <Image style={ styles.image } source={require("../../assets/images/ayuda.png")} />
+      </TouchableOpacity>
+      </View>
+     
+      </View>
+
+     <Text style={style.title}> SUBTEMAS</Text>
+
+       <RowItem   
+        name=" Pares Craneales"
+      color="#F8D95B"
+      onPress={() =>
+        this.props.navigation.navigate("t_pares_craneales")}
+       />
+   
+    <RowItem
+      name="Médula Espinal"
+      color="#77c6c6"
+      onPress={() =>
+        this.props.navigation.navigate("t_medula_espinal")}
+       />
+
+    <RowItem
+      name="Nervios Raquídeos"
+      color="#F8D95B"
+       onPress={() =>
+        this.props.navigation.navigate("t_nervios_raquideos")}
+       />
+  
+    <RowItem
+      name="Encéfalo"
+      color="#77c6c6"
+      onPress={() =>
+        this.props.navigation.navigate("t_encefalo")}
+       />
+
+    <RowItem
+      name="Cerebro"
+      color="#77c6c6"
+      onPress={() =>
+        this.props.navigation.navigate("t_cerebro")}
+       />
+
+       <Text style={style.text}> {"\n"}{"\n"}{"\n"}{"\n"}</Text>
+
+     </View>
+
+    </ScrollView>
+
+
+   </Swiper>
   </ImageBackground>
   );
 }
@@ -159,6 +180,17 @@ const style = StyleSheet.create({
   text: {
     textAlign : 'center',
     fontSize: 20,
+  },
+   title:{ 
+
+    textAlign : 'center',
+    fontSize: 23,
+    fontWeight: 'bold',
+    backgroundColor: "gold",
+    borderRadius: 50,
+    padding: 3
+
+
   },
   button: {
     backgroundColor: "rgba(3, 33, 0, 0.47)",

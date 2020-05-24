@@ -53,9 +53,9 @@ export default class t_encefalo  extends React.Component {
      <Text style={style.text}>El encéfalo es la masa nerviosa contenida dentro del craneo se encuentra revestido por meninges (duramadre, piamadre y aracnoide), en su interior hay ventrículos cerebrales llenos de líquido cefalorraquídeo. {"\n"}{"\n"}Pesa entre 1450 g  y 1600 g. Recibe el 15% del gasto cardiaco y tiene un sistema de autoregulación para asegurar que el sumninistro de sangre sea constante. {"\n"}{"\n"}La disposicion de las arterias que lo alimentan es única y se comunican entre sí  por una estructura llamada poligono de Willis. </Text>
     <Text style={style.title}> Composición</Text>
     <Text style={style.text}> Como el encéfalo es la masa de tejido nervioso más grande y compleja de todo el organismo, se estudia habitualmente dividiendolo en sus cuatro regiones principales: </Text>
-    <Text style={style.subtext}>Hemisferios cerebrales. </Text>
-    <Text style={style.subtext}>Diencéfalo.</Text>
-    <Text style={style.subtext}>Tronco encefálico. </Text>
+    <Text style={style.subtext}>Cerebro: Dividido en Hemisferios cerebrales. </Text>
+    <Text style={style.subtext}>Diencéfalo: Que consiste del tálamo, hipotálamo y Epitalamo</Text>
+    <Text style={style.subtext}>Tronco encefálico: Que consta de tres áreas más pequeñas: el bulbo raquídeo, el puente de Varolio y el mesencéfalo </Text>
     <Text style={style.subtext}>Cerebelo.</Text>
 
     <View style={style.ContainerImagen}>
@@ -70,28 +70,52 @@ export default class t_encefalo  extends React.Component {
       <StatusBar barStyle="dark-content" />
       <View style={styles.margen2}></View>
      <View style={style.container}>
+     <Text style={style.title}> Fisiologia</Text>
+     <Text style={style.text}> El encéfalo está protegido por los huesos del cráneo y las meninges. {"\n"}{"\n"}
+     <Text style={style.textBold}>Las meninges craneales </Text> es el nombre que se le atribuye a las meninges que protegen el cerebro y tienen la misma estructura de las espinales:{"\n"}{"\n"} la duramadre externa, {"\n"}{"\n"}la aracnoides media {"\n"}{"\n"}y la piamadre interna  </Text>
+    <Text style={style.text}>El encéfalo, al igual que la médula espinal, están protegidos por el líquido cefalorraquídeo que circula a través del espacio subaracnoideo que lo rodea, a la médula espinal, y a través de los ventrículos del mismo. {"\n"}{"\n"} 
+    <Text style={style.textBold}>Los ventrículos </Text> son cavidades dentro del encéfalo que se conectan entre sí, con el espacio subaracnoideo de las meninges y con el canal central de la médula espinal.{"\n"}{"\n"}
+     El líquido cefalorraquídeo sirve como un amortiguador para el sistema nervioso central y hace circular los nutrientes  </Text>
+
+    <Text style={style.title}> División </Text>
+    <Text style={style.text}> <Text style={style.textBold}>El encéfalo posee cuatro ventrículos: </Text> </Text>
+    <Text style={style.text}> Hay <Text style={style.textBold}>dos ventrículos laterales</Text> en cada lado o hemisferio del cerebro ubicados debajo del cuerpo calloso.{"\n"}{"\n"} <Text style={style.textBold}>El tercer ventrículo</Text> es una rendija ubicada entre y por debajo de las dos mitades (la izquierda y la derecha) del tálamo, y se encuentra entre los ventrículos laterales. {"\n"}{"\n"}Cada ventrículo lateral se conecta con el tercer ventrículo por una estrecha abertura ovalada llamado foramen interventricular o foramen de Monroe.
+    {"\n"}{"\n"} <Text style={style.textBold}> El cuarto ventrículo </Text> se encuentra entre el cerebelo y el tronco encefálico inferior. Se conecta con el tercer ventrículo a través del acue-ducto cerebral, también conocido como el acueducto de Sylvius.{"\n"}{"\n"}  El techo de este cuarto ventrículo cuenta con tres aberturas mediante las cuales se conecta con el espacio subaracnoideo de las meninges del encéfalo y la médula espinal; esto permite el flujo de líquido cefalorraquídeo a través de la médula espinal, el encéfalo y sus ventrículos.</Text>
+
+ 
+   
+
+     <View style={styles.margen2}></View>
+    
+
+     </View>
+      </ScrollView>
+       <ScrollView>
+      <StatusBar barStyle="dark-content" />
+      <View style={styles.margen2}></View>
+     <View style={style.container}>
      <Text style={style.title}> Composición </Text>
            <RowItem
       name="  Cerebro "
-      color="#77c6c6"
+      color="#FF6347"
      onPress={() =>
         this.props.navigation.navigate("t_cerebro")}
        />
       <RowItem
       name="  Diencéfalo "
-      color="#77c6c6"
+      color="#ADFF2F"
      onPress={() =>
         this.props.navigation.navigate("t_diencefalo")}
        />
               <RowItem
       name="  Tronco Encefálico "
-      color="#77c6c6"
+      color="#FFD700"
      onPress={() =>
         this.props.navigation.navigate("t_tronco_encefalico")}
        />
               <RowItem
       name="  Cerebelo "
-      color="#77c6c6"
+      color="#DDA0DD"
      onPress={() =>
         this.props.navigation.navigate("t_cerebelo")}
        />

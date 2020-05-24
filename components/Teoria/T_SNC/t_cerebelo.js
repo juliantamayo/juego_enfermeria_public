@@ -6,7 +6,6 @@ import styles from '../../Style.js';
 
 import { RowItem, RowItemPares} from "../../elementos/RowItem";
 import { Modal_C1_escena2 } from "../../elementos/ModalsTutorial";
-import { IPAR, IIPAR, IIIPAR, IVPAR, VPAR,VIPAR, VIIPAR, VIIIPAR, IXPAR, XPAR, XIPAR, XIIPAR} from "../../elementos/Modals_teoria";
 const { width, height } = Dimensions.get('window')
 const renderPagination = (index, total, context) => {
   return (
@@ -20,81 +19,38 @@ const renderPagination = (index, total, context) => {
 
 export default class t_pares_craneales  extends React.Component {
 
-  
     state ={
 //el componente "state" debe estar para poder recibir las variables locales de otras clases
      modalVisible: false,
-      modal_IPAR: false,
-      modal_IIPAR: false,
-      modal_IIIPAR: false,
-      modal_IVPAR: false,
-      modal_VPAR: false,
-      modal_VIPAR: false,
-      modal_VIIPAR: false,
-      modal_VIIIPAR: false,
-      modal_IXPAR: false,
-      modal_XPAR: false,
-      modal_XIPAR: false,
-      modal_XIIPAR: false
     };
     
   setModalVisible = (visible) => { this.setState({ modalVisible: visible });};
-  setModalVisibleIPAR = (visible) => {this.setState({ modal_IPAR: visible }); };
-  setModalVisibleIIPAR = (visible) => {this.setState({ modal_IIPAR: visible }); };
-  setModalVisibleIIIPAR = (visible) => {this.setState({ modal_IIIPAR: visible }); };
-  setModalVisibleIVPAR = (visible) => {this.setState({ modal_IVPAR: visible }); };
-  setModalVisibleVPAR = (visible) => {this.setState({ modal_VPAR: visible }); };
-  setModalVisibleVIPAR = (visible) => {this.setState({ modal_VIPAR: visible }); };
-  setModalVisibleVIIPAR = (visible) => {this.setState({ modal_VIIPAR: visible }); };
-  setModalVisibleVIIIPAR = (visible) => {this.setState({ modal_VIIIPAR: visible }); };
-  setModalVisibleIXPAR = (visible) => {this.setState({ modal_IXPAR: visible }); };
-  setModalVisibleXPAR = (visible) => {this.setState({ modal_XPAR: visible }); };
-  setModalVisibleXIPAR = (visible) => {this.setState({ modal_XIPAR: visible }); };
-  setModalVisibleXIIPAR = (visible) => {this.setState({ modal_XIIPAR: visible }); };
- 
 
  render() {
-  const { modalVisible, modal_IPAR, modal_IIPAR, modal_IIIPAR, modal_IVPAR, modal_VPAR,modal_VIPAR, modal_VIIPAR, modal_VIIIPAR, modal_IXPAR, modal_XPAR, modal_XIPAR, modal_XIIPAR } = this.state;
+  const { modalVisible} = this.state;
 
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
         
-    <Modal_C1_escena2 text={modalVisible} onPress={() => { this.setModalVisible(!modalVisible); }} />
-    <IPAR text={modal_IPAR} onPress={() => { this.setModalVisibleIPAR(!modal_IPAR); }} />
-    <IIPAR text={modal_IIPAR} onPress={() => { this.setModalVisibleIIPAR(!modal_IIPAR); }} />
-    <IIIPAR text={modal_IIIPAR} onPress={() => { this.setModalVisibleIIIPAR(!modal_IIIPAR); }} />
-    <IVPAR text={modal_IVPAR} onPress={() => { this.setModalVisibleIVPAR(!modal_IVPAR); }} />
-    <VPAR text={modal_VPAR} onPress={() => { this.setModalVisibleVPAR(!modal_VPAR); }} />
-    <VIPAR text={modal_VIPAR} onPress={() => { this.setModalVisibleVIPAR(!modal_VIPAR); }} />
-    <VIIPAR text={modal_VIIPAR} onPress={() => { this.setModalVisibleVIIPAR(!modal_VIIPAR); }} />
-    <VIIIPAR text={modal_VIIIPAR} onPress={() => { this.setModalVisibleVIIIPAR(!modal_VIIIPAR); }} />
-    <IXPAR text={modal_IXPAR} onPress={() => { this.setModalVisibleIXPAR(!modal_IXPAR); }} />
-    <XPAR text={modal_XPAR} onPress={() => { this.setModalVisibleXPAR(!modal_XPAR); }} />
-    <XIPAR text={modal_XIPAR} onPress={() => { this.setModalVisibleXIPAR(!modal_XIPAR); }} />
-    <XIIPAR text={modal_XIIPAR} onPress={() => { this.setModalVisibleXIIPAR(!modal_XIIPAR); }} />
-
-
      <Swiper
         style={styles.wrapper}
         renderPagination={renderPagination} showsButtons loop={false}
         loop={false}
       >
 
-
       <ScrollView>
       <StatusBar barStyle="dark-content" />
       <View style={styles.margen2}></View>
      <View style={style.container}>
      <Text style={style.title}> Definición</Text>
-     <Text style={style.text}>El cuepo humano contiene 12 pares de nervios craneales, que surgen del encéfalo y se distribuyen en diversas estructuras; la mayor parte de ellas se encuentra en la cara y el cuello.   </Text>
+     <Text style={style.text}>El  cerebelo es la segunda estructura más grande del encéfalo. Presenta una forma similar a una mariposa. Se encuentra por debajo de los lóbulos occipitales del cerebro y detrás del puente y el bulbo raquídeo del tronco encefálico.</Text>
     <View style={style.ContainerImagen}>
-     <Image style={style.Imagen} source={require("../../../assets/images/SNP_nervios_craneales_repaso.png")} resizeMode="contain"/>
+     <Image style={style.Imagen} source={require("../../../assets/images/SNC_diencefalo_repaso.png")} resizeMode="contain"/>
       </View>
      <View style={styles.margen2}></View>
     <Text style={style.title}> Composición</Text>
-    <Text style={style.text}> Los 12 pares se diferencian por sus funciones: unos son  <Text style={style.textBold}>nervios sensitivos </Text>(es decir, contienen fibras sensitivas), otros son
-     <Text style={style.textBold}> nervios motores</Text> (sólo contienen fibras motoras) y algunos son <Text style={style.textBold}>nervios mixtos </Text> (contienen fibras sensitivas y motoras). {"\n"}{"\n"}{"\n"}</Text>
+    <Text style={style.text}>Se compone de dos hemisferios parcialmente separados conectados por una estructura centralizada estrecha llamada vermis. {"\n"}{"\n"}  El cerebelo se compone principalmente de la materia blanca con una una capa de materia gris en su superficie, llamada la corteza cerebral.{"\n"}{"\n"}{"\n"}</Text>
 
      </View>
       </ScrollView>
@@ -102,97 +58,18 @@ export default class t_pares_craneales  extends React.Component {
       <StatusBar barStyle="dark-content" />
       <View style={styles.margen2}></View>
      <View style={style.container}>
-     <Text style={style.title}> Distrubución </Text>
-     <Text style={style.text}> Las 12 parejas de pares craneales abastecen básicamente a la cabeza y el cuello. Sólo una pareja (nervio vago) se distribuye por el torax y el abdomen.{"\n"}{"\n"}Los pares craneales están numerados en orden y en la mayoría de los casos su nombre revela las estructuras más importantes que controlan. {"\n"}{"\n"}Los nervios craneales, al igual que los nervios raquídeos son parte del sistema nervioso periférico y se designan con números romanos y nombres. {"\n"}{"\n"}Los números indican el orden en que nacen los nervios del encéfalo, de anterior a posterior, y el nombre su distribución o función. {"\n"}{"\n"} </Text>
-     
-
+     <Text style={style.title}> Función Cognoscitiva </Text>
+     <Text style={style.text}><Text style={style.textBold}> > </Text>El cerebelo funciona como un centro de reflejo en la coordinación de movimientos complejos de los músculos esqueléticos, el mantenimiento de la postura corporal adecuada y del equilibrio.  {"\n"}{"\n"}<Text style={style.textBold}> > </Text> Si está dañado, puede haber una disminución en el tono muscular, temblores, pérdida de equilibrio y dificultad en los movimientos del músculo esquelético.</Text>
+     <Text style={style.text}><Text style={style.textBold}> > </Text>El cerebelo proporciona el control temporal preciso a la actividad de los músculos esqueléticos y controla el equilibrio.{"\n"}{"\n"}<Text style={style.textBold}> > </Text> Su actividad supone que los movimientos del organismo sean suaves y coordinados.{"\n"}{"\n"}<Text style={style.textBold}> > </Text> No funciona tan bien cuando está sedado por el alcohol.{"\n"}{"\n"}<Text style={style.textBold}> > </Text>Las ﬁbras alcanzan el cerebelo desde el aparato del equilibrio del oído interno, el ojo, los propiorreceptores de los músculos esqueléticos y los tendones, y muchas otras áreas.
+      {"\n"}{"\n"}<Text style={style.textBold}> > </Text> El cerebelo se puede comparar con un piloto automático, continuamente contrastando las “intenciones” del encéfalo con lo que el organismo está haciendo realmente, vigilando la posición corporal y la tensión existente en distintas partes del organismo.{"\n"}{"\n"}<Text style={style.textBold}> > </Text>  Cuando es necesario, envía mensajes para poner en marcha las medidas correctoras oportunas</Text>
+    
      <View style={style.ContainerImagen}>
-     <Image style={style.Imagen} source={require("../../../assets/images/SNP_nervios_craneales_repaso.png")} resizeMode="contain"/>
+     <Image style={style.Imagen} source={require("../../../assets/images/SNC_diencefalo_repaso.png")} resizeMode="contain"/>
       </View>
      <View style={styles.margen2}></View>
      </View>
       </ScrollView>
 
-      <View
-          style={styles.slide}
-          title={
-            <Text numberOfLines={1}></Text>
-          }
-        >
-
-    <ScrollView  >
-    <StatusBar barStyle="dark-content" />
-    <View style={styles.margen2}></View>
-    <View style={style.container}>
-    <Text style={style.title}> Pares craneales  </Text> 
-    <View style={style.ContainerImagen}>
-     <Image style={style.Imagen} source={require("../../../assets/images/SNP_nervios_craneales_repaso.png")} resizeMode="contain"/>
-      </View>
-
-
-   <View style={style.filas}>
-        <RowItemPares  
-      name="I"
-      color="#ECCEF5"
-      onPress={() => { this.setModalVisibleIPAR(true);}}/>
-
-    <RowItemPares
-      name=" II "
-      color="#ECCEF5"
-     onPress={() => { this.setModalVisibleIIPAR(true);}}/>
-
-    <RowItemPares
-      name=" III "
-      color="#ECCEF5"
-      onPress={() => { this.setModalVisibleIIIPAR(true);}}/>
-        </View>
-        <View style={style.filas}>
-    <RowItemPares
-      name=" IV "
-      color="#ECCEF5"
-      onPress={() => { this.setModalVisibleIVPAR(true);}}/>
-     <RowItemPares
-      name=" V "
-      color="#ECCEF5"
-      onPress={() => { this.setModalVisibleVPAR(true);}}/>
-       <RowItemPares
-      name=" VI "
-      color="#ECCEF5"
-      onPress={() => { this.setModalVisibleVIPAR(true);}}/>
-      </View>
-      <View style={style.filas}>
-       <RowItemPares
-      name=" VII "
-      color="#ECCEF5"
-     onPress={() => { this.setModalVisibleVIIPAR(true);}}/>
-       <RowItemPares
-      name=" VIII "
-      color="#ECCEF5"
-     onPress={() => { this.setModalVisibleVIIIPAR(true);}}/>
-      <RowItemPares
-      name=" IX "
-      color="#ECCEF5"
-      onPress={() => { this.setModalVisibleIXPAR(true);}}/>
-      </View>
-      <View style={style.filas}>
-      <RowItemPares
-      name=" X "
-      color="#ECCEF5"
-      onPress={() => { this.setModalVisibleXPAR(true);}}/>
-      <RowItemPares
-      name=" XI "
-      color="#ECCEF5"
-      onPress={() => { this.setModalVisibleXIPAR(true);}}/>
-      <RowItemPares
-      name=" XII "
-      color="#ECCEF5"
-     onPress={() => { this.setModalVisibleXIIPAR(true);}}/>
-     </View>
-
-   <Text style={style.text}>{"\n"}  {"\n"}   </Text>
-    </View>
-    </ScrollView>
-  </View>
 
       </Swiper>
 
@@ -244,6 +121,13 @@ const style = StyleSheet.create({
     textAlign : 'left',
     fontSize: 19,
     marginLeft: 10,
+    marginRight: 10,
+    margin: 10
+  },
+   subtext: {
+    textAlign : 'left',
+    fontSize: 19,
+    marginLeft: 35,
     marginRight: 10,
     margin: 10
   },
