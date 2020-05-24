@@ -18,12 +18,20 @@ export default class escena2 extends React.Component {
 
     state ={
 
-      isVisible:false,
-      isVisible2:false,
-      modalVisible: false ,
-      val:this.props.route.params?.activeQuestion,
-      
+      modalVisible: false     
     };
+
+     componentDidMount= () => {
+    let keys = ['C3_save_pregPcte1', 'C3_save_pregPcte2','C3_save_pregPcte3','C3_save_pregPcte4'];
+    AsyncStorage.multiGet(keys).then(result => {
+      this.setState({
+        'C3_save_pregPcte1': result[0][1],
+        'C3_save_pregPcte2': result[1][1],
+        'C3_save_pregPcte3': result[2][1],
+        'C3_save_pregPcte4': result[3][1],
+      });
+    });
+  };
     
   setModalVisible = (visible) => {
     this.setState({ modalVisible: visible });
@@ -31,8 +39,12 @@ export default class escena2 extends React.Component {
 
 render() {
 
-  const userId = this.props.route.params?.activeQuestion;
    const { modalVisible } = this.state;
+   const C3_Pcte1= parseInt(this.state.C3_save_pregPcte1);
+   const C3_Pcte2= parseInt(this.state.C3_save_pregPcte2);
+   const C3_Pcte3= parseInt(this.state.C3_save_pregPcte3);
+   const C3_Pcte4= parseInt(this.state.C3_save_pregPcte4);
+
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
       <Modal_C1_escena2
@@ -70,8 +82,19 @@ render() {
     
 
  
-
+   {C3_Pcte1 == 1?
      <RowItem   
+      name="1. ¿cómo es el dolor que siente?"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C3_Preg1_dialogo", {
+          title: "Caso 3. Pregunta 1",
+          questions: D_C3_pregunta1_dialog,
+          color: "#36b1f0"
+        })
+      }
+    />:
+    <RowItem   
       name="1. ¿cómo es el dolor que siente?"
       color="#77c6c6"
       onPress={() =>
@@ -82,7 +105,19 @@ render() {
         })
       }
     />
-
+  }
+ {C3_Pcte2 == 1?
+    <RowItem
+      name="2. sabe usted ¿cómo se llama la zona del abdomen que le duele? "
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C3_Preg2_dialogo", {
+          title: "Caso 3. Pregunta 2",
+          questions: D_C3_pregunta2_dialog,
+          color: "#36b1f0"
+        })
+      }
+    />:
     <RowItem
       name="2. sabe usted ¿cómo se llama la zona del abdomen que le duele? "
       color="#00b9bc"
@@ -94,6 +129,19 @@ render() {
         })
       }
     />
+  }
+  {C3_Pcte3 == 1?
+    <RowItem
+      name="3.¿esta es su postura todo el tiempo? "
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C3_Preg3_dialogo", {
+          title: "Caso 3. Pregunta 3",
+          questions: D_C3_pregunta3_dialog,
+          color: "#36b1f0"
+        })
+      }
+    />:
     <RowItem
       name="3.¿esta es su postura todo el tiempo? "
       color="#77c6c6"
@@ -105,6 +153,19 @@ render() {
         })
       }
     />
+  }
+  {C3_Pcte4 == 1?
+    <RowItem
+      name="4. ¿en qué zona específicamente presenta el dolor?"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C3_Preg4_dialogo", {
+          title: "Caso 3. Pregunta 4",
+          questions: D_C3_pregunta4_dialog,
+          color: "#36b1f0"
+        })
+      }
+    />:
     <RowItem
       name="4. ¿en qué zona específicamente presenta el dolor?"
       color="#00b9bc"
@@ -116,6 +177,7 @@ render() {
         })
       }
     />
+  }
   
   
     </ScrollView>

@@ -34,26 +34,26 @@ export default class menu_caso2 extends React.Component {
     };
 
     componentDidMount= () => {
-    let keys = ['C2_save_pruValo1', 'C2_save_pruValo2','C2_save_pruValo3','save_pruValo4','save_pruValo5','save_pruValo6','save_pruValo7',
-                 'save_pruValo7','save_pruValo7','save_pruValo7','save_pruValo7','save_pruValo7','save_pruValo7','save_pruValo7',
-                 'save_pruValo7'];
+    let keys = ['C2_save_pruValo1', 'C2_save_pruValo2','C2_save_pruValo3','C2_save_pruValo4','C2_save_pruValo5','C2_save_pruValo6','C2_save_pruValo7',
+                 'C2_save_pruValo8','C2_save_pruValo9','C2_save_pruValo10','C2_save_pruValo11','C2_save_pruValo12','C2_save_pruValo13','C2_save_pruValo14',
+                 'C2_save_pruValo15'];
     AsyncStorage.multiGet(keys).then(result => {
       this.setState({
         'C2_save_pruValo1':  result[0][1],
         'C2_save_pruValo2':  result[1][1],
         'C2_save_pruValo3':  result[2][1],
-        'save_pruValo4':  result[3][1],
-        'save_pruValo5':  result[4][1],
-        'save_pruValo6':  result[5][1],
-        'save_pruValo7':  result[6][1],
-        'save_pruValo7':  result[7][1],
-        'save_pruValo7':  result[8][1],
-        'save_pruValo7':  result[9][1],
-        'save_pruValo7':  result[10][1],
-        'save_pruValo7':  result[11][1],
-        'save_pruValo7':  result[12][1],
-        'save_pruValo7':  result[13][1],
-        'save_pruValo7':  result[14][1],
+        'C2_save_pruValo4':  result[3][1],
+        'C2_save_pruValo5':  result[4][1],
+        'C2_save_pruValo6':  result[5][1],
+        'C2_save_pruValo7':  result[6][1],
+        'C2_save_pruValo8':  result[7][1],
+        'C2_save_pruValo9':  result[8][1],
+        'C2_save_pruValo10':  result[9][1],
+        'C2_save_pruValo11':  result[10][1],
+        'C2_save_pruValo12':  result[11][1],
+        'C2_save_pruValo13':  result[12][1],
+        'C2_save_pruValo14':  result[13][1],
+        'C2_save_pruValo15':  result[14][1],
       });
     });
   };
@@ -67,18 +67,18 @@ render() {
   const C2_pruValo1= parseInt(this.state.C2_save_pruValo1);
   const C2_pruValo2= parseInt(this.state.C2_save_pruValo2);
   const C2_pruValo3= parseInt(this.state.C2_save_pruValo3);
-  const C2_pruValo4= parseInt(this.state.save_pruValo4);
-  const C2_pruValo5= parseInt(this.state.save_pruValo5);
-  const C2_pruValo6= parseInt(this.state.save_pruValo6);
-  const C2_pruValo7= parseInt(this.state.save_pruValo7);
-  const C2_pruValo8= parseInt(this.state.save_pruValo8);
-  const C2_pruValo9= parseInt(this.state.save_pruValo9);
-  const C2_pruValo10= parseInt(this.state.save_pruValo10);
-  const C2_pruValo11= parseInt(this.state.save_pruValo11);
-  const C2_pruValo12= parseInt(this.state.save_pruValo12);
-  const C2_pruValo13= parseInt(this.state.save_pruValo13);
-  const C2_pruValo14= parseInt(this.state.save_pruValo14);
-  const C2_pruValo15= parseInt(this.state.save_pruValo15);
+  const C2_pruValo4= parseInt(this.state.C2_save_pruValo4);
+  const C2_pruValo5= parseInt(this.state.C2_save_pruValo5);
+  const C2_pruValo6= parseInt(this.state.C2_save_pruValo6);
+  const C2_pruValo7= parseInt(this.state.C2_save_pruValo7);
+  const C2_pruValo8= parseInt(this.state.C2_save_pruValo8);
+  const C2_pruValo9= parseInt(this.state.C2_save_pruValo9);
+  const C2_pruValo10= parseInt(this.state.C2_save_pruValo10);
+  const C2_pruValo11= parseInt(this.state.C2_save_pruValo11);
+  const C2_pruValo12= parseInt(this.state.C2_save_pruValo12);
+  const C2_pruValo13= parseInt(this.state.C2_save_pruValo13);
+  const C2_pruValo14= parseInt(this.state.C2_save_pruValo14);
+  const C2_pruValo15= parseInt(this.state.C2_save_pruValo15);
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
@@ -188,7 +188,19 @@ render() {
         })
       }
     />
-   }
+  }
+  {C2_pruValo4 == 1?
+    <RowItemEscena3
+      name="4"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C2_PruValo4_dialogo", {
+          title: "4 C2",
+          questions: C2_Pru_valo4_dialog,
+          color: "#799496"
+        })
+      }
+    />:
     <RowItemEscena3
       name="4"
       color="#00b9bc"
@@ -200,12 +212,24 @@ render() {
         })
       }
     />
+  }
 
      </View>
    
     <View style={style.viewcolsmenu}>
-
+  {C2_pruValo5 == 1?
    <RowItemEscena3
+      name="5"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C2_PruValo5_dialogo", {
+          title: "5 C2",
+          questions: C2_Pru_valo5_dialog,
+          color: "#799496"
+        })
+      }
+    />:
+    <RowItemEscena3
       name="5"
       color="#77c6c6"
       onPress={() =>
@@ -216,6 +240,19 @@ render() {
         })
       }
     />
+  }
+  {C2_pruValo6 == 1?
+    <RowItemEscena3
+      name="6"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C2_PruValo6_dialogo", {
+          title: "6 C2",
+          questions: C2_Pru_valo6_dialog,
+          color: "#799496"
+        })
+      }
+    />:
     <RowItemEscena3
       name="6"
       color="#00b9bc"
@@ -227,11 +264,23 @@ render() {
         })
       }
     />
+  }
 
    </View>
 
     <View style={style.viewcolsmenu}> 
-
+  {C2_pruValo7 == 1?
+    <RowItemEscena3
+      name="7"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C2_PruValo7_dialogo", {
+          title: "7 C2",
+          questions: C2_Pru_valo7_dialog,
+          color: "#799496"
+        })
+      }
+    />:
     <RowItemEscena3
       name="7"
       color="#77c6c6"
@@ -243,8 +292,20 @@ render() {
         })
       }
     />
-
+  }
+  {C2_pruValo8 == 1?
      <RowItemEscena3
+      name="8"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C2_PruValo8_dialogo", {
+          title: "8 C2",
+          questions: C2_Pru_valo8_dialog,
+          color: "#799496"
+        })
+      }
+    />:
+    <RowItemEscena3
       name="8"
       color="#00b9bc"
       onPress={() =>
@@ -255,11 +316,23 @@ render() {
         })
       }
     />
+  }
 
    </View>
 
     <View style={style.viewcolsmenu}> 
-
+ {C2_pruValo9 == 1?
+    <RowItemEscena3
+      name="9"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C2_PruValo9_dialogo", {
+          title: "9 C2",
+          questions: C2_Pru_valo9_dialog,
+          color: "#799496"
+        })
+      }
+    />:
     <RowItemEscena3
       name="9"
       color="#77c6c6"
@@ -271,8 +344,20 @@ render() {
         })
       }
     />
-
+  }
+  {C2_pruValo10 == 1?
      <RowItemEscena3
+      name="10"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C2_PruValo10_dialogo", {
+          title: "10 C2",
+          questions: C2_Pru_valo10_dialog,
+          color: "#799496"
+        })
+      }
+    />:
+    <RowItemEscena3
       name="10"
       color="#00b9bc"
       onPress={() =>
@@ -283,11 +368,23 @@ render() {
         })
       }
     />
+  }
 
    </View>
 
     <View style={style.viewcolsmenu}> 
-
+ {C2_pruValo11 == 1? 
+    <RowItemEscena3
+      name="11"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C2_PruValo11_dialogo", {
+          title: "11 C2",
+          questions: C2_Pru_valo11_dialog,
+          color: "#799496"
+        })
+      }
+    />:
     <RowItemEscena3
       name="11"
       color="#77c6c6"
@@ -299,8 +396,20 @@ render() {
         })
       }
     />
-
+ }
+ {C2_pruValo12 == 1?
      <RowItemEscena3
+      name="12"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C2_PruValo12_dialogo", {
+          title: "12 C2",
+          questions: C2_Pru_valo12_dialog,
+          color: "#799496"
+        })
+      }
+    />:
+    <RowItemEscena3
       name="12"
       color="#00b9bc"
       onPress={() =>
@@ -311,10 +420,22 @@ render() {
         })
       }
     />
+  }
 
    </View>
     <View style={style.viewcolsmenu}> 
-
+ {C2_pruValo13 == 1?
+    <RowItemEscena3
+      name="13"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C2_PruValo13_dialogo", {
+          title: "13 C2",
+          questions: C2_Pru_valo13_dialog,
+          color: "#799496"
+        })
+      }
+    />:
     <RowItemEscena3
       name="13"
       color="#77c6c6"
@@ -326,8 +447,20 @@ render() {
         })
       }
     />
-
+  }
+{C2_pruValo14 == 1?
      <RowItemEscena3
+      name="14"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C2_PruValo14_dialogo", {
+          title: "14 C2",
+          questions: C2_Pru_valo14_dialog,
+          color: "#799496"
+        })
+      }
+    />:
+    <RowItemEscena3
       name="14"
       color="#00b9bc"
       onPress={() =>
@@ -338,10 +471,22 @@ render() {
         })
       }
     />
+  }
 
    </View>
        <View style={style.viewcolsmenu}> 
-
+ {C2_pruValo15 == 1?
+    <RowItemEscena3
+      name="15"
+      color="#82E0AA"
+      onPress={() =>
+        this.props.navigation.navigate("V_C2_PruValo15_dialogo", {
+          title: "15 C2",
+          questions: C2_Pru_valo15_dialog,
+          color: "#799496"
+        })
+      }
+    />:
     <RowItemEscena3
       name="15"
       color="#77c6c6"
@@ -353,6 +498,7 @@ render() {
         })
       }
     />
+  }
 
    </View>
 

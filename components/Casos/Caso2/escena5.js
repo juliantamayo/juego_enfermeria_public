@@ -65,7 +65,7 @@ class C2_escena5 extends React.Component {
 
       if (nextIndex == state.totalCount) {
        // return this.props.navigation.popToTop();
-         return this.props.navigation.navigate('Guardar_V_quiz',{envia_quiz:this.state.correctCount,cantidad_preg:this.state.totalCount,erroneas:(this.state.totalCount-this.state.correctCount)});
+         return this.props.navigation.navigate('C2_Guardar_V_quiz',{C2_envia_quiz:this.state.correctCount,cantidad_preg:this.state.totalCount,erroneas:(this.state.totalCount-this.state.correctCount)});
       }
 
       return {
@@ -106,7 +106,11 @@ class C2_escena5 extends React.Component {
           <Text style={styles.text}>
             {`${this.state.correctCount}/${this.state.totalCount}`}
           </Text>
-          
+         { // <Text style={styles.text}>
+            //`${this.state.activeQuestionIndex+1}`
+
+        //  </Text>
+        }
         </SafeAreaView>
         <Alert
           correct={this.state.answerCorrect}

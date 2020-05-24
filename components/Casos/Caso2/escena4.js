@@ -71,6 +71,11 @@ validarCheckBox = (value) => {
  var checkArray = [ vali1, vali2, vali3, vali4, vali5, vali6,vali7,vali8,vali9,vali10,vali11,vali12,
                          vali13,vali14,vali15,vali16,vali17,vali18,vali19,vali20,vali21,vali22,vali23,vali24,vali25,
                          vali26,vali27,vali28,vali29,vali30,vali31,vali32,vali33,vali34,vali35,vali36 ];
+ var suma = 0;                        
+
+  checkArray.forEach (function(checkArray){
+        suma += checkArray;
+    });                       
 
   if (vali1==0 && vali2==0   && vali3==0  && vali4==0  && vali5==0  && vali6==0  && vali7==0  && 
       vali8==0  && vali9==0  && vali10==0 && vali11==0 && vali12==0 && vali13==0 && vali14==0 &&
@@ -80,10 +85,13 @@ validarCheckBox = (value) => {
       vali36==0) {
        Alert.alert("Mensaje","No ha seleccionado ningun hallazgo ");
 
-    }else{
-        Alert.alert("Mensaje","Recuerdas que puedes hacer la valoración de nuevo si lo deseas", [
+    }else if (suma >=30) {
+       Alert.alert("Mensaje","Debes elegir bien los hallazgos del paciente");
+    }
+    else {
+        Alert.alert("Mensaje","Recuerda que puedes hacer la valoración de nuevo si lo deseas", [
        
-        { text: "OK", onPress: () =>  this.props.navigation.navigate("Guardr_valo",{arraycheckR:[ vali1, vali2, vali3, vali4, vali5, vali6,vali7,vali8,vali9,vali10,vali11,vali12,
+        { text: "OK", onPress: () =>  this.props.navigation.navigate("C2_Guardr_valo",{C2_arraycheckR:[ vali1, vali2, vali3, vali4, vali5, vali6,vali7,vali8,vali9,vali10,vali11,vali12,
                          vali13,vali14,vali15,vali16,vali17,vali18,vali19,vali20,vali21,vali22,vali23,vali24,vali25,
                          vali26,vali27,vali28,vali29,vali30,vali31,vali32,vali33,vali34,vali35,vali36 ]}) }
      ]);

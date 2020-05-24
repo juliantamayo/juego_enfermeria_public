@@ -10,7 +10,7 @@ import { StyleSheet,
   StatusBar,ScrollView } from 'react-native';
 import style from '../../../Style.js';
 
-export default class guardar_escena1 extends Component {
+export default class guardar_valoracion extends Component {
 
 constructor(route) {
     super(route);
@@ -20,8 +20,6 @@ constructor(route) {
 
 
 state = {
-       caja:this.props.route.params?.check1,
-       caja2:this.props.route.params?.check2,
        arraycheckRecibe:this.props.route.params?.arraycheckR,
        arraycomparar:[1,0,1,0,1,1,0,1,0,1,1,1,0,1,1,0,1,1,1,1,0,1,1,0,1],
        save_valoracion:0
@@ -31,7 +29,7 @@ state = {
   saveData = (value) => {
 
        if(JSON.stringify(this.state.arraycheckRecibe) === JSON.stringify(this.state.arraycomparar)) {
-         AsyncStorage.setItem('save_valo',  global.recibe_valo.toString());
+         AsyncStorage.setItem('save_valoracion',  global.recibe_valo.toString());
       this.setState({ 'save_valoracion':  global.recibe_valo });
        Alert.alert("Mensaje","Datos guardados correctamente", [
        
@@ -325,7 +323,7 @@ const styles = StyleSheet.create({
     flex: 1,
    // alignItems : 'stretch',
     width: "100%",
-    height :'100%',
+    height :'100%'
     
   },
   containerBody:{
@@ -335,7 +333,7 @@ const styles = StyleSheet.create({
   },
    button: {
   
-    margin: 5,
+    margin: 5
   },
   viewcheckbody:{
     flex:1,
@@ -357,7 +355,7 @@ const styles = StyleSheet.create({
   color:"green"
   //backgroundColor: "#00fa9a",
  },
-  textcarita:{
+  textmensaje_carita:{
    fontSize: 20,
   textAlign: "center",
    //backgroundColor: 'rgba(255,0,0,0,0.6)',
@@ -401,7 +399,7 @@ viewcaritas:{
   color: "#fff",
   flexDirection : 'row',
     width: "100%",
-    margin: 5,
+    margin: 5
 
   },
   viewchecktext:{

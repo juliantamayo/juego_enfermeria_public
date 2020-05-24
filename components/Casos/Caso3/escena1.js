@@ -25,10 +25,7 @@ const styles = StyleSheet.create({
   },
   text2: {
    marginLeft : 5,
-   //paddingVertical: 8,
-   // borderWidth: 4,
     borderColor: "#20232a",
-   // borderRadius: 6,
     backgroundColor: "red",
     color: "#fff",
     textAlign: "left",
@@ -44,22 +41,15 @@ const styles = StyleSheet.create({
   
 });
 
-const mult =5;
-
-
-
 
 class escena1 extends React.Component {
    
   state = {
     modalVisible: false,
-     modalVisible2: false,
-    correctCount: 0, 
-    //totalCount: this.props.navigation.getParam("questions", []).length,
-      totalCount: this.props.route.params?.questions.length,
+    modalVisible2: false,
+    totalCount: this.props.route.params?.questions.length,
     activeQuestionIndex: 0,
-    answered: false,
-    answerCorrect: false
+    answered: false
       
   };
 
@@ -69,7 +59,7 @@ class escena1 extends React.Component {
 
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate("Guardar_escena1", {ex: '2', 
+        return this.props.navigation.navigate("C3_Guardar_escena1", {ex: 2, 
           title: "C3_Escena2",
           color: "#36b1f0"
         });

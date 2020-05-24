@@ -8,7 +8,6 @@ import  styles  from "../../../Style_dialog.js";
 import { CommonActions } from '@react-navigation/native';
 import { Modal_Pruebas } from "../../../elementos/ModalsTutorial";
 
-const mult =5;
 
 class V_C2_RespPruValo12_enfermera extends React.Component {
    
@@ -28,7 +27,7 @@ class V_C2_RespPruValo12_enfermera extends React.Component {
 
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate("C2_Escena3");
+        return this.props.navigation.navigate("C2_Guardar_V_pru_valo12",{C2_pv12:1});
       }
 
       return {

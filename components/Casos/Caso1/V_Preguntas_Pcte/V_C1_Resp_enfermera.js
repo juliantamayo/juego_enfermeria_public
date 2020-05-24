@@ -10,14 +10,12 @@ import  styles  from "../../../Style_dialog.js";
 import { ModalHistorial } from "../../../elementos/Modals";
 import { Modal_Preguntas } from "../../../elementos/ModalsTutorial";
 
-const mult =5;
 
 class V_C1_Resp_enfermera extends React.Component {
    
   state = {
     modalVisible: false,
     modalVisible2: false,
-    correctCount: 0, 
     totalCount: this.props.route.params?.questions.length,
     activeQuestionIndex: 0,
     answered: false

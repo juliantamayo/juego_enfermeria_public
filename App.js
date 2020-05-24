@@ -131,9 +131,9 @@ import Escena6 from './components/Casos/Caso1/escena6';
 import M_caso2 from './components/Casos/Caso2/menu_caso2';
 import C2_Escena1 from './components/Casos/Caso2/escena1';
 import C2_Guardar_escena1 from './components/Casos/Caso2/V_Guardar/guardar_escena1';
-import C2_Escena2 from './components/Casos/Caso2/escena2';
 
 //escena2
+import C2_Escena2 from './components/Casos/Caso2/escena2';
 import V_C2_Preg1_dialogo from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg1_dialogo';
 import V_C2_Preg1_pregunta from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_Preg1_pregunta';
 import V_C2_RespP1_enfermera from './components/Casos/Caso2/V_Preguntas_Pcte/V_C2_RespP1_enfermera';
@@ -235,33 +235,44 @@ import V_C2_PruValo15_dialogo from './components/Casos/Caso2/V_Pruebas_valoracio
 import V_C2_PruValo15_pregunta from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_PruValo15_pregunta';
 import V_C2_RespPruValo15_enfermera from './components/Casos/Caso2/V_Pruebas_valoracion/V_C2_RespPruValo15_enfermera';
 import C2_Guardar_V_pru_valo15 from './components/Casos/Caso2/V_Guardar/C2_guardar_V_pru_valo15';
-//escena6
+//escena4----
+import C2_Escena4 from './components/Casos/Caso2/escena4';
+import C2_Guardr_valo from './components/Casos/Caso2/V_Guardar/C2_guardar_V_valoracion';
+//escena5----
 import C2_Escena5 from './components/Casos/Caso2/escena5';
+import C2_Guardar_V_quiz from './components/Casos/Caso2/V_Guardar/C2_guardar_V_quiz';
+//escena6----
 import C2_Escena6 from './components/Casos/Caso2/escena6';
+
 //-------------------------caso3---------------------------------
 import M_caso3 from './components/Casos/Caso3/menu_caso3';
+//escena1
 import C3_Escena1 from './components/Casos/Caso3/escena1';
-import C3_Guardar_escena1 from './components/Casos/Caso3/V_Guardar/guardar_escena1';
+import C3_Guardar_escena1 from './components/Casos/Caso3/V_Guardar/C3_guardar_escena1';
+//escena2
 import C3_Escena2 from './components/Casos/Caso3/escena2';
-import C3_Escena3 from './components/Casos/Caso3/escena3';
 
 import V_C3_Preg1_dialogo from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_Preg1_dialogo';
 import V_C3_Preg1_pregunta from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_Preg1_pregunta';
 import V_C3_RespP1_enfermera from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_RespP1_enfermera';
+import C3_Guardar_V_preg_pcte1 from './components/Casos/Caso3/V_Guardar/C3_guardar_V_preg_pcte1';
 
 import V_C3_Preg2_dialogo from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_Preg2_dialogo';
 import V_C3_Preg2_pregunta from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_Preg2_pregunta';
 import V_C3_RespP2_enfermera from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_RespP2_enfermera';
+import C3_Guardar_V_preg_pcte2 from './components/Casos/Caso3/V_Guardar/C3_guardar_V_preg_pcte2';
 
 import V_C3_Preg3_dialogo from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_Preg3_dialogo';
 import V_C3_Preg3_pregunta from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_Preg3_pregunta';
 import V_C3_RespP3_enfermera from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_RespP3_enfermera';
+import C3_Guardar_V_preg_pcte3 from './components/Casos/Caso3/V_Guardar/C3_guardar_V_preg_pcte3';
 
 import V_C3_Preg4_dialogo from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_Preg4_dialogo';
 import V_C3_Preg4_pregunta from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_Preg4_pregunta';
 import V_C3_RespP4_enfermera from './components/Casos/Caso3/V_Preguntas_Pcte/V_C3_RespP4_enfermera';
-
-// pruebas de valoración escena 3 Caso 3}
+import C3_Guardar_V_preg_pcte4 from './components/Casos/Caso3/V_Guardar/C3_guardar_V_preg_pcte4';
+//escena 3----
+import C3_Escena3 from './components/Casos/Caso3/escena3';
 import V_C3_PruValo1_dialogo from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_PruValo1_dialogo';
 import V_C3_PruValo1_pregunta from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_PruValo1_pregunta';
 import V_C3_RespPruValo1_enfermera from './components/Casos/Caso3/V_Pruebas_valoracion/V_C3_RespPruValo1_enfermera';
@@ -2317,6 +2328,34 @@ useEffect(() => {
           }
         }}/>
 
+        <Stack.Screen name="C2_Escena4" component={C2_Escena4} 
+        options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: 'Caso 2. Valoración',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          }
+        }}/>
+
+        <Stack.Screen name="C2_Guardr_valo" component={C2_Guardr_valo} 
+        options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: 'Caso 2. Valoración',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          }
+        }}/>
+
         <Stack.Screen name="C2_Escena5" component={C2_Escena5} 
         options={
            
@@ -2326,9 +2365,18 @@ useEffect(() => {
          backgroundColor: '#fbe122',
          borderBottomColor: route.params?.color
         }
-
-
        })}/>
+
+        <Stack.Screen name="C2_Guardar_V_quiz"  component={C2_Guardar_V_quiz} 
+       options={{
+        //  headerShown: false
+        title: 'Quiz',
+        headerLeft: null,
+         // title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
         <Stack.Screen name="C2_Escena6" component={C2_Escena6} 
         options={{
@@ -2360,9 +2408,17 @@ useEffect(() => {
          backgroundColor: '#fbe122',
          borderBottomColor: route.params?.color
         }
+       })}/>
 
-
-       })}/>        
+       <Stack.Screen name="C3_Guardar_escena1"  component={C3_Guardar_escena1} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>        
 
          <Stack.Screen name="C3_Escena2"  component={C3_Escena2}
           options={{
@@ -2427,7 +2483,15 @@ useEffect(() => {
 
        })}/>
 
-
+        <Stack.Screen name="C3_Guardar_V_preg_pcte1"  component={C3_Guardar_V_preg_pcte1} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
             <Stack.Screen name="V_C3_Preg2_dialogo" component={V_C3_Preg2_dialogo} 
         options={
@@ -2466,6 +2530,16 @@ useEffect(() => {
 
        })}/>
 
+        <Stack.Screen name="C3_Guardar_V_preg_pcte2"  component={C3_Guardar_V_preg_pcte2} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
+
         <Stack.Screen name="V_C3_Preg3_dialogo" component={V_C3_Preg3_dialogo} 
         options={
            
@@ -2499,9 +2573,17 @@ useEffect(() => {
          backgroundColor: '#fbe122',
          borderBottomColor: route.params?.color
         }
-
        })}/>
 
+        <Stack.Screen name="C3_Guardar_V_preg_pcte3"  component={C3_Guardar_V_preg_pcte3} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
             <Stack.Screen name="V_C3_Preg4_dialogo" component={V_C3_Preg4_dialogo} 
         options={
@@ -2539,6 +2621,16 @@ useEffect(() => {
         }
 
        })}/>
+
+        <Stack.Screen name="C3_Guardar_V_preg_pcte4"  component={C3_Guardar_V_preg_pcte4} 
+       options={{
+        //  headerShown: false
+        headerLeft: null,
+          title: '',
+          headerStyle: {
+            backgroundColor: '#fbe122',
+          }
+        }}/>
 
            <Stack.Screen name="V_C3_PruValo1_dialogo" component={V_C3_PruValo1_dialogo} 
         options={
