@@ -25,11 +25,13 @@ const styles = StyleSheet.create({
     justifyContent: "space-between"
   },
   modalView: {
-    width: '90%',
+    width: '95%',
     height: '90%',
     margin: 20,
     backgroundColor: "rgba(0, 185, 188, 0.37)",
-    alignItems: "center",
+    alignItems: "center"
+
+    ,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -55,8 +57,11 @@ const styles = StyleSheet.create({
       fontWeight: "bold"
   },
    modalText: {
-    textAlign: "center",
-    fontSize : 18,
+    textAlign: "justify",
+    fontSize: 19,
+    marginLeft: 10,
+    marginRight: 10,
+    margin: 10
      
   },
   modalTextcuerpo: {
@@ -65,10 +70,10 @@ const styles = StyleSheet.create({
   },
    modalTextnegrilla: {
 
-   fontSize : 18,
-    textAlign: "left",
+   fontSize : 19,
+    textAlign: "center",
     fontWeight: "bold",
-     marginLeft : 3,
+     margin : 5,
   },
 
   modalTex3: {
@@ -80,6 +85,7 @@ const styles = StyleSheet.create({
     flex: 0.1,
     flexDirection : 'row',
     alignItems: 'center',
+    justifyContent: "center",
     
   },
   headerMizq:{
@@ -97,7 +103,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255, 255, 255, 1)",
     borderWidth: 4,
     justifyContent: "center",
-    width: '90%',
+    width: '95%',
     height: '90%',
   },
   margen:{
@@ -110,6 +116,29 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'transparent'
   },
+   title:{ 
+
+    textAlign : 'center',
+    fontSize: 19,
+    fontWeight: 'bold',
+    backgroundColor: '#77c6c6',
+    borderRadius: 50,
+    padding: 3,
+    marginLeft:15,
+    marginRight:15
+  },
+  text: {
+    textAlign : 'left',
+    fontSize: 19,
+    marginLeft: 10,
+    marginRight: 10,
+    margin: 10
+  },
+  textBold:{
+    fontSize: 19,
+    fontWeight: 'bold',
+    backgroundColor: '#F8D95B',
+  }
 });
 
 
@@ -710,5 +739,945 @@ export const Pruval = ({ text, onPress = () => {} }) => (
             </View>
             
          
+        </Modal>
+);
+
+export const IPAR = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
+            <View style={styles.headerModal}>
+            <View style={styles.headerMizq}>
+            <Text style={styles.modalText2}>I. Olfativo</Text>
+            </View>
+            <View style={styles.margen}></View>
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton} onPress={onPress} >
+               <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+           </View>
+           </View>
+            
+         <View style={styles.bodyModal}>
+         <Swiper style={styles.wrapper}
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 20
+          }}
+          loop={false}
+        >
+          <ScrollView  >
+       <StatusBar barStyle="dark-content" />
+
+          <View style={styles.slide}>
+
+                <Text style={styles.margen}></Text>
+                <Text style={styles.title}>Número / Nombre</Text>
+                <Text style={styles.modalTextnegrilla}>I. Olfativo </Text>
+
+                <Text style={styles.title}>Origen / Recorrido</Text>
+                <Text style={styles.modalText}>Las fibras parten de los receptores olfativos de la mucosa nasa y hacen sinapsis con los bulbos olfativos (que, a su vez, envían las fibras a la corteza olfativa)</Text>
+                
+                <Text style={styles.title}>Función</Text>
+                <Text style={styles.modalText}>Sensitivo puro; transporta los impulsos del sentido del olfato.</Text>
+
+                <Text style={styles.title}>Exploración</Text>
+                <Text style={styles.modalText}>Se le pide a la persona que huela e identifique sustancias aromàticas, como esencia de vainilla o de ajos</Text>
+               
+          </View>
+           </ScrollView>
+        </Swiper>
+            </View>   
+            </View>
+        </Modal>
+);
+export const IIPAR = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
+            <View style={styles.headerModal}>
+            <View style={styles.headerMizq}>
+            <Text style={styles.modalText2}>II. Óptico</Text>
+            </View>
+            <View style={styles.margen}></View>
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton} onPress={onPress} >
+               <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+           </View>
+           </View>
+            
+         <View style={styles.bodyModal}>
+         <Swiper style={styles.wrapper}
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 20
+          }}
+          loop={false}
+        >
+          <ScrollView  >
+       <StatusBar barStyle="dark-content" />
+
+          <View style={styles.slide}>
+
+                <Text style={styles.title}>Número / Nombre</Text>
+                <Text style={styles.modalTextnegrilla}>II. Óptico </Text>
+
+                <Text style={styles.title}>Origen / Recorrido</Text>
+                <Text style={styles.modalText}>Las fibras parten de la retina y forman el nervio óptico. Los dos nervios ópticos forman el quiasma óptico cruzando parte de sus fibras; las fibras continúan hasta la corteza visual. (vía óptica)</Text>
+                
+                <Text style={styles.title}>Función</Text>
+                <Text style={styles.modalText}>Sensitivo puro; transporta los impulsos de la vista</Text>
+
+                <Text style={styles.title}>Exploración</Text>
+                <Text style={styles.modalText}>La vista y el campo visual se exploran con una tabla optométrica y comprobando en qué punto ve por primera vez la persona un objeto (dedo explorador) que se mueve en el campo visual; el interior del ojo se explora con un oftalmoscopio.</Text>
+               
+          </View>
+           </ScrollView>
+        </Swiper>
+            </View>   
+            </View>
+        </Modal>
+);
+export const IIIPAR = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
+            <View style={styles.headerModal}>
+            <View style={styles.headerMizq}>
+            <Text style={styles.modalText2}>III. Oculomotor</Text>
+            </View>
+            <View style={styles.margen}></View>
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton} onPress={onPress} >
+               <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+           </View>
+           </View>
+            
+         <View style={styles.bodyModal}>
+         <Swiper style={styles.wrapper}
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 20
+          }}
+          loop={false}
+        >
+          <ScrollView  >
+       <StatusBar barStyle="dark-content" />
+
+          <View style={styles.slide}>
+
+                <Text style={styles.title}>Número / Nombre</Text>
+                <Text style={styles.modalTextnegrilla}>III. Motor Ocular Común (Oculomotor) </Text>
+
+                <Text style={styles.title}>Origen / Recorrido</Text>
+                <Text style={styles.modalText}>Las fibras discurren entre el mesencéfalo y el ojo. </Text>
+                
+                <Text style={styles.title}>Función</Text>
+                <Text style={styles.modalText}>Proporciona la inervación motora a cuatro de los seis músculos (rectos superior, inferior y medial, y oblicuo inferior) que mueven el ojo, el párpado y los músculos internos del ojo que controlan la forma del cristalino y el tamaño pupilar. </Text>
+
+                <Text style={styles.title}>Exploración</Text>
+                <Text style={styles.modalText}>Se explora el tamaño y la forma pupilares, comparando las dos pupilas; el reflejo pupilar se explora con una linterna (constricción de las pupilas con la luz); también se explora la convergencia ocular y el seguimiento de objetos en movimiento. </Text>
+               
+          </View>
+           </ScrollView>
+        </Swiper>
+            </View>   
+            </View>
+        </Modal>
+);
+export const IVPAR = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
+            <View style={styles.headerModal}>
+            <View style={styles.headerMizq}>
+            <Text style={styles.modalText2}>IV. Patético</Text>
+            </View>
+            <View style={styles.margen}></View>
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton} onPress={onPress} >
+               <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+           </View>
+           </View>
+            
+         <View style={styles.bodyModal}>
+         <Swiper style={styles.wrapper}
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 20
+          }}
+          loop={false}
+        >
+          <ScrollView  >
+       <StatusBar barStyle="dark-content" />
+
+          <View style={styles.slide}>
+
+                <Text style={styles.title}>Número / Nombre</Text>
+                <Text style={styles.modalTextnegrilla}>IV. Patético (Troclear) </Text>
+
+                <Text style={styles.title}>Origen / Recorrido</Text>
+                <Text style={styles.modalText}>Las fibras discurren entre el mesencéfalo y el ojo</Text>
+                
+                <Text style={styles.title}>Función</Text>
+                <Text style={styles.modalText}>Proporciona la inervación motora de un músculo externo del ojo (el oblícuo superior). </Text>
+
+                <Text style={styles.title}>Exploración</Text>
+                <Text style={styles.modalText}>Se explora igual que el III par, valorando el seguimiento de objetos en movimiento. </Text>
+               
+          </View>
+           </ScrollView>
+        </Swiper>
+            </View>   
+            </View>
+        </Modal>
+);
+export const VPAR = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
+            <View style={styles.headerModal}>
+            <View style={styles.headerMizq}>
+            <Text style={styles.modalText2}>V. Trigémino</Text>
+            </View>
+            <View style={styles.margen}></View>
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton} onPress={onPress} >
+               <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+           </View>
+           </View>
+            
+         <View style={styles.bodyModal}>
+         <Swiper style={styles.wrapper}
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 20
+          }}
+          loop={false}
+        >
+          <ScrollView  >
+       <StatusBar barStyle="dark-content" />
+
+          <View style={styles.slide}>
+
+                <Text style={styles.title}>Número / Nombre</Text>
+                <Text style={styles.modalTextnegrilla}>V. Trigémino</Text>
+
+                <Text style={styles.title}>Origen / Recorrido</Text>
+                <Text style={styles.modalText}>Las fibras parten de la protuberancia y forman tres ramas que terminan en la cara. </Text>
+                
+                <Text style={styles.title}>Función</Text>
+                <Text style={styles.modalText}>Transporta los impulsos de la piel de la cara y las mucosas nasal y oral; también lleva fibras motoras que activan los músculos de la masticación. </Text>
+
+                <Text style={styles.title}>Exploración</Text>
+                <Text style={styles.modalText}>La sensibilidad al dolor, el tacto, la temperatura se exploran con un alfiler y con objetos frios y calientes; el reflejo corneal, con un trocito de algodón; la rama motora se explora pidiendo al sujeto que abra la boca contra resistencia y mueva la mandíbula de un lado a otro.</Text>
+               
+          </View>
+           </ScrollView>
+        </Swiper>
+            </View>   
+            </View>
+        </Modal>
+);
+export const VIPAR = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
+            <View style={styles.headerModal}>
+            <View style={styles.headerMizq}>
+            <Text style={styles.modalText2}>VI. Abducens</Text>
+            </View>
+            <View style={styles.margen}></View>
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton} onPress={onPress} >
+               <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+           </View>
+           </View>
+            
+         <View style={styles.bodyModal}>
+         <Swiper style={styles.wrapper}
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 20
+          }}
+          loop={false}
+        >
+          <ScrollView  >
+       <StatusBar barStyle="dark-content" />
+
+          <View style={styles.slide}>
+
+                <Text style={styles.title}>Número / Nombre</Text>
+                <Text style={styles.modalTextnegrilla}>VI. Motor Ocular {"\n"} (Abducens) </Text>
+
+                <Text style={styles.title}>Origen / Recorrido</Text>
+                <Text style={styles.modalText}>Las fibras parten de la protuberancia y terminan en el ojo.</Text>
+                
+                <Text style={styles.title}>Función</Text>
+                <Text style={styles.modalText}>Proporciona la inervación motora del músculo recto lateral, que gira el ojo hacia afuera. </Text>
+
+                <Text style={styles.title}>Exploración</Text>
+                <Text style={styles.modalText}>Se explora del mismo modo que el III par, valorando el movimiento ocular hacia afuera (en los dos ojos).</Text>
+               
+          </View>
+           </ScrollView>
+        </Swiper>
+            </View>   
+            </View>
+        </Modal>
+);
+export const VIIPAR = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
+            <View style={styles.headerModal}>
+            <View style={styles.headerMizq}>
+            <Text style={styles.modalText2}>VII. Facial</Text>
+            </View>
+            <View style={styles.margen}></View>
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton} onPress={onPress} >
+               <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+           </View>
+           </View>
+            
+         <View style={styles.bodyModal}>
+         <Swiper style={styles.wrapper}
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 20
+          }}
+          loop={false}
+        >
+          <ScrollView  >
+       <StatusBar barStyle="dark-content" />
+
+          <View style={styles.slide}>
+
+                <Text style={styles.title}>Número / Nombre</Text>
+                <Text style={styles.modalTextnegrilla}>VII. Facial </Text>
+
+                <Text style={styles.title}>Origen / Recorrido</Text>
+                <Text style={styles.modalText}>Las fibras parten de la protuberancia y terminan en la cara. </Text>
+                
+                <Text style={styles.title}>Función</Text>
+                <Text style={styles.modalText}>Activan los músculos de la expresión facial y las glándulas lacrimales y salivares; transporta los impulsos sensitivos de los corpúsculos gustativos de la parte anterior de la lengua. </Text>
+
+                <Text style={styles.title}>Exploración</Text>
+                <Text style={styles.modalText}>Se explora la sensibilidad gustativa en los dos tercios anteriores de la lengua con sustancias dulces, saladas, ácidas y amargas; se pide al sujeto que cierre los ojos, silbe, etc.; el lagrimeo se explora con amoniaco. </Text>
+               
+          </View>
+           </ScrollView>
+        </Swiper>
+            </View>   
+            </View>
+        </Modal>
+);
+export const VIIIPAR = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
+            <View style={styles.headerModal}>
+            <View style={styles.headerMizq}>
+            <Text style={styles.modalText2}>VIII. Vestibulococlear</Text>
+            </View>
+            <View style={styles.margen}></View>
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton} onPress={onPress} >
+               <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+           </View>
+           </View>
+            
+         <View style={styles.bodyModal}>
+         <Swiper style={styles.wrapper}
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 20
+          }}
+          loop={false}
+        >
+          <ScrollView  >
+       <StatusBar barStyle="dark-content" />
+
+          <View style={styles.slide}>
+
+                <Text style={styles.title}>Número / Nombre</Text>
+                <Text style={styles.modalTextnegrilla}>VIII. Vestibulococlear {"\n"}(Auditivo o estatoacústico) </Text>
+
+                <Text style={styles.title}>Origen / Recorrido</Text>
+                <Text style={styles.modalText}>Las fibras discurren desde los receptores del equilibrio y auditivos en el oido interno hasta el tronco encefálico. </Text>
+                
+                <Text style={styles.title}>Función</Text>
+                <Text style={styles.modalText}>Sensitivo puro; la rama vestibular transmite los impulsos del equilibrio y la rama coclear conduce los impulsos del sentido del oido. </Text>
+
+                <Text style={styles.title}>Exploración</Text>
+                <Text style={styles.modalText}>La audición se explora mediante la conducción aérea y ósea, con un diapasón. </Text>
+               
+          </View>
+           </ScrollView>
+        </Swiper>
+            </View>   
+            </View>
+        </Modal>
+);
+export const IXPAR = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
+            <View style={styles.headerModal}>
+            <View style={styles.headerMizq}>
+            <Text style={styles.modalText2}>IX. Glosofaríngeo </Text>
+            </View>
+            <View style={styles.margen}></View>
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton} onPress={onPress} >
+               <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+           </View>
+           </View>
+            
+         <View style={styles.bodyModal}>
+         <Swiper style={styles.wrapper}
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 20
+          }}
+          loop={false}
+        >
+          <ScrollView  >
+       <StatusBar barStyle="dark-content" />
+
+          <View style={styles.slide}>
+
+                <Text style={styles.title}>Número / Nombre</Text>
+                <Text style={styles.modalTextnegrilla}>IX. Glosofaríngeo </Text>
+
+                <Text style={styles.title}>Origen / Recorrido</Text>
+                <Text style={styles.modalText}>Las fibras nacen en el bulbo y terminan en la garganta. </Text>
+                
+                <Text style={styles.title}>Función</Text>
+                <Text style={styles.modalText}>Proporciona las fibras motoras a la faringe (garganta) que activan la deglución y la producción de saliva; transporta los impulsos sensitivos desde los corpúsculos gustativos de la parte superior de la lengua y de los receptores de presión de la arteria carótida. </Text>
+
+                <Text style={styles.title}>Exploración</Text>
+                <Text style={styles.modalText}>Se exploran los reflejos de la deglución y la náusea; se pide al sujeto que habla y tosa; en ocasiones se explora la sensibilidad gustativa de la parte posterior de la lengua.  </Text>
+               
+          </View>
+           </ScrollView>
+        </Swiper>
+            </View>   
+            </View>
+        </Modal>
+);
+
+export const XPAR = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
+            <View style={styles.headerModal}>
+            <View style={styles.headerMizq}>
+            <Text style={styles.modalText2}>X. Vago</Text>
+            </View>
+            <View style={styles.margen}></View>
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton} onPress={onPress} >
+               <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+           </View>
+           </View>
+            
+         <View style={styles.bodyModal}>
+         <Swiper style={styles.wrapper}
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 20
+          }}
+          loop={false}
+        >
+          <ScrollView  >
+       <StatusBar barStyle="dark-content" />
+
+          <View style={styles.slide}>
+
+                <Text style={styles.margen}></Text>
+                <Text style={styles.title}>Número / Nombre</Text>
+                <Text style={styles.modalTextnegrilla}>X. Vago {"\n"}(neumogástrico) </Text>
+
+                <Text style={styles.title}>Origen / Recorrido</Text>
+                <Text style={styles.modalText}>Las fibras nacen en el bulbo y descienden hasta el tórax y el abdomen.</Text>
+                
+                <Text style={styles.title}>Función</Text>
+                <Text style={styles.modalText}>Las fibras transportan los impulsos sensitivos y motores desde y hacia la faringe , la laringe y los órganos torácicos y abdominales; la mayoría de las fibras son fibras parasimpáticas que promueven la actividad del digestivo y regulan la actividad cardiaca.</Text>
+
+                <Text style={styles.title}>Exploración</Text>
+                <Text style={styles.modalText}>Se explora del mismo modo que el IX par craneal, porque ambos inervan a los músculos de la garganta. </Text>
+               
+          </View>
+           </ScrollView>
+        </Swiper>
+            </View>   
+            </View>
+        </Modal>
+);
+export const XIPAR = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
+            <View style={styles.headerModal}>
+            <View style={styles.headerMizq}>
+            <Text style={styles.modalText2}>XI. Espinal </Text>
+            </View>
+            <View style={styles.margen}></View>
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton} onPress={onPress} >
+               <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+           </View>
+           </View>
+            
+         <View style={styles.bodyModal}>
+         <Swiper style={styles.wrapper}
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 20
+          }}
+          loop={false}
+        >
+          <ScrollView  >
+       <StatusBar barStyle="dark-content" />
+
+          <View style={styles.slide}>
+
+                <Text style={styles.title}>Número / Nombre</Text>
+                <Text style={styles.modalTextnegrilla}>XI. Espinal{"\n"} (Accesorio) </Text>
+
+                <Text style={styles.title}>Origen / Recorrido</Text>
+                <Text style={styles.modalText}>Las fibras parten del bulbo y la médula espinal (zona superior) y terminan en ciertos músculos del cuello y la espalda.  </Text>
+                
+                <Text style={styles.title}>Función</Text>
+                <Text style={styles.modalText}>Las fibras son casi todas motorasy activan los músculos esternocleidomastoideo y trapecio. </Text>
+
+                <Text style={styles.title}>Exploración</Text>
+                <Text style={styles.modalText}>Se explora la fueza de los músculos esternocleidomastoideo y trapecio pidiendo al sujeto que gire la cabeza y se encoja de hombros contra resistencia.</Text>
+               
+          </View>
+           </ScrollView>
+        </Swiper>
+            </View>   
+            </View>
+        </Modal>
+);
+export const XIIPAR = ({ text, onPress = () => {} }) => (
+  <Modal
+          animationType="slide"
+          transparent={true}
+          visible={text}
+          onRequestClose={() => {
+            Alert.alert("Presione la X para cerrar la ventana.");
+          }}
+        >
+          
+            <View style={styles.modalView}>
+            <View style={styles.headerModal}>
+            <View style={styles.headerMizq}>
+            <Text style={styles.modalText2}>XII. Hipogloso</Text>
+            </View>
+            <View style={styles.margen}></View>
+             <View style={styles.headerMDer}>
+               <TouchableHighlight style={styles.openButton} onPress={onPress} >
+               <Text style={styles.modalTex3}>x</Text>
+              </TouchableHighlight>
+           </View>
+           </View>
+            
+         <View style={styles.bodyModal}>
+         <Swiper style={styles.wrapper}
+          dot={
+            <View
+              style={{
+                backgroundColor: 'gray',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          activeDot={
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: 13,
+                height: 13,
+                borderRadius: 7,
+                marginLeft: 7,
+                marginRight: 7
+              }}
+            />
+          }
+          paginationStyle={{
+            bottom: 20
+          }}
+          loop={false}
+        >
+          <ScrollView  >
+       <StatusBar barStyle="dark-content" />
+
+          <View style={styles.slide}>
+
+                <Text style={styles.title}>Número / Nombre</Text>
+                <Text style={styles.modalTextnegrilla}>XII. Hipogloso </Text>
+
+                <Text style={styles.title}>Origen / Recorrido</Text>
+                <Text style={styles.modalText}>Las fibras discurren entre el bulbo y la lengua. </Text>
+                
+                <Text style={styles.title}>Función</Text>
+                <Text style={styles.modalText}>Las fibras motoras controlan los movimientos de la lengua; las fibras sensitivas transportan impulsos desde la lengua. </Text>
+
+                <Text style={styles.title}>Exploración</Text>
+                <Text style={styles.modalText}>Se pide al sujeto que saque la lengua y se observan posibles anomalias en la posiciòn de ésta. </Text>
+               
+          </View>
+           </ScrollView>
+        </Swiper>
+            </View>   
+            </View>
         </Modal>
 );

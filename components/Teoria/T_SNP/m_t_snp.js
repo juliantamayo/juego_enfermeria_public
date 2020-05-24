@@ -2,11 +2,8 @@ import React from 'react';
 import { ScrollView, StyleSheet, ImageBackground, View, TouchableOpacity,  Image, Dimensions, StatusBar, Text, AsyncStorage } from 'react-native';
 import Swiper from 'react-native-swiper'
 import styles from '../../Style.js';
-
-
 import { RowItem } from "../../elementos/RowItem";
 import { Modal_C1_escena2 } from "../../elementos/ModalsTutorial";
-import { SNC, SNP, SNA, Pruval } from "../../elementos/Modals_teoria";
 const { width, height } = Dimensions.get('window')
 const renderPagination = (index, total, context) => {
   return (
@@ -33,22 +30,10 @@ export default class m_t_snp  extends React.Component {
   setModalVisible = (visible) => {
     this.setState({ modalVisible: visible });
   };
-  setModalVisible_snc = (visible) => {
-    this.setState({ modal_snc: visible });
-  };
-  setModalVisible_snp = (visible) => {
-    this.setState({ modal_snp: visible });
-  };
-   setModalVisible_sna = (visible) => {
-    this.setState({ modal_sna: visible });
-  };
-    setModalVisible_pruval = (visible) => {
-    this.setState({ modal_pruval: visible });
-  };
-
+  
 
  render() {
-  const { modalVisible, modal_snp, modal_snc, modal_sna, modal_pruval } = this.state;
+  const { modalVisible } = this.state;
 
 
   return (
@@ -64,39 +49,7 @@ export default class m_t_snp  extends React.Component {
                 }}
       />
     
-        <SNC
-      
-       text={modal_snc}
-
-       onPress={() => {
-                  this.setModalVisible_snc(!modal_snc);
-                }}
-      />
-      <SNP
-      
-       text={modal_snp}
-
-       onPress={() => {
-                  this.setModalVisible_snp(!modal_snp);
-                }}
-      />
-        <SNA
-      
-       text={modal_sna}
-
-       onPress={() => {
-                  this.setModalVisible_sna(!modal_sna);
-                }}
-        />
-         <Pruval
-      
-       text={modal_pruval}
-
-       onPress={() => {
-                  this.setModalVisible_pruval(!modal_pruval);
-                }}
-        />
-          <Swiper
+     <Swiper
         style={styles.wrapper}
         renderPagination={renderPagination} showsButtons loop={false}
         loop={false}
@@ -105,6 +58,7 @@ export default class m_t_snp  extends React.Component {
 
       <ScrollView>
       <StatusBar barStyle="dark-content" />
+      <View style={styles.margen2}></View>
      <View style={style.container}>
      <Text style={style.title}> Definición</Text>
      <Text style={style.text}> El Sistema nervioso periférico conduce información de los sentidos al sistema nervioso central, y lleva información motora fuera de éste.  </Text>
@@ -115,6 +69,7 @@ export default class m_t_snp  extends React.Component {
       </ScrollView>
        <ScrollView>
       <StatusBar barStyle="dark-content" />
+      <View style={styles.margen2}></View>
      <View style={style.container}>
      <Text style={style.title}> Clasificación Funcional</Text>
      <Text style={style.text}> La clasiﬁcación funcional se ocupa tan sólo de las estructuras del SNP. Se clasiﬁca en dos subdivisiones principales  </Text>
@@ -130,64 +85,42 @@ export default class m_t_snp  extends React.Component {
      </View>
       </ScrollView>
 
-   <View
+      <View
           style={styles.slide}
           title={
             <Text numberOfLines={1}></Text>
           }
         >
 
-
     <ScrollView  >
     <StatusBar barStyle="dark-content" />
     <View style={styles.margen2}></View>
-    <View style={styles.header}>
+    <View style={style.container}>
+    <Text style={style.title}> Sistema Nervioso Periférico</Text>
+    <Text style={style.text}> El SNP incluye todos los nervios que están fuera del SNC:</Text>
+       
+        <RowItem   
+      name=" Pares (nervios) Craneales"
+      color="#77c6c6"
+        onPress={() =>
+        this.props.navigation.navigate("t_pares_craneales")}
+       />
+    <RowItem
+      name=" Médula Espinal"
+      color="#77c6c6"
+      onPress={() =>
+        this.props.navigation.navigate("t_medula_espinal")}
+       />
+    <RowItem
+      name="  Nervios Raquídeos"
+      color="#77c6c6"
+     onPress={() =>
+        this.props.navigation.navigate("t_nervios_raquideos")}
+       />
+
     
-     <View style={styles.headerIzquierda}>
-     <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-       onPress={() => this.props.navigation.pop()}>
-               <Image style={ styles.image } source={require("../../../assets/images/button-back.png")} />
-      </TouchableOpacity>
-      </View>
-
-      <View style={styles.headerDerecha}>
-      <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-                   onPress={() => {
-                        this.setModalVisible(true);
-                      }}>
-               <Image style={ styles.image } source={require("../../../assets/images/ayuda.png")} />
-      </TouchableOpacity>
-      </View>
-     
-      </View>
-       <RowItem   
-      name="1. Sístema Nerviosos Periférico"
-      color="#F8D95B"
-         onPress={() => {
-                        this.setModalVisible_snp(true);
-                      }}/>
-   
-    <RowItem
-      name="2. Sístema Nervioso Central"
-      color="#77c6c6"
-     onPress={() => {
-                        this.setModalVisible_snc(true);
-                      }}/>
-
-    <RowItem
-      name="3. Sístema Nervioso Autónomo"
-      color="#F8D95B"
-       onPress={() => {
-                        this.setModalVisible_sna(true);
-                      }}/>
-  
-    <RowItem
-      name="4. Pruebas de Valoración"
-      color="#77c6c6"
-     onPress={() => {
-                        this.setModalVisible_pruval(true);
-                      }}/>
-  
+   <Text style={style.text}>{"\n"}  {"\n"}   </Text>
+    </View>
     </ScrollView>
   </View>
 
@@ -197,7 +130,6 @@ export default class m_t_snp  extends React.Component {
   );
 }
 }
-
 
 const style = StyleSheet.create({
   container: {
