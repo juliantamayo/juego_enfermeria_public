@@ -28,13 +28,11 @@ const styles = StyleSheet.create({
 
 const mult =5;
 
-class escena5 extends React.Component {
+class C3_escena5 extends React.Component {
 
   state = {
     correctCount: 0,
-    //totalCount: this.props.navigation.getParam("questions", []).length,
-      totalCount: this.props.route.params?.questions.length,
-   //route.params?.someParam ?? 'defaultValue';
+    totalCount: this.props.route.params?.questions.length,
     activeQuestionIndex: 0,
     answered: false,
     answerCorrect: false
@@ -65,9 +63,9 @@ class escena5 extends React.Component {
     this.setState(state => {
       const nextIndex = state.activeQuestionIndex + 1;
 
-      if (nextIndex >= state.totalCount) {
+      if (nextIndex == state.totalCount) {
        // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate('M_caso3',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
+       return this.props.navigation.navigate('C3_Guardar_V_quiz',{C3_envia_quiz:this.state.correctCount,cantidad_preg:this.state.totalCount,erroneas:(this.state.totalCount-this.state.correctCount)});
       }
 
       return {
@@ -120,4 +118,4 @@ class escena5 extends React.Component {
   }
 }
 
-export default escena5;
+export default C3_escena5;

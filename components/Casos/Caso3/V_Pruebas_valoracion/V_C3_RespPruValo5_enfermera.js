@@ -7,19 +7,15 @@ import style from '../../../Style.js';
 import  styles  from "../../../Style_dialog.js";
 import { CommonActions } from '@react-navigation/native';
 import { Modal_Pruebas } from "../../../elementos/ModalsTutorial";
-const mult =5;
 
 class V_C3_RespPruValo5_enfermera extends React.Component {
    
   state = {
     modalVisible: false,
     modalVisible2: false,
-    correctCount: 0, 
-    //totalCount: this.props.navigation.getParam("questions", []).length,
-      totalCount: this.props.route.params?.questions.length,
+    totalCount: this.props.route.params?.questions.length,
     activeQuestionIndex: 0,
-    answered: false,
-    answerCorrect: false
+    answered: false
       
   };
 
@@ -28,8 +24,8 @@ class V_C3_RespPruValo5_enfermera extends React.Component {
       const nextIndex = state.activeQuestionIndex + 1;
 
       if (nextIndex >= state.totalCount) {
-       // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate("C3_Escena3");
+
+         return this.props.navigation.navigate("C3_Guardar_V_pru_valo5",{C3_pv5:1});
       }
 
       return {
