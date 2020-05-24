@@ -134,7 +134,7 @@ export default class m_teoria extends React.Component {
     <RowItem
       name="4. Pruebas de Valoración"
       color="#77c6c6"
-     o onPress={() =>
+      onPress={() =>
         this.props.navigation.navigate("m_t_pruval")}
        />
     </ScrollView>

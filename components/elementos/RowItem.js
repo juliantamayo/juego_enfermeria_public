@@ -11,6 +11,15 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     margin: 20
   },
+  rowPares:{ 
+     paddingHorizontal:5,
+    paddingVertical: 10,
+    marginBottom: 1,
+    borderRadius: 50,
+    margin: 10,
+   // width:'50%'
+   width: Dimensions.get('window').width/4,
+  },
   text: {
     fontSize: 18,
     //color: "#fff",
@@ -51,6 +60,15 @@ export const RowItemEscena3 = ({ onPress = () => {}, name, color }) => (
   </TouchableOpacity>
   
 );
+
+export const RowItemPares = ({ onPress = () => {}, name, color }) => (
+  <TouchableOpacity onPress={onPress} activeOpacity={0.8}>
+    <View style={[styles.rowPares, { backgroundColor: color }]}>
+      <Text style={styles.text}>{name}</Text>
+    </View>
+  </TouchableOpacity>
+);
+
 
 
 

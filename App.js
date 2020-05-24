@@ -30,10 +30,22 @@ import t_pares_craneales from './components/Teoria/T_SNP/t_pares_craneales';
 import t_medula_espinal from './components/Teoria/T_SNP/t_medula_espinal';
 import t_nervios_raquideos from './components/Teoria/T_SNP/t_nervios_raquideos';
 
-
+///TEORÍA SISTEMA NERVIOSO PERIFÉRICO
 import m_t_snc from './components/Teoria/T_SNC/m_t_snc';
+import t_encefalo from './components/Teoria/T_SNC/t_encefalo';
+import t_cerebro from './components/Teoria/T_SNC/t_cerebro';
+import t_diencefalo from './components/Teoria/T_SNC/t_diencefalo';
+import t_tronco_encefalico from './components/Teoria/T_SNC/t_tronco_encefalico';
+import t_cerebelo from './components/Teoria/T_SNC/t_cerebelo';
+
+
 import m_t_sna from './components/Teoria/T_SNA/m_t_sna';
+import t_simpatico from './components/Teoria/T_SNA/t_simpatico';
+import t_parasimpatico from './components/Teoria/T_SNA/t_parasimpatico';
+
 import m_t_pruval from './components/Teoria/T_PruValoracion/m_t_pruval';
+import t_pruval from './components/Teoria/T_PruValoracion/t_pruval';
+
 
 //créditos 
 import Creditos from './components/creditos';
@@ -431,9 +443,91 @@ useEffect(() => {
           },
         }}/>
 
+       <Stack.Screen  name="t_simpatico" component={t_simpatico} 
+        options={{
+          title: 'Sistema Nervioso Simpático',
+           headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}/>
+
+        <Stack.Screen  name="t_parasimpatico" component={t_parasimpatico} 
+        options={{
+          title: 'Sistema Nervioso Parasimpático',
+           headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}/>
+
         <Stack.Screen  name="m_t_snc" component={m_t_snc} 
         options={{
           title: 'Sistema Nervioso Central',
+           headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}/>
+        <Stack.Screen  name="t_encefalo" component={t_encefalo} 
+        options={{
+          title: 'Encéfalo',
+           headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}/>
+        <Stack.Screen  name="t_cerebro" component={t_cerebro} 
+        options={{
+          title: 'Cerebro',
+           headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}/>
+
+        <Stack.Screen  name="t_diencefalo" component={t_diencefalo} 
+        options={{
+          title: 'Diencéfalo',
+           headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}/>
+
+         <Stack.Screen  name="t_tronco_encefalico" component={t_tronco_encefalico} 
+        options={{
+          title: 'Tronco Encefálico',
+           headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}/>
+
+         <Stack.Screen  name="t_cerebelo"component={t_cerebelo} 
+        options={{
+          title: 'Cerebelo',
            headerStyle: {
             backgroundColor: '#fbe122',
           },
@@ -446,6 +540,18 @@ useEffect(() => {
         <Stack.Screen  name="m_t_pruval" component={m_t_pruval} 
         options={{
           title: 'Pruebas de Valoración',
+           headerStyle: {
+            backgroundColor: '#fbe122',
+          },
+          headerTintColor: 'black',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}/>
+
+        <Stack.Screen  name="t_pruval" component={t_pruval} 
+        options={{
+          title: 'Prueba de Valoración',
            headerStyle: {
             backgroundColor: '#fbe122',
           },
