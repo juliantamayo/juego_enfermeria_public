@@ -141,7 +141,7 @@ render() {
       name="Proceso de atención de Enfermeria"
       color="#f9a94b"
       onPress={() =>
-        this.props.navigation.navigate("C3_Escena6",{ex:'2'})
+        this.props.navigation.navigate("C3_Escena6")
       }
     />:
     null}
