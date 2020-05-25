@@ -574,9 +574,8 @@ useEffect(() => {
 
         <Stack.Screen  name="Creditos" component={Creditos} 
         options={{
-        //  headerShown: false
-         headerLeft: null,
-          title: 'Créditos Juego',
+        	
+          title: 'Información General',
            headerStyle: {
             backgroundColor: '#fbe122',
           },
