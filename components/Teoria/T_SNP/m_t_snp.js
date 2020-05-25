@@ -141,7 +141,7 @@ const style = StyleSheet.create({
   Imagen:{
     
      height: Dimensions.get('window').height/2,
-     backgroundColor: 'blue',
+    
   },
    ContainerImagen:{
      alignItems: 'center',

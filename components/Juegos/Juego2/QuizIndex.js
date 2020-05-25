@@ -31,7 +31,7 @@ export default function QuixIndex ({navigation, route}) {
 
       <View style={styles.headerDerecha}>
       <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-       onPress={() => navigation.navigate('Home')}>
+       onPress={() => navigation.navigate('m_teoria')}>
                <Image style={ styles.image } source={require("../../../assets/images/buttonteory.png")} />
       </TouchableOpacity>
       </View>

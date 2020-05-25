@@ -6,7 +6,7 @@ import styles from '../../Style.js';
 
 import { RowItem } from "../../elementos/RowItem";
 import { Modal_C1_escena2 } from "../../elementos/ModalsTutorial";
-import { SNC, SNP, SNA, Pruval } from "../../elementos/Modals_teoria";
+import { Conciencia, Orientacion, juicio, memoria, percepcion, pensamiento, afecto, area_psicomotora } from "../../data/Teoria/D_T_PruVal";
 
 export default class m_t_pruval extends React.Component {
 
@@ -14,31 +14,16 @@ export default class m_t_pruval extends React.Component {
     state ={
 //el componente "state" debe estar para poder recibir las variables locales de otras clases
      modalVisible: false,
-     modal_snc:false,
-     modal_snp:false,
-     modal_sna:false,
-     modal_pruval:false
+
     };
     
   setModalVisible = (visible) => {
     this.setState({ modalVisible: visible });
   };
-  setModalVisible_snc = (visible) => {
-    this.setState({ modal_snc: visible });
-  };
-  setModalVisible_snp = (visible) => {
-    this.setState({ modal_snp: visible });
-  };
-   setModalVisible_sna = (visible) => {
-    this.setState({ modal_sna: visible });
-  };
-    setModalVisible_pruval = (visible) => {
-    this.setState({ modal_pruval: visible });
-  };
-
+  
 
  render() {
-  const { modalVisible, modal_snp, modal_snc, modal_sna, modal_pruval } = this.state;
+  const { modalVisible} = this.state;
 
 
   return (
@@ -51,42 +36,7 @@ export default class m_t_pruval extends React.Component {
                   this.setModalVisible(!modalVisible);
                 }}
       />
-        <SNC
-      
-       text={modal_snc}
-
-       onPress={() => {
-                  this.setModalVisible_snc(!modal_snc);
-                }}
-      />
-      <SNP
-      
-       text={modal_snp}
-
-       onPress={() => {
-                  this.setModalVisible_snp(!modal_snp);
-                }}
-      />
-        <SNA
-      
-       text={modal_sna}
-
-       onPress={() => {
-                  this.setModalVisible_sna(!modal_sna);
-                }}
-        />
-         <Pruval
-      
-       text={modal_pruval}
-
-       onPress={() => {
-                  this.setModalVisible_pruval(!modal_pruval);
-                }}
-        />
-
-
-
-
+   
     <View style={style.container}>
     <ScrollView  >
     <StatusBar barStyle="dark-content" />
@@ -111,32 +61,59 @@ export default class m_t_pruval extends React.Component {
      
       </View>
        <RowItem   
-      name="1. Sístema Nerviosos Periférico"
+      name="1. Conciencia"
       color="#F8D95B"
-         onPress={() => {
-                        this.setModalVisible_snp(true);
-                      }}/>
+       onPress={() =>
+        this.props.navigation.navigate("t_pruval",{prueba:Conciencia})}
+       />
    
     <RowItem
-      name="2. Sístema Nervioso Central"
-      color="#77c6c6"
-     onPress={() => {
-                        this.setModalVisible_snc(true);
-                      }}/>
+      name="2. Orientación"
+      color="#95FD79"
+     onPress={() =>
+        this.props.navigation.navigate("t_pruval",{prueba:Orientacion})}
+       />
 
     <RowItem
-      name="3. Sístema Nervioso Autónomo"
+      name="3. Juicio"
       color="#F8D95B"
-       onPress={() => {
-                        this.setModalVisible_sna(true);
-                      }}/>
+      onPress={() =>
+        this.props.navigation.navigate("t_pruval",{prueba:juicio})}
+       />
   
     <RowItem
-      name="4. Pruebas de Valoración"
-      color="#77c6c6"
-     onPress={() => {
-                        this.setModalVisible_pruval(true);
-                      }}/>
+      name="4. Memoria"
+      color="#95FD79"
+    onPress={() =>
+        this.props.navigation.navigate("t_pruval",{prueba:memoria})}
+       />
+        <RowItem
+      name="5. Percepción"
+      color="#F8D95B"
+     onPress={() =>
+        this.props.navigation.navigate("t_pruval",{prueba:percepcion})}
+       />
+
+    <RowItem
+      name="6. Pensamiento"
+      color="#95FD79"
+     onPress={() =>
+        this.props.navigation.navigate("t_pruval",{prueba:pensamiento})}
+       />
+
+      <RowItem
+      name="7. Afecto"
+      color="#F8D95B"
+     onPress={() =>
+        this.props.navigation.navigate("t_pruval",{prueba:afecto})}
+       />
+
+           <RowItem
+      name="8. Área Psicomotora"
+      color="#95FD79"
+     onPress={() =>
+        this.props.navigation.navigate("t_pruval",{prueba:area_psicomotora})}
+       />
   
     </ScrollView>
   </View>

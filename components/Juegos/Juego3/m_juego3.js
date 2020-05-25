@@ -53,7 +53,7 @@ export default function menu_juego3 ({navigation, route}) {
 
       <View style={styles.headerDerecha}>
       <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-       onPress={() => navigation.navigate('Home')}>
+      onPress={() => navigation.navigate('m_teoria')}>
                <Image style={ styles.image } source={require("../../../assets/images/buttonteory.png")} />
       </TouchableOpacity>
       <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
@@ -75,9 +75,7 @@ export default function menu_juego3 ({navigation, route}) {
               <View style={style.footerSNPizq}>
                 <View style={style.margen}></View>
                     <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-                        onPress={() => {
-                 setModalVisible2(!modalVisible2);
-                         }}>
+                        onPress={() =>navigation.navigate("m_t_sna")}>
                        <Image style={ styles.image } source={require("../../../assets/images/button-izquierda.png")} />
                   </TouchableOpacity>
                       <Text style={style.textoboton}>ESTUDIAR</Text>

@@ -43,7 +43,7 @@ const [modalVisible, setModalVisible] = useState(false);
 
       <View style={styles.headerDerecha}>
       <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-       onPress={() => navigation.navigate('Home')}>
+       onPress={() => navigation.navigate('m_teoria')}>
                <Image style={ styles.image } source={require("../../../assets/images/buttonteory.png")} />
       </TouchableOpacity>
 
@@ -69,9 +69,7 @@ const [modalVisible, setModalVisible] = useState(false);
         <Text style={styles.text}> JUGAR </Text>
        </TouchableOpacity>
 
-        <TouchableOpacity activeOpacity={0.8} style={styles.buttonJP}  onPress={() => {
-                 setModalVisible(!modalVisible);
-              }}>
+        <TouchableOpacity activeOpacity={0.8} style={styles.buttonJP}  onPress={() => navigation.navigate('m_teoria')}>
         <Text style={styles.text}> REPASAR </Text>
        </TouchableOpacity>
 

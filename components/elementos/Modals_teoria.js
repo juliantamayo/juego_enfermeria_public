@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between"
   },
   modalView: {
-    width: '95%',
+    width: '90%',
     height: '90%',
     margin: 20,
     backgroundColor: "rgba(0, 185, 188, 0.37)",

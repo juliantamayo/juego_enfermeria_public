@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   Imagen:{
-    width: 290,
+    width: 250,
   height: '100%',
   
   },
@@ -122,7 +122,7 @@ export const Modal_gameover = ({ text, onPress = () => {} }) => (
             <View style={styles.bodyModal}>
              
               <View style={styles.slide}>
-              <ImageBackground  style={styles.Imagen} source={require('../../assets/images/robot-prod.png')} resizeMode="contain">
+              <ImageBackground  style={styles.Imagen} source={require('../../assets/images/enfermera3.png')} resizeMode="contain">
               <Text style={styles.modalTex1}>¡Se acabó el tiempo!</Text>
               <Text style={styles.modalTex2}>No te rindas</Text>
               </ImageBackground>

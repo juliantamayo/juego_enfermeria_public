@@ -147,7 +147,7 @@ export default class m_teoria extends React.Component {
 
     <RowItem
       name="Cerebro"
-      color="#77c6c6"
+      color="#F8D95B"
       onPress={() =>
         this.props.navigation.navigate("t_cerebro")}
        />

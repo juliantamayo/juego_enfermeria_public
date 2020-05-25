@@ -69,7 +69,7 @@ export default function menu_juego1 ({navigation, route}) {
 
       <View style={styles.headerDerecha}>
       <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-       onPress={() => navigation.navigate('Home')}>
+         onPress={() => navigation.navigate('m_teoria')}>
                <Image style={ styles.image } source={require("../../../assets/images/buttonteory.png")} />
       </TouchableOpacity>
       <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
@@ -89,9 +89,8 @@ export default function menu_juego1 ({navigation, route}) {
               <View style={style.hederSNcizq}>
                <View style={style.margen}></View>
                   <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-                        onPress={() => {
-                 setModalVisible(!modalVisible);
-                         }}>
+                       onPress={() => navigation.navigate("m_t_snc")}>
+
                        <Image style={ styles.image } source={require("../../../assets/images/button-izquierda.png")} />
                   </TouchableOpacity>
                    <Text style={style.textoboton}>ESTUDIAR</Text>
@@ -130,9 +129,7 @@ export default function menu_juego1 ({navigation, route}) {
               <View style={style.footerSNPizq}>
                 <View style={style.margen}></View>
                     <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-                        onPress={() => {
-                    setModalVisible2(!modalVisible2);
-                         }}>
+                         onPress={() => navigation.navigate("m_t_snp")}>
                        <Image style={ styles.image } source={require("../../../assets/images/button-izquierda.png")} />
                   </TouchableOpacity>
                       <Text style={style.textoboton}>ESTUDIAR</Text>
@@ -152,7 +149,7 @@ export default function menu_juego1 ({navigation, route}) {
                           navigation.navigate("juego1_part2", {
                             title: "SNP",
                             questions:listadopPJ2[Math.floor(Math.random()*listadopPJ2.length)],
-                            color: "#98fb98"
+                            color: "#20b2aa"
                           })
                         }
                       />

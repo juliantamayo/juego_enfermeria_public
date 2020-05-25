@@ -40,12 +40,13 @@ const styles = StyleSheet.create({
     fontWeight: "600"
   },
   timertext:{
-    color: "#fff",
+    color: 'black',
     fontSize: 22,
     textAlign: "center",
     letterSpacing: -0.02,
     fontWeight: "600",
-    backgroundColor: 'black',
+    backgroundColor: 'white',
+    borderRadius: 25
   }
 });
 
@@ -164,7 +165,7 @@ componentWillUnmount(){
               <StatusBar barStyle="light-content" />
         <SafeAreaView >
         
-         <Text style={styles.timertext}> { this.state.timer == -1? 0: this.state.timer} </Text>
+         <Text style={styles.timertext}> { this.state.timer == -1? 0: this.state.timer}' 🕗 </Text>
           <Text style={styles.text}>{question.question}</Text>  
           <View>
           <View style={styles.containerImagen}>

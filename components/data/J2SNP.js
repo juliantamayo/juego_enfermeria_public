@@ -17,6 +17,7 @@ export const Mj2SNP_questions = [
       { id: "4", text: "Nervios lumbares (L1 a L5)" }
     ]
   },
+
   {
     question: "Cuál es el nervio craneal que controla el músculo del ojo que permite el movimiento de los globos oculares?",
     answers: [
@@ -33,6 +34,15 @@ export const Mj2SNP_questions = [
       { id: "2", text: "Nervio Vago (X)" },
       { id: "3", text: "Nervio Hipogloso (XII)" },
       { id: "4", text: "Nervio Accesorio o espinal (XI)", correct: true }
+    ]
+  },
+  {
+    question: "Los nervios que conducen impulsos hacia el sistema nervioso central son los:",
+    answers: [
+      { id: "1", text: "Aferente" },
+      { id: "2", text: "Eferentes", correct: true },
+      { id: "3", text: "Motores" },
+      { id: "4", text: "Mixtos" }
     ]
   }
 
@@ -65,6 +75,15 @@ export const Mj2SNP_questions2 = [
       { id: "2", text: "Nervio musculo cutáneo, frénico" },
       { id: "3", text: "Nervio mediano, isquiático" },
       { id: "4", text: "Nervio femoral, obturador" }
+    ]
+  },
+  {
+    question: "Los nervios que conducen impulsos nerviosos hacia afuera del sistema nervioso central son los:",
+    answers: [
+      { id: "1", text: "Aferente" },
+      { id: "2", text: "Eferentes" },
+      { id: "3", text: "Motores" },
+      { id: "4", text: "Mixtos", correct: true }
     ]
   },
    {
