@@ -35,6 +35,8 @@ export default function creditos ({navigation, route}) {
         style={styles.wrapper}
         renderPagination={renderPagination} showsButtons loop={false}
         loop={false}
+     //   nextButton={<Text style={{ color: 'red',fontSize: 60,backgroundColor : 'transparent' }}>›</Text>}
+     //   prevButton={<Text style={{ color: 'red',fontSize: 60,backgroundColor : 'transparent' }}>‹</Text>} 
       >
 
   <ScrollView  >
