@@ -233,7 +233,7 @@ export default class escena2 extends React.Component {
   }
   {Pcte7 == 0.2?
     <RowItem
-      name="7. Puede cerrar los ojos y me puede indicar hacia ¿qué dirección le estoy movilizando su brazo derecho e izquierdo?"
+      name="7. ¿Puede cerrar los ojos y me puede indicar hacia qué dirección le estoy movilizando su brazo derecho e izquierdo?"
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C1_Preg7_dialogo", {
@@ -244,7 +244,7 @@ export default class escena2 extends React.Component {
       }
     />:
     <RowItem
-      name="7. Puede cerrar los ojos y me puede indicar hacia ¿qué dirección le estoy movilizando su brazo derecho e izquierdo?"
+      name="7. ¿Puede cerrar los ojos y me puede indicar hacia qué dirección le estoy movilizando su brazo derecho e izquierdo?"
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("V_C1_Preg7_dialogo", {

@@ -41,7 +41,7 @@ export const J2questions = [
   },
 {
     image: require("../../assets/images/SNP_nervios_craneales.png"),
-    question: "¿Cuál es el número de par craneal que proporciona la inervación motora del m{usculo recto lateral, que gira el ojo hacia afuera? ",
+    question: "¿Cuál es el número de par craneal que proporciona la inervación motora del músculo recto lateral, que gira el ojo hacia afuera? ",
     answers: [
       { id: "1", text: " IV" },
       { id: "2", text: " V" },

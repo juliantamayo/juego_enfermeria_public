@@ -7,8 +7,8 @@ const questions = [
   },
   {
     image: require("../../../../assets/images/CASO_3_SEÑOR_AT_fascies_hablando.png"),
-    personaje: "Señor P.C.P",
-    Text: "(se toca en EL EPIGASTRIO)"
+    personaje: "SEÑOR  A.T",
+    Text: "(Se toca en el epigastrio.)"
   }
 ];
 

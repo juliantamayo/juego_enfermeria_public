@@ -26,6 +26,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center'
   },
+  text2: {
+    fontSize: 22,
+    //color: "#fff",
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
+
 
   columns:{
     //flexDirection: "columns",
@@ -69,6 +76,13 @@ export const RowItemPares = ({ onPress = () => {}, name, color }) => (
   </TouchableOpacity>
 );
 
+export const RowItemMjuegos = ({ onPress = () => {}, name, color }) => (
+  <TouchableOpacity onPress={onPress} activeOpacity={0.8}>
+    <View style={[styles.row, { backgroundColor: color }]}>
+      <Text style={styles.text2}>{name}</Text>
+    </View>
+  </TouchableOpacity>
+);
 
 
 

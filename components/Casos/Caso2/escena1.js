@@ -1,9 +1,8 @@
 import React from "react";
-import {AsyncStorage, Modal, View, StyleSheet, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
+import {AsyncStorage, Modal, View, StyleSheet, ScrollView, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
 
 import { Button, ButtonContainer } from "../../elementos/ButtonEscene1";
 import style from './../../Style.js';
-import Escena2Dialog from "../../data/escena2dialog";
 import { C2_ModalHistorial } from "../../elementos/Modals";
 import { Modal_C1_escena1 } from "../../elementos/ModalsTutorial"; 
 import { CommonActions } from '@react-navigation/native';
@@ -30,7 +29,9 @@ const styles = StyleSheet.create({
     color: "#fff",
     textAlign: "left",
     fontSize: 17,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    borderRadius: 5,
+    paddingLeft: 20
   },
   containerdialog:{
    flex: 0.5,
@@ -148,6 +149,7 @@ class escena1 extends React.Component {
 
     
         <Text style={styles.text2}>{question.personaje}</Text>
+        <ScrollView>
         <ButtonContainer>
          
                 <Button
@@ -159,6 +161,7 @@ class escena1 extends React.Component {
                 />
               
             </ButtonContainer>
+              </ScrollView>
        </View>
 
       </ImageBackground>

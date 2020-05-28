@@ -116,9 +116,10 @@ class escena1 extends React.Component {
       </View>
        
        <View style={styles.containerdialog}>
-
-    
-        <Text style={styles.text2}>{question.personaje}</Text>
+       {question.personaje=="ENFERMERA"?
+        <Text style={styles.text2}>{question.personaje}</Text>:
+        <Text style={styles.text3}>{question.personaje}</Text>}
+  
         <ButtonContainer>
          
                 <Button

@@ -5,6 +5,7 @@ import { View,
          StyleSheet, 
          ImageBackground,
          Image,
+         Dimensions,
         TouchableOpacity } from 'react-native';
 import styles from './../../Style.js';
 import { RowItemJuego1} from "../../elementos/RowItemJuego1";
@@ -14,7 +15,7 @@ import { Modal_MenuJuego1 } from "../../elementos/ModalsTutorial";
 import {J2questions,J2questions2,J2questions3} from "../../data/snp";
 
 import {questions,questions2,questions3} from "../../data/C1_data/D_c1_juego_part1";
-
+const { width, height } = Dimensions.get('window')
 export default function menu_juego1 ({navigation, route}) {
 
  const [modalVisible, setModalVisible] = useState(false);
@@ -97,7 +98,9 @@ export default function menu_juego1 ({navigation, route}) {
               </View>
                   
               <View style={style.hederSNccenter}>
+               <View style={style.containerText}>
               <Text style={style.title}>SNC</Text>
+               </View>
               </View>
 
                 <View style={style.hederSNDer}>
@@ -136,7 +139,9 @@ export default function menu_juego1 ({navigation, route}) {
                 </View>
                   
                 <View style={style.footerSNPcenter}>
+                <View style={style.containerText}>
                     <Text style={style.title}>SNP</Text>
+                </View>
                 </View>
 
               <View style={style.footerSNPDer}>
@@ -170,6 +175,15 @@ const style = StyleSheet.create({
     alignItems: "center",
     height :'100%',
     width : '100%'
+  },
+  containerText:{ 
+     paddingHorizontal:5,
+    paddingVertical: 10,
+    marginBottom: 1,
+    borderRadius: 50,
+    margin: 10,
+   // width:'50%'
+   width: Dimensions.get('window').width/3,
   },
   headerbodySNC: {
     flex: 1,
@@ -241,7 +255,7 @@ const style = StyleSheet.create({
     backgroundColor: "#F3DD11",
     color: "#20232a",
     textAlign: "center",
-    fontSize: 45,
+    fontSize: 35,
     paddingVertical: 4,
     paddingRight : 3,
     paddingLeft :3,

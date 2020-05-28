@@ -1,5 +1,5 @@
 import React from "react";
-import {AsyncStorage, Modal, View, StyleSheet, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
+import {AsyncStorage, Modal, View, StyleSheet,ScrollView, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
 
 import { Button, ButtonContainer } from "../../../elementos/ButtonEscene1";
 import { C2_ModalHistorial } from "../../../elementos/Modals";
@@ -121,7 +121,10 @@ class V_C2_Preg4_dialogo extends React.Component {
        <View style={styles.containerdialog}>
 
     
-        <Text style={styles.text2}>{question.personaje}</Text>
+       {question.personaje=="ENFERMERA"?
+        <Text style={styles.text2}>{question.personaje}</Text>:
+        <Text style={styles.text4}>{question.personaje}</Text>}
+         <ScrollView>
         <ButtonContainer>
          
                 <Button
@@ -133,6 +136,7 @@ class V_C2_Preg4_dialogo extends React.Component {
                 />
               
             </ButtonContainer>
+             </ScrollView>
        </View>
 
       </ImageBackground>

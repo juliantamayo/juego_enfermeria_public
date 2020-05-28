@@ -15,7 +15,8 @@ export default StyleSheet.create({
     textAlign: "center",
     letterSpacing: -0.02,
     fontWeight: "600",
-    borderRadius: 10
+    borderRadius: 10,
+    padding:7
   },
 
   textContador: {

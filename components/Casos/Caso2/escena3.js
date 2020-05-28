@@ -120,7 +120,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo1_dialogo", {
-          title: "1 pruValo1 C2",
+          title: "Caso 2. Prueba de Valoración 1",
           questions: C2_Pru_valo1_dialog,
           color: "#36b1f0"
         })
@@ -131,7 +131,7 @@ render() {
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo1_dialogo", {
-          title: "1 pruValo1 C2",
+          title: "Caso 2. Prueba de Valoración 1",
           questions: C2_Pru_valo1_dialog,
           color: "#36b1f0"
         })
@@ -144,7 +144,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo2_dialogo", {
-          title: "2  pruValo2 C2",
+          title: "Caso 2. Prueba de Valoración 2 ",
           questions: C2_Pru_valo2_dialog,
           color: "#799496"
         })
@@ -155,7 +155,7 @@ render() {
       color="#00b9bc"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo2_dialogo", {
-          title: "2  pruValo2 C2",
+          title: "Caso 2. Prueba de Valoración 2",
           questions: C2_Pru_valo2_dialog,
           color: "#799496"
         })
@@ -171,7 +171,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo3_dialogo", {
-          title: "3 C2",
+          title: "Caso 2. Prueba de Valoración 3",
           questions: C2_Pru_valo3_dialog,
           color: "#799496"
         })
@@ -182,7 +182,7 @@ render() {
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo3_dialogo", {
-          title: "3 C2",
+          title: "Caso 2. Prueba de Valoración 3",
           questions: C2_Pru_valo3_dialog,
           color: "#799496"
         })
@@ -195,7 +195,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo4_dialogo", {
-          title: "4 C2",
+          title: "Caso 2. Prueba de Valoración 4",
           questions: C2_Pru_valo4_dialog,
           color: "#799496"
         })
@@ -206,7 +206,7 @@ render() {
       color="#00b9bc"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo4_dialogo", {
-          title: "4 C2",
+          title: "Caso 2. Prueba de Valoración 4",
           questions: C2_Pru_valo4_dialog,
           color: "#799496"
         })
@@ -223,7 +223,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo5_dialogo", {
-          title: "5 C2",
+          title: "Caso 2. Prueba de Valoración 5",
           questions: C2_Pru_valo5_dialog,
           color: "#799496"
         })
@@ -234,7 +234,7 @@ render() {
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo5_dialogo", {
-          title: "5 C2",
+          title: "Caso 2. Prueba de Valoración 5",
           questions: C2_Pru_valo5_dialog,
           color: "#799496"
         })
@@ -247,7 +247,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo6_dialogo", {
-          title: "6 C2",
+          title: "Caso 2. Prueba de Valoración 6",
           questions: C2_Pru_valo6_dialog,
           color: "#799496"
         })
@@ -258,7 +258,7 @@ render() {
       color="#00b9bc"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo6_dialogo", {
-          title: "6 C2",
+          title: "Caso 2. Prueba de Valoración 6",
           questions: C2_Pru_valo6_dialog,
           color: "#799496"
         })
@@ -275,7 +275,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo7_dialogo", {
-          title: "7 C2",
+          title: "Caso 2. Prueba de Valoración 7",
           questions: C2_Pru_valo7_dialog,
           color: "#799496"
         })
@@ -286,7 +286,7 @@ render() {
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo7_dialogo", {
-          title: "7 C2",
+          title: "Caso 2. Prueba de Valoración 7",
           questions: C2_Pru_valo7_dialog,
           color: "#799496"
         })
@@ -299,7 +299,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo8_dialogo", {
-          title: "8 C2",
+          title: "Caso 2. Prueba de Valoración 8",
           questions: C2_Pru_valo8_dialog,
           color: "#799496"
         })
@@ -310,7 +310,7 @@ render() {
       color="#00b9bc"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo8_dialogo", {
-          title: "8 C2",
+          title: "Caso 2. Prueba de Valoración 8",
           questions: C2_Pru_valo8_dialog,
           color: "#799496"
         })
@@ -327,7 +327,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo9_dialogo", {
-          title: "9 C2",
+          title: "Caso 2. Prueba de Valoración 9",
           questions: C2_Pru_valo9_dialog,
           color: "#799496"
         })
@@ -338,7 +338,7 @@ render() {
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo9_dialogo", {
-          title: "9 C2",
+          title: "Caso 2. Prueba de Valoración 9",
           questions: C2_Pru_valo9_dialog,
           color: "#799496"
         })
@@ -351,7 +351,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo10_dialogo", {
-          title: "10 C2",
+          title: "Caso 2. Prueba de Valoración 10",
           questions: C2_Pru_valo10_dialog,
           color: "#799496"
         })
@@ -362,7 +362,7 @@ render() {
       color="#00b9bc"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo10_dialogo", {
-          title: "10 C2",
+          title: "Caso 2. Prueba de Valoración 10",
           questions: C2_Pru_valo10_dialog,
           color: "#799496"
         })
@@ -379,7 +379,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo11_dialogo", {
-          title: "11 C2",
+          title: "Caso 2. Prueba de Valoración 11",
           questions: C2_Pru_valo11_dialog,
           color: "#799496"
         })
@@ -390,7 +390,7 @@ render() {
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo11_dialogo", {
-          title: "11 C2",
+          title: "Caso 2. Prueba de Valoración 11",
           questions: C2_Pru_valo11_dialog,
           color: "#799496"
         })
@@ -403,7 +403,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo12_dialogo", {
-          title: "12 C2",
+          title: "Caso 2. Prueba de Valoración 12",
           questions: C2_Pru_valo12_dialog,
           color: "#799496"
         })
@@ -414,7 +414,7 @@ render() {
       color="#00b9bc"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo12_dialogo", {
-          title: "12 C2",
+          title: "Caso 2. Prueba de Valoración 12",
           questions: C2_Pru_valo12_dialog,
           color: "#799496"
         })
@@ -430,7 +430,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo13_dialogo", {
-          title: "13 C2",
+          title: "Caso 2. Prueba de Valoración 13",
           questions: C2_Pru_valo13_dialog,
           color: "#799496"
         })
@@ -441,7 +441,7 @@ render() {
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo13_dialogo", {
-          title: "13 C2",
+          title: "Caso 2. Prueba de Valoración 13",
           questions: C2_Pru_valo13_dialog,
           color: "#799496"
         })
@@ -454,7 +454,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo14_dialogo", {
-          title: "14 C2",
+          title: "Caso 2. Prueba de Valoración 14",
           questions: C2_Pru_valo14_dialog,
           color: "#799496"
         })
@@ -465,7 +465,7 @@ render() {
       color="#00b9bc"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo14_dialogo", {
-          title: "14 C2",
+          title: "Caso 2. Prueba de Valoración 14",
           questions: C2_Pru_valo14_dialog,
           color: "#799496"
         })
@@ -481,7 +481,7 @@ render() {
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo15_dialogo", {
-          title: "15 C2",
+          title: "Caso 2. Prueba de Valoración 15",
           questions: C2_Pru_valo15_dialog,
           color: "#799496"
         })
@@ -492,7 +492,7 @@ render() {
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("V_C2_PruValo15_dialogo", {
-          title: "15 C2",
+          title: "Caso 2. Prueba de Valoración 15",
           questions: C2_Pru_valo15_dialog,
           color: "#799496"
         })

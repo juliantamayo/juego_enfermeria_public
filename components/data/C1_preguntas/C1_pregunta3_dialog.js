@@ -8,8 +8,8 @@ const questions = [
   },
   {
     image: require("../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_pensando.png"),
-    personaje: "Señor C.J.M",
-    Text: "Me cues...ta pensar…  siento... mis pensa...mientos lentos…, creo que silla y com...putador "
+    personaje: "SEÑOR C.J.M",
+    Text: "Me cues...ta pensar... siento... mis pensa...mien..tos lentos..., creo que silla y com...putador "
   
   }
 ];

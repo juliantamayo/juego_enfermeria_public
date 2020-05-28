@@ -1,5 +1,5 @@
 import React from "react";
-import {AsyncStorage, Modal, View, StyleSheet, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
+import {AsyncStorage, Modal, View,ScrollView, StyleSheet, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
 
 import { Button, ButtonContainer } from "../../../elementos/ButtonEscene1";
 import { C3_ModalHistorial } from "../../../elementos/Modals";
@@ -8,10 +8,6 @@ import  styles  from "../../../Style_dialog.js";
 import D_C3_pregunta2_pregunta from "../../../data/C3_data/C3_preguntas/D_C3_pregunta2_pregunta";
 import { CommonActions } from '@react-navigation/native';
 import { Modal_Preguntas } from "../../../elementos/ModalsTutorial";
-
-const mult =5;
-
-
 
 
 class V_C3_Preg2_dialogo extends React.Component {
@@ -120,7 +116,10 @@ class V_C3_Preg2_dialogo extends React.Component {
        <View style={styles.containerdialog}>
 
     
-        <Text style={styles.text2}>{question.personaje}</Text>
+         {question.personaje=="ENFERMERA"?
+        <Text style={styles.text2}>{question.personaje}</Text>:
+        <Text style={styles.text5}>{question.personaje}</Text>}
+          <ScrollView>
         <ButtonContainer>
          
                 <Button
@@ -132,6 +131,7 @@ class V_C3_Preg2_dialogo extends React.Component {
                 />
               
             </ButtonContainer>
+            </ScrollView>
        </View>
 
       </ImageBackground>

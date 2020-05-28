@@ -1,5 +1,5 @@
 import React from "react";
-import {AsyncStorage, Modal, View, StyleSheet, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
+import {AsyncStorage, Modal, View, ScrollView, StyleSheet, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
 
 import { Button, ButtonContainer } from "../../../elementos/ButtonEscene1";
 import style from '../../../Style.js';
@@ -83,24 +83,6 @@ class V_C1_RespP5_enfermera extends React.Component {
 
      <View style={style.header}>   
       <View style={style.headerIzquierda}>
-
-     <TouchableOpacity style={ style.imageContainer } activeOpacity={0.8}
-     onPress={() => 
-                    this.props.navigation.dispatch(
-                      CommonActions.reset({
-                        index: 1,
-                        routes: [
-                          {
-                            name: 'V_C1_RespP5_enfermera',
-                       
-                          },
-                          { name: 'Escena2' },
-                        ],
-                      })
-                    )
-                  }>
-               <Image style={ style.image } source={require("../../../../assets/images/button-back.png")} />
-      </TouchableOpacity>
 </View>
 
 
@@ -130,6 +112,7 @@ class V_C1_RespP5_enfermera extends React.Component {
 
     
         <Text style={styles.text2}>{question.personaje}</Text>
+        <ScrollView>
         <ButtonContainer>
          
                 <Button
@@ -141,6 +124,7 @@ class V_C1_RespP5_enfermera extends React.Component {
                 />
               
             </ButtonContainer>
+               </ScrollView>
        </View>
 
       </ImageBackground>

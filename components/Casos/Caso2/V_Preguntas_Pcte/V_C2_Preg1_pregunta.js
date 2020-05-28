@@ -59,7 +59,6 @@ class V_C2_Preg1_pregunta extends React.Component {
       
       } 
 
-
       return {
         activeQuestionIndex: nextIndex,
         answered: false

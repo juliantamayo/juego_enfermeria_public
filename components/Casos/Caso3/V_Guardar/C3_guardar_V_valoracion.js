@@ -62,7 +62,7 @@ state = {
            // }
              if (JSON.stringify(a1) === JSON.stringify(a2)) {
                  array1=<View style={styles.viewcaritas}>
-                        <Text style={styles.textmensaje_carita}>Bien hecho</Text>
+                        <Text style={styles.textmensaje_carita}>¡Bien hecho!</Text>
                         <Text style={styles.carita}>😎</Text>
                         </View>;
             }//else if (JSON.stringify(a1[i])==0 && JSON.stringify(a2[i])==0) {
@@ -70,7 +70,7 @@ state = {
            // }
             else if (JSON.stringify(a1) !== JSON.stringify(a2)) {
                  array2=<View style={styles.viewcaritas}>
-                        <Text style={styles.textmensaje_carita2}>Ha faltado o se ha seleccionado una de más</Text>
+                        <Text style={styles.textmensaje_carita2}>Ha faltado o se ha seleccionado una de más.</Text>
                         <Text style={styles.carita}>😞</Text>
                         </View>;
             }//else  if (JSON.stringify(a1[i])==1 && JSON.stringify(a2[i])==0){
@@ -103,7 +103,7 @@ state = {
       
       {a1[0]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>1.  Paciente alerta, cognitivamente orientado.</Text>
+             <Text style={styles.textCheck}>Paciente alerta, cognitivamente orientado.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -111,7 +111,7 @@ state = {
       </View>: null}
       {a1[1]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>2.  Desorientado alopsiquicamente (tiempo y lugar).</Text>
+             <Text style={styles.textCheck}>Desorientado alopsiquicamente (tiempo y lugar).</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
@@ -119,7 +119,7 @@ state = {
       </View>: null}
       {a1[2]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>3.  Capacidad de juzgar objetivamente las situaciones y memoria conservada.</Text>
+             <Text style={styles.textCheck}>Capacidad de juzgar objetivamente las situaciones y memoria conservada.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -127,7 +127,7 @@ state = {
       </View>: null}
       {a1[3]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>4.  Presenta signos y síntomas de dolor.</Text>
+             <Text style={styles.textCheck}>Presenta signos y síntomas de dolor.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -135,7 +135,7 @@ state = {
       </View>: null}
       {a1[4]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>5.  Afasia de Expresión y apraxia verbal.</Text>
+             <Text style={styles.textCheck}>Afasia de Expresión y apraxia verbal.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
@@ -143,7 +143,7 @@ state = {
       </View>: null}
       {a1[5]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>6.  Presenta epigastralgia</Text>
+             <Text style={styles.textCheck}>Presenta epigastralgia.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -151,7 +151,7 @@ state = {
       </View>: null}
       {a1[6]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>7.  Está en la capacidad de percibir y describir verbalmente su situación</Text>
+             <Text style={styles.textCheck}>Está en la capacidad de percibir y describir verbalmente su situación.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -159,7 +159,7 @@ state = {
       </View>: null}
       {a1[7]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>8.  Fascias de dolor.</Text>
+             <Text style={styles.textCheck}>Fascias de dolor.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -167,7 +167,7 @@ state = {
       </View>: null}
       {a1[8]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>9.  Fuerza muscular grado 2 en miembro inferior derecho - hemiparesia derecha, espasticidad grado 3.</Text>
+             <Text style={styles.textCheck}>Fuerza muscular grado 2 en miembro inferior derecho - hemiparesia derecha, espasticidad grado 3.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
@@ -175,7 +175,7 @@ state = {
       </View>: null}
       {a1[9]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>10.  Postura levemente inclinada hacia adelante, movimientos un poco más lentos.</Text>
+             <Text style={styles.textCheck}>Postura levemente inclinada hacia adelante, movimientos un poco más lentos.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -183,7 +183,7 @@ state = {
       </View>: null}
       {a1[10]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>11.  Postura erguida, movimientos normales, marcha normal.</Text>
+             <Text style={styles.textCheck}>Postura erguida, movimientos normales, marcha normal.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
@@ -191,7 +191,7 @@ state = {
       </View>: null}
       {a1[11]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>12.  Paciente que en la palpación abdominal superficial y profunda presenta fascias y manifestaciones de dolor, al llegar a la zona del epigastrio este se hace más intenso e insoportable.</Text>
+             <Text style={styles.textCheck}>Paciente que en la palpación abdominal superficial y profunda presenta fascias y manifestaciones de dolor, al llegar a la zona del epigastrio este se hace más intenso e insoportable.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -199,7 +199,7 @@ state = {
       </View>: null}
       {a1[12]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>13. Astereognosia en ambos brazos.</Text>
+             <Text style={styles.textCheck}>Astereognosia en ambos brazos.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
@@ -207,7 +207,7 @@ state = {
       </View>: null}
       {a1[13]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>14.  La faringe de color rojo intenso evidencia la inflamación de la mucosa de la faringe.</Text>
+             <Text style={styles.textCheck}>La faringe de color rojo intenso evidencia la inflamación de la mucosa de la faringe.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -215,7 +215,7 @@ state = {
       </View>: null}
       {a1[14]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>15.  Ptosis palpebral derecha.</Text>
+             <Text style={styles.textCheck}>Ptosis palpebral derecha.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
@@ -223,7 +223,7 @@ state = {
       </View>: null}
       {a1[15]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>16.  Presencia de reflejo nauseoso sin el estímulo.</Text>
+             <Text style={styles.textCheck}>Presencia de reflejo nauseoso sin el estímulo.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -231,7 +231,7 @@ state = {
       </View>: null}
       {a1[16]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>17.  Sin presencia de reflejo nauseoso.</Text>
+             <Text style={styles.textCheck}>Sin presencia de reflejo nauseoso.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
@@ -239,7 +239,7 @@ state = {
       </View>: null}
       {a1[17]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>18.  Cuello simétrico y buen desarrollo muscular, a la palpación piel fría y sensibilidad conservada, sin adenopatías no se palpa tiroides.</Text>
+             <Text style={styles.textCheck}>Cuello simétrico y buen desarrollo muscular, a la palpación piel fría y sensibilidad conservada, sin adenopatías no se palpa tiroides.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -247,7 +247,7 @@ state = {
       </View>: null}
       {a1[18]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>19.  Asimetría facial y contracción de la mandíbula de manera asimétrica.</Text>
+             <Text style={styles.textCheck}>Asimetría facial y contracción de la mandíbula de manera asimétrica.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
@@ -255,7 +255,7 @@ state = {
       </View>: null}
       {a1[19]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>20.  Pulso carotideo aumentado por el dolor.</Text>
+             <Text style={styles.textCheck}>Pulso carotideo aumentado por el dolor.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -263,7 +263,7 @@ state = {
       </View>: null}
       {a1[20]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>21.  A nivel del tórax se evidencia Buen estado nutricional y desarrollo musculo esquelético.</Text>
+             <Text style={styles.textCheck}> A nivel del tórax se evidencia Buen estado nutricional y desarrollo musculo esquelético.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -271,7 +271,7 @@ state = {
       </View>: null}
       {a1[21]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>22.  Piel integra, pero sudorosa por dolor, tórax elíptico, simétrico.</Text>
+             <Text style={styles.textCheck}>Piel integra, pero sudorosa por dolor, tórax elíptico, simétrico.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -279,7 +279,7 @@ state = {
       </View>: null}
       {a1[22]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>23.  Paciente dependiente.</Text>
+             <Text style={styles.textCheck}> Paciente dependiente.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
@@ -287,7 +287,7 @@ state = {
       </View>: null}
       {a1[23]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>24.  Frémito vocal presente igual en ambos hemitórax, resonancia en todos los campos pulmonares, ruido traqueal, murmullo bronco vesicular y vesicular presentes. PMI visible en el 5 EII con LMC.</Text>
+             <Text style={styles.textCheck}>Frémito vocal presente igual en ambos hemitórax, resonancia en todos los campos pulmonares, ruido traqueal, murmullo bronco vesicular y vesicular presentes. PMI visible en el 5 EII con LMC.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -295,7 +295,7 @@ state = {
       </View>: null}
       {a1[24]==1 ?<View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>25.  Marcha hemipléjica.</Text>
+             <Text style={styles.textCheck}>Marcha hemipléjica.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
@@ -303,7 +303,7 @@ state = {
       </View>: null}
       {a1[25]==1 ?<View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>26.  Se evidencia nauseas con presencia de borborigmos en todos los cuadrantes.  No ruidos vasculares.</Text>
+             <Text style={styles.textCheck}>Se evidencia nauseas con presencia de borborigmos en todos los cuadrantes.  No ruidos vasculares.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -311,7 +311,7 @@ state = {
       </View>: null}
       {a1[26]==1 ?<View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>27.  Se percibe sonido timpánico en zona de estómago e intestino subyacente, mate en hígado y bazo.</Text>
+             <Text style={styles.textCheck}>Se percibe sonido timpánico en zona de estómago e intestino subyacente, mate en hígado y bazo.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -319,7 +319,7 @@ state = {
       </View>: null}
       {a1[27]==1 ?<View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>28.  Paciente con capacidad para desarrollar prueba dedo-nariz coordinado, firme y rápido, que percibe sensación táctil y dolorosa en todas las áreas del cuerpo.</Text>
+             <Text style={styles.textCheck}>Paciente con capacidad para desarrollar prueba dedo-nariz coordinado, firme y rápido, que percibe sensación táctil y dolorosa en todas las áreas del cuerpo.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -360,14 +360,6 @@ const styles = StyleSheet.create({
   
     margin: 5
   },
-  viewcheckbody:{
-    flex:1,
-  backgroundColor: "rgba(3, 33, 0, 0.47)",
-  //backgroundColor: "red",
-  color: "#fff",
-  flexDirection : 'row',
-    width: "100%"
-  },
  textIncorrect:{
   fontSize: 20,
   fontWeight: "bold",
@@ -386,11 +378,12 @@ const styles = StyleSheet.create({
    //backgroundColor: 'rgba(255,0,0,0,0.6)',
   fontWeight: 'bold',
   borderWidth: 2,
-  backgroundColor: "rgba(0,240,10,0.7)",
+  backgroundColor: "rgba(0,230,10,0.99)",
   paddingVertical: 5,
   paddingRight : 5,
   paddingLeft :5,
-  color: "white"
+  color: "white",
+   borderRadius: 10
  },
  textmensaje_carita2:{
   fontSize: 20,
@@ -398,11 +391,12 @@ const styles = StyleSheet.create({
    //backgroundColor: 'rgba(255,0,0,0,0.6)',
   fontWeight: 'bold',
   borderWidth: 2,
-  backgroundColor: "rgba(255,0, 0, 0.7)",
+  backgroundColor: "rgba(255,0, 0, 0.99)",
   paddingVertical: 5,
   paddingRight : 5,
   paddingLeft :5,
-  color: "white"
+  color: "white",
+   borderRadius: 10
 },
 carita:{
   fontSize: 40,
@@ -419,12 +413,13 @@ viewcaritas:{
 },
  viewcheckbody:{
     flex:1,
-  backgroundColor: "#C3CDC8",
+  backgroundColor: "#b2dfdb",
   alignItems :'center',
   color: "#fff",
   flexDirection : 'row',
     width: "100%",
-    margin: 5
+    margin: 5,
+ borderRadius:5
 
   },
   viewchecktext:{
@@ -448,7 +443,7 @@ viewcaritas:{
      fontWeight: "bold"
  },
  button2: {
-    backgroundColor: "#51B9F1",
+    backgroundColor: "#23B9B5",
     borderRadius: 10,
     paddingVertical: 15,
     alignItems: "center",

@@ -62,11 +62,31 @@ export default function creditos ({navigation, route}) {
 
         <Text style={escudo.textbold}>Asesor de Contenidos:</Text>
          <Text style={escudo.textnormal}> Enf. Adriana Hernández</Text>
-         <Text style={escudo.textbold}>Auxiliar de Contenido: </Text>
-         <Text style={escudo.textnormal}> Cristian J. García </Text>
+         <Text style={escudo.textbold}>Estudiante de Apoyo Enfermería: </Text>
+         <Text style={escudo.textnormal}> Cristhian J. García </Text>
 
-        <Text style={escudo.textbold}>      Todos los Derechos Reservados      </Text>
-
+        <Text style={escudo.textbold}>Todos los Derechos Reservados </Text>
+          <View style={escudo.margen}>  
+        </View>
+        <View style={escudo.margen}>  
+        </View>
+         <View style={escudo.margen}>  
+        </View>
+        <View style={escudo.margen}>  
+        </View>
+        <View style={escudo.margen}>  
+        </View>
+        
+      <View style={escudo.container}>
+        <View style={escudo.margen}>  
+        </View>
+        <Text style={escudo.title}>Contacto:</Text>
+        <Text style={escudo.text2}><Text style={escudo.textbold}>- Julian D. Tamayo: </Text>jdtamayo@ucundinamarca.edu.co</Text>
+        <Text style={escudo.text2}><Text style={escudo.textbold}>- Karla N. Cárdenas: </Text>kncardenas@ucundinamarca.edu.co </Text>
+        <Text style={escudo.text2}><Text style={escudo.textbold}>- Ing. Ana Esperanza Merchán: </Text> anaesperanzamerchan@ucundinamarca.edu.co</Text>
+        <Text style={escudo.text2}><Text style={escudo.textbold}>- Enf. Adriana Hernández: </Text>ahernandezb@ucundinamarca.edu.co</Text>
+        <Text style={escudo.text2}><Text style={escudo.textbold}>- Cristhian J. García: </Text> cjosegarcia@ucundinamarca.edu.co {"\n"}{"\n"} {"\n"} </Text>
+         </View>
        </View>
     </ScrollView>
       <ScrollView >
@@ -79,12 +99,12 @@ export default function creditos ({navigation, route}) {
      <Text style={escudo.text2}><Text style={escudo.textBold2}> > OBJETIVO DE APRENDIZAJE 2: </Text> Relacionar la fisiología de cada órgano de los diferentes sistemas nerviosos con las áreas a valorar</Text> 
       <Text style={escudo.text2}><Text style={escudo.textBold2}> > OBJETIVO DE APRENDIZAJE 3: </Text> Asociar la función cognoscitiva con la conceptualización, imágenes de cada prueba a valorar y órganos que intervienen en cada función cognoscitiva.</Text>
       <Text style={escudo.text2}><Text style={escudo.textBold2}> > OBJETIVOS DE APRENDIZAJE ABARCADOS EN LOS CASOS DE ESTUDIO</Text></Text>
-      <Text style={escudo.subtext}><Text style={escudo.textBold2}> > </Text>Valorar  la esfera mental ( conciencia, orientación, juicio, memoria, percepción, pensamiento, afecto, área psicomotora), a través del análisis de cada área en la situación del señor P.C.P y C.J.M  Y asociación con preguntas. </Text>
-      <Text style={escudo.subtext}><Text style={escudo.textBold2}> > </Text>Determinar número de par craneal, su nombre, función, valoración, técnica y hallazgos, que para el caso del señor C.J.M son anormales y para el señor P.C.P son normales. </Text>
-      <Text style={escudo.subtext}><Text style={escudo.textBold2}> > </Text>Identificar cómo se valora la función motora (marcha) en el componente neurológico y sus hallazgos normales en el señor P.C.P y anormales en el señor C.J.M.</Text>
+      <Text style={escudo.subtext}><Text style={escudo.textBold2}> > </Text>Valorar  la esfera mental ( conciencia, orientación, juicio, memoria, percepción, pensamiento, afecto, área psicomotora), a través del análisis de cada área en la situación en los casos presentados. </Text>
+      <Text style={escudo.subtext}><Text style={escudo.textBold2}> > </Text>Determinar número de par craneal, su nombre, función, valoración, técnica y hallazgos, en cada caso. </Text>
+      <Text style={escudo.subtext}><Text style={escudo.textBold2}> > </Text>Identificar cómo se valora la función motora (marcha) en el componente neurológico. </Text>
       <Text style={escudo.subtext}><Text style={escudo.textBold2}> > </Text>Desarrollar las pruebas de coordinación (dedo-nariz, movimiento alterno) sus hallazgos normales y anormales en la respectiva situación.</Text>
       <Text style={escudo.subtext}><Text style={escudo.textBold2}> > </Text>Identificar pruebas para valorar sensibilidad superficial, profunda y fina y sus hallazgos normales y anormales en la situación correspondiente. </Text>
-      <Text style={escudo.subtext}><Text style={escudo.textBold2}> > </Text>Comprender a través de una situación con animación el compromiso de los reflejos superficiales y profundos  y presencia de signos meníngeos, recordando cuales son los hallazgos normales y como se valora cada uno.{"\n"} {"\n"}{"\n"} {"\n"} </Text>
+      <Text style={escudo.subtext}><Text style={escudo.textBold2}> > </Text>Comprender a través de una situación con animación el compromiso de los reflejos superficiales y profundos. {"\n"} {"\n"}{"\n"} {"\n"} </Text>
 
      </View>
       </ScrollView>

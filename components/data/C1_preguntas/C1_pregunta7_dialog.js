@@ -8,14 +8,14 @@ const questions = [
   },
   {
     image: require("../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_enfermero_levanta_brazo_derecho.png"),
-    personaje: "Señor C.J.M",
+    personaje: "SEÑOR C.J.M.",
     Text: ".......... "
   
   },
    {
     image: require("../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_enfermero_levanta_brazo_izquierdo.png"),
-    personaje: "Señor C.J.M",
-    Text: "me... está levan...tando el brazo izquierdo.... arriba"
+    personaje: "SEÑOR C.J.M.",
+    Text: "Me... está levan...tando el bra...brazo izquierdo.... arriba."
   
   }
 ];

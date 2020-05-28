@@ -15,7 +15,9 @@ const styles = StyleSheet.create({
   text: {
     color: "#fff",
     fontSize: 17,
-    textAlign: "center"
+    textAlign: "center",
+    paddingLeft: 10,
+    paddingRight:10
   },
   buttonContainer: {
     flexDirection: "column",

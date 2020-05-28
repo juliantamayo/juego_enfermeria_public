@@ -692,7 +692,7 @@ useEffect(() => {
         <Stack.Screen name="Result_QJ1" component={Result_QJ1} 
         options={{
           headerLeft: null,
-          title: 'ResultadoJ1',
+          title: 'Resultado',
            headerStyle: {
             backgroundColor: '#fbe122',
           },
@@ -732,7 +732,7 @@ useEffect(() => {
       <Stack.Screen name="Result_QJ3" component={Result_QJ3} 
         options={{
            headerLeft: null,
-          title: 'ResultadoJ3',
+          title: 'Resultado',
            headerStyle: {
             backgroundColor: '#fbe122',
           },
@@ -896,7 +896,7 @@ useEffect(() => {
        options={{
         //  headerShown: false
         headerLeft: null,
-         // title: '',
+         title: '',
           headerStyle: {
             backgroundColor: '#fbe122',
           }
@@ -941,7 +941,7 @@ useEffect(() => {
        options={{
         //  headerShown: false
         headerLeft: null,
-         // title: '',
+         title: '',
           headerStyle: {
             backgroundColor: '#fbe122',
           }
@@ -987,7 +987,7 @@ useEffect(() => {
        options={{
         //  headerShown: false
         headerLeft: null,
-         // title: '',
+         title: '',
           headerStyle: {
             backgroundColor: '#fbe122',
           }
@@ -1032,7 +1032,7 @@ useEffect(() => {
         options={{
         //  headerShown: false
         headerLeft: null,
-         // title: '',
+          title: '',
           headerStyle: {
             backgroundColor: '#fbe122',
           }
@@ -1078,7 +1078,7 @@ useEffect(() => {
         options={{
         //  headerShown: false
         headerLeft: null,
-         // title: '',
+          title: '',
           headerStyle: {
             backgroundColor: '#fbe122',
           }
@@ -1125,7 +1125,7 @@ useEffect(() => {
        options={{
         //  headerShown: false
         headerLeft: null,
-         // title: '',
+         title: '',
           headerStyle: {
             backgroundColor: '#fbe122',
           }
@@ -1268,7 +1268,7 @@ useEffect(() => {
        options={{
         //  headerShown: false
         headerLeft: null,
-         // title: '',
+         title: '',
           headerStyle: {
             backgroundColor: '#fbe122',
           }
@@ -1311,7 +1311,7 @@ useEffect(() => {
        options={{
         //  headerShown: false
         headerLeft: null,
-         // title: '',
+          title: '',
           headerStyle: {
             backgroundColor: '#fbe122',
           }
@@ -2784,7 +2784,7 @@ useEffect(() => {
        options={{
         //  headerShown: false
         headerLeft: null,
-         // title: '',
+         title: '',
           headerStyle: {
             backgroundColor: '#fbe122',
           }
@@ -2827,7 +2827,7 @@ useEffect(() => {
        options={{
         //  headerShown: false
         headerLeft: null,
-         // title: '',
+          title: '',
           headerStyle: {
             backgroundColor: '#fbe122',
           }

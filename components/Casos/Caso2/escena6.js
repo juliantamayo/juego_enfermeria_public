@@ -59,15 +59,15 @@ export default class extends Component {
                  <View style={styles.bordeview}>
                 <Text style={styles.modalTextcuerpo}>
                 <Text style={styles.modalTextnegrilla}>R/C Relacionado con: </Text>
-                <Text style={styles.modalText}>Asistencia de controles médicos</Text>
+                <Text style={styles.modalText}>Asistencia de controles médicos.</Text>
                 </Text>
                 </View>
                 <View style={styles.bordeview}>
                 <Text style={styles.modalTextcuerpo}>
                 <Text style={styles.modalTextnegrilla}>E/P Evidenciado por: </Text>
-                <Text style={styles.modalText}>Asistencia por su propia cuenta a citas control con enfermería, para valoración integral, participando activamente en el mantenimiento de su salud.{"\n"+"\n"} 
-                                              Expresa deseos de aumentar el autocuidado{"\n"+"\n"} 
-                                              Expresa deseos de aumentar el conocimiento de estrategias para el autocuidado</Text>
+                <Text style={styles.modalText}>{"\n"}-Asistencia por su propia cuenta a citas control con enfermería, para valoración integral, participando activamente en el mantenimiento de su salud.{"\n"+"\n"} 
+                                              - Expresa deseos de aumentar el autocuidado.{"\n"+"\n"} 
+                                              - Expresa deseos de aumentar el conocimiento de estrategias para el autocuidado.{"\n"}</Text>
                 </Text>
                 </View>
           </View>
@@ -94,13 +94,13 @@ export default class extends Component {
                 </Text>
                 <Text style={styles.modalTextcuerpo}>
                 <Text style={styles.modalTextnegrilla}>Diagnóstico: </Text>
-                <Text style={styles.modalText}>Disposición para mejorar los conocimientos</Text>
+                <Text style={styles.modalText}>Disposición para mejorar los conocimientos.</Text>
                 </Text>
                 </View>
                 <View style={styles.bordeview}>
                 <Text style={styles.modalTextcuerpo}>
                 <Text style={styles.modalTextnegrilla}>Definición Nanda: </Text>
-                <Text style={styles.modalText}>La presencia o adquisición de información cognitiva sobre un tema específico es suficiente para alcanzar los objetivos relacionados con la salud y puede ser reforzada</Text>
+                <Text style={styles.modalText}>La presencia o adquisición de información cognitiva sobre un tema específico es suficiente para alcanzar los objetivos relacionados con la salud y puede ser reforzada.</Text>
                 </Text>
                 </View>
                  <View style={styles.bordeview}>
@@ -112,7 +112,7 @@ export default class extends Component {
                 <View style={styles.bordeview}>
                 <Text style={styles.modalTextcuerpo}>
                 <Text style={styles.modalTextnegrilla}>E/P Evidenciado por: </Text>
-                <Text style={styles.modalText}>Paciente que asiste a cita control para tener nuevos conocimientos.{"\n"}Expresa deseo de mejorar en el aprendizaje</Text>
+                <Text style={styles.modalText}>{"\n"}- Paciente que asiste a cita control para tener nuevos conocimientos.{"\n"}- Expresa deseo de mejorar en el aprendizaje.</Text>
                 </Text>
                 </View>
          </View>

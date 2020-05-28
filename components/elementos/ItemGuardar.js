@@ -12,7 +12,9 @@ const styles = StyleSheet.create({
   textStyle: {
     fontSize: 20,
     textAlign: 'center',
+    fontWeight: 'bold',
   },
+
   textStyle2: {
     fontSize: 20,
     textAlign: 'center',
@@ -28,9 +30,10 @@ const styles = StyleSheet.create({
      height:50,
      width: 270,
     alignItems: "center",
-    backgroundColor: "#00bfff",
+    backgroundColor: "gold",
     padding: 10,
-    borderRadius: 20
+    borderRadius: 20,
+    justifyContent: 'center'
   },
   Imagen:{
      width: Dimensions.get('window').width/2,
@@ -40,13 +43,29 @@ const styles = StyleSheet.create({
      alignItems: 'center',
     justifyContent: 'center',
    // marginBottom: 5
-  },parametros: {
-     height:200,
-     width: 200,
+  },
+  parametros: {
      alignItems: 'center',
      justifyContent: 'center',
-     backgroundColor: 'yellow',     
+     backgroundColor: '#77c6c6',
+     borderRadius:25,  
+   paddingHorizontal:5,
+    paddingVertical: 30,
+    marginBottom: 1,
+    borderRadius: 15,
+    margin: 25,
+   // width:'50%'
+   width: Dimensions.get('window').width/1.5,  
   },
+  textResult:{
+    fontSize:25,
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign : 'center',
+    marginLeft: 10,
+    marginRight: 10,
+    margin: 5
+  }  
 });
 
 export const Save = ({  onPress = () => {} }) => (    
@@ -79,10 +98,9 @@ export const ContainerSave2 = ({ text,text2,children }) => (
 <ImageBackground style={styles.MainContainer} source={require("../../assets/images/background.png")} >
    <View style={styles.parametros}>
       
-       
-       <Text style={styles.textStyle}>Correctas: {text}</Text>
-      
-       <Text style={styles.textStyle}>Erróneas: {text2}</Text>
+        <Text style ={styles.textResult}>RESULTADOS</Text>
+       <Text style={styles.textStyle}>✔️ Correctas: {text}</Text>
+       <Text style={styles.textStyle}>❌ Erróneas: {text2}</Text>
 
        </View>
         <View style={styles.button}></View>

@@ -1,5 +1,5 @@
 import React from "react";
-import {AsyncStorage, Modal, View, StyleSheet, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
+import {AsyncStorage, Modal, View, StyleSheet,ScrollView, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
 
 import { Button, ButtonContainer } from "../../../elementos/ButtonEscene1";
 import { C2_ModalHistorial } from "../../../elementos/Modals";
@@ -8,9 +8,6 @@ import D_C2_pregunta5_pregunta from "../../../data/C2_data/C2_preguntas/D_C2_pre
 import { CommonActions } from '@react-navigation/native';
 import { Modal_Preguntas } from "../../../elementos/ModalsTutorial";
 import  styles  from "../../../Style_dialog.js";
-const mult =5;
-
-
 
 
 class V_C2_Preg5_dialogo extends React.Component {
@@ -120,7 +117,10 @@ class V_C2_Preg5_dialogo extends React.Component {
        <View style={styles.containerdialog}>
 
     
-        <Text style={styles.text2}>{question.personaje}</Text>
+       {question.personaje=="ENFERMERA"?
+        <Text style={styles.text2}>{question.personaje}</Text>:
+        <Text style={styles.text4}>{question.personaje}</Text>}
+         <ScrollView>
         <ButtonContainer>
          
                 <Button
@@ -130,8 +130,8 @@ class V_C2_Preg5_dialogo extends React.Component {
             setTimeout(() => this.nextQuestion(), 50);
       }}
                 />
-              
             </ButtonContainer>
+             </ScrollView>
        </View>
 
       </ImageBackground>

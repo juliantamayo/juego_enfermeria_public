@@ -12,11 +12,13 @@ const styles = StyleSheet.create({
     width,
    // height: '40%',
     marginTop: 5
+
   },
   text: {
     color: "#fff",
     fontSize: 20,
-    textAlign: "center"
+    textAlign: "center",
+      padding: 5
   },
   buttonContainer: {
     flexDirection: "column",

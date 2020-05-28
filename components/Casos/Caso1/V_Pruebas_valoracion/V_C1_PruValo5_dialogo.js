@@ -38,7 +38,7 @@ class V_C1_PruValo5_dialogo extends React.Component {
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
         return this.props.navigation.navigate("V_C1_PruValo5_pregunta", {activeQuestion: 1, 
-          title: "Caso 1. Pueba de Valoración 5",
+          title: "Caso 1. Prueba de Valoración 5",
           questions: D_C1_Pru_Valoracion5_pregunta,
           color: "#36b1f0"
         });

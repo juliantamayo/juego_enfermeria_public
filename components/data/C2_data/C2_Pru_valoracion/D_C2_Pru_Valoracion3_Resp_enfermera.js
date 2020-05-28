@@ -8,12 +8,12 @@ const questions = [
    {
     image: require("../../../../assets/images/enfermera_pensando.png"),
     personaje: "ENFERMERA",
-    Text: "y se evidencia la contraccion rapida en ambos lados del musculo maseterino.  "
+    Text: "Y se evidencia la contracción rápida en ambos lados del músculo maseterino.  "
   },
   {
     image: require("../../../../assets/images/enfermera3.png"),
     personaje: "ENFERMERA",
-    Text: "Ambos son hallazgos normales del paciente P.C.P"
+    Text: "Ambos son hallazgos normales del paciente P.C.P."
   }
 
  

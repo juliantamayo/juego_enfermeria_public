@@ -131,7 +131,7 @@ render() {
     }
     {C2_Pcte3 == 1?
     <RowItem
-      name="3.¿Cuénteme señor en qué año se graduó como ingeniero?"
+      name="3. ¿Cuénteme señor en qué año se graduó como ingeniero?"
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C2_Preg3_dialogo", {
@@ -142,7 +142,7 @@ render() {
       }
     />:
     <RowItem
-      name="3.¿Cuénteme señor en qué año se graduó como ingeniero?"
+      name="3. ¿Cuénteme señor en qué año se graduó como ingeniero?"
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("V_C2_Preg3_dialogo", {
@@ -155,7 +155,7 @@ render() {
    }
    {C2_Pcte4 == 1?
     <RowItem
-      name="4. ¿Cómo es la relación con su esposa, se siente querido por ella y por sus hijas??"
+      name="4. ¿Cómo es la relación con su esposa, se siente querido por ella y por sus hijas?"
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C2_Preg4_dialogo", {
@@ -166,7 +166,7 @@ render() {
       }
     />:
     <RowItem
-      name="4. ¿Cómo es la relación con su esposa, se siente querido por ella y por sus hijas??"
+      name="4. ¿Cómo es la relación con su esposa, se siente querido por ella y por sus hijas?"
       color="#00b9bc"
       onPress={() =>
         this.props.navigation.navigate("V_C2_Preg4_dialogo", {

@@ -1,9 +1,8 @@
 import React from "react";
-import {AsyncStorage, Modal, View, StyleSheet, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
+import {AsyncStorage, Modal, ScrollView, View, StyleSheet, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
 
 import { Button, ButtonContainer } from "../../../elementos/ButtonEscene1";
 import style from '../../../Style.js';
-import Escena2Dialog from "../../../data/escena2dialog";
 import C1_pregunta1_Resp1_C from "../../../data/C1_preguntas/C1_pregunta1_Resp1_C.J.M";
 import { CommonActions } from '@react-navigation/native';
 import  styles  from "../../../Style_dialog.js";
@@ -83,10 +82,6 @@ class V_C1_RespP2_enfermera extends React.Component {
 
      <View style={style.header}>   
       <View style={style.headerIzquierda}>
-     <TouchableOpacity style={ style.imageContainer } activeOpacity={0.8}
-       onPress={() => this.props.navigation.navigate('Escena2')}>
-               <Image style={ style.image } source={require("../../../../assets/images/button-back.png")} />
-      </TouchableOpacity>
 </View>
 
 
@@ -116,6 +111,7 @@ class V_C1_RespP2_enfermera extends React.Component {
 
     
         <Text style={styles.text2}>{question.personaje}</Text>
+        <ScrollView>
         <ButtonContainer>
          
                 <Button
@@ -127,6 +123,7 @@ class V_C1_RespP2_enfermera extends React.Component {
                 />
               
             </ButtonContainer>
+            </ScrollView>
        </View>
 
       </ImageBackground>

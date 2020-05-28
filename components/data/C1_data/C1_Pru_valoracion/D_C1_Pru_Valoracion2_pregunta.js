@@ -1,12 +1,12 @@
 const questions = [
   
   { 
-    question: "¿Cuál es el nombre de la Prueba de valoración que acaba de realizar el enfermero?",
+    question: "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
     answers: [
-      { id: "1", text: "Motilidad Extríseca del ojo" , correct: true},
-      { id: "2", text: "Simetría y Motilidad Facial" },
-      { id: "3", text: "Campimetría por Confrontación" },
-      { id: "4", text: "Movilidad Activa" }
+      { id: "1", text: "Motilidad Extríseca del ojo." , correct: true},
+      { id: "2", text: "Simetría y Motilidad Facial." },
+      { id: "3", text: "Campimetría por Confrontación." },
+      { id: "4", text: "Movilidad Activa." }
     ]
   },{ 
     question: "¿Qué se puede asumir con los hallazgos del paciente?",
@@ -18,8 +18,8 @@ const questions = [
     { 
     question: "¿Qué se puede asumir con los hallazgos del paciente?",
     answers: [
-      { id: "1", text: "ptosis palpebral derecha" , correct: true},
-      { id: "2", text: "ptosis palpebral izquierda" },
+      { id: "1", text: "Ptosis palpebral izquierda." },
+      { id: "2", text: "Ptosis palpebral derecha." , correct: true},
     ]
   }
 ];

@@ -3,7 +3,7 @@ const questions = [
  {
     image: require("../../../../assets/images/enfermera_pensando.png"),
     personaje: "ENFERMERA",
-    Text: "El paciente con sus ojos cerrados y solo al tacto en la mano izquierda reconoce llaves, monedas pero con el derecho no reconoce nada."
+    Text: "El paciente con sus ojos cerrados y solo al tacto en la mano izquierda reconoce llaves, monedas, pero con el derecho no reconoce nada."
   },
    {
     image: require("../../../../assets/images/enfermera_pensando.png"),
@@ -13,7 +13,7 @@ const questions = [
      {
     image: require("../../../../assets/images/enfermera_pensando.png"),
     personaje: "ENFERMERA",
-    Text: "incapacidad de identificar objetos a través del tacto"
+    Text: "Incapacidad de identificar objetos a través del tacto."
   }
  
 ];

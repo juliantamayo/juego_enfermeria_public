@@ -3,18 +3,18 @@ const questions = [
   {
     image: require("../../../../assets/images/CASO_2_SEÑOR_PCP_olores.png"),
     personaje: "ENFERMERA",
-    Text: " ¿Señor P.C.P puede identificar este olor?"
+    Text: "¿Señor P.C.P puede identificar este olor?"
    
   },
   {
     image: require("../../../../assets/images/CASO_2_SEÑOR_PCP_olores.png"),
-    personaje: "Señor P.C.P",
-    Text: "mmmm... huele a café señorita"
+    personaje: "SEÑOR P.C.P",
+    Text: "Mmmm... huele a café señorita."
   },
     {
     image: require("../../../../assets/images/CASO_2_SEÑOR_PCP_olores.png"),
     personaje: "ENFERMERA",
-    Text: " Es correcto señor P.C.P"
+    Text: "Es correcto señor P.C.P."
   }
 
 ];

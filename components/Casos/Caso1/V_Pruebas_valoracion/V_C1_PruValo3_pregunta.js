@@ -58,7 +58,7 @@ class V_C1_PruValo3_pregunta extends React.Component {
         return this.props.navigation.navigate('V_C1_PruValo3_dialogo',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
       }else if (nextIndex >= state.totalCount   && this.state.correctCount==2) {
        return this.props.navigation.navigate('V_C1_RespPruValo3_enfermera',{repu_enferme:1,experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount),
-        title: "Caso 1. Pueba de Valoración 3",
+        title: "Caso 1. Prueba de Valoración 3",
           questions: D_C1_Pru_Valoracion3_Resp_enfermera,
           color: "#36b1f0"});
       

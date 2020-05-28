@@ -8,11 +8,13 @@ import {StyleSheet,
         TouchableHighlight,
         TouchableOpacity,
         SafeAreaView,
-        StatusBar
+        StatusBar,
+        ScrollView
       } from 'react-native';
 import styles from './../Style.js';
 import { CommonActions } from '@react-navigation/native';
 import { Modal_MenuJuegos} from "../elementos/ModalsTutorial";
+import { RowItemMjuegos } from "../elementos/RowItem";
 
 export default function m_juegos ({navigation, route}) {
 
@@ -21,7 +23,7 @@ const [modalVisible, setModalVisible] = useState(false);
     return (
    
     <ImageBackground source={require("../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
-    
+     <ScrollView>
      <Modal_MenuJuegos
       
        text={modalVisible}
@@ -75,21 +77,29 @@ const [modalVisible, setModalVisible] = useState(false);
       <View  style={style.container}>
       <StatusBar barStyle="light-content" />
         <SafeAreaView>
-        
-           <TouchableOpacity activeOpacity={0.8} style={styles.button}  onPress={() => navigation.navigate('m_juego1')}>
-            <Text style={styles.text}> Enfrenta al S.N.C y S.N.P  </Text>
-           </TouchableOpacity>
 
-            <TouchableOpacity activeOpacity={0.8} style={styles.button2}  onPress={() => navigation.navigate('M_juego2')}>
-            <Text style={styles.text}> ¡ Ponte a prueba ! </Text>
-            </TouchableOpacity>
 
-            <TouchableOpacity activeOpacity={0.8} style={styles.button3}  onPress={() => navigation.navigate('M_juegos3')}>
-            <Text style={styles.text}> ¿Listo para el S.N.A? </Text>
-           </TouchableOpacity>
+          <RowItemMjuegos   
+                name="Enfrenta al S.N.C y S.N.P"
+                color="#ADE827"
+                onPress={() =>navigation.navigate("m_juego1")}
+             />
+
+            <RowItemMjuegos   
+                name=" ¡ Ponte a prueba ! "
+                color='gold'
+                onPress={() =>navigation.navigate("M_juego2")}
+             />
+             <RowItemMjuegos    
+                name="¿Listo para el S.N.A?"
+                color="#ADE827"
+                onPress={() =>navigation.navigate("M_juegos3")}
+             />
+
+
             </SafeAreaView>
        </View>
-    
+      </ScrollView>
         </ImageBackground>
 
        

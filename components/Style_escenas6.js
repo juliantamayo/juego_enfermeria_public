@@ -39,8 +39,11 @@ export default StyleSheet.create({
    fontSize : 23,
     textAlign: "center",
     fontWeight: "bold",
-     borderWidth: 4,
-     backgroundColor: 'white'
+     borderWidth: 2,
+     backgroundColor: '#23B9B5',
+     marginTop:10,
+     marginHorizontal:10,
+     borderRadius:10
   },
    modalTextnegrilla: {
    fontSize : 18,
@@ -49,13 +52,15 @@ export default StyleSheet.create({
      marginLeft : 3,
   },
   margen:{
-    margin:5
+    margin:1
   },
   bordeview:{
     borderWidth: 2,
-     margin:1,
+     marginHorizontal:10,
+     marginVertical:3,
     paddingVertical: 8,
-    backgroundColor: 'white'
+    backgroundColor: 'white',
+    borderRadius: 10
   },
   fondoviewText:{
     backgroundColor: "rgba(0, 185, 188, 0.37)"

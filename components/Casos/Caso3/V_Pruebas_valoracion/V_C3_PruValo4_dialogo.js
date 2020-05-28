@@ -1,5 +1,5 @@
 import React from "react";
-import {AsyncStorage, View, StyleSheet, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity} from "react-native";
+import {AsyncStorage, View, StyleSheet,ScrollView, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity} from "react-native";
 
 import { Button, ButtonContainer } from "../../../elementos/ButtonEscene1";
 import { C3_ModalHistorial,  Modal_C3_Pru_valoracion4_procedimiento, Modal_C3_Pru_valoracion4_HN  } from "../../../elementos/Modals";
@@ -8,10 +8,6 @@ import D_C3_Pru_Valoracion4_pregunta from "../../../data/C3_data/C3_Pru_valoraci
 import { CommonActions } from '@react-navigation/native';
 import  styles  from "../../../Style_dialog.js";
 import { Modal_Pruebas } from "../../../elementos/ModalsTutorial";
-const mult =5;
-
-
-
 
 class V_C3_PruValo4_dialogo extends React.Component {
    
@@ -158,7 +154,10 @@ class V_C3_PruValo4_dialogo extends React.Component {
        <View style={styles.containerdialog}>
 
     
-        <Text style={styles.text2}>{question.personaje}</Text>
+         {question.personaje=="ENFERMERA"?
+        <Text style={styles.text2}>{question.personaje}</Text>:
+        <Text style={styles.text5}>{question.personaje}</Text>}
+          <ScrollView>
         <ButtonContainer>
          
                 <Button
@@ -170,6 +169,7 @@ class V_C3_PruValo4_dialogo extends React.Component {
                 />
               
             </ButtonContainer>
+             </ScrollView>
        </View>
 
       </ImageBackground>

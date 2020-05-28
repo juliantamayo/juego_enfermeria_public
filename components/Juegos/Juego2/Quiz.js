@@ -146,7 +146,7 @@ componentWillUnmount(){
           </View>
 
           <Text style={styles.text}>
-            {`${this.state.correctCount}/${this.state.totalCount}`}
+            {`${this.state.activeQuestionIndex + 1}/${this.state.totalCount}`}
           </Text>
           
         </SafeAreaView>

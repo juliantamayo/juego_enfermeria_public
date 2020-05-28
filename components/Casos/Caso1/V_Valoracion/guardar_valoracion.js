@@ -62,7 +62,7 @@ state = {
            // }
              if (JSON.stringify(a1) === JSON.stringify(a2)) {
                  array1=<View style={styles.viewcaritas}>
-                        <Text style={styles.textmensaje_carita}>Bien hecho</Text>
+                        <Text style={styles.textmensaje_carita}>Bien hecho.</Text>
                         <Text style={styles.carita}>😎</Text>
                         </View>;
             }//else if (JSON.stringify(a1[i])==0 && JSON.stringify(a2[i])==0) {
@@ -70,7 +70,7 @@ state = {
            // }
             else if (JSON.stringify(a1) !== JSON.stringify(a2)) {
                  array2=<View style={styles.viewcaritas}>
-                        <Text style={styles.textmensaje_carita2}>Ha faltado o se ha seleccionado una de más</Text>
+                        <Text style={styles.textmensaje_carita2}>Ha faltado o se ha seleccionado una de más.</Text>
                         <Text style={styles.carita}>😞</Text>
                         </View>;
             }//else  if (JSON.stringify(a1[i])==1 && JSON.stringify(a2[i])==0){
@@ -103,7 +103,7 @@ state = {
       
       {a1[0]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Estado de confusión</Text>
+             <Text style={styles.textCheck}>Estado de confusión.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -111,7 +111,7 @@ state = {
       </View>: null}
       {a1[1]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Paciente Independiente</Text>
+             <Text style={styles.textCheck}>Paciente Independiente.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
@@ -119,7 +119,7 @@ state = {
       </View>: null}
       {a1[2]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Desorientado alopsiquicamente (tiempo y lugar) </Text>
+             <Text style={styles.textCheck}>Desorientado alopsiquicamente (tiempo y lugar). </Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -127,7 +127,7 @@ state = {
       </View>: null}
       {a1[3]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Signos y síntomas de dolor</Text>
+             <Text style={styles.textCheck}>Signos y síntomas de dolor.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
@@ -135,7 +135,7 @@ state = {
       </View>: null}
       {a1[4]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Bradipsiquia</Text>
+             <Text style={styles.textCheck}>Bradipsiquia.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -143,7 +143,7 @@ state = {
       </View>: null}
       {a1[5]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Acalculia</Text>
+             <Text style={styles.textCheck}>Acalculia.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -151,7 +151,7 @@ state = {
       </View>: null}
       {a1[6]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Cognitivamente orientado</Text>
+             <Text style={styles.textCheck}>Cognitivamente orientado.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
@@ -159,7 +159,7 @@ state = {
       </View>: null}
       {a1[7]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Afasia de Expresión y apraxia verbal </Text>
+             <Text style={styles.textCheck}>Afasia de Expresión y apraxia verbal.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -167,7 +167,7 @@ state = {
       </View>: null}
       {a1[8]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Paciente con epigastralgia</Text>
+             <Text style={styles.textCheck}>Paciente con epigastralgia.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
@@ -175,7 +175,7 @@ state = {
       </View>: null}
       {a1[9]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Fuerza muscular grado 2 en brazo derecho - hemiparesia derecha, espasticidad grado 3. en brazo derecho</Text>
+             <Text style={styles.textCheck}>Fuerza muscular grado 2 en brazo derecho - hemiparesia derecha, espasticidad grado 3. en brazo derecho.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -199,7 +199,7 @@ state = {
       </View>: null}
       {a1[12]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Hemianopsia homónima izquierda</Text>
+             <Text style={styles.textCheck}>Hemianopsia homónima izquierda.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
@@ -207,7 +207,7 @@ state = {
       </View>: null}
       {a1[13]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Hemianopsia homónima derecha</Text>
+             <Text style={styles.textCheck}>Hemianopsia homónima derecha.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -215,7 +215,7 @@ state = {
       </View>: null}
       {a1[14]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Ptosis palpebral derecha</Text>
+             <Text style={styles.textCheck}>Ptosis palpebral derecha.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -223,7 +223,7 @@ state = {
       </View>: null}
       {a1[15]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Ptosis palpebral izquierda</Text>
+             <Text style={styles.textCheck}>Ptosis palpebral izquierda.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
@@ -247,7 +247,7 @@ state = {
       </View>: null}
       {a1[18]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Paciente dependiente</Text>
+             <Text style={styles.textCheck}>Paciente dependiente.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -255,7 +255,7 @@ state = {
       </View>: null}
       {a1[19]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Marcha hemipléjica</Text>
+             <Text style={styles.textCheck}>Marcha hemipléjica.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -263,7 +263,7 @@ state = {
       </View>: null}
       {a1[20]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Astereognosia táctil en miembro superior izquierdo</Text>
+             <Text style={styles.textCheck}>Astereognosia táctil en miembro superior izquierdo.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
@@ -271,7 +271,7 @@ state = {
       </View>: null}
       {a1[21]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Astereognosia táctil en miembro superior derecho</Text>
+             <Text style={styles.textCheck}>Astereognosia táctil en miembro superior derecho.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -287,7 +287,7 @@ state = {
       </View>: null}
       {a1[23]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Estereognosia en miembro superior derecho</Text>
+             <Text style={styles.textCheck}>Estereognosia en miembro superior derecho.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>
@@ -335,14 +335,6 @@ const styles = StyleSheet.create({
   
     margin: 5
   },
-  viewcheckbody:{
-    flex:1,
-  backgroundColor: "rgba(3, 33, 0, 0.47)",
-  //backgroundColor: "red",
-  color: "#fff",
-  flexDirection : 'row',
-    width: "100%"
-  },
  textIncorrect:{
   fontSize: 20,
   fontWeight: "bold",
@@ -361,11 +353,12 @@ const styles = StyleSheet.create({
    //backgroundColor: 'rgba(255,0,0,0,0.6)',
   fontWeight: 'bold',
   borderWidth: 2,
-  backgroundColor: "rgba(0,240,10,0.7)",
+  backgroundColor: "rgba(0,240,10,0.99)",
   paddingVertical: 5,
   paddingRight : 5,
   paddingLeft :5,
-  color: "white"
+  color: "white",
+  borderRadius:5
  },
  textmensaje_carita2:{
   fontSize: 20,
@@ -393,13 +386,14 @@ viewcaritas:{
    
 },
  viewcheckbody:{
-    flex:1,
-  backgroundColor: "#C3CDC8",
+  flex:1,
+  backgroundColor: "#b2dfdb",
   alignItems :'center',
   color: "#fff",
   flexDirection : 'row',
-    width: "100%",
-    margin: 5
+  width: "100%",
+  margin: 5,
+  borderRadius:5
 
   },
   viewchecktext:{
@@ -423,7 +417,7 @@ viewcaritas:{
      fontWeight: "bold"
  },
  button2: {
-    backgroundColor: "#51B9F1",
+    backgroundColor: "#23B9B5",
     borderRadius: 10,
     paddingVertical: 15,
     alignItems: "center",

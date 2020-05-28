@@ -50,13 +50,7 @@ const styles = StyleSheet.create({
   }
 });
 
-const mult =5;
-
 class juego1_part1 extends React.Component {
-   
-
-  
-
 
   state = {
     modalVisible: false,
@@ -96,7 +90,7 @@ class juego1_part1 extends React.Component {
 
       if (nextIndex == state.totalCount) {
            var T= this.state.timer='-2';
-        return this.props.navigation.navigate('Result_QJ1',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount),t:this.state.timer});
+        return this.props.navigation.navigate('Result_QJ1',{experiencia: (this.state.correctCount)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount),t:this.state.timer});
       }else if (this.state.timer == -1) {
        return{ modalfinjuego:true}
       }
@@ -134,7 +128,6 @@ componentWillUnmount(){
 }
 
   render() {
-    let availableQuesions = []
     const { modalVisible,modalfinjuego } = this.state;
     const questions = this.props.route.params?.questions ?? [];
     const question = questions[this.state.activeQuestionIndex];
@@ -193,7 +186,7 @@ componentWillUnmount(){
           </View>
 
           <Text style={styles.text}>
-            {`${this.state.correctCount}/${this.state.totalCount}`}
+            {`${this.state.activeQuestionIndex + 1}/${this.state.totalCount}`}
           </Text>
           
         </SafeAreaView>

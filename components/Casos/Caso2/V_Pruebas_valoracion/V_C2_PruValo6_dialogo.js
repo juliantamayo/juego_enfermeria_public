@@ -1,5 +1,5 @@
 import React from "react";
-import {AsyncStorage, View, StyleSheet, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity} from "react-native";
+import {AsyncStorage, View, StyleSheet, StatusBar,ScrollView, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity} from "react-native";
 
 import { Button, ButtonContainer } from "../../../elementos/ButtonEscene1";
 import { C2_ModalHistorial, Modal_C2_Pru_valoracion6_procedimiento, Modal_C2_Pru_valoracion6_HN } from "../../../elementos/Modals";
@@ -36,7 +36,7 @@ class V_C2_PruValo6_dialogo extends React.Component {
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
         return this.props.navigation.navigate("V_C2_PruValo6_pregunta", {activeQuestion: 1, 
-          title: "Caso 2. Pueba de Valoración 6",
+          title: "Caso 2. Prueba de Valoración 6",
           questions: D_C2_Pru_Valoracion6_pregunta,
           color: "#36b1f0"
         });
@@ -159,7 +159,10 @@ class V_C2_PruValo6_dialogo extends React.Component {
        <View style={styles.containerdialog}>
 
     
-        <Text style={styles.text2}>{question.personaje}</Text>
+       {question.personaje=="ENFERMERA"?
+        <Text style={styles.text2}>{question.personaje}</Text>:
+        <Text style={styles.text4}>{question.personaje}</Text>}
+         <ScrollView>
         <ButtonContainer>
          
                 <Button
@@ -171,6 +174,7 @@ class V_C2_PruValo6_dialogo extends React.Component {
                 />
               
             </ButtonContainer>
+       </ScrollView>
        </View>
 
       </ImageBackground>

@@ -1,10 +1,10 @@
 import React from 'react';
 import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpacity, Button ,  Image, Text, CheckBox, Alert
-          ,TextInput} from 'react-native';
+          } from 'react-native';
 
 import styles from './../../Style.js';
 
-export default class menu_caso1 extends React.Component {
+export default class escena4 extends React.Component {
   
   constructor() {
     super();
@@ -70,10 +70,10 @@ validarCheckBox = (value) => {
        Alert.alert("Mensaje","No ha seleccionado ningun hallazgo ");
 
     }else if (suma >=21) {
-       Alert.alert("Mensaje","Debes elegir bien los hallazgos del paciente");
+       Alert.alert("Mensaje","Debes elegir bien los hallazgos del paciente.");
     }
     else{
-        Alert.alert("Mensaje","Recuerda que puedes hacer la valoración de nuevo si lo deseas", [
+        Alert.alert("Mensaje","Recuerda que puedes hacer la valoración de nuevo si lo deseas.", [
        
         { text: "OK", onPress: () =>  this.props.navigation.navigate("Guardr_valo",{arraycheckR:[ vali1, vali2, vali3, vali4, vali5, vali6,vali7,vali8,vali9,vali10,vali11,vali12,
                          vali13,vali14,vali15,vali16,vali17,vali18,vali19,vali20,vali21,vali22,vali23,vali24,vali25 ]}) }
@@ -129,7 +129,7 @@ render() {
         <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Paciente Independiente.</Text>
+        <Text style={style.text}>Paciente independiente.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -194,7 +194,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Cognitivamente Orientado.</Text>
+        <Text style={style.text}>Cognitivamente orientado.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -461,12 +461,14 @@ const style = StyleSheet.create({
   },
   viewcheckbody:{
   	flex:1,
-  backgroundColor: "#C3CDC8",
+  backgroundColor: "#b2dfdb",
   alignItems :'center',
   color: "#fff",
   flexDirection : 'row',
-    width: "100%"
-  },
+    width: "100%",
+    borderRadius:5
+
+     },
   viewchecktext:{
    flex:0.8
   },
@@ -492,7 +494,7 @@ const style = StyleSheet.create({
      fontWeight: "bold"
  },
  button: {
-    backgroundColor: "#51B9F1",
+    backgroundColor: "#23B9B5",
     borderRadius: 10,
     paddingVertical: 15,
     alignItems: "center",
@@ -505,10 +507,11 @@ const style = StyleSheet.create({
   textAlign: "center",
   fontWeight: 'bold',
   borderWidth: 2,
-  backgroundColor: "white",
+  backgroundColor: "#23B9B5",
   paddingVertical: 5,
   paddingRight : 5,
-  paddingLeft :5
+  paddingLeft :5,
+  borderRadius:10
  },
  text_transparent:{
    color: 'transparent',

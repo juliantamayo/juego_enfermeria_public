@@ -8,7 +8,7 @@ const questions = [
   },
   {
     image: require("../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_enojado_hablando.png"),
-    personaje: "Señor C.J.M",
+    personaje: "SEÑOR C.J.M",
     Text: "Tendríamos…. no se…. $4.000.000? (Lo dice con dificultad)"
   
   }

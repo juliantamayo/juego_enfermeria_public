@@ -26,7 +26,51 @@ export default StyleSheet.create({
     color: "#fff",
     textAlign: "left",
     fontSize: 17,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    borderRadius:5,
+    paddingLeft:20
+  },
+  text3: {
+   marginLeft : 5,
+   //paddingVertical: 8,
+   // borderWidth: 4,
+    borderColor: "#20232a",
+   // borderRadius: 6,
+    backgroundColor: "#880e4f",
+    color: "#fff",
+    textAlign: "left",
+    fontSize: 17,
+    fontWeight: "bold",
+    borderRadius:5,
+    paddingLeft:20
+  },
+   text4: {
+   marginLeft : 5,
+   //paddingVertical: 8,
+   // borderWidth: 4,
+    borderColor: "#20232a",
+   // borderRadius: 6,
+    backgroundColor: "#1a237e",
+    color: "#fff",
+    textAlign: "left",
+    fontSize: 17,
+    fontWeight: "bold",
+    borderRadius:5,
+    paddingLeft:20
+  },
+   text5: {
+   marginLeft : 5,
+   //paddingVertical: 8,
+   // borderWidth: 4,
+    borderColor: "#20232a",
+   // borderRadius: 6,
+    backgroundColor: "#7f1a34",
+    color: "#fff",
+    textAlign: "left",
+    fontSize: 17,
+    fontWeight: "bold",
+    borderRadius:5,
+    paddingLeft:20
   },
   containerdialog:{
    flex: 0.5,

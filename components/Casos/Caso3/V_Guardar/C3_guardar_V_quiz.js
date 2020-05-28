@@ -18,7 +18,7 @@ state = {
     if (global.C3_recibe_quiz === global.C3_recibe_quiz_CP) {
       AsyncStorage.setItem('C3_save_quiz',  global.C3_recibe_quiz_CP.toString());
       this.setState({ 'C3_save_quiz':  global.C3_recibe_quiz_CP });
-       Alert.alert("Mensaje","Buen trabajo", [
+       Alert.alert("Mensaje","¡Buen trabajo!", [
        
         { text: "OK", onPress: () =>  this.props.navigation.navigate("M_casos") }
      ]);
@@ -27,7 +27,7 @@ state = {
        
    } 
    saveData2 = (value) => {
-       Alert.alert("Mensaje","Sigue estudiando", [
+       Alert.alert("Mensaje","Sigue estudiando.", [
        
         { text: "OK", onPress: () =>  this.props.navigation.navigate("M_caso3") }
      ]);
@@ -38,11 +38,11 @@ state = {
   render() {
     return (
       <View style={styles.MainContainer}>
-    {  global.C2_recibe_quiz ==  global.C2_recibe_quiz_CP ? <ContainerSave>
+    {  global.C3_recibe_quiz ==  global.C3_recibe_quiz_CP ? <ContainerSave>
                 <Save onPress ={this.saveData}/>  
     </ContainerSave>:
     <ContainerSave2
-        text={global.C2_recibe_quiz}
+        text={global.C3_recibe_quiz}
         text2={global.recibe_quiz_erroneas}>
        
                 <Save2 onPress ={this.saveData2}/>  

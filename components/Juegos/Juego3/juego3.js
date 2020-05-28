@@ -3,6 +3,7 @@ import { View, StyleSheet, StatusBar, Text, SafeAreaView, Image,TouchableHighlig
 
 import { Button, ButtonContainer } from "../../elementos/ButtonJ1";
 import { Alert } from "../../elementos/Alert";
+import { Modal_gameover} from "../../elementos/ModalsGameover";
 const { width, height } = Dimensions.get('window')
  
 const styles = StyleSheet.create({
@@ -49,6 +50,15 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5
+  },
+   timertext:{
+    color: 'black',
+    fontSize: 22,
+    textAlign: "center",
+    letterSpacing: -0.02,
+    fontWeight: "600",
+    backgroundColor: 'white',
+    borderRadius: 25
   }
   
 
@@ -64,11 +74,13 @@ class juego3 extends React.Component {
 
   state = {
     modalVisible: false,
+    modalfinjuego:false,
     correctCount: 0, 
     totalCount: this.props.route.params?.questions.length,
     activeQuestionIndex: 0,
     answered: false,
-    answerCorrect: false
+    answerCorrect: false,
+    timer: 10
 
   };
 
@@ -97,24 +109,47 @@ class juego3 extends React.Component {
     this.setState(state => {
       const nextIndex = state.activeQuestionIndex + 1;
 
-      if (nextIndex >= state.totalCount) {
-       // return this.props.navigation.popToTop();
-        return this.props.navigation.navigate('Result_QJ3',{experiencia: (this.state.correctCount*mult)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount)});
+      if (nextIndex == state.totalCount) {
+           var T= this.state.timer='-2';
+        return this.props.navigation.navigate('Result_QJ3',{experiencia: (this.state.correctCount)-((this.state.totalCount-this.state.correctCount)*3), correctas:this.state.correctCount,erroneas:(this.state.totalCount-this.state.correctCount),t:this.state.timer});
+      }else if (this.state.timer == -1) {
+       return{ modalfinjuego:true}
       }
 
       return {
         activeQuestionIndex: nextIndex,
-        answered: false
+        answered: false,
+        timer: 10
       };
     });
   };
 
-  setModalVisible = (visible) => {
+ setModalVisible = (visible) => {
     this.setState({ modalVisible: visible });
   }
 
+  setModalfinjuego = (visible) => {
+    this.setState({ modalfinjuego: visible });
+  }
+    componentDidMount(){
+  this.interval = setInterval(
+    () => this.setState((prevState)=> ({ timer: prevState.timer - 1 })),
+    1000
+  );
+}
+
+componentDidUpdate(){
+  if(this.state.timer === -1){ 
+    clearInterval(this.interval);
+  }
+}
+
+componentWillUnmount(){
+ clearInterval(this.interval);
+}
+
   render() {
-    const { modalVisible } = this.state;
+    const { modalVisible,modalfinjuego } = this.state;
     const questions = this.props.route.params?.questions ?? [];
     const question = questions[this.state.activeQuestionIndex];
     
@@ -149,10 +184,16 @@ class juego3 extends React.Component {
             </View>
          
         </Modal>
+
+        <Modal_gameover
+              
+             text={this.state.timer == -1? true: modalfinjuego}
+             onPress={() => this.props.navigation.navigate('M_juegos3')}
+              />
         <StatusBar barStyle="light-content" />
         <SafeAreaView >
         
-
+          <Text style={styles.timertext}> { this.state.timer == -1? 0: this.state.timer}' 🕗</Text>
           <Text style={styles.text}>{question.question}</Text>  
           <View>
           <View style={styles.containerImagen}>
@@ -179,7 +220,7 @@ class juego3 extends React.Component {
           </View>
 
           <Text style={styles.text}>
-            {`${this.state.correctCount}/${this.state.totalCount}`}
+            {`${this.state.activeQuestionIndex + 1}/${this.state.totalCount}`}
           </Text>
           
         </SafeAreaView>

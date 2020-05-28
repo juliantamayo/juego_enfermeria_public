@@ -1,12 +1,12 @@
 const questions = [
   
   { 
-    question: "¿Cuál es el nombre de la Prueba de valoración que acaba de realizar el enfermero?",
+    question: "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
     answers: [
-       { id: "1", text: "Reflejo Tricipital", correct: true },
-      { id: "2", text: "Reflejo Biscipital" },
-      { id: "3", text: "Reflejo Supinador" },
-      { id: "4", text: "Reflejo Plantar" }
+       { id: "1", text: "Reflejo Tricipital.", correct: true },
+      { id: "2", text: "Reflejo Bicipital." },
+      { id: "3", text: "Reflejo Supinador." },
+      { id: "4", text: "Reflejo Plantar." }
     ]
   },
     { 

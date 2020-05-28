@@ -84,7 +84,7 @@ render() {
  
    {C3_Pcte1 == 1?
      <RowItem   
-      name="1. ¿cómo es el dolor que siente?"
+      name="1. ¿Cómo es el dolor que siente?"
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C3_Preg1_dialogo", {
@@ -95,7 +95,7 @@ render() {
       }
     />:
     <RowItem   
-      name="1. ¿cómo es el dolor que siente?"
+      name="1. ¿Cómo es el dolor que siente?"
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("V_C3_Preg1_dialogo", {
@@ -108,7 +108,7 @@ render() {
   }
  {C3_Pcte2 == 1?
     <RowItem
-      name="2. sabe usted ¿cómo se llama la zona del abdomen que le duele? "
+      name="2. Sabe usted ¿cómo se llama la zona del abdomen que le duele? "
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C3_Preg2_dialogo", {
@@ -119,7 +119,7 @@ render() {
       }
     />:
     <RowItem
-      name="2. sabe usted ¿cómo se llama la zona del abdomen que le duele? "
+      name="2. Sabe usted ¿cómo se llama la zona del abdomen que le duele? "
       color="#00b9bc"
       onPress={() =>
         this.props.navigation.navigate("V_C3_Preg2_dialogo", {
@@ -132,7 +132,7 @@ render() {
   }
   {C3_Pcte3 == 1?
     <RowItem
-      name="3.¿esta es su postura todo el tiempo? "
+      name="3.¿Esta es su postura todo el tiempo? "
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C3_Preg3_dialogo", {
@@ -143,7 +143,7 @@ render() {
       }
     />:
     <RowItem
-      name="3.¿esta es su postura todo el tiempo? "
+      name="3.¿Esta es su postura todo el tiempo? "
       color="#77c6c6"
       onPress={() =>
         this.props.navigation.navigate("V_C3_Preg3_dialogo", {
@@ -156,7 +156,7 @@ render() {
   }
   {C3_Pcte4 == 1?
     <RowItem
-      name="4. ¿en qué zona específicamente presenta el dolor?"
+      name="4. ¿En qué zona específicamente presenta el dolor?"
       color="#82E0AA"
       onPress={() =>
         this.props.navigation.navigate("V_C3_Preg4_dialogo", {
@@ -167,7 +167,7 @@ render() {
       }
     />:
     <RowItem
-      name="4. ¿en qué zona específicamente presenta el dolor?"
+      name="4. ¿En qué zona específicamente presenta el dolor?"
       color="#00b9bc"
       onPress={() =>
         this.props.navigation.navigate("V_C3_Preg4_dialogo", {

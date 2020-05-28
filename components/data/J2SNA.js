@@ -1,6 +1,6 @@
 export const Mj2questions = [
   {
-    question: "Cuál es el sistema nervioso que reduce la presión arterial, la frecuencia cardíaca y respiratoria?",
+    question: "¿Cuál es el sistema nervioso que reduce la presión arterial, la frecuencia cardíaca y respiratoria?",
     answers: [
       { id: "1", text: "Simpático" },
       { id: "2", text: "Parasimpático", correct: true },
@@ -9,7 +9,7 @@ export const Mj2questions = [
     ]
   },
   {
-    question: "Cuál es el sistema que se encarga de que la médula suprarrenal sea estimulada para liberar epinefrina (adrenalina) y norepinefrina (noradrenalina), lo que a su vez aumenta la tasa metabólica de las células y estimula al hígado para que libere glucosa en la sangre?",
+    question: "¿Cuál es el sistema que se encarga de que la médula suprarrenal sea estimulada para liberar epinefrina (adrenalina) y norepinefrina (noradrenalina), lo que a su vez aumenta la tasa metabólica de las células y estimula al hígado para que libere glucosa en la sangre?",
     answers: [
       { id: "1", text: "Parasimpático" },
       { id: "2", text: "Central" },
@@ -18,7 +18,7 @@ export const Mj2questions = [
     ]
   },
   {
-    question: "Cuál es el sistema nervioso que estimula la liberación de glucosa por el hígado?",
+    question: "¿Cuál es el sistema nervioso que estimula la liberación de glucosa por el hígado?",
     answers: [
       { id: "1", text: "Parasimpático" },
       { id: "2", text: "Tálamo" },
@@ -27,7 +27,7 @@ export const Mj2questions = [
     ]
   },
   {
-    question: "Cuál es el sistema nervioso que activa al organismo para situaciones de emergencia, como respuestas de lucha y huída?",
+    question: "¿Cuál es el sistema nervioso que activa al organismo para situaciones de emergencia, como respuestas de lucha y huída?",
     answers: [
       { id: "1", text: "Parasimpático" },
       { id: "2", text: "Simpático", correct: true },
@@ -36,7 +36,7 @@ export const Mj2questions = [
     ]
   },
   {
-    question: "Cuál es el sistema nervioso responsable del control de funciones internas en condiciones de reposo y normalidad?",
+    question: "¿Cuál es el sistema nervioso responsable del control de funciones internas en condiciones de reposo y normalidad?",
     answers: [
       { id: "1", text: "Simpático" },
       { id: "2", text: "Central" },
@@ -49,7 +49,7 @@ export const Mj2questions = [
 
 export const Mj2questions2 = [
   {
-    question: "Cuál es el Sistema nervioso compuesto de dos cadenas de 23 ganglios situados a lo largo y a los dos lados de la columna vertebral?",
+    question: "¿Cuál es el Sistema nervioso compuesto de dos cadenas de 23 ganglios situados a lo largo y a los dos lados de la columna vertebral?",
     answers: [
       { id: "1", text: "Parasimpático" },
       { id: "2", text: "Central" },
@@ -58,7 +58,7 @@ export const Mj2questions2 = [
     ]
   },
   {
-    question: "Cuál es el sistema vegetativo que aumenta el ritmo y la potencia de la contracción cardiaca?",
+    question: "¿Cuál es el sistema vegetativo que aumenta el ritmo y la potencia de la contracción cardiaca?",
     answers: [
       { id: "1", text: "Parasimpático" },
       { id: "2", text: "Central" },
@@ -67,7 +67,7 @@ export const Mj2questions2 = [
     ]
   },
   {
-    question: "Cuál es el sistema vegetativo que aumenta el peristaltismo y dilata los esfínteres del sistema digestivo?",
+    question: "¿Cuál es el sistema vegetativo que aumenta el peristaltismo y dilata los esfínteres del sistema digestivo?",
     answers: [
       { id: "1", text: "Simpático" },
       { id: "2", text: "Parasimpático", correct: true },
@@ -76,7 +76,7 @@ export const Mj2questions2 = [
     ]
   },
   {
-    question: "Cuál es el sistema vegetativo que acelera el metabolismo, estimula el desdoblamiento de grasas e incrementa los niveles de azúcar en la sangre?",
+    question: "¿Cuál es el sistema vegetativo que acelera el metabolismo, estimula el desdoblamiento de grasas e incrementa los niveles de azúcar en la sangre?",
     answers: [
       { id: "1", text: "Parasimpático" },
       { id: "2", text: "Central" },
@@ -85,7 +85,7 @@ export const Mj2questions2 = [
     ]
   },
   {
-    question: "Cuál es el sistema que se encarga de que la médula suprarrenal sea estimulada para liberar epinefrina (adrenalina) y norepinefrina (noradrenalina), lo que a su vez aumenta la tasa metabólica de las células y estimula al hígado para que libere glucosa en la sangre?",
+    question: "¿Cuál es el sistema que se encarga de que la médula suprarrenal sea estimulada para liberar epinefrina (adrenalina) y norepinefrina (noradrenalina), lo que a su vez aumenta la tasa metabólica de las células y estimula al hígado para que libere glucosa en la sangre?",
     answers: [
       { id: "1", text: "Simpático", correct: true },
       { id: "2", text: "Parasimpático" },

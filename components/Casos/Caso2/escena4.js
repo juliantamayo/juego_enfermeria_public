@@ -113,7 +113,7 @@ render() {
     
      <View style={styles.headerIzquierda}>
      <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-       onPress={() => this.props.navigation.navigate('M_caso1')}>
+       onPress={() => this.props.navigation.navigate('M_caso2')}>
                <Image style={ styles.image } source={require("../../../assets/images/button-back.png")} />
       </TouchableOpacity>
       </View>
@@ -133,7 +133,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Cuenta con un adecuado estado de salud</Text>
+        <Text style={style.text}>Cuenta con un adecuado estado de salud.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -159,7 +159,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Ve bien de cerca y lejos, percibe olores, sabores y   percibe la sensación táctil y dolorosa sin dificultad en todas las áreas del cuerpo</Text>
+        <Text style={style.text}>Ve bien de cerca y lejos, percibe olores, sabores y percibe la sensación táctil y dolorosa sin dificultad en todas las áreas del cuerpo.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -211,7 +211,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Fascias de dolor</Text>
+        <Text style={style.text}>Fascies de dolor.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -224,7 +224,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Memoria conservada</Text>
+        <Text style={style.text}>Memoria conservada.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -237,7 +237,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Desorientado alopsiquicamente</Text>
+        <Text style={style.text}>Desorientado alopsiquicamente.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -250,7 +250,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Juicio conservado, </Text>
+        <Text style={style.text}>Juicio conservado. </Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -302,7 +302,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Incapacidad de diferenciación de olores</Text>
+        <Text style={style.text}>Incapacidad de diferenciación de olores.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -315,7 +315,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Al estimulo con la  torunda de algodón cerca de las fosas nasales presenta  estornudo, parpadeo y el lagrimeo.</Text>
+        <Text style={style.text}>Al estímulo con la  torunda de algodón cerca de las fosas nasales presenta  estornudo, parpadeo y el lagrimeo.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -432,7 +432,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>La conducción ósea es la que más predomina</Text>
+        <Text style={style.text}>La conducción ósea es la que más predomina.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -445,7 +445,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>La conducción área es la que más predomina, </Text>
+        <Text style={style.text}>La conducción aérea es la que más predomina. </Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -458,7 +458,7 @@ render() {
     <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Paciente que lateraliza de lado derecho</Text>
+        <Text style={style.text}>Paciente que lateraliza de lado derecho.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -621,11 +621,12 @@ const style = StyleSheet.create({
   },
   viewcheckbody:{
   	flex:1,
-  backgroundColor: "#C3CDC8",
+  backgroundColor: "#b2dfdb",
   alignItems :'center',
   color: "#fff",
   flexDirection : 'row',
-    width: "100%"
+    width: "100%",
+      borderRadius:5
   },
   viewchecktext:{
    flex:0.8
@@ -652,7 +653,7 @@ const style = StyleSheet.create({
      fontWeight: "bold"
  },
  button: {
-    backgroundColor: "#51B9F1",
+    backgroundColor: "#23B9B5",
     borderRadius: 10,
     paddingVertical: 15,
     alignItems: "center",
@@ -665,10 +666,11 @@ const style = StyleSheet.create({
   textAlign: "center",
   fontWeight: 'bold',
   borderWidth: 2,
-  backgroundColor: "white",
+  backgroundColor: "#23B9B5",
   paddingVertical: 5,
   paddingRight : 5,
-  paddingLeft :5
+  paddingLeft :5,
+  borderRadius:10
  },
  text_transparent:{
    color: 'transparent',

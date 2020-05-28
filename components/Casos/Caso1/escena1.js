@@ -1,11 +1,10 @@
 import React from "react";
-import {AsyncStorage, Modal, View, StyleSheet, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
+import {AsyncStorage, Modal, View, StyleSheet, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert, ScrollView} from "react-native";
 
 import { Button, ButtonContainer } from "../../elementos/ButtonEscene1";
 import { ModalHistorial } from "../../elementos/Modals";
 import { Modal_C1_escena1 } from "../../elementos/ModalsTutorial";
 import style from './../../Style.js';
-import Escena2Dialog from "../../data/escena2dialog";
 import { CommonActions } from '@react-navigation/native';
 const { width, height } = Dimensions.get('window')
  
@@ -59,7 +58,6 @@ class escena1 extends React.Component {
        // return this.props.navigation.popToTop();
         return this.props.navigation.navigate("Guardar_escena1", {ex: 2, 
           title: "Escena2",
-          questions: Escena2Dialog,
           color: "#36b1f0"
         });
       }
@@ -88,7 +86,8 @@ class escena1 extends React.Component {
   
     return (
     <ImageBackground source={question.image} style={style.container} resizeMode='contain'>
-        
+    
+  
       <ModalHistorial
       
        text={modalVisible}
@@ -142,11 +141,10 @@ class escena1 extends React.Component {
       </View>
  
       </View>
-       
+        
        <View style={styles.containerdialog}>
-
-    
         <Text style={styles.text2}>{question.personaje}</Text>
+<ScrollView  >
         <ButtonContainer>
          
                 <Button
@@ -158,7 +156,9 @@ class escena1 extends React.Component {
                 />
               
             </ButtonContainer>
+            </ScrollView>
        </View>
+
 
       </ImageBackground>
     );

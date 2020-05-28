@@ -3,7 +3,6 @@ import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpac
 
 import styles from './../../Style.js';
 import Escena1Dialog from "../../data/escena1dialog";
-import Escena2Dialog from "../../data/escena2dialog";
 import D_C1_Quiz from "../../data/C1_data/C1_Quiz/D_C1_Quiz";
 import { RowItem } from "../../elementos/RowItem";
 import { Modal_MenuCaso1 } from "../../elementos/ModalsTutorial";
@@ -112,7 +111,7 @@ render() {
 
     { Esc2 == 1? 
     <RowItem
-      name="Pruebas de valoración"
+      name="Pruebas de Valoración"
       color="#f9e67a"
       onPress={() =>
         this.props.navigation.navigate("Escena3", {
@@ -146,7 +145,7 @@ render() {
     null}
     { Esc5 == 10?
     <RowItem
-      name="Proceso de atención de Enfermeria"
+      name="Proceso de Atención de Enfermeria"
       color="#f9a94b"
       onPress={() =>
         this.props.navigation.navigate("Escena6",{ex:'2'})

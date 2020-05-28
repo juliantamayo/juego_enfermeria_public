@@ -3,7 +3,7 @@ const questions = [
   {
     image: require("../../../../assets/images/enfermera_pensando.png"),
     personaje: "ENFERMERA",
-    Text: "El Paciente recuerda fácilmente hechos pasados, actuales e información dada en el momento. "
+    Text: "El paciente recuerda fácilmente hechos pasados, actuales e información dada en el momento. "
    
   },
     {

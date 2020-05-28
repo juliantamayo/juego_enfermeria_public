@@ -124,7 +124,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>1. Paciente alerta, cognitivamente orientado.</Text>
+        <Text style={style.text}>Paciente alerta, cognitivamente orientado.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -137,7 +137,7 @@ render() {
         <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>2. Desorientado alopsiquicamente (tiempo y lugar).</Text>
+        <Text style={style.text}>Desorientado alopsiquicamente (tiempo y lugar).</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -150,7 +150,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>3. Capacidad de juzgar objetivamente las situaciones y memoria conservada.</Text>
+        <Text style={style.text}>Capacidad de juzgar objetivamente las situaciones y memoria conservada.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -163,7 +163,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>4. Presenta signos y síntomas de dolor.</Text>
+        <Text style={style.text}>Presenta signos y síntomas de dolor.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -176,7 +176,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>5.  Afasia de Expresión y apraxia verbal.</Text>
+        <Text style={style.text}>Afasia de Expresión y apraxia verbal.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -189,7 +189,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>6.  Presenta epigastralgia.</Text>
+        <Text style={style.text}>Presenta epigastralgia.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -202,7 +202,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>7.  Está en la capacidad de percibir y describir verbalmente su situación.</Text>
+        <Text style={style.text}>Está en la capacidad de percibir y describir verbalmente su situación.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -215,7 +215,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>8.  Fascias de dolor.</Text>
+        <Text style={style.text}>Fascies de dolor.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -228,7 +228,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>9.  Fuerza muscular grado 2 en miembro inferior derecho - hemiparesia derecha, espasticidad grado 3.</Text>
+        <Text style={style.text}>Fuerza muscular grado 2 en miembro inferior derecho - hemiparesia derecha, espasticidad grado 3.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -241,7 +241,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>10.  Postura levemente inclinada hacia adelante, movimientos un poco más lentos.</Text>
+        <Text style={style.text}>Postura levemente inclinada hacia adelante, movimientos un poco más lentos.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -254,7 +254,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>11.  Postura erguida, movimientos normales, marcha normal.</Text>
+        <Text style={style.text}>Postura erguida, movimientos normales, marcha normal.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -267,7 +267,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>12.  Paciente que en la palpación abdominal superficial y profunda presenta fascias y manifestaciones de dolor, al llegar a la zona del epigastrio este se hace más intenso e insoportable.</Text>
+        <Text style={style.text}>Paciente que en la palpación abdominal superficial y profunda presenta fascias y manifestaciones de dolor, al llegar a la zona del epigastrio este se hace más intenso e insoportable.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -280,7 +280,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>13.  Astereognosia en ambos brazos.</Text>
+        <Text style={style.text}>Astereognosia en ambos brazos.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -293,7 +293,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>14.  La faringe de color rojo intenso evidencia la inflamación de la mucosa de la faringe.</Text>
+        <Text style={style.text}>La faringe de color rojo intenso evidencia la inflamación de la mucosa de la faringe.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -306,7 +306,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>15.  Ptosis palpebral derecha.</Text>
+        <Text style={style.text}>Ptosis palpebral derecha.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -319,7 +319,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>16.  presencia de reflejo nauseoso sin el estímulo.</Text>
+        <Text style={style.text}>Presencia de reflejo nauseoso sin el estímulo.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -332,7 +332,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>17.  Sin presencia de reflejo nauseoso.</Text>
+        <Text style={style.text}>Sin presencia de reflejo nauseoso.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -345,7 +345,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>18.  Cuello simétrico y buen desarrollo muscular, a la palpación piel fría y sensibilidad conservada, sin adenopatías no se palpa tiroides.</Text>
+        <Text style={style.text}>Cuello simétrico y buen desarrollo muscular, a la palpación piel fría y sensibilidad conservada, sin adenopatías no se palpa tiroides.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -358,7 +358,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>19.  Asimetría facial y contracción de la mandíbula de manera asimétrica.</Text>
+        <Text style={style.text}>Asimetría facial y contracción de la mandíbula de manera asimétrica.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -371,7 +371,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>20.  pulso carotideo aumentado por el dolor.</Text>
+        <Text style={style.text}>Pulso carotideo aumentado por el dolor.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -384,7 +384,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>21.  A nivel del tórax se evidencia Buen estado nutricional y desarrollo musculo esquelético.</Text>
+        <Text style={style.text}>A nivel del tórax se evidencia Buen estado nutricional y desarrollo musculo esquelético.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -397,7 +397,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>22.  piel integra, pero sudorosa por dolor, tórax elíptico, simétrico.</Text>
+        <Text style={style.text}>Piel integra, pero sudorosa por dolor, tórax elíptico, simétrico.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -410,7 +410,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>23.  Paciente dependiente.</Text>
+        <Text style={style.text}>Paciente dependiente.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -423,7 +423,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>24.  Frémito vocal presente igual en ambos hemitórax, resonancia en todos los campos pulmonares, ruido traqueal, murmullo bronco vesicular y vesicular presentes. PMI visible en el 5 EII con LMC.</Text>
+        <Text style={style.text}>Frémito vocal presente igual en ambos hemitórax, resonancia en todos los campos pulmonares, ruido traqueal, murmullo bronco vesicular y vesicular presentes. PMI visible en el 5 EII con LMC.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -436,7 +436,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>25.  Marcha hemipléjica.</Text>
+        <Text style={style.text}>Marcha hemipléjica.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -449,7 +449,7 @@ render() {
     <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>26.  Se evidencia nauseas con presencia de borborigmos en todos los cuadrantes.  No ruidos vasculares.</Text>
+        <Text style={style.text}>Se evidencia nauseas con presencia de borborigmos en todos los cuadrantes.  No ruidos vasculares.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -462,7 +462,7 @@ render() {
     <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>27.  Se percibe sonido timpánico en zona de estómago e intestino subyacente, mate en hígado y bazo.</Text>
+        <Text style={style.text}>Se percibe sonido timpánico en zona de estómago e intestino subyacente, mate en hígado y bazo.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -475,7 +475,7 @@ render() {
     <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>28.  Paciente con capacidad para desarrollar prueba dedo-nariz coordinado, firme y rápido, que percibe sensación táctil y dolorosa en todas las áreas del cuerpo.</Text>
+        <Text style={style.text}>Paciente con capacidad para desarrollar prueba dedo-nariz coordinado, firme y rápido, que percibe sensación táctil y dolorosa en todas las áreas del cuerpo.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -508,11 +508,12 @@ const style = StyleSheet.create({
   },
   viewcheckbody:{
   	flex:1,
-  backgroundColor: "#C3CDC8",
+  backgroundColor: "#b2dfdb",
   alignItems :'center',
   color: "#fff",
   flexDirection : 'row',
-    width: "100%"
+    width: "100%",
+      borderRadius:5
   },
   viewchecktext:{
    flex:0.8
@@ -539,7 +540,7 @@ const style = StyleSheet.create({
      fontWeight: "bold"
  },
  button: {
-    backgroundColor: "#51B9F1",
+    backgroundColor: "#23B9B5",
     borderRadius: 10,
     paddingVertical: 15,
     alignItems: "center",
@@ -552,10 +553,11 @@ const style = StyleSheet.create({
   textAlign: "center",
   fontWeight: 'bold',
   borderWidth: 2,
-  backgroundColor: "white",
+  backgroundColor: "#23B9B5",
   paddingVertical: 5,
   paddingRight : 5,
-  paddingLeft :5
+  paddingLeft :5,
+  borderRadius: 10
  },
  text_transparent:{
    color: 'transparent',

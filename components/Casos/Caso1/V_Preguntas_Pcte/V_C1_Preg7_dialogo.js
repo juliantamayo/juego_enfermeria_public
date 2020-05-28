@@ -1,9 +1,8 @@
 import React from "react";
-import {AsyncStorage, Modal, View, StyleSheet, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
+import {AsyncStorage, Modal, View, ScrollView, StyleSheet, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
 
 import { Button, ButtonContainer } from "../../../elementos/ButtonEscene1";
 import style from '../../../Style.js';
-import Escena2Dialog from "../../../data/escena2dialog";
 import C1_pregunta7_pregunta from "../../../data/C1_preguntas/C1_pregunta7_pregunta";
 import { CommonActions } from '@react-navigation/native';
 import  styles  from "../../../Style_dialog.js";
@@ -122,8 +121,10 @@ class V_C1_Preg7_dialogo extends React.Component {
        
        <View style={styles.containerdialog}>
 
-    
-        <Text style={styles.text2}>{question.personaje}</Text>
+    {question.personaje=="ENFERMERA"?
+        <Text style={styles.text2}>{question.personaje}</Text>:
+        <Text style={styles.text3}>{question.personaje}</Text>}
+        <ScrollView>
         <ButtonContainer>
          
                 <Button
@@ -135,6 +136,7 @@ class V_C1_Preg7_dialogo extends React.Component {
                 />
               
             </ButtonContainer>
+            </ScrollView>
        </View>
 
       </ImageBackground>

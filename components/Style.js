@@ -85,7 +85,7 @@ export default StyleSheet.create({
      height:50,
      width: 270,
     alignItems: "center",
-    backgroundColor: "#FBBD20",
+    backgroundColor: "gold",
     padding: 10,
     borderRadius: 20
   },

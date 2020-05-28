@@ -107,7 +107,7 @@ render() {
     null}
  {C3_Esc2 == 4?
     <RowItem
-      name="Pruebas de valoración"
+      name="Pruebas de Valoración"
        color="#f9e67a"
       onPress={() =>
         this.props.navigation.navigate("C3_Escena3")
@@ -138,7 +138,7 @@ render() {
     null}
   {C3_Esc5 == 7?
     <RowItem
-      name="Proceso de atención de Enfermeria"
+      name="Proceso de Atención de Enfermeria"
       color="#f9a94b"
       onPress={() =>
         this.props.navigation.navigate("C3_Escena6")

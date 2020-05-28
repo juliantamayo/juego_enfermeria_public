@@ -1,5 +1,5 @@
 import React from "react";
-import {AsyncStorage, View, StyleSheet, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity} from "react-native";
+import {View, StatusBar,ScrollView, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity} from "react-native";
 
 import { Button, ButtonContainer } from "../../../elementos/ButtonEscene1";
 import { C2_ModalHistorial, Modal_C2_Pru_valoracion9_procedimiento, Modal_C2_Pru_valoracion9_HN } from "../../../elementos/Modals";
@@ -8,8 +8,6 @@ import D_C2_Pru_Valoracion9_pregunta from "../../../data/C2_data/C2_Pru_valoraci
 import { CommonActions } from '@react-navigation/native';
 import  styles  from "../../../Style_dialog.js";
 import { Modal_Pruebas } from "../../../elementos/ModalsTutorial";
-const mult =5;
-
 
 class V_C2_PruValo9_dialogo extends React.Component {
    
@@ -34,7 +32,7 @@ class V_C2_PruValo9_dialogo extends React.Component {
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
         return this.props.navigation.navigate("V_C2_PruValo9_pregunta", {activeQuestion: 1, 
-          title: "Caso 2. Pueba de Valoración 9",
+          title: "Caso 2. Prueba de Valoración 9",
           questions: D_C2_Pru_Valoracion9_pregunta,
           color: "#36b1f0"
         });
@@ -157,7 +155,11 @@ class V_C2_PruValo9_dialogo extends React.Component {
        <View style={styles.containerdialog}>
 
     
-        <Text style={styles.text2}>{question.personaje}</Text>
+        
+        {question.personaje=="ENFERMERA"?
+        <Text style={styles.text2}>{question.personaje}</Text>:
+        <Text style={styles.text4}>{question.personaje}</Text>}
+         <ScrollView>
         <ButtonContainer>
          
                 <Button
@@ -169,6 +171,7 @@ class V_C2_PruValo9_dialogo extends React.Component {
                 />
               
             </ButtonContainer>
+           </ScrollView>
        </View>
 
       </ImageBackground>

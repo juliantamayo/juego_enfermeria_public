@@ -1,5 +1,5 @@
 import React from "react";
-import {View, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
+import {View, StatusBar, Text, SafeAreaView,ScrollView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
 
 import { Button, ButtonContainer } from "../../../elementos/ButtonEscene1";
 import style from '../../../Style.js';
@@ -106,6 +106,7 @@ class V_C2_RespP4_enfermera extends React.Component {
 
     
         <Text style={styles.text2}>{question.personaje}</Text>
+         <ScrollView>
         <ButtonContainer>
          
                 <Button
@@ -117,6 +118,7 @@ class V_C2_RespP4_enfermera extends React.Component {
                 />
               
             </ButtonContainer>
+             </ScrollView>
        </View>
 
       </ImageBackground>

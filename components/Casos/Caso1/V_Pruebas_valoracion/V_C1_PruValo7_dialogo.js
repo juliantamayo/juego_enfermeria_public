@@ -1,5 +1,5 @@
 import React from "react";
-import {AsyncStorage, View, StyleSheet, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity} from "react-native";
+import {AsyncStorage, View, StyleSheet, StatusBar,ScrollView, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity} from "react-native";
 
 import { Button, ButtonContainer } from "../../../elementos/ButtonEscene1";
 import { ModalHistorial, Modal_C1_Pru_valoracion7_procedimiento, Modal_C1_Pru_valoracion7_HN } from "../../../elementos/Modals";
@@ -38,7 +38,7 @@ class V_C1_PruValo7_dialogo extends React.Component {
       if (nextIndex >= state.totalCount) {
        // return this.props.navigation.popToTop();
         return this.props.navigation.navigate("V_C1_PruValo7_pregunta", {activeQuestion: 1, 
-          title: "Caso 1. Pueba de Valoración 7",
+          title: "Caso 1. Prueba de Valoración 7",
           questions: D_C1_Pru_Valoracion7_pregunta,
           color: "#36b1f0"
         });
@@ -161,7 +161,10 @@ class V_C1_PruValo7_dialogo extends React.Component {
        <View style={styles.containerdialog}>
 
     
-        <Text style={styles.text2}>{question.personaje}</Text>
+     {question.personaje=="ENFERMERA"?
+        <Text style={styles.text2}>{question.personaje}</Text>:
+        <Text style={styles.text3}>{question.personaje}</Text>}
+         <ScrollView>
         <ButtonContainer>
          
                 <Button
@@ -173,6 +176,7 @@ class V_C1_PruValo7_dialogo extends React.Component {
                 />
               
             </ButtonContainer>
+             </ScrollView>
        </View>
 
       </ImageBackground>
