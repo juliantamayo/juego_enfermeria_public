@@ -1,11 +1,7 @@
 import React from 'react';
 import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpacity,  Image, Text, AsyncStorage } from 'react-native';
-
 import styles from '../../Style.js';
-
-
 import { RowItem } from "../../elementos/RowItem";
-import { Modal_C1_escena2 } from "../../elementos/ModalsTutorial";
 import { Conciencia, Orientacion, juicio, memoria, percepcion, pensamiento, afecto, area_psicomotora } from "../../data/Teoria/D_T_PruVal";
 
 export default class m_t_pruval extends React.Component {
@@ -13,29 +9,16 @@ export default class m_t_pruval extends React.Component {
   
     state ={
 //el componente "state" debe estar para poder recibir las variables locales de otras clases
-     modalVisible: false,
-
     };
     
-  setModalVisible = (visible) => {
-    this.setState({ modalVisible: visible });
-  };
-  
 
  render() {
-  const { modalVisible} = this.state;
+
 
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
    
-    <Modal_C1_escena2
-      
-       text={modalVisible}
-       onPress={() => {
-                  this.setModalVisible(!modalVisible);
-                }}
-      />
    
     <View style={style.container}>
     <ScrollView  >
@@ -51,12 +34,7 @@ export default class m_t_pruval extends React.Component {
       </View>
 
       <View style={styles.headerDerecha}>
-      <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-                   onPress={() => {
-                        this.setModalVisible(true);
-                      }}>
-               <Image style={ styles.image } source={require("../../../assets/images/ayuda.png")} />
-      </TouchableOpacity>
+
       </View>
      
       </View>
@@ -69,7 +47,7 @@ export default class m_t_pruval extends React.Component {
    
     <RowItem
       name="2. Orientación"
-      color="#95FD79"
+      color="#00bcd4"
      onPress={() =>
         this.props.navigation.navigate("t_pruval",{prueba:Orientacion})}
        />
@@ -83,7 +61,7 @@ export default class m_t_pruval extends React.Component {
   
     <RowItem
       name="4. Memoria"
-      color="#95FD79"
+      color="#00bcd4"
     onPress={() =>
         this.props.navigation.navigate("t_pruval",{prueba:memoria})}
        />
@@ -96,7 +74,7 @@ export default class m_t_pruval extends React.Component {
 
     <RowItem
       name="6. Pensamiento"
-      color="#95FD79"
+      color="#00bcd4"
      onPress={() =>
         this.props.navigation.navigate("t_pruval",{prueba:pensamiento})}
        />
@@ -110,7 +88,7 @@ export default class m_t_pruval extends React.Component {
 
            <RowItem
       name="8. Área Psicomotora"
-      color="#95FD79"
+      color="#00bcd4"
      onPress={() =>
         this.props.navigation.navigate("t_pruval",{prueba:area_psicomotora})}
        />

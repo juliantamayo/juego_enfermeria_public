@@ -3,6 +3,7 @@ import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpac
           } from 'react-native';
 
 import styles from './../../Style.js';
+import { Modal_Valoracion } from "../../elementos/ModalsTutorial"; 
 
 export default class escena4 extends React.Component {
   
@@ -10,8 +11,7 @@ export default class escena4 extends React.Component {
     super();
   
     this.state = {
-
-
+       modalVisible: false,
       check:false,check2:false,check3:false,check4:false,check5:false,
       check6:false,check7:false,check8:false,check9:false,check10:false,
       check11:false,check12:false,check13:false,check14:false,check15:false,
@@ -81,13 +81,23 @@ validarCheckBox = (value) => {
     }  
    } 
 
+   setModalVisible = (visible) => {
+    this.setState({ modalVisible: visible });
+    };
  
  
 render() {
-
+    const { modalVisible} = this.state;
 
   return (
    <ImageBackground source={require("../../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
+   <Modal_Valoracion
+      
+       text={modalVisible}
+       onPress={() => {
+                  this.setModalVisible(!modalVisible);
+                }}
+      />
    <View style={style.container}>
     <ScrollView  >
     <StatusBar barStyle="dark-content" />
@@ -103,7 +113,9 @@ render() {
 
       <View style={styles.headerDerecha}>
       <TouchableOpacity style={ styles.imageContainer } activeOpacity={0.8}
-       onPress={() => this.props.navigation.navigate('Home')}>
+      onPress={() => {
+                        this.setModalVisible(true);
+                      }}>
                <Image style={ styles.image } source={require("../../../assets/images/ayuda.png")} />
       </TouchableOpacity>
       </View>

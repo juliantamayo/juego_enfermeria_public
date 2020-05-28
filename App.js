@@ -2,7 +2,7 @@ import React, {Component, useEffect} from 'react';
 import { Button, View, Text, StyleSheet, BackHandler, Alert } from 'react-native';
 import { NavigationContainer, CommonActions } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './components/load';
+
 import Menu from './components/menu';
 import m_teoria from './components/Teoria/m_teoria';
 import M_juegos from './components/Juegos/m_juegos';
@@ -349,25 +349,12 @@ useEffect(() => {
     return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Menu">
-        <Stack.Screen name="Home" component={HomeScreen} 
-        options={{
-        //  headerLayoutPreset: 'center',
-          headerShown: false,
-          headerLeft: null,
-          title: 'My home',
-          headerStyle: {
-            backgroundColor: '#fbe122',
-          },
-          headerTintColor: 'black',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-          },
-        }}/>
+       
         <Stack.Screen  name="Menu" component={Menu} 
         options={{
         //  headerShown: false
          headerLeft: null,
-          title: 'Menú Principal',
+          title: 'Juego Valoración',
            headerStyle: {
             backgroundColor: '#fbe122',
           },
@@ -789,7 +776,7 @@ useEffect(() => {
        options={{
         //  headerShown: false
         headerLeft: null,
-         // title: '',
+          title: '',
           headerStyle: {
             backgroundColor: '#fbe122',
           }

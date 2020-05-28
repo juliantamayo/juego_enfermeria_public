@@ -60,7 +60,7 @@ export default function creditos ({navigation, route}) {
          <Text style={escudo.textbold}>Asesor Metodológico:</Text>
          <Text style={escudo.textnormal}>Ing. Ana Esperanza Merchán</Text>
 
-        <Text style={escudo.textbold}>Asesor de Contenidos:</Text>
+        <Text style={escudo.textbold}>Asesor y Diseñador de Contenidos:</Text>
          <Text style={escudo.textnormal}> Enf. Adriana Hernández</Text>
          <Text style={escudo.textbold}>Estudiante de Apoyo Enfermería: </Text>
          <Text style={escudo.textnormal}> Cristhian J. García </Text>
@@ -81,11 +81,11 @@ export default function creditos ({navigation, route}) {
         <View style={escudo.margen}>  
         </View>
         <Text style={escudo.title}>Contacto:</Text>
-        <Text style={escudo.text2}><Text style={escudo.textbold}>- Julian D. Tamayo: </Text>jdtamayo@ucundinamarca.edu.co</Text>
-        <Text style={escudo.text2}><Text style={escudo.textbold}>- Karla N. Cárdenas: </Text>kncardenas@ucundinamarca.edu.co </Text>
-        <Text style={escudo.text2}><Text style={escudo.textbold}>- Ing. Ana Esperanza Merchán: </Text> anaesperanzamerchan@ucundinamarca.edu.co</Text>
-        <Text style={escudo.text2}><Text style={escudo.textbold}>- Enf. Adriana Hernández: </Text>ahernandezb@ucundinamarca.edu.co</Text>
-        <Text style={escudo.text2}><Text style={escudo.textbold}>- Cristhian J. García: </Text> cjosegarcia@ucundinamarca.edu.co {"\n"}{"\n"} {"\n"} </Text>
+        <Text style={escudo.text3}><Text style={escudo.textbold}>- Julian D. Tamayo: </Text>jdtamayo@ucundinamarca.edu.co</Text>
+        <Text style={escudo.text3}><Text style={escudo.textbold}>- Karla N. Cárdenas: </Text>kncardenas@ucundinamarca.edu.co </Text>
+        <Text style={escudo.text3}><Text style={escudo.textbold}>- Ing. Ana Esperanza Merchán: </Text> anaesperanzamerchan@ucundinamarca.edu.co</Text>
+        <Text style={escudo.text3}><Text style={escudo.textbold}>- Enf. Adriana Hernández: </Text>ahernandezb@ucundinamarca.edu.co</Text>
+        <Text style={escudo.text3}><Text style={escudo.textbold}>- Cristhian J. García: </Text> cjosegarcia@ucundinamarca.edu.co {"\n"}{"\n"} {"\n"} </Text>
          </View>
        </View>
     </ScrollView>
@@ -115,10 +115,19 @@ export default function creditos ({navigation, route}) {
         </View>
      <Text style={escudo.title}>Referencias Bibliográficas</Text>
 
-     <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text> N., E. (2008). Anatomía y fisiología humana. (9a. ed.) Pearson Educación.  Tomado de https://www-ebooks7-24-com.ucundinamarca.basesdedatosezproxy.com/?il=3726</Text>
-      <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text> Peate, I. (2012). Anatomía y fisiología para enfermeras. McGraw-Hill Interamericana. Tomado de https://www-ebooks7-24-com.ucundinamarca.basesdedatosezproxy.com/?il=468 </Text>
-     <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text> Saladín, K. (2013). Anatomía y fisiología. (6a. ed.) McGraw-Hill Interamericana.  Tomado de https://www-ebooks7-24-com.ucundinamarca.basesdedatosezproxy.com/?il=475</Text> 
-      <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>C., D. , C., D. (2011). Fundamentos de Anatomía y Fisiología.(3a. ed.) Cengage. Tomado de https://www-ebooks7-24-com.ucundinamarca.basesdedatosezproxy.com/?il=1188</Text>
+     <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Marieb EN. Anatomía y fisiología humana. : Pearson Educación; 2008.</Text>
+      <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text> Peate I, Nair M. Anatomía y fisiología para enfermeras. : Manual Moderno; 2012.</Text>
+     <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text> Saladín, K.  Anatomía y fisiología.:McGraw-Hill Interamericana;2013.</Text> 
+      <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Rizzo D. Fundamentos de anatomía y fisiología . : Cengage Learning; 2011.</Text>
+       <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Gomes TSC. Sistema Nervioso Autónomo. </Text>
+       <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Drake RL, Vogl W, Mitchell AM. Gray. Anatomía básica StudentConsult. : Elsevier; 2018. </Text>
+       <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Daniel Tomás. IES Abastos, Valencia. El encéfalo. Available at: http://www.mclibre.org/otros/daniel_tomas/3eso/nervioso/encefalo3eso.html. </Text>
+       <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Goldman SA, MD, PhD, University of Rochester Medical Center. Manual MSD. Versión para público general. Proveedor confiable de información médica desde 1899 . 2018; Available at: https://www.msdmanuals.com/es-co/hogar/enfermedades-cerebrales,-medulares-y-nerviosas/biolog%C3%ADa-del-sistema-nervioso/m%C3%A9dula-espinal. </Text>
+       <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Moore KL, Dalley AF. Anatomía con orientación clínica.  Ed. Médica Panamericana; 2009. </Text>
+       <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Rexed B. A cytoarchitectonic atlas of the spinal coed in the cat. J Comp Neurol 1954;100(2):297-379. </Text>
+       <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Martínez E, Lerma J. Valoración del estado de salud. 1990. </Text>
+       <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Chú Lee ÁJ, Cuenca Buele S, López Bravo M. Anatomía y fisiología del sistema nervioso. 2015. </Text>
+       <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Navarro X. Fisiología del sistema nervioso autónomo. Revista Neurológica 2002;35(6):553-562. {"\n"}{"\n"}{"\n"}{"\n"}</Text>
 
      </View>
 
@@ -150,7 +159,7 @@ const escudo = StyleSheet.create({
       alignItems: 'center',
      },
      subtext: {
-    textAlign : 'left',
+    textAlign : 'justify',
     fontSize: 18,
     marginLeft: 35,
     marginRight: 10,
@@ -190,6 +199,14 @@ title:{
 
   },
   text2: {
+    textAlign : 'justify',
+    fontSize: 18,
+    marginLeft: 10,
+    marginRight: 10,
+    margin: 10
+
+  },
+    text3: {
     textAlign : 'left',
     fontSize: 18,
     marginLeft: 10,

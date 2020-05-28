@@ -5,7 +5,7 @@ import styles from '../Style.js';
 
 
 import { RowItem } from "../elementos/RowItem";
-import { Modal_C1_escena2 } from "../elementos/ModalsTutorial";
+import { Modal_Teoria } from "../elementos/ModalsTutorial";
 const { width, height } = Dimensions.get('window')
 const renderPagination = (index, total, context) => {
   return (
@@ -31,13 +31,18 @@ export default class m_teoria extends React.Component {
   const { modalVisible } = this.state;
   return (
    <ImageBackground source={require("../../assets/images/background.png")}style={styles.container} resizeMode='contain'>
-   
+       <Modal_Teoria
+       text={modalVisible}
+       onPress={() => {
+                  this.setModalVisible(!modalVisible);
+                }}
+      />
     <Swiper
         style={styles.wrapper}
         renderPagination={renderPagination} showsButtons loop={false}
         loop={false}
       >
-
+      
     <View style={style.container}>
     <ScrollView  >
     <StatusBar barStyle="dark-content" />
