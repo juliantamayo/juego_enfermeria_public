@@ -117,8 +117,8 @@ export default function creditos ({navigation, route}) {
 
      <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Marieb EN. Anatomía y fisiología humana. : Pearson Educación; 2008.</Text>
       <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text> Peate I, Nair M. Anatomía y fisiología para enfermeras. : Manual Moderno; 2012.</Text>
-     <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text> Saladín, K.  Anatomía y fisiología.:McGraw-Hill Interamericana;2013.</Text> 
-      <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Rizzo D. Fundamentos de anatomía y fisiología . : Cengage Learning; 2011.</Text>
+       <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text> Saladín, K.  Anatomía y fisiología.:McGraw-Hill Interamericana;2013.</Text> 
+       <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Rizzo D. Fundamentos de anatomía y fisiología . : Cengage Learning; 2011.</Text>
        <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Gomes TSC. Sistema Nervioso Autónomo. </Text>
        <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Drake RL, Vogl W, Mitchell AM. Gray. Anatomía básica StudentConsult. : Elsevier; 2018. </Text>
        <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Daniel Tomás. IES Abastos, Valencia. El encéfalo. Available at: http://www.mclibre.org/otros/daniel_tomas/3eso/nervioso/encefalo3eso.html. </Text>
@@ -127,7 +127,8 @@ export default function creditos ({navigation, route}) {
        <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Rexed B. A cytoarchitectonic atlas of the spinal coed in the cat. J Comp Neurol 1954;100(2):297-379. </Text>
        <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Martínez E, Lerma J. Valoración del estado de salud. 1990. </Text>
        <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Chú Lee ÁJ, Cuenca Buele S, López Bravo M. Anatomía y fisiología del sistema nervioso. 2015. </Text>
-       <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Navarro X. Fisiología del sistema nervioso autónomo. Revista Neurológica 2002;35(6):553-562. {"\n"}{"\n"}{"\n"}{"\n"}</Text>
+       <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Navarro X. Fisiología del sistema nervioso autónomo. Revista Neurológica 2002;35(6):553-562. </Text>
+       <Text style={escudo.text2}><Text style={escudo.textBold2}> > </Text>Elsevier. Herramienta online para la consulta y diseño de Planes de Cuidados de Enfermería.NNNConsult.2015. {"\n"}{"\n"}{"\n"}{"\n"}</Text>
 
      </View>
 

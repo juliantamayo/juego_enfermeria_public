@@ -149,7 +149,7 @@ export const Modal_Menu = ({ text, onPress = () => {} }) => (
         </ImageBackground>
         <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mp6.jpg')} resizeMode="cover"> 
         </ImageBackground>
-        <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mp7.jpg')} resizeMode="cover"> 
+        <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mp7.jpg')} resizeMode="contain"> 
         </ImageBackground>
         <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mp8.jpg')} resizeMode="cover"> 
         </ImageBackground>
