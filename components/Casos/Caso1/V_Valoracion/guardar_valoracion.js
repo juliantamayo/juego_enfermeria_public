@@ -191,7 +191,7 @@ state = {
       </View>: null}
       {a1[11]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Heminegligencia e hipoestesia derecha 3.</Text>
+             <Text style={styles.textCheck}>Heminegligencia e hipoestesia derecha.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>

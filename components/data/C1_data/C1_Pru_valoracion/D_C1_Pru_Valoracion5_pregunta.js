@@ -4,7 +4,7 @@ const questions = [
     question: "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
     answers: [
       { id: "1", text: "Reflejo Plantar."},
-      { id: "2", text: "Reflejo Biscipital."  },
+      { id: "2", text: "Reflejo Bicipital."  },
       { id: "3", text: "Palpación Percusión." },
       { id: "4", text: "Movilidad Activa." , correct: true}
     ]

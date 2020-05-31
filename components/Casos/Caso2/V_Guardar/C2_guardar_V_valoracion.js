@@ -151,7 +151,7 @@ state = {
       </View>: null}
       {a1[6]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Fascies de dolor.</Text>
+             <Text style={styles.textCheck}>Facies de dolor.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textIncorrect}>X</Text>

@@ -159,7 +159,7 @@ state = {
       </View>: null}
       {a1[7]==1 ?  <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Fascias de dolor.</Text>
+             <Text style={styles.textCheck}>Facies de dolor.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>
@@ -191,7 +191,7 @@ state = {
       </View>: null}
       {a1[11]==1 ? <View style={styles.viewcheckbody}>
            <View style={styles.viewchecktext}>
-             <Text style={styles.textCheck}>Paciente que en la palpación abdominal superficial y profunda presenta fascias y manifestaciones de dolor, al llegar a la zona del epigastrio este se hace más intenso e insoportable.</Text>
+             <Text style={styles.textCheck}>Paciente que en la palpación abdominal superficial y profunda presenta fascies y manifestaciones de dolor, al llegar a la zona del epigastrio este se hace más intenso e insoportable.</Text>
            </View>
            <View style={styles.viewcheck}>
              <Text  style={styles.textcorrect}>✔</Text>

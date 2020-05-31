@@ -102,7 +102,7 @@ export default class t_pares_craneales  extends React.Component {
       <StatusBar barStyle="dark-content" />
       <View style={styles.margen2}></View>
      <View style={style.container}>
-     <Text style={style.title}> Distrubución </Text>
+     <Text style={style.title}> Distribución </Text>
      <Text style={style.text}> Las 12 parejas de pares craneales abastecen básicamente a la cabeza y el cuello. Sólo una pareja (nervio vago) se distribuye por el torax y el abdomen.{"\n"}{"\n"}Los pares craneales están numerados en orden y en la mayoría de los casos su nombre revela las estructuras más importantes que controlan. {"\n"}{"\n"}Los nervios craneales, al igual que los nervios raquídeos son parte del sistema nervioso periférico y se designan con números romanos y nombres. {"\n"}{"\n"}Los números indican el orden en que nacen los nervios del encéfalo, de anterior a posterior, y el nombre su distribución o función. {"\n"}{"\n"} </Text>
      
 

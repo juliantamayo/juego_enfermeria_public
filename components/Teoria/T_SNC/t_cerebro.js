@@ -80,7 +80,7 @@ export default class t_cerebro  extends React.Component {
       </View>
       <Text style={style.title}>  Áreas sensoriales </Text>
       <Text style={style.text}> <Text style={style.textBold}>1. Área somatosensorial primaria:</Text>Su función principal es localizar con exactitud los puntos del cuerpo donde se originan las sensaciones.</Text>
-      <Text style={style.text}> <Text style={style.textBold}>2. Área visual: </Text>Recibe impulsos que transmiten información visual (forma, color y movimiento de los estímulos visuales)</Text>
+      <Text style={style.text}> <Text style={style.textBold}>2. Área visual: </Text>Recibe impulsos que transmiten información visual (forma, color y movimiento de los estímulos visuales).</Text>
       <Text style={style.text}> <Text style={style.textBold}>3. Área auditiva: </Text>Interpreta las características básicas de los sonidos, como su tonalidad y ritmo.</Text>
       <Text style={style.text}> <Text style={style.textBold}>4. Área gustativa: </Text>Percibe estímulos gustativos.</Text>
       <Text style={style.text}> <Text style={style.textBold}>5. Área olfatoria:</Text> Interpreta la información sobre olores que envía la nariz a través de los nervios olfatorios.</Text>
@@ -120,7 +120,7 @@ export default class t_cerebro  extends React.Component {
      Las áreas sensoriales están situadas principalmente en la parte posterior de la corteza cerebral, detrás de la cisura central. En la corteza, las áreas sensoriales primarias tienen la conexión más directa con receptores sensoriales periféricos.{"\n"} {"\n"} Se puede dividir de la siguiente manera: </Text>
          <Text style={style.text}> <Text style={style.textBold}>Área somatosensitiva primaria: </Text>Recibe información sensitiva de la piel y también de los propiorreceptores de músculos esqueléticos.  se localiza en la circunvolución parietal ascendente, inmediatamente detrás de la cisura central o de Rolando. Recibe sensaciones de receptores sensoriales somáticos relativos al tacto, propioceptivos (posición articular y muscular), dolor y temperatura. </Text>
           <Text style={style.text}> <Text style={style.textBold}>Área de relación somatosensitiva: </Text>Integra la información sensitiva recibida por el área somatosensitiva primaria y aporta información sobre tamaño, textura y experiencias anteriores.  </Text>
-           <Text style={style.text}> <Text style={style.textBold}>Áreas visuales </Text>El área visual primaria recibe la información que envían los ojos y el área de relación visual ayuda a conectar esta información con la de experiencias visuales anteriores.Se localiza en la cara medial del lóbulo occipital  </Text>
+           <Text style={style.text}> <Text style={style.textBold}>Áreas visuales </Text>El área visual primaria recibe la información que envían los ojos y el área de relación visual ayuda a conectar esta información con la de experiencias visuales anteriores.Se localiza en la cara medial del lóbulo occipital.  </Text>
             <Text style={style.text}> <Text style={style.textBold}>Área de la audición: </Text>Se relacionan con la interpretación de sonidos.Se localiza en el lóbulo temporal  </Text>
              <Text style={style.text}> <Text style={style.textBold}>Área del olfato: </Text>Interpreta la información sobre olores que envía la nariz a través de los nervios olfatorios. Se localiza en la cara medial del lóbulo temporal.  </Text>     
           <Text style={style.text}> <Text style={style.textBold}>Área del gusto: </Text>Interpreta la sensaciones de sabor. Se localiza en la base de la circunvolución parietal ascendente, por encima de la cisura de Silvio. </Text>
@@ -129,7 +129,7 @@ export default class t_cerebro  extends React.Component {
        <Text style={style.text}> <Text style={style.textBold}>Área de asociación somatosensorial: </Text>Se localiza justo posterior al área somatosensorial primaria, recibe impulsos del tálamo.</Text>
          <Text style={style.text}> <Text style={style.textBold}>Área de asociación visual:</Text> Se localiza en el lóbulo occipital.</Text>
           <Text style={style.text}> <Text style={style.textBold}>Área de asociación auditiva: </Text>Se localiza en un plano posterior al área auditiva.</Text>
-           <Text style={style.text}> <Text style={style.textBold}>Área de Wernicke:</Text> Se localiza en la región frontera entre los lóbulos temporal y parietal</Text>
+           <Text style={style.text}> <Text style={style.textBold}>Área de Wernicke:</Text> Se localiza en la región frontera entre los lóbulos temporal y parietal.</Text>
             <Text style={style.text}> <Text style={style.textBold}>Área promotora:</Text>Se localiza inmediatamente por delante del área motora primaria.</Text>
 <Text style={style.text}></Text>
 

@@ -94,7 +94,6 @@ export default function creditos ({navigation, route}) {
         <View style={escudo.margen}>  
         </View>
      <Text style={escudo.title}>Objetivos de Aprendizaje</Text>
-     <Text style={escudo.text2}>Teniendo en cuenta que el presente proyecto, hace parte parte del Macroproyecto “Impacto De La Implementación de un Modelo De Aula Invertida Para El Proceso De Enseñanza  Aprendizaje  en el Componente Básico Profesional Del Programa De Enfermería”.{"\n"} {"\n"}Los objetivos de aprendizaje fueron planteados en pro a dar cumplimiento a los objetivos dispuestos en el macroproyecto, redactados por la docente de Enfermería  Adriana Hernández definiéndose de la siguiente manera: </Text>
       <Text style={escudo.text2}><Text style={escudo.textBold2}> > OBJETIVO DE APRENDIZAJE 1: </Text> Identificar los órganos que hacen parte del sistema nervioso central, periférico, autónomo. </Text>
      <Text style={escudo.text2}><Text style={escudo.textBold2}> > OBJETIVO DE APRENDIZAJE 2: </Text> Relacionar la fisiología de cada órgano de los diferentes sistemas nerviosos con las áreas a valorar</Text> 
       <Text style={escudo.text2}><Text style={escudo.textBold2}> > OBJETIVO DE APRENDIZAJE 3: </Text> Asociar la función cognoscitiva con la conceptualización, imágenes de cada prueba a valorar y órganos que intervienen en cada función cognoscitiva.</Text>

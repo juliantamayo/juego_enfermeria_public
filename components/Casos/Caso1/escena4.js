@@ -271,7 +271,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Heminegligencia e hipoestesia derecha 3.</Text>
+        <Text style={style.text}>Heminegligencia e hipoestesia derecha.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  

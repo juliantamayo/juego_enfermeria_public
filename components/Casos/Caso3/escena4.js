@@ -231,7 +231,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Fascies de dolor.</Text>
+        <Text style={style.text}>Facies de dolor.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  
@@ -283,7 +283,7 @@ render() {
        <View style={styles.margen2}></View>
        <View style={style.viewcheckbody}>
        <View style={style.viewchecktext}>
-        <Text style={style.text}>Paciente que en la palpación abdominal superficial y profunda presenta fascias y manifestaciones de dolor, al llegar a la zona del epigastrio este se hace más intenso e insoportable.</Text>
+        <Text style={style.text}>Paciente que en la palpación abdominal superficial y profunda presenta fascies y manifestaciones de dolor, al llegar a la zona del epigastrio este se hace más intenso e insoportable.</Text>
         </View>
          <View style={style.viewcheck}>
        <CheckBox  

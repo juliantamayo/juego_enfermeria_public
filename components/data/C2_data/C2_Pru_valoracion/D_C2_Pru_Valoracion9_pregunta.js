@@ -6,7 +6,7 @@ const questions = [
        { id: "1", text: "Reflejo Cremastériano." },
       { id: "2", text: "Reflejo Rotuliano." },
       { id: "3", text: "Reflejo Supinador.", correct: true },
-      { id: "4", text: "Reflejo Planta.r" }
+      { id: "4", text: "Reflejo Plantar." }
     ]
   },
     { 
