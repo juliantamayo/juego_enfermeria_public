@@ -1,7 +1,6 @@
 import React from "react";
-import { View, TouchableOpacity, Text, StyleSheet, Alert, Modal, TouchableHighlight,
-  StatusBar,  SafeAreaView,ScrollView, Image, ImageBackground } from "react-native";
-import Swiper from 'react-native-swiper';
+import { View, Text, StyleSheet, Alert, Modal, TouchableHighlight, ImageBackground, Dimensions } from "react-native";
+import Carousel from 'react-native-reanimated-carousel';
 
 
 const styles = StyleSheet.create({
@@ -72,1132 +71,662 @@ const styles = StyleSheet.create({
   }
 });
 
+const { width } = Dimensions.get('window');
+
+const images = [
+  require('../../assets/ayudas/mp1.jpg'),
+  require('../../assets/ayudas/mp2.jpg'),
+  require('../../assets/ayudas/mp3.jpg'),
+  require('../../assets/ayudas/mp4.jpg'),
+  require('../../assets/ayudas/mp4-1.jpg'),
+  require('../../assets/ayudas/mp5.jpg'),
+  require('../../assets/ayudas/mp6.jpg'),
+  require('../../assets/ayudas/mp7.jpg'),
+  require('../../assets/ayudas/mp8.jpg'),
+  require('../../assets/ayudas/mp9.jpg'),
+  require('../../assets/ayudas/mp10.jpg'),
+];
+
+const imagesJuego1 = [
+  require('../../assets/ayudas/mj1_1.jpg'),
+  require('../../assets/ayudas/mj1_2.jpg'),
+  require('../../assets/ayudas/mj1_3.jpg'),
+  require('../../assets/ayudas/mj1_4.jpg'),
+];
+
+const imagesJuego2 = [
+  require('../../assets/ayudas/mj2_1.jpg'),
+  require('../../assets/ayudas/mj2_2.jpg'),
+  require('../../assets/ayudas/mj2_3.jpg'),
+  require('../../assets/ayudas/mj2_4.jpg'),
+];
+
+const imagesJuego3 = [
+  require('../../assets/ayudas/mj3_1.jpg'),
+  require('../../assets/ayudas/mj3_2.jpg'),
+];
+
+const imagesCasos = [
+  require('../../assets/ayudas/mc1.jpg'),
+  require('../../assets/ayudas/mc2.jpg'),
+  require('../../assets/ayudas/mc3.jpg'),
+];
+
+const imagesJuegos = [
+  require('../../assets/ayudas/mj1.jpg'),
+  require('../../assets/ayudas/mj2.jpg'),
+  require('../../assets/ayudas/mj3.jpg'),
+  require('../../assets/ayudas/mj4.jpg'),
+];
+
+const imagesCaso1 = [
+  require('../../assets/ayudas/Intro1.jpg'),
+  require('../../assets/ayudas/Intro2.jpg'),
+  require('../../assets/ayudas/Intro7.jpg'),
+  require('../../assets/ayudas/mc3.jpg'),
+];
+
+const imagesEscena1 = [
+  require('../../assets/ayudas/Intro3.jpg'),
+  require('../../assets/ayudas/Intro4.jpg'),
+  require('../../assets/ayudas/Intro5.jpg'),
+  require('../../assets/ayudas/Intro6.jpg'),
+  require('../../assets/ayudas/Intro7.jpg'),
+  require('../../assets/ayudas/Intro8.jpg'),
+];
+
+const imagesEscena2 = [
+  require('../../assets/ayudas/pp2.jpg'),
+  require('../../assets/ayudas/pp3.jpg'),
+  require('../../assets/ayudas/pp4.jpg'),
+  require('../../assets/ayudas/pp5.jpg'),
+  require('../../assets/ayudas/pp6.jpg'),
+  require('../../assets/ayudas/pp7.jpg'),
+  require('../../assets/ayudas/pp8.jpg'),
+];
+
+const imagesEscena3 = [
+  require('../../assets/ayudas/pv1.jpg'),
+  require('../../assets/ayudas/pv2.jpg'),
+];
+
+const imagesPreguntas = [
+  require('../../assets/ayudas/pp2.jpg'),
+  require('../../assets/ayudas/pp3.jpg'),
+  require('../../assets/ayudas/pp4.jpg'),
+  require('../../assets/ayudas/pp5.jpg'),
+  require('../../assets/ayudas/pp6.jpg'),
+];
+
+const imagesPruebas = [
+  require('../../assets/ayudas/pv1.jpg'),
+  require('../../assets/ayudas/pv2.jpg'),
+  require('../../assets/ayudas/pp4.jpg'),
+  require('../../assets/ayudas/pp5.jpg'),
+  require('../../assets/ayudas/pp6.jpg'),
+];
+
+const imagesValoracion = [
+  require('../../assets/ayudas/v1.jpg'),
+  require('../../assets/ayudas/v2.jpg'),
+];
+
+const imagesTeoria = [
+  require('../../assets/ayudas/t1.jpg'),
+  require('../../assets/ayudas/t2.jpg'),
+  require('../../assets/ayudas/t3.jpg'),
+  require('../../assets/ayudas/t4.jpg'),
+  require('../../assets/ayudas/t5.jpg'),
+  require('../../assets/ayudas/t6.jpg'),
+];
+
 
 export const Modal_Menu = ({ text, onPress = () => {} }) => (
   <Modal
-          animationType="slide"
-          transparent={true}
-          visible={text}
-          onRequestClose={() => {
-            Alert.alert("Presione la X para cerrar la ventana.");
-          }}
-        >
-          
-            <View style={styles.modalView}>
+    animationType="slide"
+    transparent={true}
+    visible={text}
+    onRequestClose={() => {
+      Alert.alert("Presione la X para cerrar la ventana.");
+    }}
+  >
+    <View style={styles.modalView}>
+      <View style={styles.headerModal}>
+        <View style={styles.headerMizq} />
+        <View style={styles.margen} />
+        <View style={styles.headerMDer}>
+          <TouchableHighlight style={styles.openButton} onPress={onPress}>
+            <Text style={styles.modalTex3}>x</Text>
+          </TouchableHighlight>
+        </View>
+      </View>
 
-            <View style={styles.headerModal}>
-
-            <View style={styles.headerMizq}>
-            </View>
-         <View style={styles.margen}></View>
-
-             <View style={styles.headerMDer}>
-               <TouchableHighlight style={styles.openButton}
-                
-                onPress={onPress}
-               >
-                  <Text style={styles.modalTex3}>x</Text>
-              </TouchableHighlight>
-             </View>
-            
-              
-            </View>
-            
-            <View style={styles.bodyModal}>
-              <Swiper
-          style={styles.wrapper} showsButtons
-          dot={
-            <View
-              style={{
-                backgroundColor: 'gray',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          activeDot={
-            <View
-              style={{
-                backgroundColor: 'black',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          paginationStyle={{
-            bottom: 10
-          }}
+      <View style={styles.bodyModal}>
+        <Carousel
           loop={false}
-        >
-        <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mp1.jpg')} resizeMode="cover">
-         </ImageBackground>
-        <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mp2.jpg')} resizeMode="cover">
-         </ImageBackground>
-        <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mp3.jpg')} resizeMode="cover"> 
-        </ImageBackground>
-        <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mp4.jpg')} resizeMode="cover"> 
-        </ImageBackground>
-        <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mp4-1.jpg')} resizeMode="cover"> 
-        </ImageBackground>
-        <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mp5.jpg')} resizeMode="cover"> 
-        </ImageBackground>
-        <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mp6.jpg')} resizeMode="cover"> 
-        </ImageBackground>
-        <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mp7.jpg')} resizeMode="contain"> 
-        </ImageBackground>
-        <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mp8.jpg')} resizeMode="cover"> 
-        </ImageBackground>
-        <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mp9.jpg')} resizeMode="cover"> 
-        </ImageBackground>
-        <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mp10.jpg')} resizeMode="cover"> 
-        </ImageBackground>
-
-
-        </Swiper>
-            </View> 
-            </View>
-            
-         
-        </Modal>
+          width={width * 0.8}
+          height={'100%'}
+          autoPlay={false}
+          data={images}
+          pagingEnabled={true}
+          renderItem={({ item }) => (
+            <ImageBackground source={item} style={styles.slide} resizeMode="cover" />
+          )}
+        />
+      </View>
+    </View>
+  </Modal>
 );
-
 
 export const Modal_MenuJuego1 = ({ text, onPress = () => {} }) => (
   <Modal
-          animationType="slide"
-          transparent={true}
-          visible={text}
-          onRequestClose={() => {
-            Alert.alert("Presione la X para cerrar la ventana.");
-          }}
-        >
-          
-            <View style={styles.modalView}>
+    animationType="slide"
+    transparent={true}
+    visible={text}
+    onRequestClose={() => {
+      Alert.alert("Presione la X para cerrar la ventana.");
+    }}
+  >
+    <View style={styles.modalView}>
+      <View style={styles.headerModal}>
+        <View style={styles.headerMizq} />
+        <View style={styles.margen} />
+        <View style={styles.headerMDer}>
+          <TouchableHighlight style={styles.openButton} onPress={onPress}>
+            <Text style={styles.modalTex3}>x</Text>
+          </TouchableHighlight>
+        </View>
+      </View>
 
-            <View style={styles.headerModal}>
-
-            <View style={styles.headerMizq}>
-            </View>
-         <View style={styles.margen}></View>
-
-             <View style={styles.headerMDer}>
-               <TouchableHighlight style={styles.openButton}
-                
-                onPress={onPress}
-               >
-                  <Text style={styles.modalTex3}>x</Text>
-              </TouchableHighlight>
-             </View>
-            
-              
-            </View>
-            
-            <View style={styles.bodyModal}>
-              <Swiper
-          style={styles.wrapper} showsButtons
-          dot={
-            <View
-              style={{
-                backgroundColor: 'gray',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          activeDot={
-            <View
-              style={{
-                backgroundColor: 'black',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          paginationStyle={{
-            bottom: 30
-          }}
+      <View style={styles.bodyModal}>
+        <Carousel
           loop={false}
-        >
-
-		   <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mj1_1.jpg')} resizeMode="cover">
-          </ImageBackground>
-           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mj1_2.jpg')} resizeMode="cover">
-          </ImageBackground>
-           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mj1_3.jpg')} resizeMode="cover">
-          </ImageBackground>
-           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mj1_4.jpg')} resizeMode="cover">
-          </ImageBackground>
-          
-          
-        </Swiper>
-            </View> 
-            </View>
-            
-         
-        </Modal>
+          width={width * 0.8}
+          height={'100%'}
+          autoPlay={false}
+          data={imagesJuego1}
+          pagingEnabled={true}
+          renderItem={({ item }) => (
+            <ImageBackground source={item} style={styles.slide} resizeMode="cover" />
+          )}
+        />
+      </View>
+    </View>
+  </Modal>
 );
 
 export const Modal_MenuJuego2 = ({ text, onPress = () => {} }) => (
   <Modal
-          animationType="slide"
-          transparent={true}
-          visible={text}
-          onRequestClose={() => {
-            Alert.alert("Presione la X para cerrar la ventana.");
-          }}
-        >
-          
-            <View style={styles.modalView}>
+    animationType="slide"
+    transparent={true}
+    visible={text}
+    onRequestClose={() => {
+      Alert.alert("Presione la X para cerrar la ventana.");
+    }}
+  >
+    <View style={styles.modalView}>
+      <View style={styles.headerModal}>
+        <View style={styles.headerMizq} />
+        <View style={styles.margen} />
+        <View style={styles.headerMDer}>
+          <TouchableHighlight style={styles.openButton} onPress={onPress}>
+            <Text style={styles.modalTex3}>x</Text>
+          </TouchableHighlight>
+        </View>
+      </View>
 
-            <View style={styles.headerModal}>
-
-            <View style={styles.headerMizq}>
-            </View>
-         <View style={styles.margen}></View>
-
-             <View style={styles.headerMDer}>
-               <TouchableHighlight style={styles.openButton}
-                
-                onPress={onPress}
-               >
-                  <Text style={styles.modalTex3}>x</Text>
-              </TouchableHighlight>
-             </View>
-            
-              
-            </View>
-            
-            <View style={styles.bodyModal}>
-              <Swiper
-          style={styles.wrapper} showsButtons
-          dot={
-            <View
-              style={{
-                backgroundColor: 'gray',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          activeDot={
-            <View
-              style={{
-                backgroundColor: 'black',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          paginationStyle={{
-            bottom: 30
-          }}
+      <View style={styles.bodyModal}>
+        <Carousel
           loop={false}
-        >
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mj2_1.jpg')} resizeMode="cover">
-          </ImageBackground>
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mj2_2.jpg')} resizeMode="cover">
-          </ImageBackground>
-           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mj2_3.jpg')} resizeMode="cover">
-          </ImageBackground>
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mj2_4.jpg')} resizeMode="cover">
-          </ImageBackground>
-
-        </Swiper>
-            </View> 
-            </View>
-            
-        </Modal>
+          width={width * 0.8}
+          height={'100%'}
+          autoPlay={false}
+          data={imagesJuego2}
+          pagingEnabled={true}
+          renderItem={({ item }) => (
+            <ImageBackground source={item} style={styles.slide} resizeMode="cover" />
+          )}
+        />
+      </View>
+    </View>
+  </Modal>
 );
 
 export const Modal_MenuJuego3 = ({ text, onPress = () => {} }) => (
   <Modal
-          animationType="slide"
-          transparent={true}
-          visible={text}
-          onRequestClose={() => {
-            Alert.alert("Presione la X para cerrar la ventana.");
-          }}
-        >
-          
-            <View style={styles.modalView}>
+    animationType="slide"
+    transparent={true}
+    visible={text}
+    onRequestClose={() => {
+      Alert.alert("Presione la X para cerrar la ventana.");
+    }}
+  >
+    <View style={styles.modalView}>
+      <View style={styles.headerModal}>
+        <View style={styles.headerMizq} />
+        <View style={styles.margen} />
+        <View style={styles.headerMDer}>
+          <TouchableHighlight style={styles.openButton} onPress={onPress}>
+            <Text style={styles.modalTex3}>x</Text>
+          </TouchableHighlight>
+        </View>
+      </View>
 
-            <View style={styles.headerModal}>
-
-            <View style={styles.headerMizq}>
-            </View>
-         <View style={styles.margen}></View>
-
-             <View style={styles.headerMDer}>
-               <TouchableHighlight style={styles.openButton}
-                
-                onPress={onPress}
-               >
-                  <Text style={styles.modalTex3}>x</Text>
-              </TouchableHighlight>
-             </View>
-            
-              
-            </View>
-            
-            <View style={styles.bodyModal}>
-              <Swiper
-          style={styles.wrapper} showsButtons
-          dot={
-            <View
-              style={{
-                backgroundColor: 'gray',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          activeDot={
-            <View
-              style={{
-                backgroundColor: 'black',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          paginationStyle={{
-            bottom: 30
-          }}
+      <View style={styles.bodyModal}>
+        <Carousel
           loop={false}
-        >
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mj3_1.jpg')} resizeMode="cover">
-          </ImageBackground>
-
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mj3_2.jpg')} resizeMode="cover">
-          </ImageBackground>
-          
-        </Swiper>
-            </View> 
-            </View>
-            
-        </Modal>
+          width={width * 0.8}
+          height={'100%'}
+          autoPlay={false}
+          data={imagesJuego3}
+          pagingEnabled={true}
+          renderItem={({ item }) => (
+            <ImageBackground source={item} style={styles.slide} resizeMode="cover" />
+          )}
+        />
+      </View>
+    </View>
+  </Modal>
 );
 
 export const Modal_MenuCasos = ({ text, onPress = () => {} }) => (
   <Modal
-          animationType="slide"
-          transparent={true}
-          visible={text}
-          onRequestClose={() => {
-            Alert.alert("Presione la X para cerrar la ventana.");
-          }}
-        >
-          
-            <View style={styles.modalView}>
+    animationType="slide"
+    transparent={true}
+    visible={text}
+    onRequestClose={() => {
+      Alert.alert("Presione la X para cerrar la ventana.");
+    }}
+  >
+    <View style={styles.modalView}>
+      <View style={styles.headerModal}>
+        <View style={styles.headerMizq} />
+        <View style={styles.margen} />
+        <View style={styles.headerMDer}>
+          <TouchableHighlight style={styles.openButton} onPress={onPress}>
+            <Text style={styles.modalTex3}>x</Text>
+          </TouchableHighlight>
+        </View>
+      </View>
 
-            <View style={styles.headerModal}>
-
-            <View style={styles.headerMizq}>
-            </View>
-         <View style={styles.margen}></View>
-
-             <View style={styles.headerMDer}>
-               <TouchableHighlight style={styles.openButton}
-                
-                onPress={onPress}
-               >
-                  <Text style={styles.modalTex3}>x</Text>
-              </TouchableHighlight>
-             </View>
-            
-              
-            </View>
-            
-            <View style={styles.bodyModal}>
-              <Swiper
-          style={styles.wrapper} showsButtons
-          dot={
-            <View
-              style={{
-                backgroundColor: 'gray',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          activeDot={
-            <View
-              style={{
-                backgroundColor: 'black',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          paginationStyle={{
-            bottom: 30
-          }}
+      <View style={styles.bodyModal}>
+        <Carousel
           loop={false}
-        >
-         <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mc1.jpg')} resizeMode="cover">
-          </ImageBackground>
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mc2.jpg')} resizeMode="cover">
-          </ImageBackground>
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mc3.jpg')} resizeMode="cover">
-          </ImageBackground>
-          
-        </Swiper>
-            </View> 
-            </View>
-            
-        </Modal>
+          width={width * 0.8}
+          height={'100%'}
+          autoPlay={false}
+          data={imagesCasos}
+          pagingEnabled={true}
+          renderItem={({ item }) => (
+            <ImageBackground source={item} style={styles.slide} resizeMode="cover" />
+          )}
+        />
+      </View>
+    </View>
+  </Modal>
 );
 
 export const Modal_MenuJuegos = ({ text, onPress = () => {} }) => (
   <Modal
-          animationType="slide"
-          transparent={true}
-          visible={text}
-          onRequestClose={() => {
-            Alert.alert("Presione la X para cerrar la ventana.");
-          }}
-        >
-          
-            <View style={styles.modalView}>
+    animationType="slide"
+    transparent={true}
+    visible={text}
+    onRequestClose={() => {
+      Alert.alert("Presione la X para cerrar la ventana.");
+    }}
+  >
+    <View style={styles.modalView}>
+      <View style={styles.headerModal}>
+        <View style={styles.headerMizq} />
+        <View style={styles.margen} />
+        <View style={styles.headerMDer}>
+          <TouchableHighlight style={styles.openButton} onPress={onPress}>
+            <Text style={styles.modalTex3}>x</Text>
+          </TouchableHighlight>
+        </View>
+      </View>
 
-            <View style={styles.headerModal}>
-
-            <View style={styles.headerMizq}>
-            </View>
-         <View style={styles.margen}></View>
-
-             <View style={styles.headerMDer}>
-               <TouchableHighlight style={styles.openButton}
-                
-                onPress={onPress}
-               >
-                  <Text style={styles.modalTex3}>x</Text>
-              </TouchableHighlight>
-             </View>
-            
-              
-            </View>
-            
-            <View style={styles.bodyModal}>
-              <Swiper
-          style={styles.wrapper} showsButtons
-          dot={
-            <View
-              style={{
-                backgroundColor: 'gray',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          activeDot={
-            <View
-              style={{
-                backgroundColor: 'black',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          paginationStyle={{
-            bottom: 30
-          }}
+      <View style={styles.bodyModal}>
+        <Carousel
           loop={false}
-        >
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mj1.jpg')} resizeMode="cover">
-          </ImageBackground>
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mj2.jpg')} resizeMode="cover">
-          </ImageBackground>
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mj3.jpg')} resizeMode="cover">
-          </ImageBackground>
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mj4.jpg')} resizeMode="cover">
-          </ImageBackground>
-
-        </Swiper>
-            </View> 
-            </View>
-            
-        </Modal>
+          width={width * 0.8}
+          height={'100%'}
+          autoPlay={false}
+          data={imagesJuegos}
+          pagingEnabled={true}
+          renderItem={({ item }) => (
+            <ImageBackground source={item} style={styles.slide} resizeMode="cover" />
+          )}
+        />
+      </View>
+    </View>
+  </Modal>
 );
 
 export const Modal_MenuCaso1 = ({ text, onPress = () => {} }) => (
   <Modal
-          animationType="slide"
-          transparent={true}
-          visible={text}
-          onRequestClose={() => {
-            Alert.alert("Presione la X para cerrar la ventana.");
-          }}
-        >
-          
-            <View style={styles.modalView}>
+    animationType="slide"
+    transparent={true}
+    visible={text}
+    onRequestClose={() => {
+      Alert.alert("Presione la X para cerrar la ventana.");
+    }}
+  >
+    <View style={styles.modalView}>
+      <View style={styles.headerModal}>
+        <View style={styles.headerMizq} />
+        <View style={styles.margen} />
+        <View style={styles.headerMDer}>
+          <TouchableHighlight style={styles.openButton} onPress={onPress}>
+            <Text style={styles.modalTex3}>x</Text>
+          </TouchableHighlight>
+        </View>
+      </View>
 
-            <View style={styles.headerModal}>
-
-            <View style={styles.headerMizq}>
-            </View>
-         <View style={styles.margen}></View>
-
-             <View style={styles.headerMDer}>
-               <TouchableHighlight style={styles.openButton}
-                
-                onPress={onPress}
-               >
-                  <Text style={styles.modalTex3}>x</Text>
-              </TouchableHighlight>
-             </View>
-            
-              
-            </View>
-            
-            <View style={styles.bodyModal}>
-              <Swiper
-          style={styles.wrapper} showsButtons
-          dot={
-            <View
-              style={{
-                backgroundColor: 'gray',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          activeDot={
-            <View
-              style={{
-                backgroundColor: 'black',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          paginationStyle={{
-            bottom: 30
-          }}
+      <View style={styles.bodyModal}>
+        <Carousel
           loop={false}
-        >
-           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/Intro1.jpg')} resizeMode="cover">
-          </ImageBackground>
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/Intro2.jpg')} resizeMode="cover">
-          </ImageBackground>
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/Intro7.jpg')} resizeMode="cover">
-          </ImageBackground>
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/mc3.jpg')} resizeMode="cover">
-          </ImageBackground>
-
-
-          
-        </Swiper>
-            </View> 
-            </View>
-            
-        </Modal>
+          width={width * 0.8}
+          height={'100%'}
+          autoPlay={false}
+          data={imagesCaso1}
+          pagingEnabled={true}
+          renderItem={({ item }) => (
+            <ImageBackground source={item} style={styles.slide} resizeMode="cover" />
+          )}
+        />
+      </View>
+    </View>
+  </Modal>
 );
+
 export const Modal_C1_escena1 = ({ text, onPress = () => {} }) => (
   <Modal
-          animationType="slide"
-          transparent={true}
-          visible={text}
-          onRequestClose={() => {
-            Alert.alert("Presione la X para cerrar la ventana.");
-          }}
-        >
-          
-            <View style={styles.modalView}>
+    animationType="slide"
+    transparent={true}
+    visible={text}
+    onRequestClose={() => {
+      Alert.alert("Presione la X para cerrar la ventana.");
+    }}
+  >
+    <View style={styles.modalView}>
+      <View style={styles.headerModal}>
+        <View style={styles.headerMizq} />
+        <View style={styles.margen} />
+        <View style={styles.headerMDer}>
+          <TouchableHighlight style={styles.openButton} onPress={onPress}>
+            <Text style={styles.modalTex3}>x</Text>
+          </TouchableHighlight>
+        </View>
+      </View>
 
-            <View style={styles.headerModal}>
-
-            <View style={styles.headerMizq}>
-            </View>
-         <View style={styles.margen}></View>
-
-             <View style={styles.headerMDer}>
-               <TouchableHighlight style={styles.openButton}
-                
-                onPress={onPress}
-               >
-                  <Text style={styles.modalTex3}>x</Text>
-              </TouchableHighlight>
-             </View>
-            
-              
-            </View>
-            
-            <View style={styles.bodyModal}>
-              <Swiper
-          style={styles.wrapper} showsButtons
-          dot={
-            <View
-              style={{
-                backgroundColor: 'gray',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          activeDot={
-            <View
-              style={{
-                backgroundColor: 'black',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          paginationStyle={{
-            bottom: 10
-          }}
+      <View style={styles.bodyModal}>
+        <Carousel
           loop={false}
-        >
-
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/Intro3.jpg')} resizeMode="cover">
-          </ImageBackground>
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/Intro4.jpg')} resizeMode="cover">
-          </ImageBackground>
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/Intro5.jpg')} resizeMode="cover">
-          </ImageBackground>
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/Intro6.jpg')} resizeMode="cover">
-          </ImageBackground>
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/Intro7.jpg')} resizeMode="cover">
-          </ImageBackground>
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/Intro8.jpg')} resizeMode="cover">
-          </ImageBackground>
-
-          
-        </Swiper>
-            </View> 
-            </View>
-            
-        </Modal>
+          width={width * 0.8}
+          height={'100%'}
+          autoPlay={false}
+          data={imagesEscena1}
+          pagingEnabled={true}
+          renderItem={({ item }) => (
+            <ImageBackground source={item} style={styles.slide} resizeMode="cover" />
+          )}
+        />
+      </View>
+    </View>
+  </Modal>
 );
 
 export const Modal_C1_escena2 = ({ text, onPress = () => {} }) => (
   <Modal
-          animationType="slide"
-          transparent={true}
-          visible={text}
-          onRequestClose={() => {
-            Alert.alert("Presione la X para cerrar la ventana.");
-          }}
-        >
-          
-            <View style={styles.modalView}>
+    animationType="slide"
+    transparent={true}
+    visible={text}
+    onRequestClose={() => {
+      Alert.alert("Presione la X para cerrar la ventana.");
+    }}
+  >
+    <View style={styles.modalView}>
+      <View style={styles.headerModal}>
+        <View style={styles.headerMizq} />
+        <View style={styles.margen} />
+        <View style={styles.headerMDer}>
+          <TouchableHighlight style={styles.openButton} onPress={onPress}>
+            <Text style={styles.modalTex3}>x</Text>
+          </TouchableHighlight>
+        </View>
+      </View>
 
-            <View style={styles.headerModal}>
-
-            <View style={styles.headerMizq}>
-            </View>
-         <View style={styles.margen}></View>
-
-             <View style={styles.headerMDer}>
-               <TouchableHighlight style={styles.openButton}
-                
-                onPress={onPress}
-               >
-                  <Text style={styles.modalTex3}>x</Text>
-              </TouchableHighlight>
-             </View>
-            
-              
-            </View>
-            
-            <View style={styles.bodyModal}>
-              <Swiper
-          style={styles.wrapper} showsButtons
-          dot={
-            <View
-              style={{
-                backgroundColor: 'gray',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          activeDot={
-            <View
-              style={{
-                backgroundColor: 'black',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          paginationStyle={{
-            bottom: 30
-          }}
+      <View style={styles.bodyModal}>
+        <Carousel
           loop={false}
-        >
-         
-           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/pp2.jpg')} resizeMode="cover">
-          </ImageBackground>
-           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/pp3.jpg')} resizeMode="cover">
-          </ImageBackground>
-           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/pp4.jpg')} resizeMode="contain">
-          </ImageBackground>
-           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/pp5.jpg')} resizeMode="cover">
-          </ImageBackground>
-           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/pp6.jpg')} resizeMode="contain">
-          </ImageBackground>
-           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/pp7.jpg')} resizeMode="cover">
-          </ImageBackground>
-           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/pp8.jpg')} resizeMode="cover">
-          </ImageBackground>
-
-
-
-          
-        </Swiper>
-            </View> 
-            </View>
-            
-        </Modal>
+          width={width * 0.8}
+          height={'100%'}
+          autoPlay={false}
+          data={imagesEscena2}
+          pagingEnabled={true}
+          renderItem={({ item, index }) => (
+            <ImageBackground
+              key={index}
+              source={item}
+              style={styles.slide}
+              resizeMode={
+                index === 2 || index === 4 ? 'contain' : 'cover'
+              }
+            />
+          )}
+        />
+      </View>
+    </View>
+  </Modal>
 );
 
 export const Modal_C1_escena3 = ({ text, onPress = () => {} }) => (
   <Modal
-          animationType="slide"
-          transparent={true}
-          visible={text}
-          onRequestClose={() => {
-            Alert.alert("Presione la X para cerrar la ventana.");
-          }}
-        >
-          
-            <View style={styles.modalView}>
+    animationType="slide"
+    transparent={true}
+    visible={text}
+    onRequestClose={() => {
+      Alert.alert("Presione la X para cerrar la ventana.");
+    }}
+  >
+    <View style={styles.modalView}>
+      <View style={styles.headerModal}>
+        <View style={styles.headerMizq} />
+        <View style={styles.margen} />
+        <View style={styles.headerMDer}>
+          <TouchableHighlight style={styles.openButton} onPress={onPress}>
+            <Text style={styles.modalTex3}>x</Text>
+          </TouchableHighlight>
+        </View>
+      </View>
 
-            <View style={styles.headerModal}>
-
-            <View style={styles.headerMizq}>
-            </View>
-         <View style={styles.margen}></View>
-
-             <View style={styles.headerMDer}>
-               <TouchableHighlight style={styles.openButton}
-                
-                onPress={onPress}
-               >
-                  <Text style={styles.modalTex3}>x</Text>
-              </TouchableHighlight>
-             </View>
-            
-              
-            </View>
-            
-            <View style={styles.bodyModal}>
-              <Swiper
-          style={styles.wrapper} showsButtons
-          dot={
-            <View
-              style={{
-                backgroundColor: 'gray',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          activeDot={
-            <View
-              style={{
-                backgroundColor: 'black',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          paginationStyle={{
-            bottom: 30
-          }}
+      <View style={styles.bodyModal}>
+        <Carousel
           loop={false}
-        >
-         <ImageBackground style={styles.slide} source={require('../../assets/ayudas/pv1.jpg')} resizeMode="contain">
-
-          </ImageBackground>
-
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/pv2.jpg')} resizeMode="contain">
-
-          </ImageBackground>
-          
-        </Swiper>
-            </View> 
-            </View>
-            
-        </Modal>
+          width={width * 0.8}
+          height={'100%'}
+          autoPlay={false}
+          pagingEnabled={true}
+          data={imagesEscena3}
+          renderItem={({ item, index }) => (
+            <ImageBackground
+              key={index}
+              source={item}
+              style={styles.slide}
+              resizeMode="contain"
+            />
+          )}
+        />
+      </View>
+    </View>
+  </Modal>
 );
+
 export const Modal_Preguntas = ({ text, onPress = () => {} }) => (
   <Modal
-          animationType="slide"
-          transparent={true}
-          visible={text}
-          onRequestClose={() => {
-            Alert.alert("Presione la X para cerrar la ventana.");
-          }}
-        >
-          
-            <View style={styles.modalView}>
+    animationType="slide"
+    transparent={true}
+    visible={text}
+    onRequestClose={() => {
+      Alert.alert("Presione la X para cerrar la ventana.");
+    }}
+  >
+    <View style={styles.modalView}>
+      <View style={styles.headerModal}>
+        <View style={styles.headerMizq} />
+        <View style={styles.margen} />
+        <View style={styles.headerMDer}>
+          <TouchableHighlight style={styles.openButton} onPress={onPress}>
+            <Text style={styles.modalTex3}>x</Text>
+          </TouchableHighlight>
+        </View>
+      </View>
 
-            <View style={styles.headerModal}>
-
-            <View style={styles.headerMizq}>
-            </View>
-         <View style={styles.margen}></View>
-
-             <View style={styles.headerMDer}>
-               <TouchableHighlight style={styles.openButton}
-                
-                onPress={onPress}
-               >
-                  <Text style={styles.modalTex3}>x</Text>
-              </TouchableHighlight>
-             </View>
-            
-              
-            </View>
-            
-            <View style={styles.bodyModal}>
-              <Swiper
-          style={styles.wrapper} showsButtons
-          dot={
-            <View
-              style={{
-                backgroundColor: 'gray',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          activeDot={
-            <View
-              style={{
-                backgroundColor: 'black',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          paginationStyle={{
-            bottom: 30
-          }}
+      <View style={styles.bodyModal}>
+        <Carousel
           loop={false}
-        >
-           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/pp2.jpg')} resizeMode="cover">
-          </ImageBackground>
-           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/pp3.jpg')} resizeMode="cover">
-          </ImageBackground>
-           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/pp4.jpg')} resizeMode="contain">
-          </ImageBackground>
-           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/pp5.jpg')} resizeMode="cover">
-          </ImageBackground>
-           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/pp6.jpg')} resizeMode="contain">
-          </ImageBackground>
-
-        </Swiper>
-            </View> 
-            </View>
-            
-        </Modal>
+          width={width * 0.8}
+          height={'100%'}
+          autoPlay={false}
+          pagingEnabled={true}
+          data={imagesPreguntas}
+          renderItem={({ item, index }) => (
+            <ImageBackground
+              key={index}
+              source={item}
+              style={styles.slide}
+              resizeMode="contain"
+            />
+          )}
+        />
+      </View>
+    </View>
+  </Modal>
 );
+
 export const Modal_Pruebas = ({ text, onPress = () => {} }) => (
   <Modal
-          animationType="slide"
-          transparent={true}
-          visible={text}
-          onRequestClose={() => {
-            Alert.alert("Presione la X para cerrar la ventana.");
-          }}
-        >
-          
-            <View style={styles.modalView}>
+    animationType="slide"
+    transparent={true}
+    visible={text}
+    onRequestClose={() => {
+      Alert.alert("Presione la X para cerrar la ventana.");
+    }}
+  >
+    <View style={styles.modalView}>
+      <View style={styles.headerModal}>
+        <View style={styles.headerMizq} />
+        <View style={styles.margen} />
+        <View style={styles.headerMDer}>
+          <TouchableHighlight style={styles.openButton} onPress={onPress}>
+            <Text style={styles.modalTex3}>x</Text>
+          </TouchableHighlight>
+        </View>
+      </View>
 
-            <View style={styles.headerModal}>
-
-            <View style={styles.headerMizq}>
-            </View>
-         <View style={styles.margen}></View>
-
-             <View style={styles.headerMDer}>
-               <TouchableHighlight style={styles.openButton}
-                
-                onPress={onPress}
-               >
-                  <Text style={styles.modalTex3}>x</Text>
-              </TouchableHighlight>
-             </View>
-            
-              
-            </View>
-            
-            <View style={styles.bodyModal}>
-              <Swiper
-          style={styles.wrapper} showsButtons
-          dot={
-            <View
-              style={{
-                backgroundColor: 'gray',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          activeDot={
-            <View
-              style={{
-                backgroundColor: 'black',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          paginationStyle={{
-            bottom: 30
-          }}
+      <View style={styles.bodyModal}>
+        <Carousel
           loop={false}
-        >
-         <ImageBackground style={styles.slide} source={require('../../assets/ayudas/pv1.jpg')} resizeMode="contain">
-          </ImageBackground>
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/pv2.jpg')} resizeMode="contain">
-          </ImageBackground>
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/pp4.jpg')} resizeMode="contain">
-          </ImageBackground>
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/pp5.jpg')} resizeMode="contain">
-          </ImageBackground>
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/pp6.jpg')} resizeMode="contain">
-          </ImageBackground>
-
-
-
-          
-          
-        </Swiper>
-            </View> 
-            </View>
-            
-        </Modal>
+          width={width * 0.8}
+          height={'100%'}
+          autoPlay={false}
+          pagingEnabled={true}
+          data={imagesPruebas}
+          renderItem={({ item, index }) => (
+            <ImageBackground
+              key={index}
+              source={item}
+              style={styles.slide}
+              resizeMode="contain"
+            />
+          )}
+        />
+      </View>
+    </View>
+  </Modal>
 );
+
 export const Modal_Valoracion = ({ text, onPress = () => {} }) => (
   <Modal
-          animationType="slide"
-          transparent={true}
-          visible={text}
-          onRequestClose={() => {
-            Alert.alert("Presione la X para cerrar la ventana.");
-          }}
-        >
-          
-            <View style={styles.modalView}>
+    animationType="slide"
+    transparent={true}
+    visible={text}
+    onRequestClose={() => {
+      Alert.alert("Presione la X para cerrar la ventana.");
+    }}
+  >
+    <View style={styles.modalView}>
+      <View style={styles.headerModal}>
+        <View style={styles.headerMizq} />
+        <View style={styles.margen} />
+        <View style={styles.headerMDer}>
+          <TouchableHighlight style={styles.openButton} onPress={onPress}>
+            <Text style={styles.modalTex3}>x</Text>
+          </TouchableHighlight>
+        </View>
+      </View>
 
-            <View style={styles.headerModal}>
-
-            <View style={styles.headerMizq}>
-            </View>
-         <View style={styles.margen}></View>
-
-             <View style={styles.headerMDer}>
-               <TouchableHighlight style={styles.openButton}
-                
-                onPress={onPress}
-               >
-                  <Text style={styles.modalTex3}>x</Text>
-              </TouchableHighlight>
-             </View>
-            
-              
-            </View>
-            
-            <View style={styles.bodyModal}>
-              <Swiper
-          style={styles.wrapper} showsButtons
-          dot={
-            <View
-              style={{
-                backgroundColor: 'gray',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          activeDot={
-            <View
-              style={{
-                backgroundColor: 'black',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          paginationStyle={{
-            bottom: 30
-          }}
+      <View style={styles.bodyModal}>
+        <Carousel
           loop={false}
-        >
-         <ImageBackground style={styles.slide} source={require('../../assets/ayudas/v1.jpg')} resizeMode="cover">
-          </ImageBackground>
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/v2.jpg')} resizeMode="cover">
-          </ImageBackground>
-
-          
-        </Swiper>
-            </View> 
-            </View>
-            
-        </Modal>
+          width={width * 0.8}
+          height={'100%'}
+          autoPlay={false}
+          pagingEnabled={true}
+          data={imagesValoracion}
+          renderItem={({ item, index }) => (
+            <ImageBackground
+              key={index}
+              source={item}
+              style={styles.slide}
+              resizeMode="cover"
+            />
+          )}
+        />
+      </View>
+    </View>
+  </Modal>
 );
+
 export const Modal_Teoria = ({ text, onPress = () => {} }) => (
   <Modal
-          animationType="slide"
-          transparent={true}
-          visible={text}
-          onRequestClose={() => {
-            Alert.alert("Presione la X para cerrar la ventana.");
-          }}
-        >
-          
-            <View style={styles.modalView}>
+    animationType="slide"
+    transparent={true}
+    visible={text}
+    onRequestClose={() => {
+      Alert.alert("Presione la X para cerrar la ventana.");
+    }}
+  >
+    <View style={styles.modalView}>
+      <View style={styles.headerModal}>
+        <View style={styles.headerMizq} />
+        <View style={styles.margen} />
+        <View style={styles.headerMDer}>
+          <TouchableHighlight style={styles.openButton} onPress={onPress}>
+            <Text style={styles.modalTex3}>x</Text>
+          </TouchableHighlight>
+        </View>
+      </View>
 
-            <View style={styles.headerModal}>
-
-            <View style={styles.headerMizq}>
-            </View>
-         <View style={styles.margen}></View>
-
-             <View style={styles.headerMDer}>
-               <TouchableHighlight style={styles.openButton}
-                
-                onPress={onPress}
-               >
-                  <Text style={styles.modalTex3}>x</Text>
-              </TouchableHighlight>
-             </View>
-            
-              
-            </View>
-            
-            <View style={styles.bodyModal}>
-              <Swiper
-          style={styles.wrapper} showsButtons
-          dot={
-            <View
-              style={{
-                backgroundColor: 'gray',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          activeDot={
-            <View
-              style={{
-                backgroundColor: 'black',
-                width: 8,
-                height: 8,
-                borderRadius: 7,
-                marginLeft: 7,
-                marginRight: 7
-              }}
-            />
-          }
-          paginationStyle={{
-            bottom: 30
-          }}
+      <View style={styles.bodyModal}>
+        <Carousel
           loop={false}
-        >
-         <ImageBackground style={styles.slide} source={require('../../assets/ayudas/t1.jpg')} resizeMode="cover">
-          </ImageBackground>
-          <ImageBackground style={styles.slide} source={require('../../assets/ayudas/t2.jpg')} resizeMode="cover">
-          </ImageBackground>
-           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/t3.jpg')} resizeMode="cover">
-          </ImageBackground>
-           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/t4.jpg')} resizeMode="cover">
-          </ImageBackground>
-           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/t5.jpg')} resizeMode="cover">
-          </ImageBackground>
-           <ImageBackground style={styles.slide} source={require('../../assets/ayudas/t6.jpg')} resizeMode="cover">
-          </ImageBackground>
-
-          
-        </Swiper>
-            </View> 
-            </View>
-            
-        </Modal>
+          width={width * 0.8}
+          height={'100%'}
+          autoPlay={false}
+          pagingEnabled={true}
+          data={imagesTeoria}
+          renderItem={({ item, index }) => (
+            <ImageBackground
+              key={index}
+              source={item}
+              style={styles.slide}
+              resizeMode="cover"
+            />
+          )}
+        />
+      </View>
+    </View>
+  </Modal>
 );

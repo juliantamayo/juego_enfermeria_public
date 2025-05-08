@@ -1,6 +1,4 @@
 const questions = [
- 
-
   {
     image: require("../../../../assets/images/CASO_1_SEÑOR_CJM_58_AÑOS_P2_Motilidad_extrinseca_del_ojo2.png"),
     personaje: "ENFERMERA",
