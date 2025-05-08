@@ -1,5 +1,5 @@
 import React, {Component, useEffect} from 'react';
-import { Button, View, Text, StyleSheet, BackHandler, Alert } from 'react-native';
+import { StyleSheet, BackHandler, Alert } from 'react-native';
 import { NavigationContainer, CommonActions } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -38,7 +38,6 @@ import t_diencefalo from './components/Teoria/T_SNC/t_diencefalo';
 import t_tronco_encefalico from './components/Teoria/T_SNC/t_tronco_encefalico';
 import t_cerebelo from './components/Teoria/T_SNC/t_cerebelo';
 
-
 import m_t_sna from './components/Teoria/T_SNA/m_t_sna';
 import t_simpatico from './components/Teoria/T_SNA/t_simpatico';
 import t_parasimpatico from './components/Teoria/T_SNA/t_parasimpatico';
@@ -49,7 +48,6 @@ import t_pruval from './components/Teoria/T_PruValoracion/t_pruval';
 
 //créditos 
 import Creditos from './components/creditos';
-
 //---------------------------------------------------------------
 import pruebaT from './components/Teoria/prueba_atras';
 //-----------------------casos--------------------------------
@@ -255,7 +253,6 @@ import C2_Escena5 from './components/Casos/Caso2/escena5';
 import C2_Guardar_V_quiz from './components/Casos/Caso2/V_Guardar/C2_guardar_V_quiz';
 //escena6----
 import C2_Escena6 from './components/Casos/Caso2/escena6';
-
 //-------------------------caso3---------------------------------
 import M_caso3 from './components/Casos/Caso3/menu_caso3';
 //escena1

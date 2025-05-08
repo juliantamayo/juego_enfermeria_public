@@ -5,7 +5,6 @@ export default StyleSheet.create({
  wrapper: {},
   slide: {
     flex: 1,
-   // justifyContent: 'center',
     backgroundColor: 'transparent'
   },
   text: {
