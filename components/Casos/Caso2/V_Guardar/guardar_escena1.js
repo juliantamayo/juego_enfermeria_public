@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Alert } from 'react-native';
+import { Alert } from 'react-native';
 import { AsyncStorage }  from '@react-native-async-storage/async-storage';
 import { Save, ContainerSave } from "../../../elementos/ItemGuardar";
 export default class C2_guardar_escena1 extends Component {

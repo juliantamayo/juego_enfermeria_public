@@ -1,5 +1,5 @@
 import React from "react";
-import {AsyncStorage, Modal, View, StyleSheet, Dimensions, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity, TouchableHighlight, Alert} from "react-native";
+import { View, StyleSheet, Dimensions, Text, Image, ImageBackground, TouchableOpacity } from "react-native";
 
 import { Button, ButtonContainer } from "../../elementos/ButtonEscene1";
 import style from './../../Style.js';

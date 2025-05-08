@@ -1,5 +1,6 @@
 import React from 'react';
-import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpacity,  Image, Text, AsyncStorage,Dimensions } from 'react-native';
+import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpacity,  Image, Dimensions } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import styles from './../../Style.js';
 
@@ -224,7 +225,6 @@ render() {
 const style = StyleSheet.create({
   container: {
     flex: 1,
-   // alignItems : 'stretch',
     width: "100%",
     height :'100%',
    
@@ -260,7 +260,6 @@ const style = StyleSheet.create({
     flex:1,
     alignItems : 'center',
     justifyContent : 'center',
-    //backgroundColor: 'red',
     flexDirection: "row",
     width: "100%",
     height :'100%',
@@ -268,9 +267,6 @@ const style = StyleSheet.create({
   },
   viewrowmenu:{
     flex:1,
-   // backgroundColor: 'yellow',
     flexDirection: "column"
-   
-
   }
 });

@@ -1,14 +1,8 @@
 
 import React, { Component } from 'react';
 
-import { StyleSheet, 
-  View, 
-  Text,
-  TouchableOpacity, 
-  Button,Alert,ImageBackground,
-  Image,
-  StatusBar,ScrollView } from 'react-native';
-  import { AsyncStorage }  from '@react-native-async-storage/async-storage';
+import { StyleSheet, View, Text, TouchableOpacity,Alert, ImageBackground, StatusBar, ScrollView } from 'react-native';
+import { AsyncStorage }  from '@react-native-async-storage/async-storage';
 import style from '../../../Style.js';
 
 export default class C2_guardar_valoracion extends Component {

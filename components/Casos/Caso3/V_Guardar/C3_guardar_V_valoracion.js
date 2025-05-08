@@ -1,13 +1,7 @@
 
 import React, { Component } from 'react';
 
-import { StyleSheet, 
-  View, 
-  Text,
-  TouchableOpacity, 
-  Button,Alert,ImageBackground,
-  Image,
-  StatusBar,ScrollView } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, Alert, ImageBackground, StatusBar, ScrollView } from 'react-native';
 import { AsyncStorage }  from '@react-native-async-storage/async-storage';
 import style from '../../../Style.js';
 
@@ -54,30 +48,18 @@ state = {
           var array2=null;
          
           for (var i = 0; i <= a1.length; i++) {
-           // JSON.stringify(array1) === JSON.stringify(array2)
-           //  if(JSON.stringify(a1) != JSON.stringify(a2)) {
-             //   for(var j=0;j<= a1.length; j++){
-             //    array2=<Text style={styles.text}>no son iguales</Text>;
-           //  }//else if (JSON.stringify(a1) == JSON.stringify(a2)) {
-            // array1=<Text style={styles.text}>son iguales</Text>;
-           // }
              if (JSON.stringify(a1) === JSON.stringify(a2)) {
                  array1=<View style={styles.viewcaritas}>
                         <Text style={styles.textmensaje_carita}>¡Bien hecho!</Text>
                         <Text style={styles.carita}>😎</Text>
                         </View>;
-            }//else if (JSON.stringify(a1[i])==0 && JSON.stringify(a2[i])==0) {
-             //    array2=<Text style={styles.text}>✔</Text>;
-           // }
+            }
             else if (JSON.stringify(a1) !== JSON.stringify(a2)) {
                  array2=<View style={styles.viewcaritas}>
                         <Text style={styles.textmensaje_carita2}>Ha faltado o se ha seleccionado una de más.</Text>
                         <Text style={styles.carita}>😞</Text>
                         </View>;
-            }//else  if (JSON.stringify(a1[i])==1 && JSON.stringify(a2[i])==0){
-              //   array4=<Text style={styles.text}>elegiste una que no era</Text>;
-
-          //}
+            }
         }
 
     return (
@@ -86,16 +68,9 @@ state = {
     <ScrollView  >
     <StatusBar barStyle="dark-content" />
     <View style={style.header}>
-    
-     <View style={style.headerIzquierda}>
-     
-      </View>
-
-      <View style={style.headerDerecha}>
-      
-      </View>
-     
-      </View>
+     <View style={style.headerIzquierda}></View>
+     <View style={style.headerDerecha}></View>
+    </View>
    
     <View style={styles.containerBody}>
         
