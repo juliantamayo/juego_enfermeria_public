@@ -1,5 +1,5 @@
 import React from "react";
-import {AsyncStorage, View, StyleSheet, ScrollView, StatusBar, Text, SafeAreaView, Image, ImageBackground, TouchableOpacity} from "react-native";
+import { View, ScrollView, Text, Image, ImageBackground, TouchableOpacity} from "react-native";
 
 import { Button, ButtonContainer } from "../../../elementos/ButtonEscene1";
 import { C2_ModalHistorial, Modal_C2_Pru_valoracion5_procedimiento, Modal_C2_Pru_valoracion5_HN } from "../../../elementos/Modals";

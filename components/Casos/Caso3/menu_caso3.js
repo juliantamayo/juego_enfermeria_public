@@ -1,5 +1,6 @@
 import React from 'react';
-import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpacity,  Image, Text, AsyncStorage } from 'react-native';
+import { ScrollView, StatusBar, StyleSheet, ImageBackground, View, TouchableOpacity,  Image } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import styles from './../../Style.js';
 import { RowItem } from "../../elementos/RowItem";

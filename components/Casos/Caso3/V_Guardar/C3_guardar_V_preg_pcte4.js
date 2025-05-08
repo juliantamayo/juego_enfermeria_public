@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { StyleSheet, AsyncStorage, Alert } from 'react-native';
+import { Alert } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Save, ContainerSave } from "../../../elementos/ItemGuardar";
 
 
